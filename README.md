@@ -1,4 +1,3 @@
-# WINGS_WORKFLOW_PROVENANCE_SCENARIOS
-The repository contains the code for the different scenarios, making sure that the mapper exports are consistent.
+# DISK PROV Mapper
 
-The extended documentation for the mapper is ongoing work
+This repository contains the code and documentation for the integration of PROV Ontology with the DISK workflow system. The objective of this project is to enable more efficient and effective tracking and management of workflows and data within the DISK system, by incorporating provenance information into the workflow execution process. The repository includes code for representing workflows in a format compatible with the PROV Ontology, tracking the provenance of workflows in real-time, and retrieving and visualizing provenance information to support debugging and troubleshooting. The repository also includes documentation on the importance of provenance in workflow execution, as well as the specific requirements and success criteria for this project.
