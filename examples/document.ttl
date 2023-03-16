@@ -59,7 +59,7 @@ provNeuroScience:createQuestion a prov:Activity ;
 
 provNeuroScienceQuestion:EnigmaQuestion5 prov:wasGeneratedBy provNeuroScience:createQuestion .
 
-provNeuroScienceHypothesis:Hypothesis-geEzxPNJ9c8a prov:wasDerivedFrom provNeuroScienceQuestion:EnigmaQuestion5 .
+provNeuroScienceHypothesis:Hypothesis-4CGdVLyttD07 prov:wasDerivedFrom provNeuroScienceQuestion:EnigmaQuestion5 .
 
 <http://provenance.isi.edu/disk/neuro/question/EnigmaQuestion5/questionVariablesBinding> prov:hadMember provNeuroScienceQuestion:EnigmaQuestion3V3 .
 
@@ -112,58 +112,58 @@ provNeuroScienceQuestion:EnigmaQuestion5 prov:wasDerivedFrom <http://provenance.
 	rdfs:label "Collection of question variables" ;
 	prov:wasGeneratedBy provNeuroScience:createQuestion .
 
-provNeuroScienceHypothesis:Hypothesis-geEzxPNJ9c8a a prov:Entity ;
-	rdfs:label "Is the effect size of rs1080066 on Surface Area of Precentral associated with Mean Age for cohorts of European ancestry" ;
-	dcterms:created "17:46:20 2022-09-28"^^xsd:Name .
+provNeuroScienceHypothesis:Hypothesis-4CGdVLyttD07 a prov:Entity ;
+	rdfs:label "Is the effect size of rs1080066 on Surface Area of Precentral associated with Percentage of Females for cohorts of European ancestry" ;
+	dcterms:created "17:48:24 2022-09-28"^^xsd:Name .
 
 provNeuroScience:createHypothesis a prov:Activity ;
 	rdfs:label "Create Hypothesis" ;
 	rdfs:comment "The agent selects a Question and the values for each of the variables of the selected question. The agent then creates a hypothesis."^^xsd:Name .
 
-provNeuroScienceHypothesis:Hypothesis-geEzxPNJ9c8a prov:wasGeneratedBy provNeuroScience:createHypothesis .
+provNeuroScienceHypothesis:Hypothesis-4CGdVLyttD07 prov:wasGeneratedBy provNeuroScience:createHypothesis .
 
-<http://provenance.isi.edu/disk/neuro/hypothesis/Hypothesis-geEzxPNJ9c8a/hypothesisVariablesBinding> a prov:Entity ;
+<http://provenance.isi.edu/disk/neuro/hypothesis/Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding> a prov:Entity ;
 	rdfs:label "Collection of question variables" ;
 	prov:wasDerivedFrom <http://provenance.isi.edu/disk/neuro/question/EnigmaQuestion5/questionVariablesBinding> .
 
-<http://provenance.isi.edu/disk/neuro/hypothesis/Hypothesis-geEzxPNJ9c8a/hypothesisVariablesBinding/EnigmaQuestion3V4> a prov:Entity ;
-	rdfs:label "http://localhost:8080/enigma_dev/Special:URIResolver/Property-3AHasAge_Mean_-28E-29" .
-
-<http://provenance.isi.edu/disk/neuro/hypothesis/Hypothesis-geEzxPNJ9c8a/hypothesisVariablesBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/hypothesis/Hypothesis-geEzxPNJ9c8a/hypothesisVariablesBinding/EnigmaQuestion3V4> .
-
-<http://provenance.isi.edu/disk/neuro/hypothesis/Hypothesis-geEzxPNJ9c8a/hypothesisVariablesBinding/EnigmaQuestion3V4> prov:wasDerivedFrom provNeuroScienceQuestion:EnigmaQuestion3V4 .
-
-<http://provenance.isi.edu/disk/neuro/hypothesis/Hypothesis-geEzxPNJ9c8a/hypothesisVariablesBinding/EnigmaQuestion3V2> a prov:Entity ;
-	rdfs:label "SA" .
-
-<http://provenance.isi.edu/disk/neuro/hypothesis/Hypothesis-geEzxPNJ9c8a/hypothesisVariablesBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/hypothesis/Hypothesis-geEzxPNJ9c8a/hypothesisVariablesBinding/EnigmaQuestion3V2> .
-
-<http://provenance.isi.edu/disk/neuro/hypothesis/Hypothesis-geEzxPNJ9c8a/hypothesisVariablesBinding/EnigmaQuestion3V2> prov:wasDerivedFrom provNeuroScienceQuestion:EnigmaQuestion3V2 .
-
-<http://provenance.isi.edu/disk/neuro/hypothesis/Hypothesis-geEzxPNJ9c8a/hypothesisVariablesBinding/EnigmaQuestion3V1> a prov:Entity ;
-	rdfs:label "rs1080066" .
-
-<http://provenance.isi.edu/disk/neuro/hypothesis/Hypothesis-geEzxPNJ9c8a/hypothesisVariablesBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/hypothesis/Hypothesis-geEzxPNJ9c8a/hypothesisVariablesBinding/EnigmaQuestion3V1> .
-
-<http://provenance.isi.edu/disk/neuro/hypothesis/Hypothesis-geEzxPNJ9c8a/hypothesisVariablesBinding/EnigmaQuestion3V1> prov:wasDerivedFrom provNeuroScienceQuestion:EnigmaQuestion3V1 .
-
-<http://provenance.isi.edu/disk/neuro/hypothesis/Hypothesis-geEzxPNJ9c8a/hypothesisVariablesBinding/EnigmaQuestion3V3> a prov:Entity ;
+<http://provenance.isi.edu/disk/neuro/hypothesis/Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding/EnigmaQuestion3V3> a prov:Entity ;
 	rdfs:label "Precentral" .
 
-<http://provenance.isi.edu/disk/neuro/hypothesis/Hypothesis-geEzxPNJ9c8a/hypothesisVariablesBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/hypothesis/Hypothesis-geEzxPNJ9c8a/hypothesisVariablesBinding/EnigmaQuestion3V3> .
+<http://provenance.isi.edu/disk/neuro/hypothesis/Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/hypothesis/Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding/EnigmaQuestion3V3> .
 
-<http://provenance.isi.edu/disk/neuro/hypothesis/Hypothesis-geEzxPNJ9c8a/hypothesisVariablesBinding/EnigmaQuestion3V3> prov:wasDerivedFrom provNeuroScienceQuestion:EnigmaQuestion3V3 .
+<http://provenance.isi.edu/disk/neuro/hypothesis/Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding/EnigmaQuestion3V3> prov:wasDerivedFrom provNeuroScienceQuestion:EnigmaQuestion3V3 .
 
-<http://provenance.isi.edu/disk/neuro/hypothesis/Hypothesis-geEzxPNJ9c8a/hypothesisVariablesBinding/EnigmaQuestion4v1> a prov:Entity ;
+<http://provenance.isi.edu/disk/neuro/hypothesis/Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding/EnigmaQuestion4v1> a prov:Entity ;
 	rdfs:label "European" .
 
-<http://provenance.isi.edu/disk/neuro/hypothesis/Hypothesis-geEzxPNJ9c8a/hypothesisVariablesBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/hypothesis/Hypothesis-geEzxPNJ9c8a/hypothesisVariablesBinding/EnigmaQuestion4v1> .
+<http://provenance.isi.edu/disk/neuro/hypothesis/Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/hypothesis/Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding/EnigmaQuestion4v1> .
 
-<http://provenance.isi.edu/disk/neuro/hypothesis/Hypothesis-geEzxPNJ9c8a/hypothesisVariablesBinding/EnigmaQuestion4v1> prov:wasDerivedFrom provNeuroScienceQuestion:EnigmaQuestion4v1 .
+<http://provenance.isi.edu/disk/neuro/hypothesis/Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding/EnigmaQuestion4v1> prov:wasDerivedFrom provNeuroScienceQuestion:EnigmaQuestion4v1 .
 
-provNeuroScienceHypothesis:Hypothesis-geEzxPNJ9c8a prov:wasDerivedFrom <http://provenance.isi.edu/disk/neuro/hypothesis/Hypothesis-geEzxPNJ9c8a/hypothesisVariablesBinding> .
+<http://provenance.isi.edu/disk/neuro/hypothesis/Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding/EnigmaQuestion3V1> a prov:Entity ;
+	rdfs:label "rs1080066" .
 
-<http://provenance.isi.edu/disk/neuro/hypothesis/Hypothesis-geEzxPNJ9c8a/hypothesisVariablesBinding> prov:wasGeneratedBy provNeuroScience:createHypothesis .
+<http://provenance.isi.edu/disk/neuro/hypothesis/Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/hypothesis/Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding/EnigmaQuestion3V1> .
+
+<http://provenance.isi.edu/disk/neuro/hypothesis/Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding/EnigmaQuestion3V1> prov:wasDerivedFrom provNeuroScienceQuestion:EnigmaQuestion3V1 .
+
+<http://provenance.isi.edu/disk/neuro/hypothesis/Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding/EnigmaQuestion3V4> a prov:Entity ;
+	rdfs:label "http://localhost:8080/enigma_dev/Special:URIResolver/Property-3AHasNumberOfFemaleSex_-28E-29" .
+
+<http://provenance.isi.edu/disk/neuro/hypothesis/Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/hypothesis/Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding/EnigmaQuestion3V4> .
+
+<http://provenance.isi.edu/disk/neuro/hypothesis/Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding/EnigmaQuestion3V4> prov:wasDerivedFrom provNeuroScienceQuestion:EnigmaQuestion3V4 .
+
+<http://provenance.isi.edu/disk/neuro/hypothesis/Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding/EnigmaQuestion3V2> a prov:Entity ;
+	rdfs:label "SA" .
+
+<http://provenance.isi.edu/disk/neuro/hypothesis/Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/hypothesis/Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding/EnigmaQuestion3V2> .
+
+<http://provenance.isi.edu/disk/neuro/hypothesis/Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding/EnigmaQuestion3V2> prov:wasDerivedFrom provNeuroScienceQuestion:EnigmaQuestion3V2 .
+
+provNeuroScienceHypothesis:Hypothesis-4CGdVLyttD07 prov:wasDerivedFrom <http://provenance.isi.edu/disk/neuro/hypothesis/Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding> .
+
+<http://provenance.isi.edu/disk/neuro/hypothesis/Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding> prov:wasGeneratedBy provNeuroScience:createHypothesis .
 
 provNeuroScience:LOI-R12qZl77tJJ9 a prov:Entity ;
 	rdfs:label "Meta regression with ancestry" ;
@@ -240,29 +240,17 @@ provNeuroScienceLOI:metaWorkflowVariablesBinding prov:wasGeneratedBy neuroScienc
 
 neuroScienceDisk:saved_line_of_inquiry prov:used provNeuroScienceLOI:metaWorkflowVariablesBinding .
 
-provNeuroScienceLOI:demographic_value a prov:Entity ;
-	rdfs:label "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#demographic_value" ;
-	prov:value "[?realDemographic]" .
-
-provNeuroScienceLOI:metaWorkflowVariablesBinding prov:hadMember provNeuroScienceLOI:demographic_value .
-
 provNeuroScienceLOI:demographic a prov:Entity ;
 	rdfs:label "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#demographic" ;
 	prov:value "?DemographicLabel" .
 
 provNeuroScienceLOI:metaWorkflowVariablesBinding prov:hadMember provNeuroScienceLOI:demographic .
 
-provNeuroScienceLOI:snp a prov:Entity ;
-	rdfs:label "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#snp" ;
-	prov:value "?Genotype" .
+provNeuroScienceLOI:demographic_value a prov:Entity ;
+	rdfs:label "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#demographic_value" ;
+	prov:value "[?realDemographic]" .
 
-provNeuroScienceLOI:metaWorkflowVariablesBinding prov:hadMember provNeuroScienceLOI:snp .
-
-provNeuroScienceLOI:area a prov:Entity ;
-	rdfs:label "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#area" ;
-	prov:value "?Region" .
-
-provNeuroScienceLOI:metaWorkflowVariablesBinding prov:hadMember provNeuroScienceLOI:area .
+provNeuroScienceLOI:metaWorkflowVariablesBinding prov:hadMember provNeuroScienceLOI:demographic_value .
 
 provNeuroScienceLOI:trait a prov:Entity ;
 	rdfs:label "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#trait" ;
@@ -276,6 +264,18 @@ provNeuroScienceLOI:cohortData a prov:Entity ;
 
 provNeuroScienceLOI:metaWorkflowVariablesBinding prov:hadMember provNeuroScienceLOI:cohortData .
 
+provNeuroScienceLOI:snp a prov:Entity ;
+	rdfs:label "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#snp" ;
+	prov:value "?Genotype" .
+
+provNeuroScienceLOI:metaWorkflowVariablesBinding prov:hadMember provNeuroScienceLOI:snp .
+
+provNeuroScienceLOI:area a prov:Entity ;
+	rdfs:label "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#area" ;
+	prov:value "?Region" .
+
+provNeuroScienceLOI:metaWorkflowVariablesBinding prov:hadMember provNeuroScienceLOI:area .
+
 neuroScienceDisk:select_question prov:used provNeuroScienceQuestion:EnigmaQuestion5 .
 
 neuroScienceDisk:write_data_query_template prov:used provNeuroScienceQuestion:EnigmaQuestion5 .
@@ -284,7 +284,7 @@ provNeuroScienceLOI:data_query prov:wasGeneratedBy neuroScienceDisk:write_data_q
 
 provNeuroScience:LOI-R12qZl77tJJ9 prov:wasGeneratedBy neuroScienceDisk:saved_line_of_inquiry .
 
-provNeuroScience:TriggeredLOI-GKMsFE2EfTt5 a prov:Entity , "http://disk-project.org/ontology/disk#TriggeredLineOfInquiry"^^xsd:anyURI ;
+provNeuroScience:TriggeredLOI-cUmY0H6u20gu a prov:Entity , "http://disk-project.org/ontology/disk#TriggeredLineOfInquiry"^^xsd:anyURI ;
 	rdfs:label "Triggered: Meta regression with ancestry" ;
 	prov:wasDerivedFrom provNeuroScience:LOI-R12qZl77tJJ9 .
 
@@ -313,8 +313,8 @@ optional {
 ?participantsProp rdfs:label \"HasNumberOfParticipants (E)\" .
 ?CohortProjects ?participantsProp ?nParticipants
 }
-?CohortProjects <http://localhost:8080/enigma_dev/Special:URIResolver/Property-3AHasAge_Mean_-28E-29> ?demographicValue .
-<http://localhost:8080/enigma_dev/Special:URIResolver/Property-3AHasAge_Mean_-28E-29> rdfs:label ?DemographicLabel .
+?CohortProjects <http://localhost:8080/enigma_dev/Special:URIResolver/Property-3AHasNumberOfFemaleSex_-28E-29> ?demographicValue .
+<http://localhost:8080/enigma_dev/Special:URIResolver/Property-3AHasNumberOfFemaleSex_-28E-29> rdfs:label ?DemographicLabel .
 BIND(
 IF(?DemographicLabel = \"HasNumberOfFemaleSex (E)\" || ?DemographicLabel = \"HasNumberOfMaleSex (E)\" ,
 (xsd:integer(?demographicValue)/xsd:integer(?nParticipants)),
@@ -326,7 +326,7 @@ provNeuroScienceTLOI:dataSource a prov:Entity ;
 	rdfs:label "https://enigma-endpoint.disk.isi.edu/enigma_dev" ;
 	prov:wasDerivedFrom provNeuroScienceLOI:data_source .
 
-provNeuroScience:TriggeredLOI-GKMsFE2EfTt5 prov:wasGeneratedBy provNeuroScience:transformDataQueryTemplate .
+provNeuroScience:TriggeredLOI-cUmY0H6u20gu prov:wasGeneratedBy provNeuroScience:transformDataQueryTemplate .
 
 provNeuroScience:executeDataQuery a prov:Activity ;
 	rdfs:label "Execute the data query" .
@@ -340,49 +340,346 @@ provNeuroScienceTLOI:dataQuery prov:wasGeneratedBy provNeuroScience:transformDat
 
 provNeuroScienceLOI:metaWorkflowVariablesBinding prov:used provNeuroScience:transformDataQueryTemplate .
 
-provNeuroScienceTLOI:Meta-Regression--8c91ba13-954b-4096-91e1-eb471838876e a prov:Entity ;
-	rdfs:label "http://localhost:8080/wings-portal/export/users/admin/Enigma/executions/Meta-Regression--8c91ba13-954b-4096-91e1-eb471838876e.owl#Meta-Regression--8c91ba13-954b-4096-91e1-eb471838876e" .
+provNeuroScienceTLOI:Meta-Regression--b32140ce-e9e1-4a53-a16f-a0fef3741de2 a prov:Entity ;
+	rdfs:label "http://localhost:8080/wings-portal/export/users/admin/Enigma/executions/Meta-Regression--b32140ce-e9e1-4a53-a16f-a0fef3741de2.owl#Meta-Regression--b32140ce-e9e1-4a53-a16f-a0fef3741de2" .
 
 wings:Enigma a prov:Entity ;
 	rdfs:label "Enigma" .
 
-provNeuroScienceTLOI:Meta-Regression--8c91ba13-954b-4096-91e1-eb471838876e prov:wasGeneratedBy provNeuroScienceTLOI:createRun .
+provNeuroScienceTLOI:Meta-Regression--b32140ce-e9e1-4a53-a16f-a0fef3741de2 prov:wasGeneratedBy provNeuroScienceTLOI:createRun .
 
-<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-GKMsFE2EfTt5/metaWorkflowVariablesBinding/snp> a prov:Entity ;
-	rdfs:label "Variable Binding" ;
-	prov:value "rs1080066" .
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4f55c5_NeuroIMAGE_Significant_GWAS.csv> a prov:Entity ;
+	rdfs:label "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4f55c5_NeuroIMAGE_Significant_GWAS.csv" ;
+	prov:value "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4f55c5_NeuroIMAGE_Significant_GWAS.csv" .
 
-<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-GKMsFE2EfTt5/metaWorkflowVariablesBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-GKMsFE2EfTt5/metaWorkflowVariablesBinding/snp> .
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4f55c5_NeuroIMAGE_Significant_GWAS.csv> .
 
-<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-GKMsFE2EfTt5/metaWorkflowVariablesBinding/trait> a prov:Entity ;
-	rdfs:label "Variable Binding" ;
-	prov:value "SA" .
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4ca5c5_CARDIFF_Significant_GWAS.csv> a prov:Entity ;
+	rdfs:label "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4ca5c5_CARDIFF_Significant_GWAS.csv" ;
+	prov:value "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4ca5c5_CARDIFF_Significant_GWAS.csv" .
 
-<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-GKMsFE2EfTt5/metaWorkflowVariablesBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-GKMsFE2EfTt5/metaWorkflowVariablesBinding/trait> .
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4ca5c5_CARDIFF_Significant_GWAS.csv> .
 
-<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-GKMsFE2EfTt5/metaWorkflowVariablesBinding/demographic_value> a prov:Entity ;
-	rdfs:label "Variable Binding" ;
-	prov:value "[67.3, 74.8, 72.4, 19.6, 38.5, 62.4, 22.6, 22.5, 38.2, 10, 24.8, 19.7, 19.9, 38.4, 34.4, 24.2, 21.4, 41.9, 58.9, 14.6, 40.8, 72.7, 33.2, 33.7, 33.6, 48.3, 37.2, 35.8, 51.6, 37.5, 17.1, 29.4, 70.5, 28.3, 68.2, 11.8, 61.7, 22.4, 55.8, 50.4, 78.4, 28.3, 29.9, 35.2, 33.2, 31.8, 42.1, 62.8, 33.1]" .
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4765c5_OATS_Significant_GWAS.csv> a prov:Entity ;
+	rdfs:label "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4765c5_OATS_Significant_GWAS.csv" ;
+	prov:value "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4765c5_OATS_Significant_GWAS.csv" .
 
-<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-GKMsFE2EfTt5/metaWorkflowVariablesBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-GKMsFE2EfTt5/metaWorkflowVariablesBinding/demographic_value> .
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4765c5_OATS_Significant_GWAS.csv> .
 
-<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-GKMsFE2EfTt5/metaWorkflowVariablesBinding/demographic> a prov:Entity ;
-	rdfs:label "Variable Binding" ;
-	prov:value "HasAge Mean (E)" .
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4875c5_QTIM_Significant_GWAS.csv> a prov:Entity ;
+	rdfs:label "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4875c5_QTIM_Significant_GWAS.csv" ;
+	prov:value "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4875c5_QTIM_Significant_GWAS.csv" .
 
-<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-GKMsFE2EfTt5/metaWorkflowVariablesBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-GKMsFE2EfTt5/metaWorkflowVariablesBinding/demographic> .
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4875c5_QTIM_Significant_GWAS.csv> .
 
-<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-GKMsFE2EfTt5/metaWorkflowVariablesBinding/cohortData> a prov:Entity ;
-	rdfs:label "Variable Binding" ;
-	prov:value "[SHA4fe5c4_1000BRAINS_Significant_GWAS.csv, SHA4815c5_ADNI1_Significant_GWAS.csv, SHA4a85c5_ADNI2GO_Significant_GWAS.csv, SHA4bf5c6_ALSPACa_Significant_GWAS.csv, SHA47a5c5_ASRB_Significant_GWAS.csv, SHA4aa5c5_BETULA_Significant_GWAS.csv, SHA4945c5_BIG_Significant_GWAS.csv, SHA5305c4_BIG-PsychChip_Significant_GWAS.csv, SHA4c45c5_BONN_Significant_GWAS.csv, SHA4ad5c5_BrainScale_Significant_GWAS.csv, SHA4ca5c5_CARDIFF_Significant_GWAS.csv, SHA4a75c5_DNS-V3_Significant_GWAS.csv, SHA4b15c5_DNS-V4_Significant_GWAS.csv, SHA4c65c5_EPIGEN_Significant_GWAS.csv, SHA4b15c5_FOR2107_Significant_GWAS.csv, SHA4925c5_GIG_Significant_GWAS.csv, SHA4935c5_GSP_Significant_GWAS.csv, SHA4b15c5_HUBIN_Significant_GWAS.csv, SHA4925c5_HUNT_Significant_GWAS.csv, SHA4b85c5_IMAGEN_Significant_GWAS.csv, SHA4bf5c5_ImpACT_Significant_GWAS.csv, SHA4b45c5_LBC1936_Significant_GWAS.csv, SHA48a5c5_LIBD_Significant_GWAS.csv, SHA4835c5_MCIC_Significant_GWAS.csv, SHA4905c5_MooDS_Significant_GWAS.csv, SHA4775c5_MPIP_Significant_GWAS.csv, SHA4825c5_MPRC_Significant_GWAS.csv, SHA4945c5_MUNSTER_Significant_GWAS.csv, SHA4865c5_NCNG_Significant_GWAS.csv, SHA4835c5_NESDA_Significant_GWAS.csv, SHA4f55c5_NeuroIMAGE_Significant_GWAS.csv, SHA46d5c5_NTR_Significant_GWAS.csv, SHA4765c5_OATS_Significant_GWAS.csv, SHA4a65c5_PAFIP_Significant_GWAS.csv, SHA4865c5_PDNZ_Significant_GWAS.csv, SHA47a5c5_PING_Significant_GWAS.csv, SHA3f15c5_PPMI_Significant_GWAS.csv, SHA4875c5_QTIM_Significant_GWAS.csv, SHA4bb5c5_SHIP_Significant_GWAS.csv, SHA4ee5c5_SHIP-Trend_Significant_GWAS.csv, SHA4ba5c5_SydneyMAS_Significant_GWAS.csv, SHA4a85c5_SYS_Significant_GWAS.csv, SHA4c15c5_TCD-NUIG_Significant_GWAS.csv, SHA4865c5_TOP_Significant_GWAS.csv, SHA4945c5_TOP3T_Significant_GWAS.csv, SHA4ae5c5_UiO2016_Significant_GWAS.csv, SHA4aa5c5_UiO2017_Significant_GWAS.csv, SHA4c95c5_UKBB_Significant_GWAS.csv, SHA4335c5_UMCU_Significant_GWAS.csv]" .
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4b45c5_LBC1936_Significant_GWAS.csv> a prov:Entity ;
+	rdfs:label "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4b45c5_LBC1936_Significant_GWAS.csv" ;
+	prov:value "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4b45c5_LBC1936_Significant_GWAS.csv" .
 
-<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-GKMsFE2EfTt5/metaWorkflowVariablesBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-GKMsFE2EfTt5/metaWorkflowVariablesBinding/cohortData> .
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4b45c5_LBC1936_Significant_GWAS.csv> .
 
-<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-GKMsFE2EfTt5/metaWorkflowVariablesBinding/area> a prov:Entity ;
-	rdfs:label "Variable Binding" ;
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4a75c5_DNS-V3_Significant_GWAS.csv> a prov:Entity ;
+	rdfs:label "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4a75c5_DNS-V3_Significant_GWAS.csv" ;
+	prov:value "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4a75c5_DNS-V3_Significant_GWAS.csv" .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4a75c5_DNS-V3_Significant_GWAS.csv> .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4925c5_HUNT_Significant_GWAS.csv> a prov:Entity ;
+	rdfs:label "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4925c5_HUNT_Significant_GWAS.csv" ;
+	prov:value "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4925c5_HUNT_Significant_GWAS.csv" .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4925c5_HUNT_Significant_GWAS.csv> .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4815c5_ADNI1_Significant_GWAS.csv> a prov:Entity ;
+	rdfs:label "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4815c5_ADNI1_Significant_GWAS.csv" ;
+	prov:value "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4815c5_ADNI1_Significant_GWAS.csv" .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4815c5_ADNI1_Significant_GWAS.csv> .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA3f15c5_PPMI_Significant_GWAS.csv> a prov:Entity ;
+	rdfs:label "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA3f15c5_PPMI_Significant_GWAS.csv" ;
+	prov:value "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA3f15c5_PPMI_Significant_GWAS.csv" .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA3f15c5_PPMI_Significant_GWAS.csv> .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4c15c5_TCD-NUIG_Significant_GWAS.csv> a prov:Entity ;
+	rdfs:label "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4c15c5_TCD-NUIG_Significant_GWAS.csv" ;
+	prov:value "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4c15c5_TCD-NUIG_Significant_GWAS.csv" .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4c15c5_TCD-NUIG_Significant_GWAS.csv> .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4bb5c5_SHIP_Significant_GWAS.csv> a prov:Entity ;
+	rdfs:label "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4bb5c5_SHIP_Significant_GWAS.csv" ;
+	prov:value "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4bb5c5_SHIP_Significant_GWAS.csv" .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4bb5c5_SHIP_Significant_GWAS.csv> .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4ae5c5_UiO2016_Significant_GWAS.csv> a prov:Entity ;
+	rdfs:label "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4ae5c5_UiO2016_Significant_GWAS.csv" ;
+	prov:value "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4ae5c5_UiO2016_Significant_GWAS.csv" .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4ae5c5_UiO2016_Significant_GWAS.csv> .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4aa5c5_BETULA_Significant_GWAS.csv> a prov:Entity ;
+	rdfs:label "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4aa5c5_BETULA_Significant_GWAS.csv" ;
+	prov:value "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4aa5c5_BETULA_Significant_GWAS.csv" .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4aa5c5_BETULA_Significant_GWAS.csv> .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4865c5_PDNZ_Significant_GWAS.csv> a prov:Entity ;
+	rdfs:label "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4865c5_PDNZ_Significant_GWAS.csv" ;
+	prov:value "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4865c5_PDNZ_Significant_GWAS.csv" .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4865c5_PDNZ_Significant_GWAS.csv> .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA47a5c5_PING_Significant_GWAS.csv> a prov:Entity ;
+	rdfs:label "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA47a5c5_PING_Significant_GWAS.csv" ;
+	prov:value "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA47a5c5_PING_Significant_GWAS.csv" .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA47a5c5_PING_Significant_GWAS.csv> .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4925c5_GIG_Significant_GWAS.csv> a prov:Entity ;
+	rdfs:label "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4925c5_GIG_Significant_GWAS.csv" ;
+	prov:value "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4925c5_GIG_Significant_GWAS.csv" .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4925c5_GIG_Significant_GWAS.csv> .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA5305c4_BIG-PsychChip_Significant_GWAS.csv> a prov:Entity ;
+	rdfs:label "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA5305c4_BIG-PsychChip_Significant_GWAS.csv" ;
+	prov:value "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA5305c4_BIG-PsychChip_Significant_GWAS.csv" .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA5305c4_BIG-PsychChip_Significant_GWAS.csv> .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4935c5_GSP_Significant_GWAS.csv> a prov:Entity ;
+	rdfs:label "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4935c5_GSP_Significant_GWAS.csv" ;
+	prov:value "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4935c5_GSP_Significant_GWAS.csv" .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4935c5_GSP_Significant_GWAS.csv> .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4ee5c5_SHIP-Trend_Significant_GWAS.csv> a prov:Entity ;
+	rdfs:label "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4ee5c5_SHIP-Trend_Significant_GWAS.csv" ;
+	prov:value "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4ee5c5_SHIP-Trend_Significant_GWAS.csv" .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4ee5c5_SHIP-Trend_Significant_GWAS.csv> .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4a85c5_ADNI2GO_Significant_GWAS.csv> a prov:Entity ;
+	rdfs:label "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4a85c5_ADNI2GO_Significant_GWAS.csv" ;
+	prov:value "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4a85c5_ADNI2GO_Significant_GWAS.csv" .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4a85c5_ADNI2GO_Significant_GWAS.csv> .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4ad5c5_BrainScale_Significant_GWAS.csv> a prov:Entity ;
+	rdfs:label "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4ad5c5_BrainScale_Significant_GWAS.csv" ;
+	prov:value "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4ad5c5_BrainScale_Significant_GWAS.csv" .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4ad5c5_BrainScale_Significant_GWAS.csv> .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4945c5_BIG_Significant_GWAS.csv> a prov:Entity ;
+	rdfs:label "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4945c5_BIG_Significant_GWAS.csv" ;
+	prov:value "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4945c5_BIG_Significant_GWAS.csv" .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4945c5_BIG_Significant_GWAS.csv> .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4945c5_TOP3T_Significant_GWAS.csv> a prov:Entity ;
+	rdfs:label "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4945c5_TOP3T_Significant_GWAS.csv" ;
+	prov:value "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4945c5_TOP3T_Significant_GWAS.csv" .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4945c5_TOP3T_Significant_GWAS.csv> .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4b85c5_IMAGEN_Significant_GWAS.csv> a prov:Entity ;
+	rdfs:label "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4b85c5_IMAGEN_Significant_GWAS.csv" ;
+	prov:value "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4b85c5_IMAGEN_Significant_GWAS.csv" .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4b85c5_IMAGEN_Significant_GWAS.csv> .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4fe5c4_1000BRAINS_Significant_GWAS.csv> a prov:Entity ;
+	rdfs:label "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4fe5c4_1000BRAINS_Significant_GWAS.csv" ;
+	prov:value "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4fe5c4_1000BRAINS_Significant_GWAS.csv" .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4fe5c4_1000BRAINS_Significant_GWAS.csv> .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4825c5_MPRC_Significant_GWAS.csv> a prov:Entity ;
+	rdfs:label "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4825c5_MPRC_Significant_GWAS.csv" ;
+	prov:value "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4825c5_MPRC_Significant_GWAS.csv" .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4825c5_MPRC_Significant_GWAS.csv> .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4835c5_NESDA_Significant_GWAS.csv> a prov:Entity ;
+	rdfs:label "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4835c5_NESDA_Significant_GWAS.csv" ;
+	prov:value "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4835c5_NESDA_Significant_GWAS.csv" .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4835c5_NESDA_Significant_GWAS.csv> .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4865c5_TOP_Significant_GWAS.csv> a prov:Entity ;
+	rdfs:label "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4865c5_TOP_Significant_GWAS.csv" ;
+	prov:value "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4865c5_TOP_Significant_GWAS.csv" .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4865c5_TOP_Significant_GWAS.csv> .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4335c5_UMCU_Significant_GWAS.csv> a prov:Entity ;
+	rdfs:label "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4335c5_UMCU_Significant_GWAS.csv" ;
+	prov:value "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4335c5_UMCU_Significant_GWAS.csv" .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4335c5_UMCU_Significant_GWAS.csv> .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA46d5c5_NTR_Significant_GWAS.csv> a prov:Entity ;
+	rdfs:label "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA46d5c5_NTR_Significant_GWAS.csv" ;
+	prov:value "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA46d5c5_NTR_Significant_GWAS.csv" .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA46d5c5_NTR_Significant_GWAS.csv> .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4a85c5_SYS_Significant_GWAS.csv> a prov:Entity ;
+	rdfs:label "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4a85c5_SYS_Significant_GWAS.csv" ;
+	prov:value "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4a85c5_SYS_Significant_GWAS.csv" .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4a85c5_SYS_Significant_GWAS.csv> .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4ba5c5_SydneyMAS_Significant_GWAS.csv> a prov:Entity ;
+	rdfs:label "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4ba5c5_SydneyMAS_Significant_GWAS.csv" ;
+	prov:value "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4ba5c5_SydneyMAS_Significant_GWAS.csv" .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4ba5c5_SydneyMAS_Significant_GWAS.csv> .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4b15c5_FOR2107_Significant_GWAS.csv> a prov:Entity ;
+	rdfs:label "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4b15c5_FOR2107_Significant_GWAS.csv" ;
+	prov:value "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4b15c5_FOR2107_Significant_GWAS.csv" .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4b15c5_FOR2107_Significant_GWAS.csv> .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4905c5_MooDS_Significant_GWAS.csv> a prov:Entity ;
+	rdfs:label "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4905c5_MooDS_Significant_GWAS.csv" ;
+	prov:value "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4905c5_MooDS_Significant_GWAS.csv" .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4905c5_MooDS_Significant_GWAS.csv> .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4865c5_NCNG_Significant_GWAS.csv> a prov:Entity ;
+	rdfs:label "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4865c5_NCNG_Significant_GWAS.csv" ;
+	prov:value "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4865c5_NCNG_Significant_GWAS.csv" .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4865c5_NCNG_Significant_GWAS.csv> .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4835c5_MCIC_Significant_GWAS.csv> a prov:Entity ;
+	rdfs:label "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4835c5_MCIC_Significant_GWAS.csv" ;
+	prov:value "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4835c5_MCIC_Significant_GWAS.csv" .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4835c5_MCIC_Significant_GWAS.csv> .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4c65c5_EPIGEN_Significant_GWAS.csv> a prov:Entity ;
+	rdfs:label "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4c65c5_EPIGEN_Significant_GWAS.csv" ;
+	prov:value "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4c65c5_EPIGEN_Significant_GWAS.csv" .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4c65c5_EPIGEN_Significant_GWAS.csv> .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4bf5c6_ALSPACa_Significant_GWAS.csv> a prov:Entity ;
+	rdfs:label "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4bf5c6_ALSPACa_Significant_GWAS.csv" ;
+	prov:value "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4bf5c6_ALSPACa_Significant_GWAS.csv" .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4bf5c6_ALSPACa_Significant_GWAS.csv> .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4bf5c5_ImpACT_Significant_GWAS.csv> a prov:Entity ;
+	rdfs:label "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4bf5c5_ImpACT_Significant_GWAS.csv" ;
+	prov:value "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4bf5c5_ImpACT_Significant_GWAS.csv" .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4bf5c5_ImpACT_Significant_GWAS.csv> .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4c45c5_BONN_Significant_GWAS.csv> a prov:Entity ;
+	rdfs:label "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4c45c5_BONN_Significant_GWAS.csv" ;
+	prov:value "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4c45c5_BONN_Significant_GWAS.csv" .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4c45c5_BONN_Significant_GWAS.csv> .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA48a5c5_LIBD_Significant_GWAS.csv> a prov:Entity ;
+	rdfs:label "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA48a5c5_LIBD_Significant_GWAS.csv" ;
+	prov:value "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA48a5c5_LIBD_Significant_GWAS.csv" .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA48a5c5_LIBD_Significant_GWAS.csv> .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4945c5_MUNSTER_Significant_GWAS.csv> a prov:Entity ;
+	rdfs:label "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4945c5_MUNSTER_Significant_GWAS.csv" ;
+	prov:value "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4945c5_MUNSTER_Significant_GWAS.csv" .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4945c5_MUNSTER_Significant_GWAS.csv> .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4a65c5_PAFIP_Significant_GWAS.csv> a prov:Entity ;
+	rdfs:label "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4a65c5_PAFIP_Significant_GWAS.csv" ;
+	prov:value "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4a65c5_PAFIP_Significant_GWAS.csv" .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4a65c5_PAFIP_Significant_GWAS.csv> .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4aa5c5_UiO2017_Significant_GWAS.csv> a prov:Entity ;
+	rdfs:label "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4aa5c5_UiO2017_Significant_GWAS.csv" ;
+	prov:value "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4aa5c5_UiO2017_Significant_GWAS.csv" .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4aa5c5_UiO2017_Significant_GWAS.csv> .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4b15c5_HUBIN_Significant_GWAS.csv> a prov:Entity ;
+	rdfs:label "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4b15c5_HUBIN_Significant_GWAS.csv" ;
+	prov:value "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4b15c5_HUBIN_Significant_GWAS.csv" .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4b15c5_HUBIN_Significant_GWAS.csv> .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA47a5c5_ASRB_Significant_GWAS.csv> a prov:Entity ;
+	rdfs:label "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA47a5c5_ASRB_Significant_GWAS.csv" ;
+	prov:value "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA47a5c5_ASRB_Significant_GWAS.csv" .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA47a5c5_ASRB_Significant_GWAS.csv> .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4b15c5_DNS-V4_Significant_GWAS.csv> a prov:Entity ;
+	rdfs:label "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4b15c5_DNS-V4_Significant_GWAS.csv" ;
+	prov:value "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4b15c5_DNS-V4_Significant_GWAS.csv" .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4b15c5_DNS-V4_Significant_GWAS.csv> .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4775c5_MPIP_Significant_GWAS.csv> a prov:Entity ;
+	rdfs:label "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4775c5_MPIP_Significant_GWAS.csv" ;
+	prov:value "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4775c5_MPIP_Significant_GWAS.csv" .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4775c5_MPIP_Significant_GWAS.csv> .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4c95c5_UKBB_Significant_GWAS.csv> a prov:Entity ;
+	rdfs:label "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4c95c5_UKBB_Significant_GWAS.csv" ;
+	prov:value "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4c95c5_UKBB_Significant_GWAS.csv" .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4c95c5_UKBB_Significant_GWAS.csv> ;
+	a prov:Entity ;
+	rdfs:label "Stores the run inputs for the Meta Workflow" ;
+	prov:wasGeneratedBy provNeuroScience:executeDataQuery .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowVariablesBinding/demographic_value> a prov:Entity ;
+	rdfs:label "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#demographic_value" ;
+	prov:value "[0.446451612903225806451613, 0.40680272108843537414966, 0.457627118644067796610169, 0, 0.592274678111587982832618, 0.543408360128617363344051, 0.583050847457627118644068, 0.476851851851851851851852, 0, 0.541322314049586776859504, 0.718518518518518518518519, 0.518518518518518518518519, 0.565445026178010471204188, 0.584269662921348314606742, 0.603821656050955414012739, 0.593639575971731448763251, 0.567873303167420814479638, 0.31073446327683615819209, 0.527397260273972602739726, 0.533873343151693667157585, 0.588235294117647058823529, 0.471854304635761589403974, 0.442148760330578512396694, 0.345679012345679012345679, 0.45744680851063829787234, 0.578181818181818181818182, 0.52971576227390180878553, 0.569543147208121827411168, 0.679127725856697819314642, 0.673228346456692913385827, 0.32380952380952380952381, 0.611801242236024844720497, 0.658333333333333333333333, 0.375, 0.341463414634146341463415, 0.448071216617210682492582, 0.330917874396135265700483, 0.64759036144578313253012, 0.517889087656529516994633, 0.560044893378226711560045, 0.554655870445344129554656, 0.527761194029850746268657, 0.5625, 0.50099009900990099009901, 0.4525, 0.427947598253275109170306, 0.561688311688311688311688, 0.521769314688088862441734, 0.534383954154727793696275]" .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowVariablesBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowVariablesBinding/demographic_value> .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowVariablesBinding/area> a prov:Entity ;
+	rdfs:label "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#area" ;
 	prov:value "Precentral" .
 
-<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-GKMsFE2EfTt5/metaWorkflowVariablesBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-GKMsFE2EfTt5/metaWorkflowVariablesBinding/area> ;
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowVariablesBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowVariablesBinding/area> .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowVariablesBinding/demographic> a prov:Entity ;
+	rdfs:label "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#demographic" ;
+	prov:value "HasNumberOfFemaleSex (E)" .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowVariablesBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowVariablesBinding/demographic> .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowVariablesBinding/trait> a prov:Entity ;
+	rdfs:label "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#trait" ;
+	prov:value "SA" .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowVariablesBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowVariablesBinding/trait> .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowVariablesBinding/cohortData> a prov:Entity ;
+	rdfs:label "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#cohortData" ;
+	prov:value "[SHA4fe5c4_1000BRAINS_Significant_GWAS.csv, SHA4815c5_ADNI1_Significant_GWAS.csv, SHA4a85c5_ADNI2GO_Significant_GWAS.csv, SHA4bf5c6_ALSPACa_Significant_GWAS.csv, SHA47a5c5_ASRB_Significant_GWAS.csv, SHA4aa5c5_BETULA_Significant_GWAS.csv, SHA4945c5_BIG_Significant_GWAS.csv, SHA5305c4_BIG-PsychChip_Significant_GWAS.csv, SHA4c45c5_BONN_Significant_GWAS.csv, SHA4ad5c5_BrainScale_Significant_GWAS.csv, SHA4ca5c5_CARDIFF_Significant_GWAS.csv, SHA4a75c5_DNS-V3_Significant_GWAS.csv, SHA4b15c5_DNS-V4_Significant_GWAS.csv, SHA4c65c5_EPIGEN_Significant_GWAS.csv, SHA4b15c5_FOR2107_Significant_GWAS.csv, SHA4925c5_GIG_Significant_GWAS.csv, SHA4935c5_GSP_Significant_GWAS.csv, SHA4b15c5_HUBIN_Significant_GWAS.csv, SHA4925c5_HUNT_Significant_GWAS.csv, SHA4b85c5_IMAGEN_Significant_GWAS.csv, SHA4bf5c5_ImpACT_Significant_GWAS.csv, SHA4b45c5_LBC1936_Significant_GWAS.csv, SHA48a5c5_LIBD_Significant_GWAS.csv, SHA4835c5_MCIC_Significant_GWAS.csv, SHA4905c5_MooDS_Significant_GWAS.csv, SHA4775c5_MPIP_Significant_GWAS.csv, SHA4825c5_MPRC_Significant_GWAS.csv, SHA4945c5_MUNSTER_Significant_GWAS.csv, SHA4865c5_NCNG_Significant_GWAS.csv, SHA4835c5_NESDA_Significant_GWAS.csv, SHA4f55c5_NeuroIMAGE_Significant_GWAS.csv, SHA46d5c5_NTR_Significant_GWAS.csv, SHA4765c5_OATS_Significant_GWAS.csv, SHA4a65c5_PAFIP_Significant_GWAS.csv, SHA4865c5_PDNZ_Significant_GWAS.csv, SHA47a5c5_PING_Significant_GWAS.csv, SHA3f15c5_PPMI_Significant_GWAS.csv, SHA4875c5_QTIM_Significant_GWAS.csv, SHA4bb5c5_SHIP_Significant_GWAS.csv, SHA4ee5c5_SHIP-Trend_Significant_GWAS.csv, SHA4ba5c5_SydneyMAS_Significant_GWAS.csv, SHA4a85c5_SYS_Significant_GWAS.csv, SHA4c15c5_TCD-NUIG_Significant_GWAS.csv, SHA4865c5_TOP_Significant_GWAS.csv, SHA4945c5_TOP3T_Significant_GWAS.csv, SHA4ae5c5_UiO2016_Significant_GWAS.csv, SHA4aa5c5_UiO2017_Significant_GWAS.csv, SHA4c95c5_UKBB_Significant_GWAS.csv, SHA4335c5_UMCU_Significant_GWAS.csv]" .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowVariablesBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowVariablesBinding/cohortData> .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowVariablesBinding/snp> a prov:Entity ;
+	rdfs:label "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#snp" ;
+	prov:value "rs1080066" .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowVariablesBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/metaWorkflowVariablesBinding/snp> ;
 	a prov:Entity ;
 	rdfs:label "Stores the run parameters for the Meta Workflow" ;
 	prov:wasGeneratedBy provNeuroScience:executeDataQuery ;
@@ -396,9 +693,13 @@ provNeuroScience:analyzeWorkflowRun a prov:Activity ;
 provNeuroScience:analysis a prov:Entity ;
 	rdfs:label "Analysis" .
 
-provNeuroScienceTLOI:Meta-Regression--8c91ba13-954b-4096-91e1-eb471838876e prov:used provNeuroScience:analyzeWorkflowRun .
+provNeuroScienceTLOI:Meta-Regression--b32140ce-e9e1-4a53-a16f-a0fef3741de2 prov:used provNeuroScience:analyzeWorkflowRun .
 
 provNeuroScience:analysis prov:wasGeneratedBy provNeuroScience:analyzeWorkflowRun .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-cUmY0H6u20gu/ConfidenceReport> a prov:Entity , "http://disk-project.org/ontology/disk#ConfidenceReport"^^xsd:anyURI ;
+	rdfs:label "Confidence Report" ;
+	prov:value "0.737067579824064" .
 
 provNeuroScienceTLOI:createRun a prov:Activity ;
 	rdfs:label "Create run" .
