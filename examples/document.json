@@ -69,37 +69,37 @@
       "hadMember": {
         "_:hM17": {
           "prov:entity": [
-            "snp"
+            "area"
           ],
           "prov:collection": "metaWorkflowVariablesBinding"
         },
         "_:hM15": {
           "prov:entity": [
-            "demographic_value"
+            "cohortData"
           ],
           "prov:collection": "metaWorkflowVariablesBinding"
         },
         "_:hM16": {
           "prov:entity": [
-            "cohortData"
+            "snp"
           ],
           "prov:collection": "metaWorkflowVariablesBinding"
         },
         "_:hM13": {
           "prov:entity": [
-            "area"
+            "demographic_value"
           ],
           "prov:collection": "metaWorkflowVariablesBinding"
         },
         "_:hM14": {
           "prov:entity": [
-            "demographic"
+            "trait"
           ],
           "prov:collection": "metaWorkflowVariablesBinding"
         },
         "_:hM12": {
           "prov:entity": [
-            "trait"
+            "demographic"
           ],
           "prov:collection": "metaWorkflowVariablesBinding"
         }
@@ -342,7 +342,7 @@
           "prov:usedEntity": "EnigmaQuestion5/questionVariablesBinding"
         },
         "_:wDF1": {
-          "prov:generatedEntity": "provNeuroScienceHypothesis:Hypothesis-geEzxPNJ9c8a",
+          "prov:generatedEntity": "provNeuroScienceHypothesis:Hypothesis-4CGdVLyttD07",
           "prov:usedEntity": "EnigmaQuestion5"
         }
       },
@@ -398,42 +398,42 @@
       "hadMember": {
         "_:hM7": {
           "prov:entity": [
-            "Hypothesis-geEzxPNJ9c8a/hypothesisVariablesBinding/EnigmaQuestion3V4"
+            "Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding/EnigmaQuestion3V3"
           ],
-          "prov:collection": "Hypothesis-geEzxPNJ9c8a/hypothesisVariablesBinding"
+          "prov:collection": "Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding"
         },
         "_:hM10": {
           "prov:entity": [
-            "Hypothesis-geEzxPNJ9c8a/hypothesisVariablesBinding/EnigmaQuestion3V3"
+            "Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding/EnigmaQuestion3V4"
           ],
-          "prov:collection": "Hypothesis-geEzxPNJ9c8a/hypothesisVariablesBinding"
+          "prov:collection": "Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding"
         },
         "_:hM8": {
           "prov:entity": [
-            "Hypothesis-geEzxPNJ9c8a/hypothesisVariablesBinding/EnigmaQuestion3V2"
+            "Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding/EnigmaQuestion4v1"
           ],
-          "prov:collection": "Hypothesis-geEzxPNJ9c8a/hypothesisVariablesBinding"
+          "prov:collection": "Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding"
         },
         "_:hM11": {
           "prov:entity": [
-            "Hypothesis-geEzxPNJ9c8a/hypothesisVariablesBinding/EnigmaQuestion4v1"
+            "Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding/EnigmaQuestion3V2"
           ],
-          "prov:collection": "Hypothesis-geEzxPNJ9c8a/hypothesisVariablesBinding"
+          "prov:collection": "Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding"
         },
         "_:hM9": {
           "prov:entity": [
-            "Hypothesis-geEzxPNJ9c8a/hypothesisVariablesBinding/EnigmaQuestion3V1"
+            "Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding/EnigmaQuestion3V1"
           ],
-          "prov:collection": "Hypothesis-geEzxPNJ9c8a/hypothesisVariablesBinding"
+          "prov:collection": "Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding"
         }
       },
       "wasGeneratedBy": {
         "_:wGB4": {
-          "prov:entity": "Hypothesis-geEzxPNJ9c8a",
+          "prov:entity": "Hypothesis-4CGdVLyttD07",
           "prov:activity": "provNeuroScience:createHypothesis"
         },
         "_:wGB5": {
-          "prov:entity": "Hypothesis-geEzxPNJ9c8a/hypothesisVariablesBinding",
+          "prov:entity": "Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding",
           "prov:activity": "provNeuroScience:createHypothesis"
         }
       },
@@ -474,59 +474,59 @@
       },
       "wasDerivedFrom": {
         "_:wDF3": {
-          "prov:generatedEntity": "Hypothesis-geEzxPNJ9c8a/hypothesisVariablesBinding",
+          "prov:generatedEntity": "Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding",
           "prov:usedEntity": "provNeuroScienceQuestion:EnigmaQuestion5/questionVariablesBinding"
         },
         "_:wDF4": {
-          "prov:generatedEntity": "Hypothesis-geEzxPNJ9c8a/hypothesisVariablesBinding/EnigmaQuestion3V4",
-          "prov:usedEntity": "provNeuroScienceQuestion:EnigmaQuestion3V4"
+          "prov:generatedEntity": "Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding/EnigmaQuestion3V3",
+          "prov:usedEntity": "provNeuroScienceQuestion:EnigmaQuestion3V3"
         },
         "_:wDF5": {
-          "prov:generatedEntity": "Hypothesis-geEzxPNJ9c8a/hypothesisVariablesBinding/EnigmaQuestion3V2",
-          "prov:usedEntity": "provNeuroScienceQuestion:EnigmaQuestion3V2"
+          "prov:generatedEntity": "Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding/EnigmaQuestion4v1",
+          "prov:usedEntity": "provNeuroScienceQuestion:EnigmaQuestion4v1"
         },
         "_:wDF6": {
-          "prov:generatedEntity": "Hypothesis-geEzxPNJ9c8a/hypothesisVariablesBinding/EnigmaQuestion3V1",
+          "prov:generatedEntity": "Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding/EnigmaQuestion3V1",
           "prov:usedEntity": "provNeuroScienceQuestion:EnigmaQuestion3V1"
         },
         "_:wDF7": {
-          "prov:generatedEntity": "Hypothesis-geEzxPNJ9c8a/hypothesisVariablesBinding/EnigmaQuestion3V3",
-          "prov:usedEntity": "provNeuroScienceQuestion:EnigmaQuestion3V3"
+          "prov:generatedEntity": "Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding/EnigmaQuestion3V4",
+          "prov:usedEntity": "provNeuroScienceQuestion:EnigmaQuestion3V4"
         },
         "_:wDF8": {
-          "prov:generatedEntity": "Hypothesis-geEzxPNJ9c8a/hypothesisVariablesBinding/EnigmaQuestion4v1",
-          "prov:usedEntity": "provNeuroScienceQuestion:EnigmaQuestion4v1"
+          "prov:generatedEntity": "Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding/EnigmaQuestion3V2",
+          "prov:usedEntity": "provNeuroScienceQuestion:EnigmaQuestion3V2"
         },
         "_:wDF9": {
-          "prov:generatedEntity": "Hypothesis-geEzxPNJ9c8a",
-          "prov:usedEntity": "Hypothesis-geEzxPNJ9c8a/hypothesisVariablesBinding"
+          "prov:generatedEntity": "Hypothesis-4CGdVLyttD07",
+          "prov:usedEntity": "Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding"
         }
       },
       "entity": {
-        "Hypothesis-geEzxPNJ9c8a/hypothesisVariablesBinding/EnigmaQuestion3V3": {
-          "prov:label": "Precentral"
-        },
-        "Hypothesis-geEzxPNJ9c8a/hypothesisVariablesBinding/EnigmaQuestion3V4": {
-          "prov:label": "http://localhost:8080/enigma_dev/Special:URIResolver/Property-3AHasAge_Mean_-28E-29"
-        },
-        "Hypothesis-geEzxPNJ9c8a/hypothesisVariablesBinding/EnigmaQuestion3V1": {
-          "prov:label": "rs1080066"
-        },
-        "Hypothesis-geEzxPNJ9c8a/hypothesisVariablesBinding/EnigmaQuestion3V2": {
-          "prov:label": "SA"
-        },
-        "Hypothesis-geEzxPNJ9c8a/hypothesisVariablesBinding/EnigmaQuestion4v1": {
-          "prov:label": "European"
-        },
-        "Hypothesis-geEzxPNJ9c8a": {
-          "prov:label": "Is the effect size of rs1080066 on Surface Area of Precentral associated with Mean Age for cohorts of European ancestry",
+        "Hypothesis-4CGdVLyttD07": {
+          "prov:label": "Is the effect size of rs1080066 on Surface Area of Precentral associated with Percentage of Females for cohorts of European ancestry",
           "dcterms:created": {
-            "$": "17:46:20 2022-09-28",
+            "$": "17:48:24 2022-09-28",
             "type": "xsd:Name"
           }
         },
-        "Hypothesis-geEzxPNJ9c8a/hypothesisVariablesBinding": {
+        "Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding/EnigmaQuestion4v1": {
+          "prov:label": "European"
+        },
+        "Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding/EnigmaQuestion3V2": {
+          "prov:label": "SA"
+        },
+        "Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding/EnigmaQuestion3V1": {
+          "prov:label": "rs1080066"
+        },
+        "Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding": {
           "prov:label": "Collection of question variables"
+        },
+        "Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding/EnigmaQuestion3V4": {
+          "prov:label": "http://localhost:8080/enigma_dev/Special:URIResolver/Property-3AHasNumberOfFemaleSex_-28E-29"
+        },
+        "Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding/EnigmaQuestion3V3": {
+          "prov:label": "Precentral"
         }
       }
     },
@@ -534,338 +534,338 @@
       "hadMember": {
         "_:hM53": {
           "prov:entity": [
-            "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4bb5c5_SHIP_Significant_GWAS.csv"
+            "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4835c5_MCIC_Significant_GWAS.csv"
           ],
-          "prov:collection": "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding"
+          "prov:collection": "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding"
         },
         "_:hM54": {
           "prov:entity": [
-            "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA47a5c5_ASRB_Significant_GWAS.csv"
+            "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4c65c5_EPIGEN_Significant_GWAS.csv"
           ],
-          "prov:collection": "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding"
+          "prov:collection": "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding"
         },
         "_:hM51": {
           "prov:entity": [
-            "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4a65c5_PAFIP_Significant_GWAS.csv"
+            "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4905c5_MooDS_Significant_GWAS.csv"
           ],
-          "prov:collection": "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding"
+          "prov:collection": "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding"
         },
         "_:hM52": {
           "prov:entity": [
-            "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4835c5_MCIC_Significant_GWAS.csv"
+            "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4865c5_NCNG_Significant_GWAS.csv"
           ],
-          "prov:collection": "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding"
+          "prov:collection": "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding"
         },
         "_:hM50": {
           "prov:entity": [
-            "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4775c5_MPIP_Significant_GWAS.csv"
+            "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4b15c5_FOR2107_Significant_GWAS.csv"
           ],
-          "prov:collection": "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding"
+          "prov:collection": "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding"
         },
         "_:hM48": {
           "prov:entity": [
-            "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4c95c5_UKBB_Significant_GWAS.csv"
+            "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4a85c5_SYS_Significant_GWAS.csv"
           ],
-          "prov:collection": "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding"
+          "prov:collection": "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding"
         },
         "_:hM49": {
           "prov:entity": [
-            "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4ba5c5_SydneyMAS_Significant_GWAS.csv"
+            "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4ba5c5_SydneyMAS_Significant_GWAS.csv"
           ],
-          "prov:collection": "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding"
+          "prov:collection": "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding"
         },
         "_:hM46": {
           "prov:entity": [
-            "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4945c5_BIG_Significant_GWAS.csv"
+            "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4335c5_UMCU_Significant_GWAS.csv"
           ],
-          "prov:collection": "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding"
+          "prov:collection": "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding"
         },
         "_:hM47": {
           "prov:entity": [
-            "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4f55c5_NeuroIMAGE_Significant_GWAS.csv"
+            "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA46d5c5_NTR_Significant_GWAS.csv"
           ],
-          "prov:collection": "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding"
+          "prov:collection": "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding"
         },
         "_:hM44": {
           "prov:entity": [
-            "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA5305c4_BIG-PsychChip_Significant_GWAS.csv"
+            "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4835c5_NESDA_Significant_GWAS.csv"
           ],
-          "prov:collection": "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding"
+          "prov:collection": "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding"
         },
         "_:hM45": {
           "prov:entity": [
-            "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4765c5_OATS_Significant_GWAS.csv"
+            "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4865c5_TOP_Significant_GWAS.csv"
           ],
-          "prov:collection": "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding"
+          "prov:collection": "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding"
         },
         "_:hM42": {
           "prov:entity": [
-            "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4c65c5_EPIGEN_Significant_GWAS.csv"
+            "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4fe5c4_1000BRAINS_Significant_GWAS.csv"
           ],
-          "prov:collection": "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding"
+          "prov:collection": "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding"
         },
         "_:hM43": {
           "prov:entity": [
-            "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4ee5c5_SHIP-Trend_Significant_GWAS.csv"
+            "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4825c5_MPRC_Significant_GWAS.csv"
           ],
-          "prov:collection": "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding"
+          "prov:collection": "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding"
         },
         "_:hM40": {
           "prov:entity": [
-            "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4b15c5_DNS-V4_Significant_GWAS.csv"
+            "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4945c5_TOP3T_Significant_GWAS.csv"
           ],
-          "prov:collection": "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding"
+          "prov:collection": "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding"
         },
         "_:hM41": {
           "prov:entity": [
-            "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4ca5c5_CARDIFF_Significant_GWAS.csv"
+            "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4b85c5_IMAGEN_Significant_GWAS.csv"
           ],
-          "prov:collection": "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding"
+          "prov:collection": "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding"
         },
         "_:hM39": {
           "prov:entity": [
-            "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4bf5c6_ALSPACa_Significant_GWAS.csv"
+            "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4945c5_BIG_Significant_GWAS.csv"
           ],
-          "prov:collection": "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding"
+          "prov:collection": "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding"
         },
         "_:hM37": {
           "prov:entity": [
-            "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4865c5_NCNG_Significant_GWAS.csv"
+            "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4a85c5_ADNI2GO_Significant_GWAS.csv"
           ],
-          "prov:collection": "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding"
+          "prov:collection": "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding"
         },
         "_:hM38": {
           "prov:entity": [
-            "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4835c5_NESDA_Significant_GWAS.csv"
+            "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4ad5c5_BrainScale_Significant_GWAS.csv"
           ],
-          "prov:collection": "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding"
+          "prov:collection": "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding"
         },
         "_:hM35": {
           "prov:entity": [
-            "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4335c5_UMCU_Significant_GWAS.csv"
+            "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4935c5_GSP_Significant_GWAS.csv"
           ],
-          "prov:collection": "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding"
+          "prov:collection": "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding"
         },
         "_:hM36": {
           "prov:entity": [
-            "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4865c5_TOP_Significant_GWAS.csv"
+            "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4ee5c5_SHIP-Trend_Significant_GWAS.csv"
           ],
-          "prov:collection": "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding"
+          "prov:collection": "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding"
         },
         "_:hM33": {
           "prov:entity": [
-            "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4aa5c5_UiO2017_Significant_GWAS.csv"
+            "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4925c5_GIG_Significant_GWAS.csv"
           ],
-          "prov:collection": "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding"
+          "prov:collection": "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding"
         },
         "_:hM34": {
           "prov:entity": [
-            "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4bf5c5_ImpACT_Significant_GWAS.csv"
+            "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA5305c4_BIG-PsychChip_Significant_GWAS.csv"
           ],
-          "prov:collection": "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding"
+          "prov:collection": "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding"
         },
         "_:hM31": {
           "prov:entity": [
-            "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4a75c5_DNS-V3_Significant_GWAS.csv"
+            "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4865c5_PDNZ_Significant_GWAS.csv"
           ],
-          "prov:collection": "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding"
+          "prov:collection": "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding"
         },
         "_:hM32": {
           "prov:entity": [
-            "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4865c5_PDNZ_Significant_GWAS.csv"
+            "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA47a5c5_PING_Significant_GWAS.csv"
           ],
-          "prov:collection": "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding"
+          "prov:collection": "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding"
         },
         "_:hM30": {
           "prov:entity": [
-            "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4945c5_MUNSTER_Significant_GWAS.csv"
+            "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4aa5c5_BETULA_Significant_GWAS.csv"
           ],
-          "prov:collection": "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding"
+          "prov:collection": "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding"
         },
         "_:hM71": {
           "prov:entity": [
-            "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowVariablesBinding/snp"
+            "TriggeredLOI-cUmY0H6u20gu/metaWorkflowVariablesBinding/cohortData"
           ],
-          "prov:collection": "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowVariablesBinding"
+          "prov:collection": "TriggeredLOI-cUmY0H6u20gu/metaWorkflowVariablesBinding"
         },
         "_:hM72": {
           "prov:entity": [
-            "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowVariablesBinding/trait"
+            "TriggeredLOI-cUmY0H6u20gu/metaWorkflowVariablesBinding/snp"
           ],
-          "prov:collection": "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowVariablesBinding"
+          "prov:collection": "TriggeredLOI-cUmY0H6u20gu/metaWorkflowVariablesBinding"
         },
         "_:hM70": {
           "prov:entity": [
-            "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowVariablesBinding/cohortData"
+            "TriggeredLOI-cUmY0H6u20gu/metaWorkflowVariablesBinding/trait"
           ],
-          "prov:collection": "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowVariablesBinding"
+          "prov:collection": "TriggeredLOI-cUmY0H6u20gu/metaWorkflowVariablesBinding"
         },
         "_:hM28": {
           "prov:entity": [
-            "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4b15c5_HUBIN_Significant_GWAS.csv"
+            "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4bb5c5_SHIP_Significant_GWAS.csv"
           ],
-          "prov:collection": "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding"
+          "prov:collection": "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding"
         },
         "_:hM29": {
           "prov:entity": [
-            "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4815c5_ADNI1_Significant_GWAS.csv"
+            "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4ae5c5_UiO2016_Significant_GWAS.csv"
           ],
-          "prov:collection": "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding"
+          "prov:collection": "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding"
         },
         "_:hM26": {
           "prov:entity": [
-            "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4aa5c5_BETULA_Significant_GWAS.csv"
+            "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA3f15c5_PPMI_Significant_GWAS.csv"
           ],
-          "prov:collection": "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding"
+          "prov:collection": "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding"
         },
         "_:hM27": {
           "prov:entity": [
-            "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4935c5_GSP_Significant_GWAS.csv"
+            "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4c15c5_TCD-NUIG_Significant_GWAS.csv"
           ],
-          "prov:collection": "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding"
+          "prov:collection": "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding"
         },
         "_:hM24": {
           "prov:entity": [
-            "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4825c5_MPRC_Significant_GWAS.csv"
+            "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4925c5_HUNT_Significant_GWAS.csv"
           ],
-          "prov:collection": "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding"
+          "prov:collection": "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding"
         },
         "_:hM68": {
           "prov:entity": [
-            "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowVariablesBinding/demographic_value"
+            "TriggeredLOI-cUmY0H6u20gu/metaWorkflowVariablesBinding/area"
           ],
-          "prov:collection": "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowVariablesBinding"
+          "prov:collection": "TriggeredLOI-cUmY0H6u20gu/metaWorkflowVariablesBinding"
         },
         "_:hM25": {
           "prov:entity": [
-            "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4c15c5_TCD-NUIG_Significant_GWAS.csv"
+            "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4815c5_ADNI1_Significant_GWAS.csv"
           ],
-          "prov:collection": "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding"
+          "prov:collection": "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding"
         },
         "_:hM69": {
           "prov:entity": [
-            "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowVariablesBinding/demographic"
+            "TriggeredLOI-cUmY0H6u20gu/metaWorkflowVariablesBinding/demographic"
           ],
-          "prov:collection": "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowVariablesBinding"
+          "prov:collection": "TriggeredLOI-cUmY0H6u20gu/metaWorkflowVariablesBinding"
         },
         "_:hM22": {
           "prov:entity": [
-            "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4905c5_MooDS_Significant_GWAS.csv"
+            "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4b45c5_LBC1936_Significant_GWAS.csv"
           ],
-          "prov:collection": "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding"
+          "prov:collection": "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding"
         },
         "_:hM66": {
           "prov:entity": [
-            "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4b15c5_FOR2107_Significant_GWAS.csv"
+            "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4c95c5_UKBB_Significant_GWAS.csv"
           ],
-          "prov:collection": "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding"
+          "prov:collection": "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding"
         },
         "_:hM23": {
           "prov:entity": [
-            "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4945c5_TOP3T_Significant_GWAS.csv"
+            "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4a75c5_DNS-V3_Significant_GWAS.csv"
           ],
-          "prov:collection": "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding"
+          "prov:collection": "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding"
         },
         "_:hM67": {
           "prov:entity": [
-            "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowVariablesBinding/area"
+            "TriggeredLOI-cUmY0H6u20gu/metaWorkflowVariablesBinding/demographic_value"
           ],
-          "prov:collection": "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowVariablesBinding"
+          "prov:collection": "TriggeredLOI-cUmY0H6u20gu/metaWorkflowVariablesBinding"
         },
         "_:hM20": {
           "prov:entity": [
-            "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA48a5c5_LIBD_Significant_GWAS.csv"
+            "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4765c5_OATS_Significant_GWAS.csv"
           ],
-          "prov:collection": "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding"
+          "prov:collection": "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding"
         },
         "_:hM64": {
           "prov:entity": [
-            "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4925c5_GIG_Significant_GWAS.csv"
+            "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4b15c5_DNS-V4_Significant_GWAS.csv"
           ],
-          "prov:collection": "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding"
+          "prov:collection": "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding"
         },
         "_:hM21": {
           "prov:entity": [
-            "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4ad5c5_BrainScale_Significant_GWAS.csv"
+            "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4875c5_QTIM_Significant_GWAS.csv"
           ],
-          "prov:collection": "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding"
+          "prov:collection": "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding"
         },
         "_:hM65": {
           "prov:entity": [
-            "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4a85c5_SYS_Significant_GWAS.csv"
+            "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4775c5_MPIP_Significant_GWAS.csv"
           ],
-          "prov:collection": "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding"
+          "prov:collection": "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding"
         },
         "_:hM62": {
           "prov:entity": [
-            "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4b45c5_LBC1936_Significant_GWAS.csv"
+            "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4b15c5_HUBIN_Significant_GWAS.csv"
           ],
-          "prov:collection": "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding"
+          "prov:collection": "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding"
         },
         "_:hM63": {
           "prov:entity": [
-            "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA47a5c5_PING_Significant_GWAS.csv"
+            "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA47a5c5_ASRB_Significant_GWAS.csv"
           ],
-          "prov:collection": "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding"
+          "prov:collection": "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding"
         },
         "_:hM60": {
           "prov:entity": [
-            "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4875c5_QTIM_Significant_GWAS.csv"
+            "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4a65c5_PAFIP_Significant_GWAS.csv"
           ],
-          "prov:collection": "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding"
+          "prov:collection": "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding"
         },
         "_:hM61": {
           "prov:entity": [
-            "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA3f15c5_PPMI_Significant_GWAS.csv"
+            "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4aa5c5_UiO2017_Significant_GWAS.csv"
           ],
-          "prov:collection": "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding"
+          "prov:collection": "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding"
         },
         "_:hM19": {
           "prov:entity": [
-            "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4a85c5_ADNI2GO_Significant_GWAS.csv"
+            "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4ca5c5_CARDIFF_Significant_GWAS.csv"
           ],
-          "prov:collection": "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding"
+          "prov:collection": "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding"
         },
         "_:hM18": {
           "prov:entity": [
-            "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4b85c5_IMAGEN_Significant_GWAS.csv"
+            "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4f55c5_NeuroIMAGE_Significant_GWAS.csv"
           ],
-          "prov:collection": "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding"
+          "prov:collection": "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding"
         },
         "_:hM59": {
           "prov:entity": [
-            "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4fe5c4_1000BRAINS_Significant_GWAS.csv"
+            "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4945c5_MUNSTER_Significant_GWAS.csv"
           ],
-          "prov:collection": "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding"
+          "prov:collection": "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding"
         },
         "_:hM57": {
           "prov:entity": [
-            "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4c45c5_BONN_Significant_GWAS.csv"
+            "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4c45c5_BONN_Significant_GWAS.csv"
           ],
-          "prov:collection": "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding"
+          "prov:collection": "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding"
         },
         "_:hM58": {
           "prov:entity": [
-            "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4925c5_HUNT_Significant_GWAS.csv"
+            "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA48a5c5_LIBD_Significant_GWAS.csv"
           ],
-          "prov:collection": "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding"
+          "prov:collection": "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding"
         },
         "_:hM55": {
           "prov:entity": [
-            "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4ae5c5_UiO2016_Significant_GWAS.csv"
+            "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4bf5c6_ALSPACa_Significant_GWAS.csv"
           ],
-          "prov:collection": "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding"
+          "prov:collection": "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding"
         },
         "_:hM56": {
           "prov:entity": [
-            "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA46d5c5_NTR_Significant_GWAS.csv"
+            "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4bf5c5_ImpACT_Significant_GWAS.csv"
           ],
-          "prov:collection": "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding"
+          "prov:collection": "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding"
         }
       },
       "wasGeneratedBy": {
         "_:wGB11": {
-          "prov:entity": "Meta-Regression--8c91ba13-954b-4096-91e1-eb471838876e",
+          "prov:entity": "Meta-Regression--b32140ce-e9e1-4a53-a16f-a0fef3741de2",
           "prov:activity": "createRun"
         },
         "_:wGB10": {
@@ -873,7 +873,7 @@
           "prov:activity": "provNeuroScience:transformDataQueryTemplate"
         },
         "_:wGB9": {
-          "prov:entity": "provNeuroScience:TriggeredLOI-GKMsFE2EfTt5",
+          "prov:entity": "provNeuroScience:TriggeredLOI-cUmY0H6u20gu",
           "prov:activity": "provNeuroScience:transformDataQueryTemplate"
         },
         "_:wGB14": {
@@ -881,11 +881,11 @@
           "prov:activity": "provNeuroScience:analyzeWorkflowRun"
         },
         "_:wGB13": {
-          "prov:entity": "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowVariablesBinding",
+          "prov:entity": "TriggeredLOI-cUmY0H6u20gu/metaWorkflowVariablesBinding",
           "prov:activity": "provNeuroScience:executeDataQuery"
         },
         "_:wGB12": {
-          "prov:entity": "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding",
+          "prov:entity": "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding",
           "prov:activity": "provNeuroScience:executeDataQuery"
         }
       },
@@ -926,7 +926,7 @@
           "prov:usedEntity": "provNeuroScienceLOI:data_source"
         },
         "_:wDF11": {
-          "prov:generatedEntity": "provNeuroScience:TriggeredLOI-GKMsFE2EfTt5",
+          "prov:generatedEntity": "provNeuroScience:TriggeredLOI-cUmY0H6u20gu",
           "prov:usedEntity": "provNeuroScience:LOI-R12qZl77tJJ9"
         }
       },
@@ -941,11 +941,11 @@
         },
         "_:u9": {
           "prov:entity": "createRun",
-          "prov:activity": "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowVariablesBinding"
+          "prov:activity": "TriggeredLOI-cUmY0H6u20gu/metaWorkflowVariablesBinding"
         },
         "_:u11": {
           "prov:entity": "provNeuroScience:analyzeWorkflowRun",
-          "prov:activity": "Meta-Regression--8c91ba13-954b-4096-91e1-eb471838876e"
+          "prov:activity": "Meta-Regression--b32140ce-e9e1-4a53-a16f-a0fef3741de2"
         },
         "_:u10": {
           "prov:entity": "createRun",
@@ -953,425 +953,429 @@
         }
       },
       "entity": {
-        "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4bf5c5_ImpACT_Significant_GWAS.csv": {
-          "prov:value": {
-            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4bf5c5_ImpACT_Significant_GWAS.csv",
-            "type": "xsd:string"
-          },
-          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4bf5c5_ImpACT_Significant_GWAS.csv"
-        },
-        "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4865c5_NCNG_Significant_GWAS.csv": {
-          "prov:value": {
-            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4865c5_NCNG_Significant_GWAS.csv",
-            "type": "xsd:string"
-          },
-          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4865c5_NCNG_Significant_GWAS.csv"
-        },
-        "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4c15c5_TCD-NUIG_Significant_GWAS.csv": {
-          "prov:value": {
-            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4c15c5_TCD-NUIG_Significant_GWAS.csv",
-            "type": "xsd:string"
-          },
-          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4c15c5_TCD-NUIG_Significant_GWAS.csv"
-        },
-        "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4945c5_TOP3T_Significant_GWAS.csv": {
-          "prov:value": {
-            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4945c5_TOP3T_Significant_GWAS.csv",
-            "type": "xsd:string"
-          },
-          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4945c5_TOP3T_Significant_GWAS.csv"
-        },
-        "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4ae5c5_UiO2016_Significant_GWAS.csv": {
-          "prov:value": {
-            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4ae5c5_UiO2016_Significant_GWAS.csv",
-            "type": "xsd:string"
-          },
-          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4ae5c5_UiO2016_Significant_GWAS.csv"
-        },
-        "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4905c5_MooDS_Significant_GWAS.csv": {
-          "prov:value": {
-            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4905c5_MooDS_Significant_GWAS.csv",
-            "type": "xsd:string"
-          },
-          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4905c5_MooDS_Significant_GWAS.csv"
-        },
-        "Meta-Regression--8c91ba13-954b-4096-91e1-eb471838876e": {
-          "prov:label": "http://localhost:8080/wings-portal/export/users/admin/Enigma/executions/Meta-Regression--8c91ba13-954b-4096-91e1-eb471838876e.owl#Meta-Regression--8c91ba13-954b-4096-91e1-eb471838876e"
-        },
-        "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4925c5_GIG_Significant_GWAS.csv": {
-          "prov:value": {
-            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4925c5_GIG_Significant_GWAS.csv",
-            "type": "xsd:string"
-          },
-          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4925c5_GIG_Significant_GWAS.csv"
-        },
-        "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA3f15c5_PPMI_Significant_GWAS.csv": {
-          "prov:value": {
-            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA3f15c5_PPMI_Significant_GWAS.csv",
-            "type": "xsd:string"
-          },
-          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA3f15c5_PPMI_Significant_GWAS.csv"
-        },
-        "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4a75c5_DNS-V3_Significant_GWAS.csv": {
-          "prov:value": {
-            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4a75c5_DNS-V3_Significant_GWAS.csv",
-            "type": "xsd:string"
-          },
-          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4a75c5_DNS-V3_Significant_GWAS.csv"
-        },
-        "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4835c5_NESDA_Significant_GWAS.csv": {
-          "prov:value": {
-            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4835c5_NESDA_Significant_GWAS.csv",
-            "type": "xsd:string"
-          },
-          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4835c5_NESDA_Significant_GWAS.csv"
-        },
-        "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding": {
-          "prov:label": "Stores the run inputs for the Meta Workflow"
-        },
-        "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4865c5_PDNZ_Significant_GWAS.csv": {
-          "prov:value": {
-            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4865c5_PDNZ_Significant_GWAS.csv",
-            "type": "xsd:string"
-          },
-          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4865c5_PDNZ_Significant_GWAS.csv"
-        },
-        "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4775c5_MPIP_Significant_GWAS.csv": {
-          "prov:value": {
-            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4775c5_MPIP_Significant_GWAS.csv",
-            "type": "xsd:string"
-          },
-          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4775c5_MPIP_Significant_GWAS.csv"
-        },
-        "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4b45c5_LBC1936_Significant_GWAS.csv": {
-          "prov:value": {
-            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4b45c5_LBC1936_Significant_GWAS.csv",
-            "type": "xsd:string"
-          },
-          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4b45c5_LBC1936_Significant_GWAS.csv"
-        },
-        "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4875c5_QTIM_Significant_GWAS.csv": {
-          "prov:value": {
-            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4875c5_QTIM_Significant_GWAS.csv",
-            "type": "xsd:string"
-          },
-          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4875c5_QTIM_Significant_GWAS.csv"
-        },
-        "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4ba5c5_SydneyMAS_Significant_GWAS.csv": {
-          "prov:value": {
-            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4ba5c5_SydneyMAS_Significant_GWAS.csv",
-            "type": "xsd:string"
-          },
-          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4ba5c5_SydneyMAS_Significant_GWAS.csv"
-        },
-        "wings:Enigma": {
-          "prov:label": "Enigma"
-        },
-        "dataQuery": {
-          "prov:label": "?project a ?projectClass .\n?projectClass rdfs:label \"Project (E)\" .\n?project ?hasCohort ?Cohorts .\n?hasCohort rdfs:label \"HasCohort (E)\" .\n?Cohorts ?hasCohortProj ?CohortProjects .\n?hasCohortProj rdfs:label \"HasCohortProject (E)\" .\n?CohortProjects ?hasProjectResults ?ProjectResults .\n?hasProjectResults rdfs:label \"HasProjectResults (E)\" .\n?ProjectResults ?regionprop \"Precentral\" .\n?regionprop rdfs:label \"BrainRegion\" .\n?ProjectResults ?traitprop \"SA\" .\n?traitprop rdfs:label \"Trait\" .\n?ProjectResults ?snpprop \"rs1080066\" .\n?snpprop rdfs:label \"SNP\" .\n?ProjectResults ?contenturlProp ?CohortData .\n?contenturlProp rdfs:label \"HasContentUrl (E)\" .\n#Ethnic Group\n?Cohorts ?hasEthnicGroupProp \"European\" .\n?hasEthnicGroupProp rdfs:label \"HasEthnicGroup (E)\" .\n#Demographic\noptional {\n?participantsProp rdfs:label \"HasNumberOfParticipants (E)\" .\n?CohortProjects ?participantsProp ?nParticipants\n}\n?CohortProjects \u003chttp://localhost:8080/enigma_dev/Special:URIResolver/Property-3AHasAge_Mean_-28E-29\u003e ?demographicValue .\n\u003chttp://localhost:8080/enigma_dev/Special:URIResolver/Property-3AHasAge_Mean_-28E-29\u003e rdfs:label ?DemographicLabel .\nBIND(\nIF(?DemographicLabel \u003d \"HasNumberOfFemaleSex (E)\" || ?DemographicLabel \u003d \"HasNumberOfMaleSex (E)\" ,\n(xsd:integer(?demographicValue)/xsd:integer(?nParticipants)),\n?demographicValue)\nas ?realDemographic)\n"
-        },
-        "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4865c5_TOP_Significant_GWAS.csv": {
-          "prov:value": {
-            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4865c5_TOP_Significant_GWAS.csv",
-            "type": "xsd:string"
-          },
-          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4865c5_TOP_Significant_GWAS.csv"
-        },
-        "provNeuroScience:analysis": {
-          "prov:label": "Analysis"
-        },
-        "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4aa5c5_UiO2017_Significant_GWAS.csv": {
-          "prov:value": {
-            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4aa5c5_UiO2017_Significant_GWAS.csv",
-            "type": "xsd:string"
-          },
-          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4aa5c5_UiO2017_Significant_GWAS.csv"
-        },
-        "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4b15c5_HUBIN_Significant_GWAS.csv": {
-          "prov:value": {
-            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4b15c5_HUBIN_Significant_GWAS.csv",
-            "type": "xsd:string"
-          },
-          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4b15c5_HUBIN_Significant_GWAS.csv"
-        },
-        "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4a85c5_ADNI2GO_Significant_GWAS.csv": {
-          "prov:value": {
-            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4a85c5_ADNI2GO_Significant_GWAS.csv",
-            "type": "xsd:string"
-          },
-          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4a85c5_ADNI2GO_Significant_GWAS.csv"
-        },
-        "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4925c5_HUNT_Significant_GWAS.csv": {
-          "prov:value": {
-            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4925c5_HUNT_Significant_GWAS.csv",
-            "type": "xsd:string"
-          },
-          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4925c5_HUNT_Significant_GWAS.csv"
-        },
-        "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4f55c5_NeuroIMAGE_Significant_GWAS.csv": {
-          "prov:value": {
-            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4f55c5_NeuroIMAGE_Significant_GWAS.csv",
-            "type": "xsd:string"
-          },
-          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4f55c5_NeuroIMAGE_Significant_GWAS.csv"
-        },
-        "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4335c5_UMCU_Significant_GWAS.csv": {
-          "prov:value": {
-            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4335c5_UMCU_Significant_GWAS.csv",
-            "type": "xsd:string"
-          },
-          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4335c5_UMCU_Significant_GWAS.csv"
-        },
-        "dataSource": {
-          "prov:label": "https://enigma-endpoint.disk.isi.edu/enigma_dev"
-        },
-        "provNeuroScience:TriggeredLOI-GKMsFE2EfTt5/ConfidenceReport": {
-          "prov:type": {
-            "$": "http://disk-project.org/ontology/disk#ConfidenceReport",
-            "type": "xsd:anyURI"
-          },
-          "prov:label": "Confidence Report"
-        },
-        "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowVariablesBinding/area": {
-          "prov:value": {
-            "$": "Precentral",
-            "type": "xsd:string"
-          },
-          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#area"
-        },
-        "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA48a5c5_LIBD_Significant_GWAS.csv": {
-          "prov:value": {
-            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA48a5c5_LIBD_Significant_GWAS.csv",
-            "type": "xsd:string"
-          },
-          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA48a5c5_LIBD_Significant_GWAS.csv"
-        },
-        "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowVariablesBinding/demographic_value": {
-          "prov:value": {
-            "$": "[67.3, 74.8, 72.4, 19.6, 38.5, 62.4, 22.6, 22.5, 38.2, 10, 24.8, 19.7, 19.9, 38.4, 34.4, 24.2, 21.4, 41.9, 58.9, 14.6, 40.8, 72.7, 33.2, 33.7, 33.6, 48.3, 37.2, 35.8, 51.6, 37.5, 17.1, 29.4, 70.5, 28.3, 68.2, 11.8, 61.7, 22.4, 55.8, 50.4, 78.4, 28.3, 29.9, 35.2, 33.2, 31.8, 42.1, 62.8, 33.1]",
-            "type": "xsd:string"
-          },
-          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#demographic_value"
-        },
-        "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4b15c5_DNS-V4_Significant_GWAS.csv": {
-          "prov:value": {
-            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4b15c5_DNS-V4_Significant_GWAS.csv",
-            "type": "xsd:string"
-          },
-          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4b15c5_DNS-V4_Significant_GWAS.csv"
-        },
-        "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4815c5_ADNI1_Significant_GWAS.csv": {
-          "prov:value": {
-            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4815c5_ADNI1_Significant_GWAS.csv",
-            "type": "xsd:string"
-          },
-          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4815c5_ADNI1_Significant_GWAS.csv"
-        },
-        "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4fe5c4_1000BRAINS_Significant_GWAS.csv": {
-          "prov:value": {
-            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4fe5c4_1000BRAINS_Significant_GWAS.csv",
-            "type": "xsd:string"
-          },
-          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4fe5c4_1000BRAINS_Significant_GWAS.csv"
-        },
-        "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4945c5_MUNSTER_Significant_GWAS.csv": {
-          "prov:value": {
-            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4945c5_MUNSTER_Significant_GWAS.csv",
-            "type": "xsd:string"
-          },
-          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4945c5_MUNSTER_Significant_GWAS.csv"
-        },
-        "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA5305c4_BIG-PsychChip_Significant_GWAS.csv": {
-          "prov:value": {
-            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA5305c4_BIG-PsychChip_Significant_GWAS.csv",
-            "type": "xsd:string"
-          },
-          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA5305c4_BIG-PsychChip_Significant_GWAS.csv"
-        },
-        "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4935c5_GSP_Significant_GWAS.csv": {
-          "prov:value": {
-            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4935c5_GSP_Significant_GWAS.csv",
-            "type": "xsd:string"
-          },
-          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4935c5_GSP_Significant_GWAS.csv"
-        },
-        "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4765c5_OATS_Significant_GWAS.csv": {
-          "prov:value": {
-            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4765c5_OATS_Significant_GWAS.csv",
-            "type": "xsd:string"
-          },
-          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4765c5_OATS_Significant_GWAS.csv"
-        },
-        "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4a65c5_PAFIP_Significant_GWAS.csv": {
-          "prov:value": {
-            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4a65c5_PAFIP_Significant_GWAS.csv",
-            "type": "xsd:string"
-          },
-          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4a65c5_PAFIP_Significant_GWAS.csv"
-        },
-        "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowVariablesBinding/trait": {
-          "prov:value": {
-            "$": "SA",
-            "type": "xsd:string"
-          },
-          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#trait"
-        },
-        "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4c45c5_BONN_Significant_GWAS.csv": {
-          "prov:value": {
-            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4c45c5_BONN_Significant_GWAS.csv",
-            "type": "xsd:string"
-          },
-          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4c45c5_BONN_Significant_GWAS.csv"
-        },
-        "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4ee5c5_SHIP-Trend_Significant_GWAS.csv": {
-          "prov:value": {
-            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4ee5c5_SHIP-Trend_Significant_GWAS.csv",
-            "type": "xsd:string"
-          },
-          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4ee5c5_SHIP-Trend_Significant_GWAS.csv"
-        },
-        "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4835c5_MCIC_Significant_GWAS.csv": {
-          "prov:value": {
-            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4835c5_MCIC_Significant_GWAS.csv",
-            "type": "xsd:string"
-          },
-          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4835c5_MCIC_Significant_GWAS.csv"
-        },
-        "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4c65c5_EPIGEN_Significant_GWAS.csv": {
-          "prov:value": {
-            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4c65c5_EPIGEN_Significant_GWAS.csv",
-            "type": "xsd:string"
-          },
-          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4c65c5_EPIGEN_Significant_GWAS.csv"
-        },
-        "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowVariablesBinding": {
-          "prov:label": "Stores the run parameters for the Meta Workflow"
-        },
-        "provNeuroScience:TriggeredLOI-GKMsFE2EfTt5": {
-          "prov:type": {
-            "$": "http://disk-project.org/ontology/disk#TriggeredLineOfInquiry",
-            "type": "xsd:anyURI"
-          },
-          "prov:label": "Triggered: Meta regression with ancestry"
-        },
-        "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4b15c5_FOR2107_Significant_GWAS.csv": {
-          "prov:value": {
-            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4b15c5_FOR2107_Significant_GWAS.csv",
-            "type": "xsd:string"
-          },
-          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4b15c5_FOR2107_Significant_GWAS.csv"
-        },
-        "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4bb5c5_SHIP_Significant_GWAS.csv": {
-          "prov:value": {
-            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4bb5c5_SHIP_Significant_GWAS.csv",
-            "type": "xsd:string"
-          },
-          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4bb5c5_SHIP_Significant_GWAS.csv"
-        },
-        "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4aa5c5_BETULA_Significant_GWAS.csv": {
-          "prov:value": {
-            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4aa5c5_BETULA_Significant_GWAS.csv",
-            "type": "xsd:string"
-          },
-          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4aa5c5_BETULA_Significant_GWAS.csv"
-        },
-        "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA47a5c5_ASRB_Significant_GWAS.csv": {
-          "prov:value": {
-            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA47a5c5_ASRB_Significant_GWAS.csv",
-            "type": "xsd:string"
-          },
-          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA47a5c5_ASRB_Significant_GWAS.csv"
-        },
-        "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA46d5c5_NTR_Significant_GWAS.csv": {
-          "prov:value": {
-            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA46d5c5_NTR_Significant_GWAS.csv",
-            "type": "xsd:string"
-          },
-          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA46d5c5_NTR_Significant_GWAS.csv"
-        },
-        "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4945c5_BIG_Significant_GWAS.csv": {
-          "prov:value": {
-            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4945c5_BIG_Significant_GWAS.csv",
-            "type": "xsd:string"
-          },
-          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4945c5_BIG_Significant_GWAS.csv"
-        },
-        "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowVariablesBinding/snp": {
-          "prov:value": {
-            "$": "rs1080066",
-            "type": "xsd:string"
-          },
-          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#snp"
-        },
-        "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowVariablesBinding/cohortData": {
+        "TriggeredLOI-cUmY0H6u20gu/metaWorkflowVariablesBinding/cohortData": {
           "prov:value": {
             "$": "[SHA4fe5c4_1000BRAINS_Significant_GWAS.csv, SHA4815c5_ADNI1_Significant_GWAS.csv, SHA4a85c5_ADNI2GO_Significant_GWAS.csv, SHA4bf5c6_ALSPACa_Significant_GWAS.csv, SHA47a5c5_ASRB_Significant_GWAS.csv, SHA4aa5c5_BETULA_Significant_GWAS.csv, SHA4945c5_BIG_Significant_GWAS.csv, SHA5305c4_BIG-PsychChip_Significant_GWAS.csv, SHA4c45c5_BONN_Significant_GWAS.csv, SHA4ad5c5_BrainScale_Significant_GWAS.csv, SHA4ca5c5_CARDIFF_Significant_GWAS.csv, SHA4a75c5_DNS-V3_Significant_GWAS.csv, SHA4b15c5_DNS-V4_Significant_GWAS.csv, SHA4c65c5_EPIGEN_Significant_GWAS.csv, SHA4b15c5_FOR2107_Significant_GWAS.csv, SHA4925c5_GIG_Significant_GWAS.csv, SHA4935c5_GSP_Significant_GWAS.csv, SHA4b15c5_HUBIN_Significant_GWAS.csv, SHA4925c5_HUNT_Significant_GWAS.csv, SHA4b85c5_IMAGEN_Significant_GWAS.csv, SHA4bf5c5_ImpACT_Significant_GWAS.csv, SHA4b45c5_LBC1936_Significant_GWAS.csv, SHA48a5c5_LIBD_Significant_GWAS.csv, SHA4835c5_MCIC_Significant_GWAS.csv, SHA4905c5_MooDS_Significant_GWAS.csv, SHA4775c5_MPIP_Significant_GWAS.csv, SHA4825c5_MPRC_Significant_GWAS.csv, SHA4945c5_MUNSTER_Significant_GWAS.csv, SHA4865c5_NCNG_Significant_GWAS.csv, SHA4835c5_NESDA_Significant_GWAS.csv, SHA4f55c5_NeuroIMAGE_Significant_GWAS.csv, SHA46d5c5_NTR_Significant_GWAS.csv, SHA4765c5_OATS_Significant_GWAS.csv, SHA4a65c5_PAFIP_Significant_GWAS.csv, SHA4865c5_PDNZ_Significant_GWAS.csv, SHA47a5c5_PING_Significant_GWAS.csv, SHA3f15c5_PPMI_Significant_GWAS.csv, SHA4875c5_QTIM_Significant_GWAS.csv, SHA4bb5c5_SHIP_Significant_GWAS.csv, SHA4ee5c5_SHIP-Trend_Significant_GWAS.csv, SHA4ba5c5_SydneyMAS_Significant_GWAS.csv, SHA4a85c5_SYS_Significant_GWAS.csv, SHA4c15c5_TCD-NUIG_Significant_GWAS.csv, SHA4865c5_TOP_Significant_GWAS.csv, SHA4945c5_TOP3T_Significant_GWAS.csv, SHA4ae5c5_UiO2016_Significant_GWAS.csv, SHA4aa5c5_UiO2017_Significant_GWAS.csv, SHA4c95c5_UKBB_Significant_GWAS.csv, SHA4335c5_UMCU_Significant_GWAS.csv]",
             "type": "xsd:string"
           },
           "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#cohortData"
         },
-        "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4c95c5_UKBB_Significant_GWAS.csv": {
+        "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA48a5c5_LIBD_Significant_GWAS.csv": {
           "prov:value": {
-            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4c95c5_UKBB_Significant_GWAS.csv",
+            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA48a5c5_LIBD_Significant_GWAS.csv",
             "type": "xsd:string"
           },
-          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4c95c5_UKBB_Significant_GWAS.csv"
+          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA48a5c5_LIBD_Significant_GWAS.csv"
         },
-        "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowVariablesBinding/demographic": {
+        "TriggeredLOI-cUmY0H6u20gu/metaWorkflowVariablesBinding/demographic_value": {
           "prov:value": {
-            "$": "HasAge Mean (E)",
+            "$": "[0.446451612903225806451613, 0.40680272108843537414966, 0.457627118644067796610169, 0, 0.592274678111587982832618, 0.543408360128617363344051, 0.583050847457627118644068, 0.476851851851851851851852, 0, 0.541322314049586776859504, 0.718518518518518518518519, 0.518518518518518518518519, 0.565445026178010471204188, 0.584269662921348314606742, 0.603821656050955414012739, 0.593639575971731448763251, 0.567873303167420814479638, 0.31073446327683615819209, 0.527397260273972602739726, 0.533873343151693667157585, 0.588235294117647058823529, 0.471854304635761589403974, 0.442148760330578512396694, 0.345679012345679012345679, 0.45744680851063829787234, 0.578181818181818181818182, 0.52971576227390180878553, 0.569543147208121827411168, 0.679127725856697819314642, 0.673228346456692913385827, 0.32380952380952380952381, 0.611801242236024844720497, 0.658333333333333333333333, 0.375, 0.341463414634146341463415, 0.448071216617210682492582, 0.330917874396135265700483, 0.64759036144578313253012, 0.517889087656529516994633, 0.560044893378226711560045, 0.554655870445344129554656, 0.527761194029850746268657, 0.5625, 0.50099009900990099009901, 0.4525, 0.427947598253275109170306, 0.561688311688311688311688, 0.521769314688088862441734, 0.534383954154727793696275]",
             "type": "xsd:string"
           },
-          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#demographic"
+          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#demographic_value"
         },
-        "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4bf5c6_ALSPACa_Significant_GWAS.csv": {
+        "provNeuroScience:TriggeredLOI-cUmY0H6u20gu": {
+          "prov:type": {
+            "$": "http://disk-project.org/ontology/disk#TriggeredLineOfInquiry",
+            "type": "xsd:anyURI"
+          },
+          "prov:label": "Triggered: Meta regression with ancestry"
+        },
+        "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4835c5_NESDA_Significant_GWAS.csv": {
           "prov:value": {
-            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4bf5c6_ALSPACa_Significant_GWAS.csv",
+            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4835c5_NESDA_Significant_GWAS.csv",
             "type": "xsd:string"
           },
-          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4bf5c6_ALSPACa_Significant_GWAS.csv"
+          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4835c5_NESDA_Significant_GWAS.csv"
         },
-        "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4ad5c5_BrainScale_Significant_GWAS.csv": {
+        "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4865c5_TOP_Significant_GWAS.csv": {
           "prov:value": {
-            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4ad5c5_BrainScale_Significant_GWAS.csv",
+            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4865c5_TOP_Significant_GWAS.csv",
             "type": "xsd:string"
           },
-          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4ad5c5_BrainScale_Significant_GWAS.csv"
+          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4865c5_TOP_Significant_GWAS.csv"
         },
-        "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4ca5c5_CARDIFF_Significant_GWAS.csv": {
+        "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4fe5c4_1000BRAINS_Significant_GWAS.csv": {
           "prov:value": {
-            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4ca5c5_CARDIFF_Significant_GWAS.csv",
+            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4fe5c4_1000BRAINS_Significant_GWAS.csv",
             "type": "xsd:string"
           },
-          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4ca5c5_CARDIFF_Significant_GWAS.csv"
+          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4fe5c4_1000BRAINS_Significant_GWAS.csv"
         },
-        "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA47a5c5_PING_Significant_GWAS.csv": {
+        "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4c45c5_BONN_Significant_GWAS.csv": {
+          "prov:value": {
+            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4c45c5_BONN_Significant_GWAS.csv",
+            "type": "xsd:string"
+          },
+          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4c45c5_BONN_Significant_GWAS.csv"
+        },
+        "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4f55c5_NeuroIMAGE_Significant_GWAS.csv": {
+          "prov:value": {
+            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4f55c5_NeuroIMAGE_Significant_GWAS.csv",
+            "type": "xsd:string"
+          },
+          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4f55c5_NeuroIMAGE_Significant_GWAS.csv"
+        },
+        "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA47a5c5_PING_Significant_GWAS.csv": {
           "prov:value": {
             "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA47a5c5_PING_Significant_GWAS.csv",
             "type": "xsd:string"
           },
           "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA47a5c5_PING_Significant_GWAS.csv"
         },
-        "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4b85c5_IMAGEN_Significant_GWAS.csv": {
+        "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4765c5_OATS_Significant_GWAS.csv": {
+          "prov:value": {
+            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4765c5_OATS_Significant_GWAS.csv",
+            "type": "xsd:string"
+          },
+          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4765c5_OATS_Significant_GWAS.csv"
+        },
+        "TriggeredLOI-cUmY0H6u20gu/metaWorkflowVariablesBinding/snp": {
+          "prov:value": {
+            "$": "rs1080066",
+            "type": "xsd:string"
+          },
+          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#snp"
+        },
+        "TriggeredLOI-cUmY0H6u20gu/ConfidenceReport": {
+          "prov:value": {
+            "$": "0.737067579824064",
+            "type": "xsd:string"
+          },
+          "prov:type": {
+            "$": "http://disk-project.org/ontology/disk#ConfidenceReport",
+            "type": "xsd:anyURI"
+          },
+          "prov:label": "Confidence Report"
+        },
+        "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4bf5c5_ImpACT_Significant_GWAS.csv": {
+          "prov:value": {
+            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4bf5c5_ImpACT_Significant_GWAS.csv",
+            "type": "xsd:string"
+          },
+          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4bf5c5_ImpACT_Significant_GWAS.csv"
+        },
+        "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4bb5c5_SHIP_Significant_GWAS.csv": {
+          "prov:value": {
+            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4bb5c5_SHIP_Significant_GWAS.csv",
+            "type": "xsd:string"
+          },
+          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4bb5c5_SHIP_Significant_GWAS.csv"
+        },
+        "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4b85c5_IMAGEN_Significant_GWAS.csv": {
           "prov:value": {
             "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4b85c5_IMAGEN_Significant_GWAS.csv",
             "type": "xsd:string"
           },
           "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4b85c5_IMAGEN_Significant_GWAS.csv"
         },
-        "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4a85c5_SYS_Significant_GWAS.csv": {
+        "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4ae5c5_UiO2016_Significant_GWAS.csv": {
+          "prov:value": {
+            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4ae5c5_UiO2016_Significant_GWAS.csv",
+            "type": "xsd:string"
+          },
+          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4ae5c5_UiO2016_Significant_GWAS.csv"
+        },
+        "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4875c5_QTIM_Significant_GWAS.csv": {
+          "prov:value": {
+            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4875c5_QTIM_Significant_GWAS.csv",
+            "type": "xsd:string"
+          },
+          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4875c5_QTIM_Significant_GWAS.csv"
+        },
+        "wings:Enigma": {
+          "prov:label": "Enigma"
+        },
+        "dataQuery": {
+          "prov:label": "?project a ?projectClass .\n?projectClass rdfs:label \"Project (E)\" .\n?project ?hasCohort ?Cohorts .\n?hasCohort rdfs:label \"HasCohort (E)\" .\n?Cohorts ?hasCohortProj ?CohortProjects .\n?hasCohortProj rdfs:label \"HasCohortProject (E)\" .\n?CohortProjects ?hasProjectResults ?ProjectResults .\n?hasProjectResults rdfs:label \"HasProjectResults (E)\" .\n?ProjectResults ?regionprop \"Precentral\" .\n?regionprop rdfs:label \"BrainRegion\" .\n?ProjectResults ?traitprop \"SA\" .\n?traitprop rdfs:label \"Trait\" .\n?ProjectResults ?snpprop \"rs1080066\" .\n?snpprop rdfs:label \"SNP\" .\n?ProjectResults ?contenturlProp ?CohortData .\n?contenturlProp rdfs:label \"HasContentUrl (E)\" .\n#Ethnic Group\n?Cohorts ?hasEthnicGroupProp \"European\" .\n?hasEthnicGroupProp rdfs:label \"HasEthnicGroup (E)\" .\n#Demographic\noptional {\n?participantsProp rdfs:label \"HasNumberOfParticipants (E)\" .\n?CohortProjects ?participantsProp ?nParticipants\n}\n?CohortProjects \u003chttp://localhost:8080/enigma_dev/Special:URIResolver/Property-3AHasNumberOfFemaleSex_-28E-29\u003e ?demographicValue .\n\u003chttp://localhost:8080/enigma_dev/Special:URIResolver/Property-3AHasNumberOfFemaleSex_-28E-29\u003e rdfs:label ?DemographicLabel .\nBIND(\nIF(?DemographicLabel \u003d \"HasNumberOfFemaleSex (E)\" || ?DemographicLabel \u003d \"HasNumberOfMaleSex (E)\" ,\n(xsd:integer(?demographicValue)/xsd:integer(?nParticipants)),\n?demographicValue)\nas ?realDemographic)\n"
+        },
+        "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4a65c5_PAFIP_Significant_GWAS.csv": {
+          "prov:value": {
+            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4a65c5_PAFIP_Significant_GWAS.csv",
+            "type": "xsd:string"
+          },
+          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4a65c5_PAFIP_Significant_GWAS.csv"
+        },
+        "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4925c5_GIG_Significant_GWAS.csv": {
+          "prov:value": {
+            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4925c5_GIG_Significant_GWAS.csv",
+            "type": "xsd:string"
+          },
+          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4925c5_GIG_Significant_GWAS.csv"
+        },
+        "provNeuroScience:analysis": {
+          "prov:label": "Analysis"
+        },
+        "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4775c5_MPIP_Significant_GWAS.csv": {
+          "prov:value": {
+            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4775c5_MPIP_Significant_GWAS.csv",
+            "type": "xsd:string"
+          },
+          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4775c5_MPIP_Significant_GWAS.csv"
+        },
+        "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding": {
+          "prov:label": "Stores the run inputs for the Meta Workflow"
+        },
+        "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4b15c5_FOR2107_Significant_GWAS.csv": {
+          "prov:value": {
+            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4b15c5_FOR2107_Significant_GWAS.csv",
+            "type": "xsd:string"
+          },
+          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4b15c5_FOR2107_Significant_GWAS.csv"
+        },
+        "dataSource": {
+          "prov:label": "https://enigma-endpoint.disk.isi.edu/enigma_dev"
+        },
+        "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4825c5_MPRC_Significant_GWAS.csv": {
+          "prov:value": {
+            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4825c5_MPRC_Significant_GWAS.csv",
+            "type": "xsd:string"
+          },
+          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4825c5_MPRC_Significant_GWAS.csv"
+        },
+        "Meta-Regression--b32140ce-e9e1-4a53-a16f-a0fef3741de2": {
+          "prov:label": "http://localhost:8080/wings-portal/export/users/admin/Enigma/executions/Meta-Regression--b32140ce-e9e1-4a53-a16f-a0fef3741de2.owl#Meta-Regression--b32140ce-e9e1-4a53-a16f-a0fef3741de2"
+        },
+        "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4c65c5_EPIGEN_Significant_GWAS.csv": {
+          "prov:value": {
+            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4c65c5_EPIGEN_Significant_GWAS.csv",
+            "type": "xsd:string"
+          },
+          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4c65c5_EPIGEN_Significant_GWAS.csv"
+        },
+        "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4865c5_NCNG_Significant_GWAS.csv": {
+          "prov:value": {
+            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4865c5_NCNG_Significant_GWAS.csv",
+            "type": "xsd:string"
+          },
+          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4865c5_NCNG_Significant_GWAS.csv"
+        },
+        "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4b15c5_HUBIN_Significant_GWAS.csv": {
+          "prov:value": {
+            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4b15c5_HUBIN_Significant_GWAS.csv",
+            "type": "xsd:string"
+          },
+          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4b15c5_HUBIN_Significant_GWAS.csv"
+        },
+        "TriggeredLOI-cUmY0H6u20gu/metaWorkflowVariablesBinding/demographic": {
+          "prov:value": {
+            "$": "HasNumberOfFemaleSex (E)",
+            "type": "xsd:string"
+          },
+          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#demographic"
+        },
+        "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA5305c4_BIG-PsychChip_Significant_GWAS.csv": {
+          "prov:value": {
+            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA5305c4_BIG-PsychChip_Significant_GWAS.csv",
+            "type": "xsd:string"
+          },
+          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA5305c4_BIG-PsychChip_Significant_GWAS.csv"
+        },
+        "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4335c5_UMCU_Significant_GWAS.csv": {
+          "prov:value": {
+            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4335c5_UMCU_Significant_GWAS.csv",
+            "type": "xsd:string"
+          },
+          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4335c5_UMCU_Significant_GWAS.csv"
+        },
+        "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4945c5_BIG_Significant_GWAS.csv": {
+          "prov:value": {
+            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4945c5_BIG_Significant_GWAS.csv",
+            "type": "xsd:string"
+          },
+          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4945c5_BIG_Significant_GWAS.csv"
+        },
+        "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4a85c5_SYS_Significant_GWAS.csv": {
           "prov:value": {
             "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4a85c5_SYS_Significant_GWAS.csv",
             "type": "xsd:string"
           },
           "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4a85c5_SYS_Significant_GWAS.csv"
         },
-        "TriggeredLOI-GKMsFE2EfTt5/metaWorkflowInputsFileBinding/SHA4825c5_MPRC_Significant_GWAS.csv": {
+        "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4ad5c5_BrainScale_Significant_GWAS.csv": {
           "prov:value": {
-            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4825c5_MPRC_Significant_GWAS.csv",
+            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4ad5c5_BrainScale_Significant_GWAS.csv",
             "type": "xsd:string"
           },
-          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4825c5_MPRC_Significant_GWAS.csv"
+          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4ad5c5_BrainScale_Significant_GWAS.csv"
+        },
+        "TriggeredLOI-cUmY0H6u20gu/metaWorkflowVariablesBinding/area": {
+          "prov:value": {
+            "$": "Precentral",
+            "type": "xsd:string"
+          },
+          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#area"
+        },
+        "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4b15c5_DNS-V4_Significant_GWAS.csv": {
+          "prov:value": {
+            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4b15c5_DNS-V4_Significant_GWAS.csv",
+            "type": "xsd:string"
+          },
+          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4b15c5_DNS-V4_Significant_GWAS.csv"
+        },
+        "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4c95c5_UKBB_Significant_GWAS.csv": {
+          "prov:value": {
+            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4c95c5_UKBB_Significant_GWAS.csv",
+            "type": "xsd:string"
+          },
+          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4c95c5_UKBB_Significant_GWAS.csv"
+        },
+        "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4925c5_HUNT_Significant_GWAS.csv": {
+          "prov:value": {
+            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4925c5_HUNT_Significant_GWAS.csv",
+            "type": "xsd:string"
+          },
+          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4925c5_HUNT_Significant_GWAS.csv"
+        },
+        "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4ca5c5_CARDIFF_Significant_GWAS.csv": {
+          "prov:value": {
+            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4ca5c5_CARDIFF_Significant_GWAS.csv",
+            "type": "xsd:string"
+          },
+          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4ca5c5_CARDIFF_Significant_GWAS.csv"
+        },
+        "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4935c5_GSP_Significant_GWAS.csv": {
+          "prov:value": {
+            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4935c5_GSP_Significant_GWAS.csv",
+            "type": "xsd:string"
+          },
+          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4935c5_GSP_Significant_GWAS.csv"
+        },
+        "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA46d5c5_NTR_Significant_GWAS.csv": {
+          "prov:value": {
+            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA46d5c5_NTR_Significant_GWAS.csv",
+            "type": "xsd:string"
+          },
+          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA46d5c5_NTR_Significant_GWAS.csv"
+        },
+        "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4bf5c6_ALSPACa_Significant_GWAS.csv": {
+          "prov:value": {
+            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4bf5c6_ALSPACa_Significant_GWAS.csv",
+            "type": "xsd:string"
+          },
+          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4bf5c6_ALSPACa_Significant_GWAS.csv"
+        },
+        "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4aa5c5_BETULA_Significant_GWAS.csv": {
+          "prov:value": {
+            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4aa5c5_BETULA_Significant_GWAS.csv",
+            "type": "xsd:string"
+          },
+          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4aa5c5_BETULA_Significant_GWAS.csv"
+        },
+        "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4a85c5_ADNI2GO_Significant_GWAS.csv": {
+          "prov:value": {
+            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4a85c5_ADNI2GO_Significant_GWAS.csv",
+            "type": "xsd:string"
+          },
+          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4a85c5_ADNI2GO_Significant_GWAS.csv"
+        },
+        "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4865c5_PDNZ_Significant_GWAS.csv": {
+          "prov:value": {
+            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4865c5_PDNZ_Significant_GWAS.csv",
+            "type": "xsd:string"
+          },
+          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4865c5_PDNZ_Significant_GWAS.csv"
+        },
+        "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4ee5c5_SHIP-Trend_Significant_GWAS.csv": {
+          "prov:value": {
+            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4ee5c5_SHIP-Trend_Significant_GWAS.csv",
+            "type": "xsd:string"
+          },
+          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4ee5c5_SHIP-Trend_Significant_GWAS.csv"
+        },
+        "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4905c5_MooDS_Significant_GWAS.csv": {
+          "prov:value": {
+            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4905c5_MooDS_Significant_GWAS.csv",
+            "type": "xsd:string"
+          },
+          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4905c5_MooDS_Significant_GWAS.csv"
+        },
+        "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4945c5_MUNSTER_Significant_GWAS.csv": {
+          "prov:value": {
+            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4945c5_MUNSTER_Significant_GWAS.csv",
+            "type": "xsd:string"
+          },
+          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4945c5_MUNSTER_Significant_GWAS.csv"
+        },
+        "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA47a5c5_ASRB_Significant_GWAS.csv": {
+          "prov:value": {
+            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA47a5c5_ASRB_Significant_GWAS.csv",
+            "type": "xsd:string"
+          },
+          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA47a5c5_ASRB_Significant_GWAS.csv"
+        },
+        "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4a75c5_DNS-V3_Significant_GWAS.csv": {
+          "prov:value": {
+            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4a75c5_DNS-V3_Significant_GWAS.csv",
+            "type": "xsd:string"
+          },
+          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4a75c5_DNS-V3_Significant_GWAS.csv"
+        },
+        "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4c15c5_TCD-NUIG_Significant_GWAS.csv": {
+          "prov:value": {
+            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4c15c5_TCD-NUIG_Significant_GWAS.csv",
+            "type": "xsd:string"
+          },
+          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4c15c5_TCD-NUIG_Significant_GWAS.csv"
+        },
+        "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4945c5_TOP3T_Significant_GWAS.csv": {
+          "prov:value": {
+            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4945c5_TOP3T_Significant_GWAS.csv",
+            "type": "xsd:string"
+          },
+          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4945c5_TOP3T_Significant_GWAS.csv"
+        },
+        "TriggeredLOI-cUmY0H6u20gu/metaWorkflowVariablesBinding": {
+          "prov:label": "Stores the run parameters for the Meta Workflow"
+        },
+        "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4815c5_ADNI1_Significant_GWAS.csv": {
+          "prov:value": {
+            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4815c5_ADNI1_Significant_GWAS.csv",
+            "type": "xsd:string"
+          },
+          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4815c5_ADNI1_Significant_GWAS.csv"
+        },
+        "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4835c5_MCIC_Significant_GWAS.csv": {
+          "prov:value": {
+            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4835c5_MCIC_Significant_GWAS.csv",
+            "type": "xsd:string"
+          },
+          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4835c5_MCIC_Significant_GWAS.csv"
+        },
+        "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA3f15c5_PPMI_Significant_GWAS.csv": {
+          "prov:value": {
+            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA3f15c5_PPMI_Significant_GWAS.csv",
+            "type": "xsd:string"
+          },
+          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA3f15c5_PPMI_Significant_GWAS.csv"
+        },
+        "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4ba5c5_SydneyMAS_Significant_GWAS.csv": {
+          "prov:value": {
+            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4ba5c5_SydneyMAS_Significant_GWAS.csv",
+            "type": "xsd:string"
+          },
+          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4ba5c5_SydneyMAS_Significant_GWAS.csv"
+        },
+        "TriggeredLOI-cUmY0H6u20gu/metaWorkflowVariablesBinding/trait": {
+          "prov:value": {
+            "$": "SA",
+            "type": "xsd:string"
+          },
+          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#trait"
+        },
+        "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4aa5c5_UiO2017_Significant_GWAS.csv": {
+          "prov:value": {
+            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4aa5c5_UiO2017_Significant_GWAS.csv",
+            "type": "xsd:string"
+          },
+          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4aa5c5_UiO2017_Significant_GWAS.csv"
+        },
+        "TriggeredLOI-cUmY0H6u20gu/metaWorkflowInputsFileBinding/SHA4b45c5_LBC1936_Significant_GWAS.csv": {
+          "prov:value": {
+            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4b45c5_LBC1936_Significant_GWAS.csv",
+            "type": "xsd:string"
+          },
+          "prov:label": "https://wings.disk.isi.edu/wings-portal/export/users/admin/Enigma/workflows/Meta-Regression.owl#SHA4b45c5_LBC1936_Significant_GWAS.csv"
         }
       }
     }

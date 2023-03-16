@@ -30,7 +30,7 @@ public class OPMM {
         String hypothesisGraphId = "http://localhost:8080/disk-server/admin/hypotheses";
         String loisGraphId = "http://localhost:8080/disk-server/admin/lois";
         String questionGraphId = "https://raw.githubusercontent.com/KnowledgeCaptureAndDiscovery/QuestionOntology/main/development/EnigmaQuestions.xml";
-        String tloiId = "http://localhost:8080/disk-server/admin/tlois/TriggeredLOI-GKMsFE2EfTt5";
+        String tloiId = "http://localhost:8080/disk-server/admin/tlois/TriggeredLOI-cUmY0H6u20gu";
         //String hypothesisId = "http://localhost:8080/disk-server/admin/hypotheses/Hypothesis-geEzxPNJ9c8a";
 
         // Create a new database

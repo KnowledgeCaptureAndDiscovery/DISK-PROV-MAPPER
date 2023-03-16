@@ -369,8 +369,9 @@ public class Mapper {
                 //Confidence report
                 String confidenceReportLocalName = triggerEntity.getId().getLocalPart() + '/'
                         + Constants.DISK_ONTOLOGY_CONFIDENCE_REPORT_LOCALNAME;
-                Entity confidenceReport = pFactory.newEntity(prov.qn(confidenceReportLocalName),
+                Entity confidenceReport = pFactory.newEntity(prov.qn(confidenceReportLocalName, DocumentProv.PROV_NEUROSCIENCE_TLOI_PREFIX),
                                 "Confidence Report");
+
                 //Add other type
                 QualifiedName confidenceReportType = prov.qn(Constants.DISK_ONTOLOGY_CONFIDENCE_REPORT_LOCALNAME, DocumentProv.DISK_ONTOLOGY_PREFIX);
                 confidenceReport.getType().add(pFactory.newType(confidenceReportType.getUri(), pFactory.getName().XSD_ANY_URI));
