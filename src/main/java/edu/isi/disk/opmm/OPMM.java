@@ -1,12 +1,10 @@
 package edu.isi.disk.opmm;
 
 import java.io.File;
-import java.io.FileOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
 
-import org.apache.jena.riot.Lang;
 import org.apache.jena.sparql.core.DatasetGraph;
 
 public class OPMM {
@@ -47,8 +45,12 @@ public class OPMM {
         if (! directory.exists()){
             directory.mkdir();
         }
-        String documentProvFile = directory.getAbsolutePath() + '/' + "document";
-        documentProv.doConversions(documentProv.document, documentProvFile);
+        String documentProvFilePath = directory.getAbsolutePath() + '/' + "document";
+        documentProv.doConversions(documentProv.document, documentProvFilePath);
+
+        //File documentProvFile = new File(documentProvFilePath);
+        //DataNarrative narrative = new DataNarrative(documentProv.document);
+
         //mapper.opmwModel.write(new FileOutputStream(opmwTriples), Lang.TURTLE.getName());
     }
 }
