@@ -1,9 +1,7 @@
 {
   "hadMember": {
     "_:hM1": {
-      "prov:entity": [
-        "wings:Enigma"
-      ],
+      "prov:entity": ["wings:Enigma"],
       "prov:collection": "wings:unknown"
     }
   },
@@ -68,39 +66,27 @@
     "provNeuroScience:loisBundle": {
       "hadMember": {
         "_:hM17": {
-          "prov:entity": [
-            "area"
-          ],
+          "prov:entity": ["area"],
           "prov:collection": "metaWorkflowVariablesBinding"
         },
         "_:hM15": {
-          "prov:entity": [
-            "cohortData"
-          ],
+          "prov:entity": ["cohortData"],
           "prov:collection": "metaWorkflowVariablesBinding"
         },
         "_:hM16": {
-          "prov:entity": [
-            "snp"
-          ],
+          "prov:entity": ["snp"],
           "prov:collection": "metaWorkflowVariablesBinding"
         },
         "_:hM13": {
-          "prov:entity": [
-            "demographic_value"
-          ],
+          "prov:entity": ["demographic_value"],
           "prov:collection": "metaWorkflowVariablesBinding"
         },
         "_:hM14": {
-          "prov:entity": [
-            "trait"
-          ],
+          "prov:entity": ["trait"],
           "prov:collection": "metaWorkflowVariablesBinding"
         },
         "_:hM12": {
-          "prov:entity": [
-            "demographic"
-          ],
+          "prov:entity": ["demographic"],
           "prov:collection": "metaWorkflowVariablesBinding"
         }
       },
@@ -270,33 +256,23 @@
     "provNeuroScience:questionBundle": {
       "hadMember": {
         "_:hM6": {
-          "prov:entity": [
-            "EnigmaQuestion3V1"
-          ],
+          "prov:entity": ["EnigmaQuestion3V1"],
           "prov:collection": "EnigmaQuestion5/questionVariablesBinding"
         },
         "_:hM4": {
-          "prov:entity": [
-            "EnigmaQuestion3V2"
-          ],
+          "prov:entity": ["EnigmaQuestion3V2"],
           "prov:collection": "EnigmaQuestion5/questionVariablesBinding"
         },
         "_:hM5": {
-          "prov:entity": [
-            "EnigmaQuestion3V4"
-          ],
+          "prov:entity": ["EnigmaQuestion3V4"],
           "prov:collection": "EnigmaQuestion5/questionVariablesBinding"
         },
         "_:hM2": {
-          "prov:entity": [
-            "EnigmaQuestion3V3"
-          ],
+          "prov:entity": ["EnigmaQuestion3V3"],
           "prov:collection": "EnigmaQuestion5/questionVariablesBinding"
         },
         "_:hM3": {
-          "prov:entity": [
-            "EnigmaQuestion4v1"
-          ],
+          "prov:entity": ["EnigmaQuestion4v1"],
           "prov:collection": "EnigmaQuestion5/questionVariablesBinding"
         }
       },

@@ -153,7 +153,7 @@ public class Mapper {
                 triggerBundle.setNamespace(triggerDefaultNamespace);
                 prov.document.getStatementOrBundle().add(triggerBundle);
                 return prov;
-                //prov.doConversions(prov.document, file);
+                // prov.doConversions(prov.document, file);
         }
 
         public void map(Model tLoisGraphModel, String triggerURI) throws ParseException {
@@ -294,7 +294,6 @@ public class Mapper {
                                         null);
                         triggerBundle.getStatement().add(runInputBindingMetaWorkflowWasGeneratedBy);
 
-
                         /**
                          * Handle the variables of the Meta Workflow
                          */
@@ -365,18 +364,20 @@ public class Mapper {
 
                 }
 
-
-                //Confidence report
+                // Confidence report
                 String confidenceReportLocalName = triggerEntity.getId().getLocalPart() + '/'
-                        + Constants.DISK_ONTOLOGY_CONFIDENCE_REPORT_LOCALNAME;
-                Entity confidenceReport = pFactory.newEntity(prov.qn(confidenceReportLocalName, DocumentProv.PROV_NEUROSCIENCE_TLOI_PREFIX),
+                                + Constants.DISK_ONTOLOGY_CONFIDENCE_REPORT_LOCALNAME;
+                Entity confidenceReport = pFactory.newEntity(
+                                prov.qn(confidenceReportLocalName, DocumentProv.PROV_NEUROSCIENCE_TLOI_PREFIX),
                                 "Confidence Report");
 
-                //Add other type
-                QualifiedName confidenceReportType = prov.qn(Constants.DISK_ONTOLOGY_CONFIDENCE_REPORT_LOCALNAME, DocumentProv.DISK_ONTOLOGY_PREFIX);
-                confidenceReport.getType().add(pFactory.newType(confidenceReportType.getUri(), pFactory.getName().XSD_ANY_URI));
+                // Add other type
+                QualifiedName confidenceReportType = prov.qn(Constants.DISK_ONTOLOGY_CONFIDENCE_REPORT_LOCALNAME,
+                                DocumentProv.DISK_ONTOLOGY_PREFIX);
+                confidenceReport.getType()
+                                .add(pFactory.newType(confidenceReportType.getUri(), pFactory.getName().XSD_ANY_URI));
                 String confidenceReportValue = getLiteralByProperty(triggerResource, tLoisGraphModel,
-                              Constants.DISK_ONTOLOGY_HAS_CONFIDENCE_LOCALNAME);
+                                Constants.DISK_ONTOLOGY_HAS_CONFIDENCE_LOCALNAME);
                 confidenceReport.setValue(pFactory.newValue(confidenceReportValue));
                 triggerBundle.getStatement().add(confidenceReport);
                 triggerBundle.getStatement().add(createRunActivity);
@@ -474,7 +475,7 @@ public class Mapper {
                 Activity activitySelectQuestion = pFactory.newActivity(
                                 prov.qn("select_question", DocumentProv.DISK_PREFIX),
                                 "Select the question");
-                //add date created to the activity
+                // add date created to the activity
                 activitySelectQuestion.getOther().add(pFactory.newOther(DocumentProv.RDFS_NS, "comment",
                                 DocumentProv.RDFS_PREFIX, dateCreated,
                                 pFactory.getName().XSD_NAME));
@@ -831,7 +832,8 @@ public class Mapper {
                 String dateCreated = getLiteralByProperty(triggerResource, tLoisGraphModel, "dateCreated");
 
                 // Get rdf:type of a resource
-                String triggerResourceType = tLoisGraphModel.getProperty(triggerResource, RDF.type).getObject().asResource().getLocalName();
+                String triggerResourceType = tLoisGraphModel.getProperty(triggerResource, RDF.type).getObject()
+                                .asResource().getLocalName();
                 QualifiedName qn = prov.qn(triggerResourceType, DocumentProv.DISK_ONTOLOGY_PREFIX);
                 QualifiedName rdfType = prov.qn("type", DocumentProv.RDF_PREFIX);
                 Entity triggerEntity = pFactory.newEntity(prov.qn(triggerName), triggerLabel);
@@ -849,8 +851,6 @@ public class Mapper {
                 }
                 return triggerResource;
         }
-
-
 
         private StmtIterator getResourcesByProperty(Resource resource, Model model, String propertyName) {
                 IRI propertyIRI = diskProperties.get(propertyName);
