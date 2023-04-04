@@ -23,34 +23,35 @@ public class OPMM {
         String diskTriples = resourcesDirectory + "sample_data/neuro-disk.nq";
         String opmwTriples = resourcesDirectory + "sample_data/neuro-opmw.nq";
         List<String> localOntologies = new ArrayList<>();
-        localOntologies.add(ontologiesDirectory+ "p-plan.owl");
-        localOntologies.add(ontologiesDirectory+ "opmv.ttl");
+        localOntologies.add(ontologiesDirectory + "p-plan.owl");
+        localOntologies.add(ontologiesDirectory + "opmv.ttl");
 
         String tLoisGraphId = "http://localhost:8080/disk-server/admin/tlois";
         String hypothesisGraphId = "http://localhost:8080/disk-server/admin/hypotheses";
         String loisGraphId = "http://localhost:8080/disk-server/admin/lois";
         String questionGraphId = "https://raw.githubusercontent.com/KnowledgeCaptureAndDiscovery/QuestionOntology/main/development/EnigmaQuestions.xml";
         String tloiId = "http://localhost:8080/disk-server/admin/tlois/TriggeredLOI-cUmY0H6u20gu";
-        //String hypothesisId = "http://localhost:8080/disk-server/admin/hypotheses/Hypothesis-geEzxPNJ9c8a";
 
         // Create a new database
         DatasetGraph diskDataset = ModelUtils.loadDatasetGraph(diskTriples);
 
         // Create the mapper
-        Mapper mapper = new Mapper(diskDataset, tLoisGraphId, hypothesisGraphId, loisGraphId, questionGraphId, localOntologies);
-        DocumentProv documentProv = mapper.transform(tloiId);
-
-        //create directory if it doesn't exist
+        Mapper mapper = new Mapper(diskDataset, tloiId, tLoisGraphId, hypothesisGraphId, loisGraphId,
+                questionGraphId,
+                localOntologies);
+        DocumentProv documentProv = mapper.doc;
+        // create directory if it doesn't exist
         File directory = new File(outputDirectory);
-        if (! directory.exists()){
+        if (!directory.exists()) {
             directory.mkdir();
         }
         String documentProvFilePath = directory.getAbsolutePath() + '/' + "document";
         documentProv.doConversions(documentProv.document, documentProvFilePath);
 
-        //File documentProvFile = new File(documentProvFilePath);
-        //DataNarrative narrative = new DataNarrative(documentProv.document);
+        // File documentProvFile = new File(documentProvFilePath);
+        // DataNarrative narrative = new DataNarrative(documentProv.document);
 
-        //mapper.opmwModel.write(new FileOutputStream(opmwTriples), Lang.TURTLE.getName());
+        // mapper.opmwModel.write(new FileOutputStream(opmwTriples),
+        // Lang.TURTLE.getName());
     }
 }

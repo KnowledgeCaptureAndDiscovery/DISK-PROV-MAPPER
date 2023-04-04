@@ -5,10 +5,14 @@ import org.openprovenance.prov.model.Document;
 import org.openprovenance.prov.model.Namespace;
 import org.openprovenance.prov.model.QualifiedName;
 import org.openprovenance.prov.model.ProvFactory;
+
 /**
  *
  */
 public class DocumentProv {
+
+    public static final String PROV_PREFIX = "prov";
+    public static final String PROV_NS = "http://www.w3.org/ns/prov#";
 
     public static final String PROV_NEUROSCIENCE_NS = "http://provenance.isi.edu/disk/neuro/";
     public static final String PROV_NEUROSCIENCE_PREFIX = "provNeuroScience";
@@ -46,7 +50,6 @@ public class DocumentProv {
     public static final String DCTERMS_NS = "http://purl.org/dc/terms/";
     public static final String DCTERMS_PREFIX = "dcterms";
 
-
     public final ProvFactory factory;
     public final Namespace ns;
     public Document document;
@@ -58,7 +61,7 @@ public class DocumentProv {
         register(ns, PROV_NEUROSCIENCE_NS);
     }
 
-    public static void register(Namespace localNs, String defaultNameSpace){
+    public static void register(Namespace localNs, String defaultNameSpace) {
         localNs.addKnownNamespaces();
         localNs.register(PROV_NEUROSCIENCE_QUESTION_PREFIX, PROV_NEUROSCIENCE_QUESTION_NS);
         localNs.register(PROV_NEUROSCIENCE_HYPOTHESIS_PREFIX, PROV_NEUROSCIENCE_HYPOTHESIS_NS);
@@ -73,6 +76,7 @@ public class DocumentProv {
         localNs.register(RDF_PREFIX, RDF_NS);
         localNs.register(DCTERMS_PREFIX, DCTERMS_NS);
         localNs.setDefaultNamespace(defaultNameSpace);
+        System.out.println("Default namespace: " + localNs.getDefaultNamespace());
     }
 
     public void registerNamespace(String prefix, String iri) {
@@ -83,19 +87,14 @@ public class DocumentProv {
         return ns.qualifiedName(PROV_NEUROSCIENCE_PREFIX, n, factory);
     }
 
-
-
-    public QualifiedName qn(String n, String prefix) {        return ns.qualifiedName(prefix, n, factory);
+    public QualifiedName qn(String n, String prefix) {
+        return ns.qualifiedName(prefix, n, factory);
     }
-
 
     public QualifiedName qn(String n, String prefix_iri, String none) {
         String prefix = ns.getNamespaces().get(prefix_iri);
         return ns.qualifiedName(prefix, n, factory);
     }
-
-
-
 
     public void doConversions(Document document, String file) {
         String pngFile = file + ".png";
