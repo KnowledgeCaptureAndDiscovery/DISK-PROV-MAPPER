@@ -17,6 +17,7 @@ import org.apache.jena.ontology.OntModelSpec;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
 import org.apache.jena.rdf.model.Property;
+import org.apache.jena.rdf.model.ResIterator;
 import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.rdf.model.Statement;
 import org.apache.jena.rdf.model.StmtIterator;
@@ -32,6 +33,7 @@ import org.openprovenance.prov.model.Bundle;
 import org.openprovenance.prov.model.Entity;
 import org.openprovenance.prov.model.HadMember;
 import org.openprovenance.prov.model.Namespace;
+import org.openprovenance.prov.model.Other;
 // import prov
 import org.openprovenance.prov.model.ProvFactory;
 import org.openprovenance.prov.model.QualifiedName;
@@ -74,7 +76,7 @@ public class Mapper {
         public HashMap<String, IRI> diskProperties = new HashMap<>();
         public DocumentProv prov = new DocumentProv(InteropFramework.getDefaultFactory());
         public ProvFactory pFactory = prov.factory;
-        public Resource triggerResource;
+        // public Resource triggerResource;
         public Resource lineOfInquiry;
         public Resource hypothesisResource;
         public Resource questionResource;
@@ -88,15 +90,20 @@ public class Mapper {
         Model loisGraphModel;
         Model hypothesesGraphModel;
         Model questionGraphModel;
+
+        DocumentProv doc;
         Integer level = 2;
 
         /**
          * @throws OWLOntologyCreationException
+         * @throws ParseException
          *
          */
-        public Mapper(DatasetGraph diskDataset, String tLoisGraphId, String hypothesisGraphId, String loisGraphId,
+        public Mapper(DatasetGraph diskDataset, String tLoiId, String tLoisGraphId,
+                        String hypothesisGraphId,
+                        String loisGraphId,
                         String questionGraphId, List<String> localOntologies)
-                        throws OWLOntologyCreationException {
+                        throws OWLOntologyCreationException, ParseException {
                 {
                         this.opmwModel = ModelFactory.createOntologyModel(OntModelSpec.OWL_MEM);
                         this.diskDataset = diskDataset;
@@ -120,11 +127,37 @@ public class Mapper {
                         hypothesesGraphModel = ModelFactory.createModelForGraph(hypothesesGraph);
                         questionGraphModel = ModelFactory.createModelForGraph(questionGraph);
 
+                        // doc = transform(tLoiId, tLoisGraphModel);
+                        doc = transformFromHypotehsis(tLoiId);
+
                 }
 
         }
 
-        public DocumentProv transform(String triggerURI) throws ParseException {
+        public DocumentProv transformFromHypotehsis(String triggerUri) throws ParseException {
+                newMap(triggerUri);
+                Namespace triggerDefaultNamespace = new Namespace();
+                DocumentProv.register(triggerDefaultNamespace, DocumentProv.PROV_NEUROSCIENCE_TLOI_NS);
+                Namespace loisDefaultNamespace = new Namespace();
+                DocumentProv.register(loisDefaultNamespace, DocumentProv.PROV_NEUROSCIENCE_LOI_NS);
+                Namespace hypothesisDefaultNamespace = new Namespace();
+                DocumentProv.register(hypothesisDefaultNamespace, DocumentProv.PROV_NEUROSCIENCE_HYPOTHESIS_NS);
+                Namespace questionDefaultNamespace = new Namespace();
+                DocumentProv.register(questionDefaultNamespace, DocumentProv.PROV_NEUROSCIENCE_QUESTION_NS);
+
+                prov.document.setNamespace(prov.ns);
+                questionBundle.setNamespace(questionDefaultNamespace);
+                prov.document.getStatementOrBundle().add(questionBundle);
+                hypothesisBundle.setNamespace(hypothesisDefaultNamespace);
+                prov.document.getStatementOrBundle().add(hypothesisBundle);
+                loisBundle.setNamespace(loisDefaultNamespace);
+                prov.document.getStatementOrBundle().add(loisBundle);
+                triggerBundle.setNamespace(triggerDefaultNamespace);
+                prov.document.getStatementOrBundle().add(triggerBundle);
+                return prov;
+        }
+
+        public DocumentProv transform(String triggerURI, Model tLoisGraphModel) throws ParseException {
                 /**
                  * Create the bundle:
                  * Question
@@ -156,8 +189,75 @@ public class Mapper {
                 // prov.doConversions(prov.document, file);
         }
 
-        public void map(Model tLoisGraphModel, String triggerURI) throws ParseException {
-                triggerResource = getTriggerResource(triggerURI);
+        public void newMap(String triggerURI) throws ParseException {
+                /**
+                 * Find all the triggers that have the same hypothesis and line of inquiry.
+                 */
+                List<Resource> triggers = new ArrayList<>();
+                Resource triggerResourceReference = getTriggerResource(triggerURI);
+                String lineOfInquiryReferenceUri = getResourceByProperty(triggerResourceReference, tLoisGraphModel,
+                                "hasLineOfInquiry").getURI();
+                lineOfInquiry = loisGraphModel.getResource(lineOfInquiryReferenceUri);
+                String hypothesisResourceUri = getResourceByProperty(triggerResourceReference, tLoisGraphModel,
+                                "hasParentHypothesis").getURI();
+                hypothesisResource = hypothesesGraphModel.getResource(hypothesisResourceUri);
+                String propertyName = "hasParentHypothesis";
+                if (!diskProperties.containsKey(propertyName)) {
+                        throw new RuntimeException("DISK properties mapping " + propertyName + " not found");
+                }
+                IRI propertyIRI = diskProperties.get(propertyName);
+                Property property = tLoisGraphModel.getProperty(propertyIRI.toString());
+                ResIterator all = tLoisGraphModel.listResourcesWithProperty(property, hypothesisResource);
+                all.forEachRemaining(trigger -> {
+                        System.out.println(trigger.getURI());
+                        Resource lineOfInquiry = getResourceByProperty(trigger, tLoisGraphModel, "hasLineOfInquiry");
+                        if (lineOfInquiry.getURI().equals(lineOfInquiry.getURI())) {
+                                System.out.println("Same line of inquiry");
+                                triggers.add(trigger);
+                        } else {
+                                System.out.println("Different line of inquiry");
+                        }
+                });
+
+                IRI questionProperty = getIRIByProperty(hypothesisResource, hypothesesGraphModel, "hasQuestion");
+                questionResource = questionGraphModel.getResource(questionProperty.toString());
+
+                Agent hvargas = createDummyAgent("hvargas", "Hernan Vargas");
+                Agent neda = createDummyAgent("neda", "Neda Jahanshad");
+                prov.document.getStatementOrBundle().add(hvargas);
+                prov.document.getStatementOrBundle().add(neda);
+
+                Entity questionEntity = createQuestionEntity(questionResource);
+                Entity hypothesisEntity = createHypothesisEntity(hypothesisResource);
+                Entity lineOfInquiryEntity = createLineOfInquiryEntity(lineOfInquiry);
+
+                String commentText = "The agent selects a Question and the values for each of the variables of the selected question. The agent then creates a hypothesis.";
+                Activity createQuestionActivity = linkActivityEntities(hvargas, neda, questionEntity, questionBundle,
+                                "createQuestion", "Create Question",
+                                "The agent creates a Question and each of the variables of them. The agent then creates a hypothesis.");
+                Activity createHypothesisActivity = linkActivityEntities(hvargas, neda, hypothesisEntity,
+                                hypothesisBundle,
+                                "createHypothesis", "Create Hypothesis", commentText);
+
+                Entity questionVariablesBinding = level2QuestionAddVariables(questionResource,
+                                questionEntity, null,
+                                createQuestionActivity);
+                Entity hypothesisVariablesCollection = level2HypothesisAddVariables(hypothesisResource,
+                                hypothesisEntity, questionVariablesBinding,
+                                createHypothesisActivity);
+
+                for (Resource triggerResource : triggers) {
+                        Entity triggerEntity = createTriggerEntity(triggerResource);
+                        level1WasDerived(questionEntity, hypothesisEntity, lineOfInquiryEntity, triggerEntity);
+                        level2LineAdd(triggerResource, tLoisGraphModel, lineOfInquiry, hypothesisEntity, questionEntity,
+                                        lineOfInquiryEntity,
+                                        triggerEntity, hypothesisVariablesCollection);
+                }
+        }
+
+        public void map(Model tLoisGraphModel, String triggerURI)
+                        throws ParseException {
+                Resource triggerResource = getTriggerResource(triggerURI);
                 lineOfInquiry = loisGraphModel
                                 .getResource(getResourceByProperty(triggerResource, tLoisGraphModel, "hasLineOfInquiry")
                                                 .getURI());
@@ -188,19 +288,19 @@ public class Mapper {
 
                 level1WasDerived(questionEntity, hypothesisEntity, lineOfInquiryEntity, triggerEntity);
 
-                if (level > 1) {
-                        Entity questionVariablesBinding = level2QuestionAddVariables(questionResource,
-                                        questionEntity, null,
-                                        createQuestionActivity);
-                        Entity hypothesisVariablesCollection = level2HypothesisAddVariables(hypothesisResource,
-                                        hypothesisEntity, questionVariablesBinding,
-                                        createHypothesisActivity);
-                        level2LineAdd(lineOfInquiry, hypothesisEntity, questionEntity, lineOfInquiryEntity,
-                                        triggerEntity, hypothesisVariablesCollection);
-                }
+                Entity questionVariablesBinding = level2QuestionAddVariables(questionResource,
+                                questionEntity, null,
+                                createQuestionActivity);
+                Entity hypothesisVariablesCollection = level2HypothesisAddVariables(hypothesisResource,
+                                hypothesisEntity, questionVariablesBinding,
+                                createHypothesisActivity);
+                level2LineAdd(triggerResource, tLoisGraphModel, lineOfInquiry, hypothesisEntity, questionEntity,
+                                lineOfInquiryEntity,
+                                triggerEntity, hypothesisVariablesCollection);
         }
 
-        private void level2AddTrigger(Entity triggerEntity, Entity lineOfInquiryEntity, Entity dataSourceLoi,
+        private void level2AddTrigger(Resource triggerResource, Model tLoisGraphModel, Entity triggerEntity,
+                        Entity lineOfInquiryEntity, Entity dataSourceLoi,
                         Entity dataQueryTemplate, Entity workflowSystem, Entity workflowLoi, Entity metaWorkflowLoi,
                         Entity variablesBindingWorkflowEntity, Entity variablesBindingMetaWorkflowEntity,
                         Entity hypothesisVariableCollection) {
@@ -286,7 +386,7 @@ public class Mapper {
                         getResourcesByProperty(metaWorkflowBindingResource, tLoisGraphModel,
                                         "hasInputFile")
                                         .forEachRemaining(s -> {
-                                                addRunVariableBinding(runInputBindingMetaWorkflow, s);
+                                                addRunVariableBinding(runInputBindingMetaWorkflow, s, tLoisGraphModel);
                                         });
                         triggerBundle.getStatement().add(runInputBindingMetaWorkflow);
                         WasGeneratedBy runInputBindingMetaWorkflowWasGeneratedBy = pFactory.newWasGeneratedBy(null,
@@ -307,7 +407,8 @@ public class Mapper {
                         getResourcesByProperty(metaWorkflowBindingResource, tLoisGraphModel,
                                         "hasVariableBinding")
                                         .forEachRemaining(s -> {
-                                                addRunVariableBinding(runVariableBindingMetaWorkflow, s);
+                                                addRunVariableBinding(runVariableBindingMetaWorkflow, s,
+                                                                tLoisGraphModel);
                                         });
                         triggerBundle.getStatement().add(runVariableBindingMetaWorkflow);
 
@@ -384,7 +485,7 @@ public class Mapper {
 
         }
 
-        private void addRunVariableBinding(Entity collection, Statement s) {
+        private void addRunVariableBinding(Entity collection, Statement s, Model tLoisGraphModel) {
                 Resource variableBindingResource = s.getObject().asResource();
                 String hasBindingValue = getLiteralByProperty(variableBindingResource,
                                 tLoisGraphModel,
@@ -456,7 +557,8 @@ public class Mapper {
                 return agent;
         }
 
-        public void level2LineAdd(Resource lineOfInquiryResource, Entity hypothesis, Entity questionEntity,
+        public void level2LineAdd(Resource triggerOfLineInquiry, Model triggerModel, Resource lineOfInquiryResource,
+                        Entity hypothesis, Entity questionEntity,
                         Entity lineOfInquiryEntity, Entity triggerEntity, Entity hypothesisVariablesCollection)
                         throws ParseException {
                 String dateCreated = getLiteralByProperty(lineOfInquiryResource, loisGraphModel, "dateCreated");
@@ -593,7 +695,8 @@ public class Mapper {
                 loisBundle.getStatement().add(wgbWriteDataQueryTemplate);
                 loisBundle.getStatement().add(wgbSavedLineOfInquiry);
 
-                level2AddTrigger(triggerEntity, lineOfInquiryEntity, dataSource, dataQueryTemplateEntity,
+                level2AddTrigger(triggerOfLineInquiry, triggerModel, triggerEntity, lineOfInquiryEntity, dataSource,
+                                dataQueryTemplateEntity,
                                 workflowSystem,
                                 workflow, metaWorkflow, variableBindingWorkflow, variableBindingMetaWorkflow,
                                 hypothesisVariablesCollection);
@@ -835,9 +938,13 @@ public class Mapper {
                 String triggerResourceType = tLoisGraphModel.getProperty(triggerResource, RDF.type).getObject()
                                 .asResource().getLocalName();
                 QualifiedName qn = prov.qn(triggerResourceType, DocumentProv.DISK_ONTOLOGY_PREFIX);
-                QualifiedName rdfType = prov.qn("type", DocumentProv.RDF_PREFIX);
                 Entity triggerEntity = pFactory.newEntity(prov.qn(triggerName), triggerLabel);
                 triggerEntity.getType().add(pFactory.newType(qn.getUri(), pFactory.getName().XSD_ANY_URI));
+                // add date created to the activity
+                Other dateAtributes = pFactory.newOther(DocumentProv.PROV_NS, "generatedAtTime",
+                                DocumentProv.RDFS_PREFIX, dateCreated,
+                                pFactory.getName().XSD_DATETIME);
+                triggerEntity.getOther().add(dateAtributes);
                 triggerBundle.getStatement().add(triggerEntity);
                 return triggerEntity;
         }
@@ -880,6 +987,12 @@ public class Mapper {
                         }
                 }
                 throw new RuntimeException("Uncatched error");
+        }
+
+        private ResIterator getStatementsByProperty(Model model, String propertyName) {
+                IRI propertyIRI = diskProperties.get(propertyName);
+                Property property = model.getProperty(propertyIRI.toString());
+                return model.listResourcesWithProperty(property);
         }
 
         private String getLiteralByProperty(Resource resource, Model tloiModel, String propertyName) {
