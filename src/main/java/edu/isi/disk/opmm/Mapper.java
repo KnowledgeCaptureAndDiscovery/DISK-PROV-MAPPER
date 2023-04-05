@@ -25,6 +25,9 @@ import org.apache.jena.sparql.core.DatasetGraph;
 import org.apache.jena.util.iterator.ExtendedIterator;
 import org.apache.jena.vocabulary.RDF;
 import org.apache.jena.vocabulary.RDFS;
+import org.diskproject.shared.classes.hypothesis.Hypothesis;
+import org.diskproject.shared.classes.loi.LineOfInquiry;
+import org.diskproject.shared.classes.loi.TriggeredLOI;
 import org.openprovenance.prov.interop.InteropFramework;
 import org.openprovenance.prov.model.ActedOnBehalfOf;
 import org.openprovenance.prov.model.Activity;
@@ -105,11 +108,6 @@ public class Mapper {
                         String questionGraphId, List<String> localOntologies)
                         throws OWLOntologyCreationException, ParseException {
                 {
-                        this.opmwModel = ModelFactory.createOntologyModel(OntModelSpec.OWL_MEM);
-                        this.diskDataset = diskDataset;
-                        OWLOntology diskOntology = readDiskOntology();
-                        loadOntologiesDependencies(localOntologies);
-                        prepareMappingShortProperties(diskOntology);
 
                         triggerBundle = pFactory.newNamedBundle(prov.qn("triggerBundle"),
                                         null);
@@ -131,6 +129,10 @@ public class Mapper {
                         doc = transformFromHypotehsis(tLoiId);
 
                 }
+
+        }
+
+        public Mapper(Hypothesis hypothesis, LineOfInquiry lineOfInquiry, TriggeredLOI triggeredLOI) {
 
         }
 
@@ -194,10 +196,17 @@ public class Mapper {
                  * Find all the triggers that have the same hypothesis and line of inquiry.
                  */
                 List<Resource> triggers = new ArrayList<>();
+
                 Resource triggerResourceReference = getTriggerResource(triggerURI);
+                // TODO: shared class Trigger of LOI
+                TriggeredLOI tLoi = new TriggeredLOI();
+
                 String lineOfInquiryReferenceUri = getResourceByProperty(triggerResourceReference, tLoisGraphModel,
                                 "hasLineOfInquiry").getURI();
+
+                // TODO: shared classes Line of inquiry
                 lineOfInquiry = loisGraphModel.getResource(lineOfInquiryReferenceUri);
+                // TODO: shared classes Hypothesis
                 String hypothesisResourceUri = getResourceByProperty(triggerResourceReference, tLoisGraphModel,
                                 "hasParentHypothesis").getURI();
                 hypothesisResource = hypothesesGraphModel.getResource(hypothesisResourceUri);
@@ -220,6 +229,7 @@ public class Mapper {
                 });
 
                 IRI questionProperty = getIRIByProperty(hypothesisResource, hypothesesGraphModel, "hasQuestion");
+                // TODO: shared classes Question
                 questionResource = questionGraphModel.getResource(questionProperty.toString());
 
                 Agent hvargas = createDummyAgent("hvargas", "Hernan Vargas");

@@ -102,7 +102,11 @@
       <artifactId>prov-dot</artifactId>
       <version>0.9.27</version>
     </dependency>
-
+    <dependency>
+      <groupId>org.disk-project</groupId>
+      <artifactId>disk-project-shared</artifactId>
+      <version>2.5.2</version>
+    </dependency>
     <dependency>
       <groupId>org.openprovenance.prov</groupId>
       <artifactId>prov-json</artifactId>
@@ -113,6 +117,12 @@
       <artifactId>prov-rdf</artifactId>
       <version>0.9.27</version>
     </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>2.14.2</version>
+  </dependency>
+
   </dependencies>
   <distributionManagement>
     <repository>
