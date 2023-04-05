@@ -1,0 +1,155 @@
+{
+  "id": "TriggeredLOI-tvUdPs5yRiWf",
+  "name": "Triggered: Effect size estimation in different cohorts",
+  "description": "Is the effect size of Genotype on Brain Imaging Trait of Region associated with Demographic Attribute",
+  "author": null,
+  "dataSource": "https://endpoint.mint.isi.edu/enigma_dev",
+  "status": "SUCCESSFUL",
+  "parentHypothesisId": "Hypothesis-Vn94VBXpSDvy",
+  "workflows": [],
+  "metaWorkflows": [
+    {
+      "source": "New_Enigma",
+      "workflow": null,
+      "workflowLink": null,
+      "description": null,
+      "bindings": [
+        {
+          "variable": "area",
+          "binding": "Precentral",
+          "type": null,
+          "collection": false,
+          "bindingAsArray": ["Precentral"]
+        },
+        {
+          "variable": "cohortData",
+          "binding": "[SHA4fe5c4_1000BRAINS_Significant_GWAS.csv, SHA4815c5_ADNI1_Significant_GWAS.csv, SHA4a85c5_ADNI2GO_Significant_GWAS.csv, SHA4bf5c6_ALSPACa_Significant_GWAS.csv, SHA47a5c5_ASRB_Significant_GWAS.csv, SHA4aa5c5_BETULA_Significant_GWAS.csv, SHA4945c5_BIG_Significant_GWAS.csv, SHA5305c4_BIG-PsychChip_Significant_GWAS.csv, SHA4c45c5_BONN_Significant_GWAS.csv, SHA4ad5c5_BrainScale_Significant_GWAS.csv]",
+          "type": null,
+          "collection": true,
+          "bindingAsArray": [
+            "SHA4fe5c4_1000BRAINS_Significant_GWAS.csv",
+            "SHA4815c5_ADNI1_Significant_GWAS.csv",
+            "SHA4a85c5_ADNI2GO_Significant_GWAS.csv",
+            "SHA4bf5c6_ALSPACa_Significant_GWAS.csv",
+            "SHA47a5c5_ASRB_Significant_GWAS.csv",
+            "SHA4aa5c5_BETULA_Significant_GWAS.csv",
+            "SHA4945c5_BIG_Significant_GWAS.csv",
+            "SHA5305c4_BIG-PsychChip_Significant_GWAS.csv",
+            "SHA4c45c5_BONN_Significant_GWAS.csv",
+            "SHA4ad5c5_BrainScale_Significant_GWAS.csv"
+          ]
+        },
+        {
+          "variable": "demographic",
+          "binding": "HasAge Mean (E)",
+          "type": null,
+          "collection": false,
+          "bindingAsArray": ["HasAgeMean(E)"]
+        },
+        {
+          "variable": "demographic_value",
+          "binding": "[67.3, 74.8, 72.4, 19.6, 38.5, 62.4, 22.6, 22.5, 38.2, 10]",
+          "type": null,
+          "collection": true,
+          "bindingAsArray": [
+            "67.3",
+            "74.8",
+            "72.4",
+            "19.6",
+            "38.5",
+            "62.4",
+            "22.6",
+            "22.5",
+            "38.2",
+            "10"
+          ]
+        },
+        {
+          "variable": "snp",
+          "binding": "rs1080066",
+          "type": null,
+          "collection": false,
+          "bindingAsArray": ["rs1080066"]
+        },
+        {
+          "variable": "trait",
+          "binding": "SA",
+          "type": null,
+          "collection": false,
+          "bindingAsArray": ["SA"]
+        }
+      ],
+      "run": {
+        "id": "http://localhost:8080/wings-portal/export/users/admin/Enigma/executions/Effect_Size_Esti-aa3d4917-9bb1-4d8a-a32c-fdf066306a72.owl#Effect_Size_Esti-aa3d4917-9bb1-4d8a-a32c-fdf066306a72",
+        "link": "https://wings.disk.isi.edu/wings-portal/users/admin/Enigma/executions?run_id=http%3A%2F%2Flocalhost%3A8080%2Fwings-portal%2Fexport%2Fusers%2Fadmin%2FEnigma%2Fexecutions%2FEffect_Size_Esti-aa3d4917-9bb1-4d8a-a32c-fdf066306a72.owl%23Effect_Size_Esti-aa3d4917-9bb1-4d8a-a32c-fdf066306a72",
+        "status": "SUCCESS",
+        "outputs": {
+          "p_value": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#p_value-dk0ar4arwuggp9ce364frl6dh",
+          "shiny_visualization": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#shiny_visualization-9z55v2d929ft5xrwu3hlf5y5t",
+          "brain_visualization": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#brain_visualization-99ah4oc12zrvsbzuzjs07en30",
+          "age_vs_allele": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#age_vs_allele-18qg40ugspzylrv3cedr4hp08"
+        },
+        "files": {
+          "SHA4945c5_BIG_Significant_GWAS.csv": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4945c5_BIG_Significant_GWAS.csv",
+          "SHA4a85c5_ADNI2GO_Significant_GWAS.csv": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4a85c5_ADNI2GO_Significant_GWAS.csv",
+          "SHA4bf5c6_ALSPACa_Significant_GWAS.csv": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4bf5c6_ALSPACa_Significant_GWAS.csv",
+          "SHA47a5c5_ASRB_Significant_GWAS.csv": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA47a5c5_ASRB_Significant_GWAS.csv",
+          "SHA4c45c5_BONN_Significant_GWAS.csv": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4c45c5_BONN_Significant_GWAS.csv",
+          "SHA4fe5c4_1000BRAINS_Significant_GWAS.csv": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4fe5c4_1000BRAINS_Significant_GWAS.csv",
+          "SHA4ad5c5_BrainScale_Significant_GWAS.csv": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4ad5c5_BrainScale_Significant_GWAS.csv",
+          "SHA5305c4_BIG-PsychChip_Significant_GWAS.csv": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA5305c4_BIG-PsychChip_Significant_GWAS.csv",
+          "SHA4815c5_ADNI1_Significant_GWAS.csv": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4815c5_ADNI1_Significant_GWAS.csv",
+          "SHA4aa5c5_BETULA_Significant_GWAS.csv": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4aa5c5_BETULA_Significant_GWAS.csv"
+        },
+        "startDate": "07:13:10 2022-08-10",
+        "endDate": "07:13:10 2022-08-10"
+      },
+      "meta": {
+        "hypothesis": null,
+        "revisedHypothesis": null
+      },
+      "allVariables": [
+        "Precentral",
+        "SHA4fe5c4_1000BRAINS_Significant_GWAS.csv",
+        "SHA4815c5_ADNI1_Significant_GWAS.csv",
+        "SHA4a85c5_ADNI2GO_Significant_GWAS.csv",
+        "SHA4bf5c6_ALSPACa_Significant_GWAS.csv",
+        "SHA47a5c5_ASRB_Significant_GWAS.csv",
+        "SHA4aa5c5_BETULA_Significant_GWAS.csv",
+        "SHA4945c5_BIG_Significant_GWAS.csv",
+        "SHA5305c4_BIG-PsychChip_Significant_GWAS.csv",
+        "SHA4c45c5_BONN_Significant_GWAS.csv",
+        "SHA4ad5c5_BrainScale_Significant_GWAS.csv",
+        "HasAgeMean(E)",
+        "67.3",
+        "74.8",
+        "72.4",
+        "19.6",
+        "38.5",
+        "62.4",
+        "22.6",
+        "22.5",
+        "38.2",
+        "10",
+        "rs1080066",
+        "SA"
+      ],
+      "nonCollectionVariables": [
+        "Precentral",
+        "HasAgeMean(E)",
+        "rs1080066",
+        "SA"
+      ]
+    }
+  ],
+  "confidenceValue": 0.793160756444493,
+  "confidenceType": null,
+  "notes": null,
+  "dateCreated": "07:12:58 2022-08-10",
+  "dateModified": "18:04:11 2022-08-02",
+  "dataQuery": "?project a ?projectClass .\n?projectClass rdfs:label \"Project (E)\" .\n?project ?hasCohort ?Cohorts .\n?hasCohort rdfs:label \"HasCohort (E)\" .\n?Cohorts ?hasCohortProj ?CohortProjects .\n?hasCohortProj rdfs:label \"HasCohortProject (E)\" .\n?CohortProjects ?hasProjectResults ?ProjectResults .\n?hasProjectResults rdfs:label \"HasProjectResults (E)\" .\n?ProjectResults ?regionprop \"Precentral\" .\n?regionprop rdfs:label \"BrainRegion\" .\n?ProjectResults ?traitprop \"SA\" .\n?traitprop rdfs:label \"Trait\" .\n?ProjectResults ?snpprop \"rs1080066\" .\n?snpprop rdfs:label \"SNP\" .\n?ProjectResults ?contenturlProp ?CohortData .\n?contenturlProp rdfs:label \"HasContentUrl (E)\" .\n#Demographic\noptional {\n?participantsProp rdfs:label \"HasNumberOfParticipants (E)\" .\n?CohortProjects ?participantsProp ?nParticipants\n}\n?CohortProjects <http://localhost:8080/enigma_dev/Special:URIResolver/Property-3AHasAge_Mean_-28E-29> ?demographicValue .\n<http://localhost:8080/enigma_dev/Special:URIResolver/Property-3AHasAge_Mean_-28E-29> rdfs:label ?DemographicLabel .\nBIND(\nIF(?DemographicLabel = \"HasNumberOfFemaleSex (E)\" || ?DemographicLabel = \"HasNumberOfMaleSex (E)\" ,\n(xsd:integer(?demographicValue)/xsd:integer(?nParticipants)),\n?demographicValue)\nas ?realDemographic)\n",
+
+  "dataQueryExplanation": "",
+  "tableVariables": "?project ?Cohorts ?CohortData",
+  "tableDescription": "Projects Cohorts and CSV files"
+}

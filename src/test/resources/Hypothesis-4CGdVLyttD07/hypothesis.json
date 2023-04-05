@@ -1,0 +1,49 @@
+{
+  "id": "Hypothesis-4CGdVLyttD07",
+  "name": "Is the effect size of rs1080066 on Surface Area of Precentral associated with Percentage of Females for cohorts of European ancestry",
+  "description": "Runs meta regression ",
+  "dateCreated": "17:48:24 2022-09-28",
+  "dateModified": "07:19:00 2023-03-30",
+  "author": "enigma-disk@isi.edu",
+  "notes": "",
+  "questionId": "https://w3id.org/sqo/resource/EnigmaQuestion5",
+  "questionBindings": [
+    {
+      "variable": "http://disk-project.org/resources/enigma/variable/genotype",
+      "binding": "rs1080066",
+      "type": null,
+      "collection": false,
+      "bindingAsArray": ["rs1080066"]
+    },
+    {
+      "variable": "http://disk-project.org/resources/enigma/variable/brainImagingTrait",
+      "binding": "SA",
+      "type": null,
+      "collection": false,
+      "bindingAsArray": ["SA"]
+    },
+    {
+      "variable": "http://disk-project.org/resources/enigma/variable/brainRegion",
+      "binding": "Precentral",
+      "type": null,
+      "collection": false,
+      "bindingAsArray": ["Precentral"]
+    },
+    {
+      "variable": "http://disk-project.org/resources/enigma/variable/demographicAttribute",
+      "binding": "http://localhost:8080/enigma_dev/Special:URIResolver/Property-3AHasNumberOfFemaleSex_-28E-29",
+      "type": null,
+      "collection": false,
+      "bindingAsArray": [
+        "http://localhost:8080/enigma_dev/Special:URIResolver/Property-3AHasNumberOfFemaleSex_-28E-29"
+      ]
+    },
+    {
+      "variable": "http://disk-project.org/resources/enigma/variable/ethnicGroup",
+      "binding": "European",
+      "type": null,
+      "collection": false,
+      "bindingAsArray": ["European"]
+    }
+  ]
+}

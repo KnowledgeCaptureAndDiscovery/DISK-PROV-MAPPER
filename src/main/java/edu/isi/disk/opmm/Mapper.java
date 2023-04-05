@@ -8,6 +8,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
+import org.apache.jena.base.Sys;
 import org.apache.jena.graph.Graph;
 import org.apache.jena.graph.Node;
 import org.apache.jena.graph.NodeFactory;
@@ -28,6 +29,7 @@ import org.apache.jena.vocabulary.RDFS;
 import org.diskproject.shared.classes.hypothesis.Hypothesis;
 import org.diskproject.shared.classes.loi.LineOfInquiry;
 import org.diskproject.shared.classes.loi.TriggeredLOI;
+import org.diskproject.shared.classes.loi.WorkflowBindings;
 import org.diskproject.shared.classes.question.Question;
 import org.diskproject.shared.classes.question.QuestionVariable;
 import org.openprovenance.prov.interop.InteropFramework;
@@ -127,22 +129,21 @@ public class Mapper {
                         hypothesesGraphModel = ModelFactory.createModelForGraph(hypothesesGraph);
                         questionGraphModel = ModelFactory.createModelForGraph(questionGraph);
 
-                        // doc = transform(tLoiId, tLoisGraphModel);
-                        doc = transformFromHypotehsis(tLoiId);
-
                 }
 
         }
 
-        public Mapper(Hypothesis hypothesis, LineOfInquiry lineOfInquiry, List<TriggeredLOI> triggeredLOIList)
+        public Mapper(Hypothesis hypothesis, LineOfInquiry lineOfInquiry, List<TriggeredLOI> triggeredLOIList,
+                        List<Question> questions)
                         throws ParseException {
                 triggerBundle = pFactory.newNamedBundle(prov.qn("triggerBundle"),
                                 null);
-                doc = transformFromHypotehsis(hypothesis.getId());
+                doc = transformFromHypotehsis(hypothesis, lineOfInquiry, triggeredLOIList, questions);
         }
 
-        public DocumentProv transformFromHypotehsis(String triggerUri) throws ParseException {
-                newMap(triggerUri);
+        public DocumentProv transformFromHypotehsis(Hypothesis hypothesis, LineOfInquiry lineOfInquiry,
+                        List<TriggeredLOI> triggeredLOIList, List<Question> questions) throws ParseException {
+                newMap(hypothesis, lineOfInquiry, triggeredLOIList, questions);
                 Namespace triggerDefaultNamespace = new Namespace();
                 DocumentProv.register(triggerDefaultNamespace, DocumentProv.PROV_NEUROSCIENCE_TRIGGER_NS);
                 Namespace loisDefaultNamespace = new Namespace();
@@ -164,46 +165,26 @@ public class Mapper {
                 return prov;
         }
 
-        public DocumentProv transform(String triggerURI, Model tLoisGraphModel) throws ParseException {
-                /**
-                 * Create the bundle:
-                 * Question
-                 * Hypothesis
-                 * Lois
-                 * Trigger
-                 */
-                // The map function will handle the transformation of the resources
-                map(tLoisGraphModel, triggerURI);
-                Namespace triggerDefaultNamespace = new Namespace();
-                DocumentProv.register(triggerDefaultNamespace, DocumentProv.PROV_NEUROSCIENCE_TRIGGER_NS);
-                Namespace loisDefaultNamespace = new Namespace();
-                DocumentProv.register(loisDefaultNamespace, DocumentProv.PROV_NEUROSCIENCE_LINE_NS);
-                Namespace hypothesisDefaultNamespace = new Namespace();
-                DocumentProv.register(hypothesisDefaultNamespace, DocumentProv.PROV_NEUROSCIENCE_HYPOTHESIS_NS);
-                Namespace questionDefaultNamespace = new Namespace();
-                DocumentProv.register(questionDefaultNamespace, DocumentProv.PROV_NEUROSCIENCE_QUESTION_NS);
-
-                prov.document.setNamespace(prov.ns);
-                questionBundle.setNamespace(questionDefaultNamespace);
-                prov.document.getStatementOrBundle().add(questionBundle);
-                hypothesisBundle.setNamespace(hypothesisDefaultNamespace);
-                prov.document.getStatementOrBundle().add(hypothesisBundle);
-                loisBundle.setNamespace(loisDefaultNamespace);
-                prov.document.getStatementOrBundle().add(loisBundle);
-                triggerBundle.setNamespace(triggerDefaultNamespace);
-                prov.document.getStatementOrBundle().add(triggerBundle);
-                return prov;
-                // prov.doConversions(prov.document, file);
-        }
-
-        public void mapClasses(Hypothesis hypothesis, LineOfInquiry lineOfInquiry,
-                        List<TriggeredLOI> triggeredLOIList, Question question) {
+        public void newMap(Hypothesis hypothesis, LineOfInquiry lineOfInquiry,
+                        List<TriggeredLOI> triggeredLOIList, List<Question> questions) throws ParseException {
                 Agent hvargas = createDummyAgent("hvargas", "Hernan Vargas");
                 Agent neda = createDummyAgent("neda", "Neda Jahanshad");
                 prov.document.getStatementOrBundle().add(hvargas);
                 prov.document.getStatementOrBundle().add(neda);
 
-                Entity questionEntity = createQuestionEntity(question);
+                // find the question by the hypothesis.questionId
+                Question question = null;
+                for (Question q : questions) {
+                        if (q.getId().equals(hypothesis.getQuestionId())) {
+                                question = q;
+                                break;
+                        }
+                }
+                if (question == null) {
+                        throw new RuntimeException("Question not found for hypothesis: " + hypothesis.getId());
+                }
+
+                Entity questionEntity = createQuestionEntity(questions.get(0));
                 Entity hypothesisEntity = createHypothesisEntity(hypothesis);
                 Entity lineOfInquiryEntity = createLineOfInquiryEntity(lineOfInquiry);
 
@@ -224,130 +205,14 @@ public class Mapper {
 
                 for (TriggeredLOI trigger : triggeredLOIList) {
                         Entity triggerEntity = createTiggerEntity(trigger);
-                        level1WasDerived(questionEntity, hypothesisEntity, lineOfInquiryEntity, triggerEntity);
-                        // level2LineAdd(triggerResource, tLoisGraphModel, lineOfInquiry,
-                        // hypothesisEntity, questionEntity,
-                        // lineOfInquiryEntity,
-                        // triggerEntity, hypothesisVariablesCollection);
-                }
-        }
-
-        public void newMap(String triggerURI) throws ParseException {
-                /**
-                 * Find all the triggers that have the same hypothesis and line of inquiry.
-                 */
-                List<Resource> triggers = new ArrayList<>();
-
-                Resource triggerResourceReference = getTriggerResource(triggerURI);
-                // TODO: shared class Trigger of LOI
-                TriggeredLOI tLoi = new TriggeredLOI();
-
-                String lineOfInquiryReferenceUri = getResourceByProperty(triggerResourceReference, tLoisGraphModel,
-                                "hasLineOfInquiry").getURI();
-
-                // TODO: shared classes Line of inquiry
-                lineOfInquiry = loisGraphModel.getResource(lineOfInquiryReferenceUri);
-                // TODO: shared classes Hypothesis
-                String hypothesisResourceUri = getResourceByProperty(triggerResourceReference, tLoisGraphModel,
-                                "hasParentHypothesis").getURI();
-                hypothesisResource = hypothesesGraphModel.getResource(hypothesisResourceUri);
-                String propertyName = "hasParentHypothesis";
-                if (!diskProperties.containsKey(propertyName)) {
-                        throw new RuntimeException("DISK properties mapping " + propertyName + " not found");
-                }
-                IRI propertyIRI = diskProperties.get(propertyName);
-                Property property = tLoisGraphModel.getProperty(propertyIRI.toString());
-                ResIterator all = tLoisGraphModel.listResourcesWithProperty(property, hypothesisResource);
-                all.forEachRemaining(trigger -> {
-                        System.out.println(trigger.getURI());
-                        Resource lineOfInquiry = getResourceByProperty(trigger, tLoisGraphModel, "hasLineOfInquiry");
-                        if (lineOfInquiry.getURI().equals(lineOfInquiry.getURI())) {
-                                System.out.println("Same line of inquiry");
-                                triggers.add(trigger);
-                        } else {
-                                System.out.println("Different line of inquiry");
-                        }
-                });
-
-                IRI questionProperty = getIRIByProperty(hypothesisResource, hypothesesGraphModel, "hasQuestion");
-                // TODO: shared classes Question
-                questionResource = questionGraphModel.getResource(questionProperty.toString());
-
-                Agent hvargas = createDummyAgent("hvargas", "Hernan Vargas");
-                Agent neda = createDummyAgent("neda", "Neda Jahanshad");
-                prov.document.getStatementOrBundle().add(hvargas);
-                prov.document.getStatementOrBundle().add(neda);
-
-                Entity questionEntity = createQuestionEntity(questionResource);
-                Entity hypothesisEntity = createHypothesisEntity(hypothesisResource);
-                Entity lineOfInquiryEntity = createLineOfInquiryEntity(lineOfInquiry);
-
-                String commentText = "The agent selects a Question and the values for each of the variables of the selected question. The agent then creates a hypothesis.";
-                Activity createQuestionActivity = linkActivityEntities(hvargas, neda, questionEntity, questionBundle,
-                                "createQuestion", "Create Question",
-                                "The agent creates a Question and each of the variables of them. The agent then creates a hypothesis.");
-                Activity createHypothesisActivity = linkActivityEntities(hvargas, neda, hypothesisEntity,
-                                hypothesisBundle,
-                                "createHypothesis", "Create Hypothesis", commentText);
-
-                Entity questionVariablesBinding = level2QuestionAddVariables(questionResource,
-                                questionEntity, null,
-                                createQuestionActivity);
-                Entity hypothesisVariablesCollection = level2HypothesisAddVariables(hypothesisResource,
-                                hypothesisEntity, questionVariablesBinding,
-                                createHypothesisActivity);
-
-                for (Resource triggerResource : triggers) {
-                        Entity triggerEntity = createTriggerEntity(triggerResource);
-                        level1WasDerived(questionEntity, hypothesisEntity, lineOfInquiryEntity, triggerEntity);
-                        level2LineAdd(triggerResource, tLoisGraphModel, lineOfInquiry, hypothesisEntity, questionEntity,
+                        level1WasDerived(questionEntity, hypothesisEntity, lineOfInquiryEntity,
+                                        triggerEntity);
+                        level2LineAdd(trigger, lineOfInquiry,
+                                        hypothesisEntity, questionEntity,
                                         lineOfInquiryEntity,
                                         triggerEntity, hypothesisVariablesCollection);
                 }
-        }
-
-        public void map(Model tLoisGraphModel, String triggerURI)
-                        throws ParseException {
-                Resource triggerResource = getTriggerResource(triggerURI);
-                lineOfInquiry = loisGraphModel
-                                .getResource(getResourceByProperty(triggerResource, tLoisGraphModel, "hasLineOfInquiry")
-                                                .getURI());
-                hypothesisResource = hypothesesGraphModel
-                                .getResource(getResourceByProperty(triggerResource, tLoisGraphModel,
-                                                "hasParentHypothesis").getURI());
-                questionResource = questionGraphModel
-                                .getResource(getIRIByProperty(hypothesisResource, hypothesesGraphModel, "hasQuestion")
-                                                .toString());
-
-                Agent hvargas = createDummyAgent("hvargas", "Hernan Vargas");
-                Agent neda = createDummyAgent("neda", "Neda Jahanshad");
-                prov.document.getStatementOrBundle().add(hvargas);
-                prov.document.getStatementOrBundle().add(neda);
-
-                Entity questionEntity = createQuestionEntity(questionResource);
-                Entity hypothesisEntity = createHypothesisEntity(hypothesisResource);
-                Entity lineOfInquiryEntity = createLineOfInquiryEntity(lineOfInquiry);
-                Entity triggerEntity = createTriggerEntity(triggerResource);
-
-                String commentText = "The agent selects a Question and the values for each of the variables of the selected question. The agent then creates a hypothesis.";
-                Activity createQuestionActivity = linkActivityEntities(hvargas, neda, questionEntity, questionBundle,
-                                "createQuestion", "Create Question",
-                                "The agent creates a Question and each of the variables of them. The agent then creates a hypothesis.");
-                Activity createHypothesisActivity = linkActivityEntities(hvargas, neda, hypothesisEntity,
-                                hypothesisBundle,
-                                "createHypothesis", "Create Hypothesis", commentText);
-
-                level1WasDerived(questionEntity, hypothesisEntity, lineOfInquiryEntity, triggerEntity);
-
-                Entity questionVariablesBinding = level2QuestionAddVariables(questionResource,
-                                questionEntity, null,
-                                createQuestionActivity);
-                Entity hypothesisVariablesCollection = level2HypothesisAddVariables(hypothesisResource,
-                                hypothesisEntity, questionVariablesBinding,
-                                createHypothesisActivity);
-                level2LineAdd(triggerResource, tLoisGraphModel, lineOfInquiry, hypothesisEntity, questionEntity,
-                                lineOfInquiryEntity,
-                                triggerEntity, hypothesisVariablesCollection);
+                System.out.println("Done");
         }
 
         private void level2AddTrigger(Resource triggerResource, Model tLoisGraphModel, Entity triggerEntity,
@@ -609,60 +474,102 @@ public class Mapper {
                 return agent;
         }
 
-        public void level2LineAdd(Resource triggerOfLineInquiry, Model triggerModel, Resource lineOfInquiryResource,
+        private Activity createActivity(String localName, String name, String dateCreated, Bundle bundle) {
+                Activity activity = pFactory.newActivity(
+                                prov.qn(localName, DocumentProv.DISK_PREFIX),
+                                name);
+                // add date created to the activity
+                activity.getOther().add(pFactory.newOther(DocumentProv.RDFS_NS, "comment",
+                                DocumentProv.RDFS_PREFIX, dateCreated,
+                                pFactory.getName().XSD_NAME));
+                loisBundle.getStatement().add(activity);
+                return activity;
+        }
+
+        private void createWorkflowEntity(WorkflowBindings workflowBinding,
+                        Activity activitySavedLineOfInquiry, Activity activityWriteDataQueryTemplate,
+                        Constants.WORKFLOW_TYPE type) {
+                String workflowLabel = workflowBinding.getDescription();
+                String workflowLocalName = "unknown";
+                String workflowSystemName = workflowBinding.getSource();
+                Entity workflowSystem = pFactory.newEntity(
+                                prov.qn(workflowSystemName, DocumentProv.WINGS_ONTOLOGY_PREFIX),
+                                workflowSystemName);
+                Entity workflow = pFactory.newEntity(prov.qn(workflowLocalName, DocumentProv.WINGS_ONTOLOGY_PREFIX),
+                                workflowLabel);
+
+                if (type == Constants.WORKFLOW_TYPE.WORKFLOW) {
+                        String variableBindingLocalName = "workflowVariableBinding";
+                        String variableBindingLabel = "Workflow Variable Binding";
+                        Entity variableBindingWorkflow = pFactory.newEntity(
+                                        prov.qn(variableBindingLocalName,
+                                                        DocumentProv.PROV_NEUROSCIENCE_LINE_PREFIX),
+                                        variableBindingLabel);
+                        handleWorkflowActivity(activityWriteDataQueryTemplate, activitySavedLineOfInquiry,
+                                        workflowSystem,
+                                        workflow,
+                                        variableBindingWorkflow,
+                                        Constants.ACTIVITY_SELECT_WORKFLOW_LABEL,
+                                        Constants.ACTIVITY_SELECT_WORKFLOW_VARIABLE_LABEL,
+                                        Constants.ACTIVITY_SELECT_WORKFLOW_VARIABLE_LOCALNAME,
+                                        Constants.ACTIVITY_SELECT_WORKFLOW_LOCALNAME,
+                                        workflowBinding);
+                } else {
+                        String variableBindingLocalName = "metaWorkflowVariableBinding";
+                        String variableBindingLabel = "Meta Workflow Variable Binding";
+                        Entity variableBindingWorkflow = pFactory.newEntity(
+                                        prov.qn(variableBindingLocalName,
+                                                        DocumentProv.PROV_NEUROSCIENCE_LINE_PREFIX),
+                                        variableBindingLabel);
+                        handleWorkflowActivity(activityWriteDataQueryTemplate, activitySavedLineOfInquiry,
+                                        workflowSystem,
+                                        workflow,
+                                        variableBindingWorkflow,
+                                        Constants.ACTIVITY_SELECT_WORKFLOW_LABEL,
+                                        Constants.ACTIVITY_SELECT_WORKFLOW_VARIABLE_LABEL,
+                                        Constants.ACTIVITY_SELECT_WORKFLOW_VARIABLE_LOCALNAME,
+                                        Constants.ACTIVITY_SELECT_WORKFLOW_LOCALNAME,
+                                        workflowBinding);
+                }
+        }
+
+        public void level2LineAdd(TriggeredLOI triggerOfLineInquiry, LineOfInquiry lineOfInquiry,
                         Entity hypothesis, Entity questionEntity,
                         Entity lineOfInquiryEntity, Entity triggerEntity, Entity hypothesisVariablesCollection)
                         throws ParseException {
-                String dateCreated = getLiteralByProperty(lineOfInquiryResource, loisGraphModel, "dateCreated");
-                String dataQuery = getLiteralByProperty(lineOfInquiryResource, loisGraphModel, "hasDataQuery");
-                String dataQueryDescription = getLiteralByProperty(lineOfInquiryResource, loisGraphModel,
-                                "dataQueryDescription");
-                String dataSourceIRI = getLiteralByProperty(lineOfInquiryResource, loisGraphModel, "hasDataSource");
 
-                List<Resource> metaWorkflowBindingResources = getMetaOrWorkflow("hasMetaWorkflowBinding",
-                                loisGraphModel,
-                                lineOfInquiryResource);
-                List<Resource> workflowBindingResources = getMetaOrWorkflow("hasWorkflowBinding", loisGraphModel,
-                                lineOfInquiryResource);
+                String dateCreated = triggerOfLineInquiry.getDateCreated();
+                String dataQuery = triggerOfLineInquiry.getDataQuery();
+                String dataQueryDescription = triggerOfLineInquiry.getDataQueryExplanation();
+                String dataSourceText = triggerOfLineInquiry.getDataSource();
+                List<WorkflowBindings> metaworkflows = triggerOfLineInquiry.getMetaWorkflows();
+                List<WorkflowBindings> workflows = triggerOfLineInquiry.getWorkflows();
 
                 // create the activity for writing the data query
-                Activity activitySelectQuestion = pFactory.newActivity(
-                                prov.qn("select_question", DocumentProv.DISK_PREFIX),
-                                "Select the question");
-                // add date created to the activity
-                activitySelectQuestion.getOther().add(pFactory.newOther(DocumentProv.RDFS_NS, "comment",
-                                DocumentProv.RDFS_PREFIX, dateCreated,
-                                pFactory.getName().XSD_NAME));
-                Activity activitySelectDataSource = pFactory.newActivity(
-                                prov.qn("select_data_source", DocumentProv.DISK_PREFIX),
-                                "Select the data source");
-                Activity activityWriteDataQueryTemplate = pFactory
-                                .newActivity(prov.qn("write_data_query_template", DocumentProv.DISK_PREFIX),
-                                                "Write data query template");
-                Activity activitySavedLineOfInquiry = pFactory
-                                .newActivity(prov.qn("saved_line_of_inquiry", DocumentProv.DISK_PREFIX),
-                                                "Saved line of inquiry");
-
-                WasInformedBy wib = pFactory.newWasInformedBy(null, activitySelectDataSource.getId(),
-                                activitySelectQuestion.getId(), null);
-                WasInformedBy wib1 = pFactory.newWasInformedBy(null, activityWriteDataQueryTemplate.getId(),
-                                activitySelectDataSource.getId(), null);
-                loisBundle.getStatement().add(activitySelectQuestion);
-                loisBundle.getStatement().add(activitySelectDataSource);
-                loisBundle.getStatement().add(activityWriteDataQueryTemplate);
-                loisBundle.getStatement().add(activitySavedLineOfInquiry);
-                loisBundle.getStatement().add(wib);
-                loisBundle.getStatement().add(wib1);
 
                 Entity dataQueryTemplateEntity = pFactory.newEntity(
                                 prov.qn("data_query", DocumentProv.PROV_NEUROSCIENCE_LINE_PREFIX),
                                 dataQuery);
                 Entity dataSource = pFactory.newEntity(
-                                prov.qn("data_source", DocumentProv.PROV_NEUROSCIENCE_LINE_PREFIX), dataSourceIRI);
+                                prov.qn("data_source", DocumentProv.PROV_NEUROSCIENCE_LINE_PREFIX), dataSourceText);
                 loisBundle.getStatement().add(dataQueryTemplateEntity);
                 loisBundle.getStatement().add(dataSource);
 
-                // Activties details
+                Activity activitySelectQuestion = createActivity("select_question", "Select the question", dateCreated,
+                                loisBundle);
+                Activity activitySelectDataSource = createActivity("select_data_source", "Select the data source",
+                                dateCreated, loisBundle);
+                Activity activityWriteDataQueryTemplate = createActivity("write_data_query_template",
+                                "Write data query template", dateCreated, loisBundle);
+                Activity activitySavedLineOfInquiry = createActivity("saved_line_of_inquiry", "Saved line of inquiry",
+                                dateCreated, loisBundle);
+
+                // Activity relations
+                WasInformedBy wib = pFactory.newWasInformedBy(null, activitySelectDataSource.getId(),
+                                activitySelectQuestion.getId(), null);
+                WasInformedBy wib1 = pFactory.newWasInformedBy(null, activityWriteDataQueryTemplate.getId(),
+                                activitySelectDataSource.getId(), null);
+
                 // 1. Select the question
                 Used usedSelectQuestion = pFactory.newUsed(null, activitySelectQuestion.getId(), questionEntity.getId(),
                                 null,
@@ -680,66 +587,16 @@ public class Mapper {
                 // 8. Save the line of inquiry
                 WasGeneratedBy wgbSavedLineOfInquiry = pFactory.newWasGeneratedBy(null, lineOfInquiryEntity.getId(),
                                 activitySavedLineOfInquiry.getId(), null, null);
-                Entity workflow = null;
-                Entity metaWorkflow = null;
-                Entity workflowSystem = null;
-                Entity variableBindingWorkflow = null;
-                Entity variableBindingMetaWorkflow = null;
-                for (Resource workflowBindingResource : workflowBindingResources) {
-                        String workflowLabel = workflowBindingResource
-                                        .getProperty(loisGraphModel.createProperty(RDFS_COMMENT))
-                                        .getLiteral().toString();
-                        String workflowLocalName = "unknown";
-                        String workflowSystemName = getLiteralByProperty(workflowBindingResource, hypothesesGraphModel,
-                                        "hasSource");
 
-                        workflowSystem = pFactory.newEntity(
-                                        prov.qn(workflowSystemName, DocumentProv.WINGS_ONTOLOGY_PREFIX),
-                                        workflowSystemName);
-                        workflow = pFactory.newEntity(prov.qn(workflowLocalName, DocumentProv.WINGS_ONTOLOGY_PREFIX),
-                                        workflowLabel);
-                        variableBindingWorkflow = pFactory.newEntity(
-                                        prov.qn("workflowVariablesBinding", DocumentProv.PROV_NEUROSCIENCE_LINE_PREFIX),
-                                        "Variable binding workflow collection");
-                        String activitySelectWorkflowLabel = "Select the workflow";
-                        String activitySelectVariableWorkflowLabel = "Select the variable workflow";
-                        String activitySelectVariableLocalName = "select_variable_workflow";
-                        String activitySelectWorkflowName = "select_workflow";
-                        handleWorkflowActivity(activityWriteDataQueryTemplate, activitySavedLineOfInquiry,
-                                        workflowSystem,
-                                        workflow,
-                                        variableBindingWorkflow, activitySelectWorkflowLabel,
-                                        activitySelectVariableWorkflowLabel,
-                                        activitySelectVariableLocalName, activitySelectWorkflowName,
-                                        workflowBindingResource);
+                for (WorkflowBindings workflowBinding : metaworkflows) {
+                        createWorkflowEntity(workflowBinding, activityWriteDataQueryTemplate,
+                                        activitySavedLineOfInquiry, Constants.WORKFLOW_TYPE.META_WORKFLOW);
+
                 }
-                for (Resource metaWorkflowBindingResource : metaWorkflowBindingResources) {
-                        String workflowLabel = metaWorkflowBindingResource
-                                        .getProperty(loisGraphModel.createProperty(RDFS_COMMENT))
-                                        .getLiteral().getString();
-                        String workflowLocalName = "unknown";
-                        String workflowSystemName = getLiteralByProperty(metaWorkflowBindingResource, loisGraphModel,
-                                        "hasSource");
-                        metaWorkflow = pFactory.newEntity(
-                                        prov.qn(workflowLocalName, DocumentProv.WINGS_ONTOLOGY_PREFIX),
-                                        workflowLabel);
-                        workflowSystem = pFactory.newEntity(
-                                        prov.qn(workflowSystemName, DocumentProv.WINGS_ONTOLOGY_PREFIX),
-                                        workflowSystemName);
-                        variableBindingMetaWorkflow = pFactory.newEntity(
-                                        prov.qn("metaWorkflowVariablesBinding",
-                                                        DocumentProv.PROV_NEUROSCIENCE_LINE_PREFIX),
-                                        "Stores the binding between Question or Data Queries variables and the Meta Workflow variables");
-                        String activitySelectWorkflowLabel = "Select the workflow";
-                        String activitySelectVariableWorkflowLabel = "Select the variable workflow";
-                        String activitySelectVariableLocalName = "select_variable_workflow";
-                        String activitySelectWorkflowName = "select_workflow";
-                        handleWorkflowActivity(activityWriteDataQueryTemplate, activitySavedLineOfInquiry,
-                                        workflowSystem,
-                                        metaWorkflow, variableBindingMetaWorkflow, activitySelectWorkflowLabel,
-                                        activitySelectVariableWorkflowLabel, activitySelectVariableLocalName,
-                                        activitySelectWorkflowName,
-                                        metaWorkflowBindingResource);
+
+                for (WorkflowBindings workflowBinding : workflows) {
+                        createWorkflowEntity(workflowBinding, activityWriteDataQueryTemplate,
+                                        activitySavedLineOfInquiry, Constants.WORKFLOW_TYPE.WORKFLOW);
                 }
                 loisBundle.getStatement().add(usedSelectQuestion);
                 prov.document.getStatementOrBundle().add(usedSelectDataSource);
@@ -747,11 +604,12 @@ public class Mapper {
                 loisBundle.getStatement().add(wgbWriteDataQueryTemplate);
                 loisBundle.getStatement().add(wgbSavedLineOfInquiry);
 
-                level2AddTrigger(triggerOfLineInquiry, triggerModel, triggerEntity, lineOfInquiryEntity, dataSource,
-                                dataQueryTemplateEntity,
-                                workflowSystem,
-                                workflow, metaWorkflow, variableBindingWorkflow, variableBindingMetaWorkflow,
-                                hypothesisVariablesCollection);
+                // level2AddTrigger(triggerOfLineInquiry, triggerModel, triggerEntity,
+                // lineOfInquiryEntity, dataSource,
+                // dataQueryTemplateEntity,
+                // workflowSystem,
+                // workflow, metaWorkflow, variableBindingWorkflow, variableBindingMetaWorkflow,
+                // hypothesisVariablesCollection);
         }
 
         private void handleWorkflowActivity(Activity activityWriteDataQueryTemplate,
@@ -759,7 +617,7 @@ public class Mapper {
                         Entity workflowSystem, Entity workflow, Entity variableBindingWorkflow,
                         String activitySelectWorkflowLabel,
                         String activitySelectVariableWorkflowLabel, String activitySelectVariableLocalName,
-                        String activitySelectWorkflowName, Resource workflowBindingResource) {
+                        String activitySelectWorkflowName, WorkflowBindings workflowBindingResource) {
                 prov.document.getStatementOrBundle().add(workflowSystem);
                 Activity activitySelectWorkflow = pFactory
                                 .newActivity(prov.qn(activitySelectWorkflowName, DocumentProv.DISK_PREFIX),
@@ -808,21 +666,15 @@ public class Mapper {
                 loisBundle.getStatement().add(usedSavedLineOfInquiry);
 
                 // Add the variable bindings
-                StmtIterator statements = getResourcesByProperty(workflowBindingResource, loisGraphModel,
-                                "hasVariableBinding");
-                statements.forEachRemaining(s -> {
-                        Resource variableBindingResource = s.getObject().asResource();
-                        String hasBindingValue = getLiteralByProperty(variableBindingResource, loisGraphModel,
-                                        "hasBindingValue");
-                        // TODO: hack to get the name
-                        String hasVariable = getLiteralByProperty(variableBindingResource, loisGraphModel,
-                                        "hasVariable");
-                        String[] split = hasVariable.split("#");
-                        String variableName = split[split.length - 1];
+                workflowBindingResource.getBindings().forEach(b -> {
+                        String binding = b.getBinding();
+                        String value = b.getVariable();
+
                         Entity variableBindingCollectionItem = pFactory.newEntity(
-                                        prov.qn(variableName, DocumentProv.PROV_NEUROSCIENCE_LINE_PREFIX),
-                                        hasVariable);
-                        variableBindingCollectionItem.setValue(pFactory.newValue(hasBindingValue));
+                                        prov.qn(binding, DocumentProv.PROV_NEUROSCIENCE_LINE_PREFIX),
+                                        binding);
+                        // TODO: set value
+                        variableBindingCollectionItem.setValue(pFactory.newValue(value));
 
                         loisBundle.getStatement().add(variableBindingCollectionItem);
                         HadMember hm2 = pFactory.newHadMember(variableBindingWorkflow.getId(),
@@ -845,63 +697,16 @@ public class Mapper {
                 List<QuestionVariable> variables = question.getVariables();
                 variables.forEach(variable -> {
                         String id = variable.getId();
-                        String name = variable.getVarName();
+                        String name = variable.getVariableName();
                         String localName = IRI.create(id).getFragment();
-                        String constrainsts = variable.getConstraints();
                         Entity questionVariableEntity = pFactory.newEntity(
                                         prov.qn(localName, DocumentProv.PROV_NEUROSCIENCE_QUESTION_PREFIX),
                                         name);
-                        questionVariableEntity.getOther().add(pFactory.newOther(DocumentProv.DISK_NS, "hasConstraints",
-                                        DocumentProv.DISK_PREFIX, constrainsts, pFactory.getName().XSD_STRING));
                         HadMember hadMember = pFactory.newHadMember(questionVariableCollection.getId(),
                                         questionVariableEntity.getId());
                         questionBundle.getStatement().addAll(Arrays.asList(hadMember));
                         questionBundle.getStatement().add(questionVariableEntity);
 
-                });
-                WasDerivedFrom wdf = pFactory.newWasDerivedFrom(null, questionEntity.getId(),
-                                questionVariableCollection.getId());
-                WasGeneratedBy wgb = pFactory.newWasGeneratedBy(null, questionVariableCollection.getId(),
-                                createQuestionActivity.getId());
-                questionBundle.getStatement().addAll(Arrays.asList(wdf));
-                questionBundle.getStatement().add(questionVariableCollection);
-                questionBundle.getStatement().add(wgb);
-                return questionVariableCollection;
-        }
-
-        private Entity level2QuestionAddVariables(Resource questionResource,
-                        Entity questionEntity, HashMap<String, Entity> questionVariablesMap,
-                        Activity createQuestionActivity) {
-
-                String variableCollectionLocalName = questionEntity.getId().getLocalPart() + '/'
-                                + Constants.QUESTION_VARIABLES_BINDING;
-                Entity questionVariableCollection = pFactory.newEntity(
-                                prov.qn(variableCollectionLocalName,
-                                                DocumentProv.PROV_NEUROSCIENCE_QUESTION_PREFIX),
-                                "Collection of question variables");
-                StmtIterator statements = questionResource
-                                .listProperties(questionGraphModel
-                                                .getProperty("https://w3id.org/sqo#hasQuestionVariable"));
-                Property hasVariableName = questionGraphModel.getProperty("https://w3id.org/sqo#hasVariableName");
-                Property hasConstrainsProperty = questionGraphModel.getProperty("https://w3id.org/sqo#hasConstraints");
-                statements.forEachRemaining(s -> {
-                        Resource questionVariableResource = s.getObject().asResource();
-                        String qvName = questionVariableResource.getLocalName();
-                        String qvLabel = questionGraphModel.getProperty(questionVariableResource, hasVariableName)
-                                        .getString();
-                        Entity questionVariableEntity = pFactory.newEntity(
-                                        prov.qn(qvName, DocumentProv.PROV_NEUROSCIENCE_QUESTION_PREFIX),
-                                        qvLabel);
-                        // add member
-                        String hasConstraints = questionVariableResource.getProperty(hasConstrainsProperty).getString();
-                        questionVariableEntity.getOther().add(pFactory.newOther(DocumentProv.DISK_NS, "hasConstraints",
-                                        DocumentProv.DISK_PREFIX, hasConstraints, pFactory.getName().XSD_STRING));
-                        HadMember hadMember = pFactory.newHadMember(questionVariableCollection.getId(),
-                                        questionVariableEntity.getId());
-                        questionBundle.getStatement().addAll(Arrays.asList(hadMember));
-                        questionBundle.getStatement().add(questionVariableEntity);
-                        // questionVariablesMap.put(questionVariableResource.getURI(),
-                        // questionVariableEntity);
                 });
                 WasDerivedFrom wdf = pFactory.newWasDerivedFrom(null, questionEntity.getId(),
                                 questionVariableCollection.getId());
@@ -916,10 +721,6 @@ public class Mapper {
         private Entity level2HypothesisAddVariables(Hypothesis hypothesis,
                         Entity hypothesisEntity, Entity questionVariableCollection,
                         Activity createHypothesisActivity) {
-                StmtIterator getVariableBindingsOnHypothesisGraph = getResourcesByProperty(hypothesisResource,
-                                hypothesesGraphModel,
-                                "hasVariableBinding");
-
                 String variableCollectionLocalName = hypothesisEntity.getId().getLocalPart() + '/'
                                 + Constants.HYPOTHESIS_VARIABLES_BINDING;
                 Entity variableCollection = pFactory.newEntity(
@@ -931,8 +732,9 @@ public class Mapper {
                 hypothesisBundle.getStatement().add(derivationVariables);
                 hypothesis.getQuestionBindings().forEach(variableBinding -> {
                         String variable = variableBinding.getVariable();
+                        String localName = IRI.create(variable).getFragment();
                         String binding = variableBinding.getBinding();
-                        String variableLocalName = variableCollectionLocalName + '/' + variable;
+                        String variableLocalName = variableCollectionLocalName + '/' + localName;
                         Entity variableBindingEntity = pFactory.newEntity(
                                         prov.qn(variableLocalName, DocumentProv.PROV_NEUROSCIENCE_HYPOTHESIS_PREFIX),
                                         binding);
@@ -940,77 +742,6 @@ public class Mapper {
                                         variableBindingEntity.getId());
                         hypothesisBundle.getStatement().add(variableBindingEntity);
                         hypothesisBundle.getStatement().add(hadMember);
-                });
-                getVariableBindingsOnHypothesisGraph.forEachRemaining(statementHypothesis -> {
-                        Resource variableBindingResource = statementHypothesis.getObject().asResource();
-                        // Create the variable binding entity
-                        String variableLocalName = variableCollectionLocalName + '/'
-                                        + variableBindingResource.getLocalName();
-                        String value = getLiteralByProperty(variableBindingResource, hypothesesGraphModel,
-                                        "hasBindingValue");
-                        String questionVariable = getIRIByProperty(variableBindingResource, hypothesesGraphModel,
-                                        "hasVariable").getFragment();
-                        QualifiedName questionVariableQn = prov.qn(questionVariable,
-                                        DocumentProv.PROV_NEUROSCIENCE_QUESTION_PREFIX);
-                        String hvLabel = value;
-                        Entity variableBindingEntity = pFactory.newEntity(
-                                        prov.qn(variableLocalName, DocumentProv.PROV_NEUROSCIENCE_HYPOTHESIS_PREFIX),
-                                        hvLabel);
-                        HadMember hadMember = pFactory.newHadMember(variableCollection.getId(),
-                                        variableBindingEntity.getId());
-                        WasDerivedFrom derivation = pFactory.newWasDerivedFrom(null,
-                                        variableBindingEntity.getId(), questionVariableQn);
-                        hypothesisBundle.getStatement()
-                                        .addAll(Arrays.asList(variableBindingEntity, hadMember, derivation));
-                });
-                WasDerivedFrom wdf = pFactory.newWasDerivedFrom(null, hypothesisEntity.getId(),
-                                variableCollection.getId());
-                WasGeneratedBy wgb = pFactory.newWasGeneratedBy(null, variableCollection.getId(),
-                                createHypothesisActivity.getId());
-                hypothesisBundle.getStatement().addAll(Arrays.asList(wdf));
-                hypothesisBundle.getStatement().add(createHypothesisActivity);
-                hypothesisBundle.getStatement().add(wgb);
-                return variableCollection;
-        }
-
-        private Entity level2HypothesisAddVariables(Resource hypothesisResource,
-                        Entity hypothesisEntity, Entity questionVariableCollection,
-                        Activity createHypothesisActivity) {
-                StmtIterator getVariableBindingsOnHypothesisGraph = getResourcesByProperty(hypothesisResource,
-                                hypothesesGraphModel,
-                                "hasVariableBinding");
-
-                String variableCollectionLocalName = hypothesisEntity.getId().getLocalPart() + '/'
-                                + Constants.HYPOTHESIS_VARIABLES_BINDING;
-                Entity variableCollection = pFactory.newEntity(
-                                prov.qn(variableCollectionLocalName, DocumentProv.PROV_NEUROSCIENCE_HYPOTHESIS_PREFIX),
-                                "Collection of question variables");
-                WasDerivedFrom derivationVariables = pFactory.newWasDerivedFrom(null,
-                                variableCollection.getId(), questionVariableCollection.getId());
-                hypothesisBundle.getStatement().add(variableCollection);
-                hypothesisBundle.getStatement().add(derivationVariables);
-
-                getVariableBindingsOnHypothesisGraph.forEachRemaining(statementHypothesis -> {
-                        Resource variableBindingResource = statementHypothesis.getObject().asResource();
-                        // Create the variable binding entity
-                        String variableLocalName = variableCollectionLocalName + '/'
-                                        + variableBindingResource.getLocalName();
-                        String value = getLiteralByProperty(variableBindingResource, hypothesesGraphModel,
-                                        "hasBindingValue");
-                        String questionVariable = getIRIByProperty(variableBindingResource, hypothesesGraphModel,
-                                        "hasVariable").getFragment();
-                        QualifiedName questionVariableQn = prov.qn(questionVariable,
-                                        DocumentProv.PROV_NEUROSCIENCE_QUESTION_PREFIX);
-                        String hvLabel = value;
-                        Entity variableBindingEntity = pFactory.newEntity(
-                                        prov.qn(variableLocalName, DocumentProv.PROV_NEUROSCIENCE_HYPOTHESIS_PREFIX),
-                                        hvLabel);
-                        HadMember hadMember = pFactory.newHadMember(variableCollection.getId(),
-                                        variableBindingEntity.getId());
-                        WasDerivedFrom derivation = pFactory.newWasDerivedFrom(null,
-                                        variableBindingEntity.getId(), questionVariableQn);
-                        hypothesisBundle.getStatement()
-                                        .addAll(Arrays.asList(variableBindingEntity, hadMember, derivation));
                 });
                 WasDerivedFrom wdf = pFactory.newWasDerivedFrom(null, hypothesisEntity.getId(),
                                 variableCollection.getId());

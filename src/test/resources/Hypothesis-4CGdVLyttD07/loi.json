@@ -1,0 +1,10 @@
+{
+  "id": "LOI-R12qZl77tJJ9",
+  "name": "Meta regression with ancestry",
+  "description": "Is the effect size of Genotype on Brain Imaging Trait of Region associated with Demographic Attribute for Ancestry",
+  "dateModified": "03:25:05 2023-03-02",
+  "author": "enigma-disk@isi.edu",
+  "parentId": null,
+  "question": "https://w3id.org/sqo/resource/EnigmaQuestion5",
+  "creationDate": "17:50:54 2022-09-28"
+}
