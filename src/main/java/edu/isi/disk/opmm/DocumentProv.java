@@ -23,11 +23,11 @@ public class DocumentProv {
     public static final String PROV_NEUROSCIENCE_HYPOTHESIS_NS = "http://provenance.isi.edu/disk/neuro/hypothesis/";
     public static final String PROV_NEUROSCIENCE_HYPOTHESIS_PREFIX = "provNeuroScienceHypothesis";
 
-    public static final String PROV_NEUROSCIENCE_TLOI_NS = "http://provenance.isi.edu/disk/neuro/tloi/";
-    public static final String PROV_NEUROSCIENCE_TLOI_PREFIX = "provNeuroScienceTLOI";
+    public static final String PROV_NEUROSCIENCE_TRIGGER_NS = "http://provenance.isi.edu/disk/neuro/tloi/";
+    public static final String PROV_NEUROSCIENCE_TRIGGER_PREFIX = "provNeuroScienceTLOI";
 
-    public static final String PROV_NEUROSCIENCE_LOI_NS = "http://provenance.isi.edu/disk/neuro/loi/";
-    public static final String PROV_NEUROSCIENCE_LOI_PREFIX = "provNeuroScienceLOI";
+    public static final String PROV_NEUROSCIENCE_LINE_NS = "http://provenance.isi.edu/disk/neuro/loi/";
+    public static final String PROV_NEUROSCIENCE_LINE_PREFIX = "provNeuroScienceLOI";
 
     public static final String DISK_PREFIX = "neuroScienceDisk";
     public static final String DISK_NS = "http://localhost:8080/disk-server/admin/";
@@ -65,8 +65,8 @@ public class DocumentProv {
         localNs.addKnownNamespaces();
         localNs.register(PROV_NEUROSCIENCE_QUESTION_PREFIX, PROV_NEUROSCIENCE_QUESTION_NS);
         localNs.register(PROV_NEUROSCIENCE_HYPOTHESIS_PREFIX, PROV_NEUROSCIENCE_HYPOTHESIS_NS);
-        localNs.register(PROV_NEUROSCIENCE_TLOI_PREFIX, PROV_NEUROSCIENCE_TLOI_NS);
-        localNs.register(PROV_NEUROSCIENCE_LOI_PREFIX, PROV_NEUROSCIENCE_LOI_NS);
+        localNs.register(PROV_NEUROSCIENCE_TRIGGER_PREFIX, PROV_NEUROSCIENCE_TRIGGER_NS);
+        localNs.register(PROV_NEUROSCIENCE_LINE_PREFIX, PROV_NEUROSCIENCE_LINE_NS);
         localNs.register(PROV_NEUROSCIENCE_PREFIX, PROV_NEUROSCIENCE_NS);
         localNs.register(DISK_PREFIX, DISK_NS);
         localNs.register(DISK_ONTOLOGY_PREFIX, DISK_ONTOLOGY_NS);
