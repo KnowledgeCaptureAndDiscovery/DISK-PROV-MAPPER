@@ -12,7 +12,7 @@ public class QuestionTest {
   @Test
   public void loadQuestions() throws IOException {
     String path = "src/test/resources/Hypothesis-4CGdVLyttD07/questions.json";
-    List<Question> questions = Utils.loadQuestions(path);
+    List<Question> questions = UtilsTest.loadQuestions(path);
     Question question = questions.get(0);
     String questionId = "https://w3id.org/sqo/resource/EnigmaQuestion4";
     Assert.assertEquals(questionId, question.getId());

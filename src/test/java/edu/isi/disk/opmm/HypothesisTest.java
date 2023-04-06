@@ -15,7 +15,7 @@ public class HypothesisTest {
 
         @Test
         public void loadHypothesis() throws StreamReadException, DatabindException, IOException {
-                Hypothesis hypothesis = Utils
+                Hypothesis hypothesis = UtilsTest
                                 .loadHypothesis("src/test/resources/Hypothesis-4CGdVLyttD07/hypothesis.json");
                 Assert.assertEquals("Hypothesis-4CGdVLyttD07", hypothesis.getId());
                 Assert.assertEquals(

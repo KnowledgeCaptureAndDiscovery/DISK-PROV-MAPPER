@@ -1,5 +1,7 @@
 package edu.isi.disk.opmm;
 
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -28,7 +30,6 @@ import org.openprovenance.prov.model.Used;
 import org.openprovenance.prov.model.WasDerivedFrom;
 import org.openprovenance.prov.model.WasGeneratedBy;
 import org.openprovenance.prov.model.WasInformedBy;
-import org.semanticweb.owlapi.model.IRI;
 
 /**
  * @author Maximiliano Osorio
@@ -68,7 +69,12 @@ public class Mapper {
 
         public DocumentProv transformFromHypotehsis(Hypothesis hypothesis, LineOfInquiry lineOfInquiry,
                         List<TriggeredLOI> triggeredLOIList, List<Question> questions) throws ParseException {
-                map(hypothesis, lineOfInquiry, triggeredLOIList, questions);
+                try {
+                        map(hypothesis, lineOfInquiry, triggeredLOIList, questions);
+                } catch (URISyntaxException e) {
+                        // TODO Auto-generated catch block
+                        e.printStackTrace();
+                }
                 Namespace triggerDefaultNamespace = new Namespace();
                 DocumentProv.register(triggerDefaultNamespace, DocumentProv.PROV_NEUROSCIENCE_TRIGGER_NS);
                 Namespace loisDefaultNamespace = new Namespace();
@@ -91,7 +97,8 @@ public class Mapper {
         }
 
         public void map(Hypothesis hypothesis, LineOfInquiry lineOfInquiry,
-                        List<TriggeredLOI> triggeredLOIList, List<Question> questions) throws ParseException {
+                        List<TriggeredLOI> triggeredLOIList, List<Question> questions)
+                        throws ParseException, URISyntaxException {
                 Agent hvargas = createDummyAgent("hvargas", "Hernan Vargas");
                 Agent neda = createDummyAgent("neda", "Neda Jahanshad");
                 prov.document.getStatementOrBundle().add(hvargas);
@@ -606,14 +613,19 @@ public class Mapper {
                 variables.forEach(variable -> {
                         String id = variable.getId();
                         String name = variable.getVariableName();
-                        String localName = IRI.create(id).getFragment();
-                        Entity questionVariableEntity = pFactory.newEntity(
-                                        prov.qn(localName, DocumentProv.PROV_NEUROSCIENCE_QUESTION_PREFIX),
-                                        name);
-                        HadMember hadMember = pFactory.newHadMember(questionVariableCollection.getId(),
-                                        questionVariableEntity.getId());
-                        questionBundle.getStatement().addAll(Arrays.asList(hadMember));
-                        questionBundle.getStatement().add(questionVariableEntity);
+                        try {
+
+                                String localName = Utils.getFragment(id);
+                                Entity questionVariableEntity = pFactory.newEntity(
+                                                prov.qn(localName, DocumentProv.PROV_NEUROSCIENCE_QUESTION_PREFIX),
+                                                name);
+                                HadMember hadMember = pFactory.newHadMember(questionVariableCollection.getId(),
+                                                questionVariableEntity.getId());
+                                questionBundle.getStatement().addAll(Arrays.asList(hadMember));
+                                questionBundle.getStatement().add(questionVariableEntity);
+                        } catch (Exception e) {
+                                e.printStackTrace();
+                        }
 
                 });
                 WasDerivedFrom wdf = pFactory.newWasDerivedFrom(null, questionEntity.getId(),
@@ -640,16 +652,22 @@ public class Mapper {
                 hypothesisBundle.getStatement().add(derivationVariables);
                 hypothesis.getQuestionBindings().forEach(variableBinding -> {
                         String variable = variableBinding.getVariable();
-                        String localName = IRI.create(variable).getFragment();
-                        String binding = variableBinding.getBinding();
-                        String variableLocalName = variableCollectionLocalName + '/' + localName;
-                        Entity variableBindingEntity = pFactory.newEntity(
-                                        prov.qn(variableLocalName, DocumentProv.PROV_NEUROSCIENCE_HYPOTHESIS_PREFIX),
-                                        binding);
-                        HadMember hadMember = pFactory.newHadMember(variableCollection.getId(),
-                                        variableBindingEntity.getId());
-                        hypothesisBundle.getStatement().add(variableBindingEntity);
-                        hypothesisBundle.getStatement().add(hadMember);
+                        try {
+
+                                String localName = Utils.getFragment(variable);
+                                String binding = variableBinding.getBinding();
+                                String variableLocalName = variableCollectionLocalName + '/' + localName;
+                                Entity variableBindingEntity = pFactory.newEntity(
+                                                prov.qn(variableLocalName,
+                                                                DocumentProv.PROV_NEUROSCIENCE_HYPOTHESIS_PREFIX),
+                                                binding);
+                                HadMember hadMember = pFactory.newHadMember(variableCollection.getId(),
+                                                variableBindingEntity.getId());
+                                hypothesisBundle.getStatement().add(variableBindingEntity);
+                                hypothesisBundle.getStatement().add(hadMember);
+                        } catch (Exception e) {
+                                e.printStackTrace();
+                        }
                 });
                 WasDerivedFrom wdf = pFactory.newWasDerivedFrom(null, hypothesisEntity.getId(),
                                 variableCollection.getId());
@@ -675,10 +693,10 @@ public class Mapper {
                 questionBundle.getStatement().add(hypothesisFromQuestion);
         }
 
-        public Entity createQuestionEntity(Question question) {
+        public Entity createQuestionEntity(Question question) throws URISyntaxException {
                 String id = question.getId();
                 String name = question.getName();
-                String localName = IRI.create(id).getFragment();
+                String localName = Utils.getFragment(id);
                 Entity questionEntity = pFactory.newEntity(
                                 prov.qn(localName, DocumentProv.PROV_NEUROSCIENCE_QUESTION_PREFIX),
                                 name);
@@ -691,10 +709,10 @@ public class Mapper {
                 return questionEntity;
         }
 
-        public Entity createHypothesisEntity(Hypothesis hypothesis) {
+        public Entity createHypothesisEntity(Hypothesis hypothesis) throws URISyntaxException {
                 String id = hypothesis.getId();
                 String name = hypothesis.getName();
-                String localName = IRI.create(id).getFragment();
+                String localName = Utils.getFragment(id);
                 String dateCreated = hypothesis.getDateCreated();
 
                 Entity hypothesisEntity = pFactory.newEntity(
@@ -707,10 +725,10 @@ public class Mapper {
                 return hypothesisEntity;
         }
 
-        public Entity createLineOfInquiryEntity(LineOfInquiry lineOfInquiry) {
+        public Entity createLineOfInquiryEntity(LineOfInquiry lineOfInquiry) throws URISyntaxException {
                 String id = lineOfInquiry.getId();
                 String name = lineOfInquiry.getName();
-                String localName = IRI.create(id).getFragment();
+                String localName = Utils.getFragment(id);
                 String dateCreated = lineOfInquiry.getDateCreated();
                 Entity loisEntity = pFactory.newEntity(
                                 prov.qn(localName, DocumentProv.PROV_NEUROSCIENCE_LINE_PREFIX),
@@ -722,10 +740,10 @@ public class Mapper {
                 return loisEntity;
         }
 
-        public Entity createTiggerEntity(TriggeredLOI triggerLineInquiry) {
+        public Entity createTiggerEntity(TriggeredLOI triggerLineInquiry) throws URISyntaxException {
                 String id = triggerLineInquiry.getId();
                 String name = triggerLineInquiry.getName();
-                String localName = IRI.create(id).getFragment();
+                String localName = Utils.getFragment(id);
                 String dateCreated = triggerLineInquiry.getDateCreated();
                 Entity triggerEntity = pFactory.newEntity(
                                 prov.qn(localName, DocumentProv.PROV_NEUROSCIENCE_TRIGGER_PREFIX),

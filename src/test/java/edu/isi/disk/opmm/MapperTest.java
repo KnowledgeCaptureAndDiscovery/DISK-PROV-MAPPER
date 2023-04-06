@@ -19,11 +19,11 @@ public class MapperTest {
   @Test
   public void mapper() throws StreamReadException, DatabindException, IOException, ParseException {
 
-    Hypothesis hypothesis = Utils.loadHypothesis("src/test/resources/Hypothesis-4CGdVLyttD07/hypothesis.json");
-    List<Question> questions = Utils.loadQuestions("src/test/resources/Hypothesis-4CGdVLyttD07/questions.json");
-    TriggeredLOI tloi = Utils.loadTriggeredLOI("src/test/resources/Hypothesis-4CGdVLyttD07/tloi.json");
-    List<TriggeredLOI> tlois = Utils.loadTriggeredLOIs("src/test/resources/Hypothesis-4CGdVLyttD07/tlois.json");
-    LineOfInquiry loi = Utils.loadLineOfInquiry("src/test/resources/Hypothesis-4CGdVLyttD07/loi.json");
+    Hypothesis hypothesis = UtilsTest.loadHypothesis("src/test/resources/Hypothesis-4CGdVLyttD07/hypothesis.json");
+    List<Question> questions = UtilsTest.loadQuestions("src/test/resources/Hypothesis-4CGdVLyttD07/questions.json");
+    TriggeredLOI tloi = UtilsTest.loadTriggeredLOI("src/test/resources/Hypothesis-4CGdVLyttD07/tloi.json");
+    List<TriggeredLOI> tlois = UtilsTest.loadTriggeredLOIs("src/test/resources/Hypothesis-4CGdVLyttD07/tlois.json");
+    LineOfInquiry loi = UtilsTest.loadLineOfInquiry("src/test/resources/Hypothesis-4CGdVLyttD07/loi.json");
     // List<LineOfInquiry> lois =
     // Utils.loadLinesOfInquiry("src/test/resources/Hypothesis-4CGdVLyttD07/lois.json");
     Mapper mapper = new Mapper(hypothesis, loi, tlois, questions);
