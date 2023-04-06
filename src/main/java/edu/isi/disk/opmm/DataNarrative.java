@@ -1,6 +1,5 @@
 package edu.isi.disk.opmm;
 
-import java.io.File;
 import java.util.HashMap;
 import java.util.List;
 
@@ -8,9 +7,7 @@ import org.openprovenance.prov.model.Bundle;
 import org.openprovenance.prov.model.Document;
 import org.openprovenance.prov.model.Entity;
 import org.openprovenance.prov.model.Statement;
-import org.openprovenance.prov.model.StatementOrBundle;
 import org.openprovenance.prov.model.StatementOrBundle.Kind;
-
 
 public class DataNarrative {
   Document document;
@@ -28,8 +25,9 @@ public class DataNarrative {
   String HYPOTHESIS_BUNDLE_IDENTIFIER = "hypothesisBundle";
   String QUESTION_BUNDLE_IDENTIFIER = "questionBundle";
 
-  //Hashmap key: LOIS_BUNDLE_IDENTIFIER, TLOIS_BUNDLE_IDENTIFIER, HYPOTHESIS_BUNDLE_IDENTIFIER, QUESTION_BUNDLE_IDENTIFIER
-  //Hashmap value: Bundle
+  // Hashmap key: LOIS_BUNDLE_IDENTIFIER, TLOIS_BUNDLE_IDENTIFIER,
+  // HYPOTHESIS_BUNDLE_IDENTIFIER, QUESTION_BUNDLE_IDENTIFIER
+  // Hashmap value: Bundle
   HashMap<String, Bundle> bundleMap = new HashMap<String, Bundle>();
 
   public DataNarrative(Document document) {
@@ -64,13 +62,14 @@ public class DataNarrative {
   public static Statement getRecordById(Bundle bundle, String statementId) {
     /**
      * Get a record from a bundle by its id
+     * 
      * @param bundle
      * @param statementId
      *
      */
     List<Statement> statements = bundle.getStatement();
-    for (Statement statement:  statements) {
-      if (statement.getClass() == Entity.class ){
+    for (Statement statement : statements) {
+      if (statement.getClass() == Entity.class) {
         Entity entity = (Entity) statement;
         if (entity.getId().getLocalPart().equals(statementId)) {
           System.out.println("Found entity: " + entity.getId().getLocalPart());
@@ -79,6 +78,5 @@ public class DataNarrative {
     }
     return null;
   }
-
 
 }

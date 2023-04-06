@@ -104,8 +104,16 @@ public class DocumentProv {
         InteropFramework intF = new InteropFramework();
         intF.writeDocument(pngFile, document);
         intF.writeDocument(provFile, document);
-        intF.writeDocument(ttlFile, document);
-        intF.writeDocument(jsonFile, document);
+        try {
+            intF.writeDocument(ttlFile, document);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            intF.writeDocument(jsonFile, document);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public void doFigure(Document document, String file) {
