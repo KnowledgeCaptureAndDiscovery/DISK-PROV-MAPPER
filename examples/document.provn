@@ -307,42 +307,6 @@ wasDerivedFrom(EnigmaQuestion4, EnigmaQuestion4/questionVariablesBinding)
 entity(EnigmaQuestion4/questionVariablesBinding,[prov:label = "Collection of question variables"])
 wasGeneratedBy(EnigmaQuestion4/questionVariablesBinding,provNeuroScience:createQuestion,-)
 wasDerivedFrom(provNeuroScienceHypothesis:Hypothesis-4CGdVLyttD07, EnigmaQuestion4)
-wasDerivedFrom(provNeuroScienceHypothesis:Hypothesis-4CGdVLyttD07, EnigmaQuestion4)
-wasDerivedFrom(provNeuroScienceHypothesis:Hypothesis-4CGdVLyttD07, EnigmaQuestion4)
-wasDerivedFrom(provNeuroScienceHypothesis:Hypothesis-4CGdVLyttD07, EnigmaQuestion4)
-wasDerivedFrom(provNeuroScienceHypothesis:Hypothesis-4CGdVLyttD07, EnigmaQuestion4)
-wasDerivedFrom(provNeuroScienceHypothesis:Hypothesis-4CGdVLyttD07, EnigmaQuestion4)
-wasDerivedFrom(provNeuroScienceHypothesis:Hypothesis-4CGdVLyttD07, EnigmaQuestion4)
-wasDerivedFrom(provNeuroScienceHypothesis:Hypothesis-4CGdVLyttD07, EnigmaQuestion4)
-wasDerivedFrom(provNeuroScienceHypothesis:Hypothesis-4CGdVLyttD07, EnigmaQuestion4)
-wasDerivedFrom(provNeuroScienceHypothesis:Hypothesis-4CGdVLyttD07, EnigmaQuestion4)
-wasDerivedFrom(provNeuroScienceHypothesis:Hypothesis-4CGdVLyttD07, EnigmaQuestion4)
-wasDerivedFrom(provNeuroScienceHypothesis:Hypothesis-4CGdVLyttD07, EnigmaQuestion4)
-wasDerivedFrom(provNeuroScienceHypothesis:Hypothesis-4CGdVLyttD07, EnigmaQuestion4)
-wasDerivedFrom(provNeuroScienceHypothesis:Hypothesis-4CGdVLyttD07, EnigmaQuestion4)
-wasDerivedFrom(provNeuroScienceHypothesis:Hypothesis-4CGdVLyttD07, EnigmaQuestion4)
-wasDerivedFrom(provNeuroScienceHypothesis:Hypothesis-4CGdVLyttD07, EnigmaQuestion4)
-wasDerivedFrom(provNeuroScienceHypothesis:Hypothesis-4CGdVLyttD07, EnigmaQuestion4)
-wasDerivedFrom(provNeuroScienceHypothesis:Hypothesis-4CGdVLyttD07, EnigmaQuestion4)
-wasDerivedFrom(provNeuroScienceHypothesis:Hypothesis-4CGdVLyttD07, EnigmaQuestion4)
-wasDerivedFrom(provNeuroScienceHypothesis:Hypothesis-4CGdVLyttD07, EnigmaQuestion4)
-wasDerivedFrom(provNeuroScienceHypothesis:Hypothesis-4CGdVLyttD07, EnigmaQuestion4)
-wasDerivedFrom(provNeuroScienceHypothesis:Hypothesis-4CGdVLyttD07, EnigmaQuestion4)
-wasDerivedFrom(provNeuroScienceHypothesis:Hypothesis-4CGdVLyttD07, EnigmaQuestion4)
-wasDerivedFrom(provNeuroScienceHypothesis:Hypothesis-4CGdVLyttD07, EnigmaQuestion4)
-wasDerivedFrom(provNeuroScienceHypothesis:Hypothesis-4CGdVLyttD07, EnigmaQuestion4)
-wasDerivedFrom(provNeuroScienceHypothesis:Hypothesis-4CGdVLyttD07, EnigmaQuestion4)
-wasDerivedFrom(provNeuroScienceHypothesis:Hypothesis-4CGdVLyttD07, EnigmaQuestion4)
-wasDerivedFrom(provNeuroScienceHypothesis:Hypothesis-4CGdVLyttD07, EnigmaQuestion4)
-wasDerivedFrom(provNeuroScienceHypothesis:Hypothesis-4CGdVLyttD07, EnigmaQuestion4)
-wasDerivedFrom(provNeuroScienceHypothesis:Hypothesis-4CGdVLyttD07, EnigmaQuestion4)
-wasDerivedFrom(provNeuroScienceHypothesis:Hypothesis-4CGdVLyttD07, EnigmaQuestion4)
-wasDerivedFrom(provNeuroScienceHypothesis:Hypothesis-4CGdVLyttD07, EnigmaQuestion4)
-wasDerivedFrom(provNeuroScienceHypothesis:Hypothesis-4CGdVLyttD07, EnigmaQuestion4)
-wasDerivedFrom(provNeuroScienceHypothesis:Hypothesis-4CGdVLyttD07, EnigmaQuestion4)
-wasDerivedFrom(provNeuroScienceHypothesis:Hypothesis-4CGdVLyttD07, EnigmaQuestion4)
-wasDerivedFrom(provNeuroScienceHypothesis:Hypothesis-4CGdVLyttD07, EnigmaQuestion4)
-wasDerivedFrom(provNeuroScienceHypothesis:Hypothesis-4CGdVLyttD07, EnigmaQuestion4)
 endBundle
 bundle provNeuroScience:hypothesisBundle
 default <http://provenance.isi.edu/disk/neuro/hypothesis/>
@@ -455,7 +419,6 @@ used(neuroScienceDisk:select_question,provNeuroScienceQuestion:EnigmaQuestion4,-
 used(neuroScienceDisk:write_data_query_template,provNeuroScienceQuestion:EnigmaQuestion4,-)
 wasGeneratedBy(data_query,neuroScienceDisk:write_data_query_template,-)
 wasGeneratedBy(LOI-R12qZl77tJJ9,neuroScienceDisk:saved_line_of_inquiry,-)
-wasDerivedFrom(LOI-R12qZl77tJJ9, provNeuroScienceQuestion:EnigmaQuestion4)
 entity(data_query,[prov:label = "?project a ?projectClass .
 ?projectClass rdfs:label \"Project (E)\" .
 ?project ?hasCohort ?Cohorts .
@@ -516,7 +479,6 @@ used(neuroScienceDisk:select_question,provNeuroScienceQuestion:EnigmaQuestion4,-
 used(neuroScienceDisk:write_data_query_template,provNeuroScienceQuestion:EnigmaQuestion4,-)
 wasGeneratedBy(data_query,neuroScienceDisk:write_data_query_template,-)
 wasGeneratedBy(LOI-R12qZl77tJJ9,neuroScienceDisk:saved_line_of_inquiry,-)
-wasDerivedFrom(LOI-R12qZl77tJJ9, provNeuroScienceQuestion:EnigmaQuestion4)
 entity(data_query,[prov:label = "?project a ?projectClass .
 ?projectClass rdfs:label \"Project (E)\" .
 ?project ?hasCohort ?Cohorts .
@@ -577,7 +539,6 @@ used(neuroScienceDisk:select_question,provNeuroScienceQuestion:EnigmaQuestion4,-
 used(neuroScienceDisk:write_data_query_template,provNeuroScienceQuestion:EnigmaQuestion4,-)
 wasGeneratedBy(data_query,neuroScienceDisk:write_data_query_template,-)
 wasGeneratedBy(LOI-R12qZl77tJJ9,neuroScienceDisk:saved_line_of_inquiry,-)
-wasDerivedFrom(LOI-R12qZl77tJJ9, provNeuroScienceQuestion:EnigmaQuestion4)
 entity(data_query,[prov:label = "?project a ?projectClass .
 ?projectClass rdfs:label \"Project (E)\" .
 ?project ?hasCohort ?Cohorts .
@@ -638,7 +599,6 @@ used(neuroScienceDisk:select_question,provNeuroScienceQuestion:EnigmaQuestion4,-
 used(neuroScienceDisk:write_data_query_template,provNeuroScienceQuestion:EnigmaQuestion4,-)
 wasGeneratedBy(data_query,neuroScienceDisk:write_data_query_template,-)
 wasGeneratedBy(LOI-R12qZl77tJJ9,neuroScienceDisk:saved_line_of_inquiry,-)
-wasDerivedFrom(LOI-R12qZl77tJJ9, provNeuroScienceQuestion:EnigmaQuestion4)
 entity(data_query,[prov:label = "?project a ?projectClass .
 ?projectClass rdfs:label \"Project (E)\" .
 ?project ?hasCohort ?Cohorts .
@@ -699,7 +659,6 @@ used(neuroScienceDisk:select_question,provNeuroScienceQuestion:EnigmaQuestion4,-
 used(neuroScienceDisk:write_data_query_template,provNeuroScienceQuestion:EnigmaQuestion4,-)
 wasGeneratedBy(data_query,neuroScienceDisk:write_data_query_template,-)
 wasGeneratedBy(LOI-R12qZl77tJJ9,neuroScienceDisk:saved_line_of_inquiry,-)
-wasDerivedFrom(LOI-R12qZl77tJJ9, provNeuroScienceQuestion:EnigmaQuestion4)
 entity(data_query,[prov:label = "?project a ?projectClass .
 ?projectClass rdfs:label \"Project (E)\" .
 ?project ?hasCohort ?Cohorts .
@@ -760,7 +719,6 @@ used(neuroScienceDisk:select_question,provNeuroScienceQuestion:EnigmaQuestion4,-
 used(neuroScienceDisk:write_data_query_template,provNeuroScienceQuestion:EnigmaQuestion4,-)
 wasGeneratedBy(data_query,neuroScienceDisk:write_data_query_template,-)
 wasGeneratedBy(LOI-R12qZl77tJJ9,neuroScienceDisk:saved_line_of_inquiry,-)
-wasDerivedFrom(LOI-R12qZl77tJJ9, provNeuroScienceQuestion:EnigmaQuestion4)
 entity(data_query,[prov:label = "?project a ?projectClass .
 ?projectClass rdfs:label \"Project (E)\" .
 ?project ?hasCohort ?Cohorts .
@@ -821,7 +779,6 @@ used(neuroScienceDisk:select_question,provNeuroScienceQuestion:EnigmaQuestion4,-
 used(neuroScienceDisk:write_data_query_template,provNeuroScienceQuestion:EnigmaQuestion4,-)
 wasGeneratedBy(data_query,neuroScienceDisk:write_data_query_template,-)
 wasGeneratedBy(LOI-R12qZl77tJJ9,neuroScienceDisk:saved_line_of_inquiry,-)
-wasDerivedFrom(LOI-R12qZl77tJJ9, provNeuroScienceQuestion:EnigmaQuestion4)
 entity(data_query,[prov:label = "?project a ?projectClass .
 ?projectClass rdfs:label \"Project (E)\" .
 ?project ?hasCohort ?Cohorts .
@@ -882,7 +839,6 @@ used(neuroScienceDisk:select_question,provNeuroScienceQuestion:EnigmaQuestion4,-
 used(neuroScienceDisk:write_data_query_template,provNeuroScienceQuestion:EnigmaQuestion4,-)
 wasGeneratedBy(data_query,neuroScienceDisk:write_data_query_template,-)
 wasGeneratedBy(LOI-R12qZl77tJJ9,neuroScienceDisk:saved_line_of_inquiry,-)
-wasDerivedFrom(LOI-R12qZl77tJJ9, provNeuroScienceQuestion:EnigmaQuestion4)
 entity(data_query,[prov:label = "?project a ?projectClass .
 ?projectClass rdfs:label \"Project (E)\" .
 ?project ?hasCohort ?Cohorts .
@@ -943,7 +899,6 @@ used(neuroScienceDisk:select_question,provNeuroScienceQuestion:EnigmaQuestion4,-
 used(neuroScienceDisk:write_data_query_template,provNeuroScienceQuestion:EnigmaQuestion4,-)
 wasGeneratedBy(data_query,neuroScienceDisk:write_data_query_template,-)
 wasGeneratedBy(LOI-R12qZl77tJJ9,neuroScienceDisk:saved_line_of_inquiry,-)
-wasDerivedFrom(LOI-R12qZl77tJJ9, provNeuroScienceQuestion:EnigmaQuestion4)
 entity(data_query,[prov:label = "?project a ?projectClass .
 ?projectClass rdfs:label \"Project (E)\" .
 ?project ?hasCohort ?Cohorts .
@@ -1004,7 +959,6 @@ used(neuroScienceDisk:select_question,provNeuroScienceQuestion:EnigmaQuestion4,-
 used(neuroScienceDisk:write_data_query_template,provNeuroScienceQuestion:EnigmaQuestion4,-)
 wasGeneratedBy(data_query,neuroScienceDisk:write_data_query_template,-)
 wasGeneratedBy(LOI-R12qZl77tJJ9,neuroScienceDisk:saved_line_of_inquiry,-)
-wasDerivedFrom(LOI-R12qZl77tJJ9, provNeuroScienceQuestion:EnigmaQuestion4)
 entity(data_query,[prov:label = "?project a ?projectClass .
 ?projectClass rdfs:label \"Project (E)\" .
 ?project ?hasCohort ?Cohorts .
@@ -1065,7 +1019,6 @@ used(neuroScienceDisk:select_question,provNeuroScienceQuestion:EnigmaQuestion4,-
 used(neuroScienceDisk:write_data_query_template,provNeuroScienceQuestion:EnigmaQuestion4,-)
 wasGeneratedBy(data_query,neuroScienceDisk:write_data_query_template,-)
 wasGeneratedBy(LOI-R12qZl77tJJ9,neuroScienceDisk:saved_line_of_inquiry,-)
-wasDerivedFrom(LOI-R12qZl77tJJ9, provNeuroScienceQuestion:EnigmaQuestion4)
 entity(data_query,[prov:label = "?project a ?projectClass .
 ?projectClass rdfs:label \"Project (E)\" .
 ?project ?hasCohort ?Cohorts .
@@ -1126,7 +1079,6 @@ used(neuroScienceDisk:select_question,provNeuroScienceQuestion:EnigmaQuestion4,-
 used(neuroScienceDisk:write_data_query_template,provNeuroScienceQuestion:EnigmaQuestion4,-)
 wasGeneratedBy(data_query,neuroScienceDisk:write_data_query_template,-)
 wasGeneratedBy(LOI-R12qZl77tJJ9,neuroScienceDisk:saved_line_of_inquiry,-)
-wasDerivedFrom(LOI-R12qZl77tJJ9, provNeuroScienceQuestion:EnigmaQuestion4)
 entity(data_query,[prov:label = "?project a ?projectClass .
 ?projectClass rdfs:label \"Project (E)\" .
 ?project ?hasCohort ?Cohorts .
@@ -1190,7 +1142,6 @@ used(neuroScienceDisk:select_question,provNeuroScienceQuestion:EnigmaQuestion4,-
 used(neuroScienceDisk:write_data_query_template,provNeuroScienceQuestion:EnigmaQuestion4,-)
 wasGeneratedBy(data_query,neuroScienceDisk:write_data_query_template,-)
 wasGeneratedBy(LOI-R12qZl77tJJ9,neuroScienceDisk:saved_line_of_inquiry,-)
-wasDerivedFrom(LOI-R12qZl77tJJ9, provNeuroScienceQuestion:EnigmaQuestion4)
 entity(data_query,[prov:label = "?project a ?projectClass .
 ?projectClass rdfs:label \"Project (E)\" .
 ?project ?hasCohort ?Cohorts .
@@ -1254,7 +1205,6 @@ used(neuroScienceDisk:select_question,provNeuroScienceQuestion:EnigmaQuestion4,-
 used(neuroScienceDisk:write_data_query_template,provNeuroScienceQuestion:EnigmaQuestion4,-)
 wasGeneratedBy(data_query,neuroScienceDisk:write_data_query_template,-)
 wasGeneratedBy(LOI-R12qZl77tJJ9,neuroScienceDisk:saved_line_of_inquiry,-)
-wasDerivedFrom(LOI-R12qZl77tJJ9, provNeuroScienceQuestion:EnigmaQuestion4)
 entity(data_query,[prov:label = "?project a ?projectClass .
 ?projectClass rdfs:label \"Project (E)\" .
 ?project ?hasCohort ?Cohorts .
@@ -1318,7 +1268,6 @@ used(neuroScienceDisk:select_question,provNeuroScienceQuestion:EnigmaQuestion4,-
 used(neuroScienceDisk:write_data_query_template,provNeuroScienceQuestion:EnigmaQuestion4,-)
 wasGeneratedBy(data_query,neuroScienceDisk:write_data_query_template,-)
 wasGeneratedBy(LOI-R12qZl77tJJ9,neuroScienceDisk:saved_line_of_inquiry,-)
-wasDerivedFrom(LOI-R12qZl77tJJ9, provNeuroScienceQuestion:EnigmaQuestion4)
 entity(data_query,[prov:label = "?project a ?projectClass .
 ?projectClass rdfs:label \"Project (E)\" .
 ?project ?hasCohort ?Cohorts .
@@ -1382,7 +1331,6 @@ used(neuroScienceDisk:select_question,provNeuroScienceQuestion:EnigmaQuestion4,-
 used(neuroScienceDisk:write_data_query_template,provNeuroScienceQuestion:EnigmaQuestion4,-)
 wasGeneratedBy(data_query,neuroScienceDisk:write_data_query_template,-)
 wasGeneratedBy(LOI-R12qZl77tJJ9,neuroScienceDisk:saved_line_of_inquiry,-)
-wasDerivedFrom(LOI-R12qZl77tJJ9, provNeuroScienceQuestion:EnigmaQuestion4)
 entity(data_query,[prov:label = "?project a ?projectClass .
 ?projectClass rdfs:label \"Project (E)\" .
 ?project ?hasCohort ?Cohorts .
@@ -1446,7 +1394,6 @@ used(neuroScienceDisk:select_question,provNeuroScienceQuestion:EnigmaQuestion4,-
 used(neuroScienceDisk:write_data_query_template,provNeuroScienceQuestion:EnigmaQuestion4,-)
 wasGeneratedBy(data_query,neuroScienceDisk:write_data_query_template,-)
 wasGeneratedBy(LOI-R12qZl77tJJ9,neuroScienceDisk:saved_line_of_inquiry,-)
-wasDerivedFrom(LOI-R12qZl77tJJ9, provNeuroScienceQuestion:EnigmaQuestion4)
 entity(data_query,[prov:label = "?project a ?projectClass .
 ?projectClass rdfs:label \"Project (E)\" .
 ?project ?hasCohort ?Cohorts .
@@ -1510,7 +1457,6 @@ used(neuroScienceDisk:select_question,provNeuroScienceQuestion:EnigmaQuestion4,-
 used(neuroScienceDisk:write_data_query_template,provNeuroScienceQuestion:EnigmaQuestion4,-)
 wasGeneratedBy(data_query,neuroScienceDisk:write_data_query_template,-)
 wasGeneratedBy(LOI-R12qZl77tJJ9,neuroScienceDisk:saved_line_of_inquiry,-)
-wasDerivedFrom(LOI-R12qZl77tJJ9, provNeuroScienceQuestion:EnigmaQuestion4)
 entity(data_query,[prov:label = "?project a ?projectClass .
 ?projectClass rdfs:label \"Project (E)\" .
 ?project ?hasCohort ?Cohorts .
@@ -1574,7 +1520,6 @@ used(neuroScienceDisk:select_question,provNeuroScienceQuestion:EnigmaQuestion4,-
 used(neuroScienceDisk:write_data_query_template,provNeuroScienceQuestion:EnigmaQuestion4,-)
 wasGeneratedBy(data_query,neuroScienceDisk:write_data_query_template,-)
 wasGeneratedBy(LOI-R12qZl77tJJ9,neuroScienceDisk:saved_line_of_inquiry,-)
-wasDerivedFrom(LOI-R12qZl77tJJ9, provNeuroScienceQuestion:EnigmaQuestion4)
 entity(data_query,[prov:label = "?project a ?projectClass .
 ?projectClass rdfs:label \"Project (E)\" .
 ?project ?hasCohort ?Cohorts .
@@ -1638,7 +1583,6 @@ used(neuroScienceDisk:select_question,provNeuroScienceQuestion:EnigmaQuestion4,-
 used(neuroScienceDisk:write_data_query_template,provNeuroScienceQuestion:EnigmaQuestion4,-)
 wasGeneratedBy(data_query,neuroScienceDisk:write_data_query_template,-)
 wasGeneratedBy(LOI-R12qZl77tJJ9,neuroScienceDisk:saved_line_of_inquiry,-)
-wasDerivedFrom(LOI-R12qZl77tJJ9, provNeuroScienceQuestion:EnigmaQuestion4)
 entity(data_query,[prov:label = "?project a ?projectClass .
 ?projectClass rdfs:label \"Project (E)\" .
 ?project ?hasCohort ?Cohorts .
@@ -1702,7 +1646,6 @@ used(neuroScienceDisk:select_question,provNeuroScienceQuestion:EnigmaQuestion4,-
 used(neuroScienceDisk:write_data_query_template,provNeuroScienceQuestion:EnigmaQuestion4,-)
 wasGeneratedBy(data_query,neuroScienceDisk:write_data_query_template,-)
 wasGeneratedBy(LOI-R12qZl77tJJ9,neuroScienceDisk:saved_line_of_inquiry,-)
-wasDerivedFrom(LOI-R12qZl77tJJ9, provNeuroScienceQuestion:EnigmaQuestion4)
 entity(data_query,[prov:label = "?project a ?projectClass .
 ?projectClass rdfs:label \"Project (E)\" .
 ?project ?hasCohort ?Cohorts .
@@ -1766,7 +1709,6 @@ used(neuroScienceDisk:select_question,provNeuroScienceQuestion:EnigmaQuestion4,-
 used(neuroScienceDisk:write_data_query_template,provNeuroScienceQuestion:EnigmaQuestion4,-)
 wasGeneratedBy(data_query,neuroScienceDisk:write_data_query_template,-)
 wasGeneratedBy(LOI-R12qZl77tJJ9,neuroScienceDisk:saved_line_of_inquiry,-)
-wasDerivedFrom(LOI-R12qZl77tJJ9, provNeuroScienceQuestion:EnigmaQuestion4)
 entity(data_query,[prov:label = "?project a ?projectClass .
 ?projectClass rdfs:label \"Project (E)\" .
 ?project ?hasCohort ?Cohorts .
@@ -1830,7 +1772,6 @@ used(neuroScienceDisk:select_question,provNeuroScienceQuestion:EnigmaQuestion4,-
 used(neuroScienceDisk:write_data_query_template,provNeuroScienceQuestion:EnigmaQuestion4,-)
 wasGeneratedBy(data_query,neuroScienceDisk:write_data_query_template,-)
 wasGeneratedBy(LOI-R12qZl77tJJ9,neuroScienceDisk:saved_line_of_inquiry,-)
-wasDerivedFrom(LOI-R12qZl77tJJ9, provNeuroScienceQuestion:EnigmaQuestion4)
 entity(data_query,[prov:label = "?project a ?projectClass .
 ?projectClass rdfs:label \"Project (E)\" .
 ?project ?hasCohort ?Cohorts .
@@ -1894,7 +1835,6 @@ used(neuroScienceDisk:select_question,provNeuroScienceQuestion:EnigmaQuestion4,-
 used(neuroScienceDisk:write_data_query_template,provNeuroScienceQuestion:EnigmaQuestion4,-)
 wasGeneratedBy(data_query,neuroScienceDisk:write_data_query_template,-)
 wasGeneratedBy(LOI-R12qZl77tJJ9,neuroScienceDisk:saved_line_of_inquiry,-)
-wasDerivedFrom(LOI-R12qZl77tJJ9, provNeuroScienceQuestion:EnigmaQuestion4)
 entity(data_query,[prov:label = "?project a ?projectClass .
 ?projectClass rdfs:label \"Project (E)\" .
 ?project ?hasCohort ?Cohorts .
@@ -1958,7 +1898,6 @@ used(neuroScienceDisk:select_question,provNeuroScienceQuestion:EnigmaQuestion4,-
 used(neuroScienceDisk:write_data_query_template,provNeuroScienceQuestion:EnigmaQuestion4,-)
 wasGeneratedBy(data_query,neuroScienceDisk:write_data_query_template,-)
 wasGeneratedBy(LOI-R12qZl77tJJ9,neuroScienceDisk:saved_line_of_inquiry,-)
-wasDerivedFrom(LOI-R12qZl77tJJ9, provNeuroScienceQuestion:EnigmaQuestion4)
 entity(data_query,[prov:label = "?project a ?projectClass .
 ?projectClass rdfs:label \"Project (E)\" .
 ?project ?hasCohort ?Cohorts .
@@ -2022,7 +1961,6 @@ used(neuroScienceDisk:select_question,provNeuroScienceQuestion:EnigmaQuestion4,-
 used(neuroScienceDisk:write_data_query_template,provNeuroScienceQuestion:EnigmaQuestion4,-)
 wasGeneratedBy(data_query,neuroScienceDisk:write_data_query_template,-)
 wasGeneratedBy(LOI-R12qZl77tJJ9,neuroScienceDisk:saved_line_of_inquiry,-)
-wasDerivedFrom(LOI-R12qZl77tJJ9, provNeuroScienceQuestion:EnigmaQuestion4)
 entity(data_query,[prov:label = "?project a ?projectClass .
 ?projectClass rdfs:label \"Project (E)\" .
 ?project ?hasCohort ?Cohorts .
@@ -2086,7 +2024,6 @@ used(neuroScienceDisk:select_question,provNeuroScienceQuestion:EnigmaQuestion4,-
 used(neuroScienceDisk:write_data_query_template,provNeuroScienceQuestion:EnigmaQuestion4,-)
 wasGeneratedBy(data_query,neuroScienceDisk:write_data_query_template,-)
 wasGeneratedBy(LOI-R12qZl77tJJ9,neuroScienceDisk:saved_line_of_inquiry,-)
-wasDerivedFrom(LOI-R12qZl77tJJ9, provNeuroScienceQuestion:EnigmaQuestion4)
 entity(data_query,[prov:label = "?project a ?projectClass .
 ?projectClass rdfs:label \"Project (E)\" .
 ?project ?hasCohort ?Cohorts .
@@ -2139,7 +2076,6 @@ used(neuroScienceDisk:select_question,provNeuroScienceQuestion:EnigmaQuestion4,-
 used(neuroScienceDisk:write_data_query_template,provNeuroScienceQuestion:EnigmaQuestion4,-)
 wasGeneratedBy(data_query,neuroScienceDisk:write_data_query_template,-)
 wasGeneratedBy(LOI-R12qZl77tJJ9,neuroScienceDisk:saved_line_of_inquiry,-)
-wasDerivedFrom(LOI-R12qZl77tJJ9, provNeuroScienceQuestion:EnigmaQuestion4)
 entity(data_query,[prov:label = "?project a ?projectClass .
 ?projectClass rdfs:label \"Project (E)\" .
 ?project ?hasCohort ?Cohorts .
@@ -2192,7 +2128,6 @@ used(neuroScienceDisk:select_question,provNeuroScienceQuestion:EnigmaQuestion4,-
 used(neuroScienceDisk:write_data_query_template,provNeuroScienceQuestion:EnigmaQuestion4,-)
 wasGeneratedBy(data_query,neuroScienceDisk:write_data_query_template,-)
 wasGeneratedBy(LOI-R12qZl77tJJ9,neuroScienceDisk:saved_line_of_inquiry,-)
-wasDerivedFrom(LOI-R12qZl77tJJ9, provNeuroScienceQuestion:EnigmaQuestion4)
 entity(data_query,[prov:label = "?project a ?projectClass .
 ?projectClass rdfs:label \"Project (E)\" .
 ?project ?hasCohort ?Cohorts .
@@ -2245,7 +2180,6 @@ used(neuroScienceDisk:select_question,provNeuroScienceQuestion:EnigmaQuestion4,-
 used(neuroScienceDisk:write_data_query_template,provNeuroScienceQuestion:EnigmaQuestion4,-)
 wasGeneratedBy(data_query,neuroScienceDisk:write_data_query_template,-)
 wasGeneratedBy(LOI-R12qZl77tJJ9,neuroScienceDisk:saved_line_of_inquiry,-)
-wasDerivedFrom(LOI-R12qZl77tJJ9, provNeuroScienceQuestion:EnigmaQuestion4)
 entity(data_query,[prov:label = "?project a ?projectClass .
 ?projectClass rdfs:label \"Project (E)\" .
 ?project ?hasCohort ?Cohorts .
@@ -2298,7 +2232,6 @@ used(neuroScienceDisk:select_question,provNeuroScienceQuestion:EnigmaQuestion4,-
 used(neuroScienceDisk:write_data_query_template,provNeuroScienceQuestion:EnigmaQuestion4,-)
 wasGeneratedBy(data_query,neuroScienceDisk:write_data_query_template,-)
 wasGeneratedBy(LOI-R12qZl77tJJ9,neuroScienceDisk:saved_line_of_inquiry,-)
-wasDerivedFrom(LOI-R12qZl77tJJ9, provNeuroScienceQuestion:EnigmaQuestion4)
 entity(data_query,[prov:label = "?project a ?projectClass .
 ?projectClass rdfs:label \"Project (E)\" .
 ?project ?hasCohort ?Cohorts .
@@ -2351,7 +2284,6 @@ used(neuroScienceDisk:select_question,provNeuroScienceQuestion:EnigmaQuestion4,-
 used(neuroScienceDisk:write_data_query_template,provNeuroScienceQuestion:EnigmaQuestion4,-)
 wasGeneratedBy(data_query,neuroScienceDisk:write_data_query_template,-)
 wasGeneratedBy(LOI-R12qZl77tJJ9,neuroScienceDisk:saved_line_of_inquiry,-)
-wasDerivedFrom(LOI-R12qZl77tJJ9, provNeuroScienceQuestion:EnigmaQuestion4)
 entity(data_query,[prov:label = "?project a ?projectClass .
 ?projectClass rdfs:label \"Project (E)\" .
 ?project ?hasCohort ?Cohorts .
@@ -2404,7 +2336,6 @@ used(neuroScienceDisk:select_question,provNeuroScienceQuestion:EnigmaQuestion4,-
 used(neuroScienceDisk:write_data_query_template,provNeuroScienceQuestion:EnigmaQuestion4,-)
 wasGeneratedBy(data_query,neuroScienceDisk:write_data_query_template,-)
 wasGeneratedBy(LOI-R12qZl77tJJ9,neuroScienceDisk:saved_line_of_inquiry,-)
-wasDerivedFrom(LOI-R12qZl77tJJ9, provNeuroScienceQuestion:EnigmaQuestion4)
 entity(data_query,[prov:label = "?project a ?projectClass .
 ?projectClass rdfs:label \"Project (E)\" .
 ?project ?hasCohort ?Cohorts .
@@ -2457,7 +2388,6 @@ used(neuroScienceDisk:select_question,provNeuroScienceQuestion:EnigmaQuestion4,-
 used(neuroScienceDisk:write_data_query_template,provNeuroScienceQuestion:EnigmaQuestion4,-)
 wasGeneratedBy(data_query,neuroScienceDisk:write_data_query_template,-)
 wasGeneratedBy(LOI-R12qZl77tJJ9,neuroScienceDisk:saved_line_of_inquiry,-)
-wasDerivedFrom(LOI-R12qZl77tJJ9, provNeuroScienceQuestion:EnigmaQuestion4)
 entity(data_query,[prov:label = "?project a ?projectClass .
 ?projectClass rdfs:label \"Project (E)\" .
 ?project ?hasCohort ?Cohorts .
@@ -2510,7 +2440,6 @@ used(neuroScienceDisk:select_question,provNeuroScienceQuestion:EnigmaQuestion4,-
 used(neuroScienceDisk:write_data_query_template,provNeuroScienceQuestion:EnigmaQuestion4,-)
 wasGeneratedBy(data_query,neuroScienceDisk:write_data_query_template,-)
 wasGeneratedBy(LOI-R12qZl77tJJ9,neuroScienceDisk:saved_line_of_inquiry,-)
-wasDerivedFrom(LOI-R12qZl77tJJ9, provNeuroScienceQuestion:EnigmaQuestion4)
 entity(data_query,[prov:label = "?project a ?projectClass .
 ?projectClass rdfs:label \"Project (E)\" .
 ?project ?hasCohort ?Cohorts .
@@ -2574,7 +2503,6 @@ used(neuroScienceDisk:select_question,provNeuroScienceQuestion:EnigmaQuestion4,-
 used(neuroScienceDisk:write_data_query_template,provNeuroScienceQuestion:EnigmaQuestion4,-)
 wasGeneratedBy(data_query,neuroScienceDisk:write_data_query_template,-)
 wasGeneratedBy(LOI-R12qZl77tJJ9,neuroScienceDisk:saved_line_of_inquiry,-)
-wasDerivedFrom(LOI-R12qZl77tJJ9, provNeuroScienceQuestion:EnigmaQuestion4)
 entity(data_query,[prov:label = "?project a ?projectClass .
 ?projectClass rdfs:label \"Project (E)\" .
 ?project ?hasCohort ?Cohorts .

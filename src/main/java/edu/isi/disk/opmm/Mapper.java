@@ -135,10 +135,11 @@ public class Mapper {
                                 hypothesisEntity, questionVariablesBinding,
                                 createHypothesisActivity);
 
+                hypothesisWasDerived(questionEntity, hypothesisEntity);
+                lineOfInquiryWasDerived(questionEntity, lineOfInquiryEntity);
                 for (TriggeredLOI trigger : triggeredLOIList) {
                         Entity triggerEntity = createTiggerEntity(trigger);
-                        level1WasDerived(questionEntity, hypothesisEntity, lineOfInquiryEntity,
-                                        triggerEntity);
+                        triggerWasDerived(lineOfInquiryEntity, triggerEntity);
                         level2LineAdd(trigger, lineOfInquiry,
                                         hypothesisEntity, questionEntity,
                                         lineOfInquiryEntity,
@@ -679,18 +680,24 @@ public class Mapper {
                 return variableCollection;
         }
 
-        private void level1WasDerived(Entity questionEntity, Entity hypothesisEntity, Entity lineOfInquiryEntity,
-                        Entity triggerEntity) {
-                // Link the trigger to the line of inquiry
-                WasDerivedFrom triggerFromLine = pFactory.newWasDerivedFrom(triggerEntity.getId(),
-                                lineOfInquiryEntity.getId());
-                WasDerivedFrom lineFromQuestion = pFactory.newWasDerivedFrom(lineOfInquiryEntity.getId(),
-                                questionEntity.getId());
+        private void hypothesisWasDerived(Entity questionEntity, Entity hypothesisEntity) {
                 WasDerivedFrom hypothesisFromQuestion = pFactory.newWasDerivedFrom(hypothesisEntity.getId(),
                                 questionEntity.getId());
-                triggerBundle.getStatement().add(triggerFromLine);
-                loisBundle.getStatement().add(lineFromQuestion);
                 questionBundle.getStatement().add(hypothesisFromQuestion);
+
+        }
+
+        private void lineOfInquiryWasDerived(Entity questionEntity, Entity lineOfInquiryEntity) {
+                // Link the trigger to the line of inquiry
+                WasDerivedFrom lineFromQuestion = pFactory.newWasDerivedFrom(lineOfInquiryEntity.getId(),
+                                questionEntity.getId());
+                loisBundle.getStatement().add(lineFromQuestion);
+        }
+
+        private void triggerWasDerived(Entity lineOfInquiryEntity, Entity triggerEntity) {
+                WasDerivedFrom triggerFromLine = pFactory.newWasDerivedFrom(triggerEntity.getId(),
+                                lineOfInquiryEntity.getId());
+                triggerBundle.getStatement().add(triggerFromLine);
         }
 
         public Entity createQuestionEntity(Question question) throws URISyntaxException {
