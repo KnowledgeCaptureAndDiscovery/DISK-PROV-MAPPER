@@ -26,7 +26,6 @@ public class HypothesisTest {
                 Assert.assertEquals("07:19:00 2023-03-30", hypothesis.getDateModified());
                 Assert.assertEquals("enigma-disk@isi.edu", hypothesis.getAuthor());
                 Assert.assertEquals("", hypothesis.getNotes());
-                // TODO: #3 QuestionId is not a property of Hypothesis class
                 Assert.assertEquals("https://w3id.org/sqo/resource/EnigmaQuestion5", hypothesis.getQuestionId());
 
                 List<VariableBinding> questionBindings = hypothesis.getQuestionBindings();
