@@ -23,11 +23,11 @@ public class DocumentProv {
     public static final String PROV_NEUROSCIENCE_HYPOTHESIS_NS = "http://provenance.isi.edu/disk/neuro/hypothesis/";
     public static final String PROV_NEUROSCIENCE_HYPOTHESIS_PREFIX = "provNeuroScienceHypothesis";
 
-    public static final String PROV_NEUROSCIENCE_TLOI_NS = "http://provenance.isi.edu/disk/neuro/tloi/";
-    public static final String PROV_NEUROSCIENCE_TLOI_PREFIX = "provNeuroScienceTLOI";
+    public static final String PROV_NEUROSCIENCE_TRIGGER_NS = "http://provenance.isi.edu/disk/neuro/tloi/";
+    public static final String PROV_NEUROSCIENCE_TRIGGER_PREFIX = "provNeuroScienceTLOI";
 
-    public static final String PROV_NEUROSCIENCE_LOI_NS = "http://provenance.isi.edu/disk/neuro/loi/";
-    public static final String PROV_NEUROSCIENCE_LOI_PREFIX = "provNeuroScienceLOI";
+    public static final String PROV_NEUROSCIENCE_LINE_NS = "http://provenance.isi.edu/disk/neuro/loi/";
+    public static final String PROV_NEUROSCIENCE_LINE_PREFIX = "provNeuroScienceLOI";
 
     public static final String DISK_PREFIX = "neuroScienceDisk";
     public static final String DISK_NS = "http://localhost:8080/disk-server/admin/";
@@ -47,6 +47,10 @@ public class DocumentProv {
     public static final String RDFS_PREFIX = "rdfs";
     public static final String RDFS_NS = "http://www.w3.org/2000/01/rdf-schema#";
 
+    // dcat
+    public static final String DCAT_PREFIX = "dcat";
+    public static final String DCAT_NS = "http://www.w3.org/ns/dcat#";
+
     public static final String DCTERMS_NS = "http://purl.org/dc/terms/";
     public static final String DCTERMS_PREFIX = "dcterms";
 
@@ -65,8 +69,8 @@ public class DocumentProv {
         localNs.addKnownNamespaces();
         localNs.register(PROV_NEUROSCIENCE_QUESTION_PREFIX, PROV_NEUROSCIENCE_QUESTION_NS);
         localNs.register(PROV_NEUROSCIENCE_HYPOTHESIS_PREFIX, PROV_NEUROSCIENCE_HYPOTHESIS_NS);
-        localNs.register(PROV_NEUROSCIENCE_TLOI_PREFIX, PROV_NEUROSCIENCE_TLOI_NS);
-        localNs.register(PROV_NEUROSCIENCE_LOI_PREFIX, PROV_NEUROSCIENCE_LOI_NS);
+        localNs.register(PROV_NEUROSCIENCE_TRIGGER_PREFIX, PROV_NEUROSCIENCE_TRIGGER_NS);
+        localNs.register(PROV_NEUROSCIENCE_LINE_PREFIX, PROV_NEUROSCIENCE_LINE_NS);
         localNs.register(PROV_NEUROSCIENCE_PREFIX, PROV_NEUROSCIENCE_NS);
         localNs.register(DISK_PREFIX, DISK_NS);
         localNs.register(DISK_ONTOLOGY_PREFIX, DISK_ONTOLOGY_NS);
@@ -75,6 +79,7 @@ public class DocumentProv {
         localNs.register(RDFS_PREFIX, RDFS_NS);
         localNs.register(RDF_PREFIX, RDF_NS);
         localNs.register(DCTERMS_PREFIX, DCTERMS_NS);
+        localNs.register(DCAT_PREFIX, DCAT_NS);
         localNs.setDefaultNamespace(defaultNameSpace);
         System.out.println("Default namespace: " + localNs.getDefaultNamespace());
     }
@@ -96,7 +101,7 @@ public class DocumentProv {
         return ns.qualifiedName(prefix, n, factory);
     }
 
-    public void doConversions(Document document, String file) {
+    public void doConversions(String file) {
         String pngFile = file + ".png";
         String provFile = file + ".provn";
         String ttlFile = file + ".ttl";
