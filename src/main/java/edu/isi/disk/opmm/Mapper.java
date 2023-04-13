@@ -9,6 +9,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+import javax.print.Doc;
+
 import org.diskproject.shared.classes.hypothesis.Hypothesis;
 import org.diskproject.shared.classes.loi.LineOfInquiry;
 import org.diskproject.shared.classes.loi.TriggeredLOI;
@@ -150,7 +152,7 @@ public class Mapper {
                 } else {
 
                 }
-                String variableLocalName = collection.getId().getLocalPart() + '/'
+                String variableLocalName = collection.getId().getLocalPart() + '_'
                                 + name;
                 Entity variableBindingEntity = pFactory.newEntity(
                                 prov.qn(variableLocalName, DocumentProv.PROV_NEUROSCIENCE_TRIGGER_PREFIX),
@@ -390,7 +392,7 @@ public class Mapper {
                 }
 
                 // Confidence report
-                String confidenceReportLocalName = triggerEntity.getId().getLocalPart() + '/'
+                String confidenceReportLocalName = triggerEntity.getId().getLocalPart() + '_'
                                 + Constants.DISK_ONTOLOGY_CONFIDENCE_REPORT_LOCALNAME;
                 Entity confidenceReport = pFactory.newEntity(
                                 prov.qn(confidenceReportLocalName, DocumentProv.PROV_NEUROSCIENCE_TRIGGER_PREFIX),
@@ -496,7 +498,8 @@ public class Mapper {
 
         /**
          * Create `prov:Collection` to store the Parameters, Inputs and Outputs
-         *
+         * nput*
+         * 
          * @param triggerEntity
          * @param generator
          * @param uses
@@ -506,7 +509,7 @@ public class Mapper {
          */
         private Entity createWorkflowVariableBindingCollection(Entity triggerEntity, Activity generator, Activity uses,
                         String collectionType, String label) {
-                String localName = triggerEntity.getId().getLocalPart() + '/' + collectionType;
+                String localName = triggerEntity.getId().getLocalPart() + '_' + collectionType;
                 Entity entity = createBaseEntity(localName, label, DocumentProv.PROV_NEUROSCIENCE_TRIGGER_PREFIX);
                 WasGeneratedBy wasGeneratedBy = pFactory.newWasGeneratedBy(null,
                                 entity.getId(), generator.getId(), null,
@@ -546,18 +549,6 @@ public class Mapper {
                         addTypeToEntity(entity, DocumentProv.OPMW_PREFIX,
                                         Constants.OPMW_WORKFLOW_EXECUTION_DATA_VARIABLE_LOCAL_NAME);
                         addTypeToEntity(entity, DocumentProv.DCAT_PREFIX, Constants.DCAT_RESOURCE_LOCALNAME);
-
-                        if (binding.isCollection()) {
-                                String[] resources = splitArrayString(binding.getBinding());
-                                for (String resource : resources) {
-                                        String resourceLocalName = "resource_" + resource;
-                                        Entity resourceEntity = createBaseEntity(resourceLocalName, resource,
-                                                        DocumentProv.PROV_NEUROSCIENCE_TRIGGER_PREFIX);
-                                        addTypeToEntity(resourceEntity, DocumentProv.DCAT_PREFIX,
-                                                        Constants.DCAT_RESOURCE_LOCALNAME);
-                                }
-
-                        }
                 });
         }
 
@@ -711,7 +702,7 @@ public class Mapper {
                         Entity questionEntity, HashMap<String, Entity> questionVariablesMap,
                         Activity createQuestionActivity) {
 
-                String variableCollectionLocalName = questionEntity.getId().getLocalPart() + '/'
+                String variableCollectionLocalName = questionEntity.getId().getLocalPart() + '_'
                                 + Constants.QUESTION_VARIABLES_BINDING;
                 Entity questionVariableCollection = pFactory.newEntity(
                                 prov.qn(variableCollectionLocalName,
@@ -761,10 +752,12 @@ public class Mapper {
                         Activity createHypothesisActivity, Question question) {
                 // Create the collection of variables, and the derivation (Question ->
                 // Hypothesis) and add to the bundle
-                String variableCollectionLocalName = hypothesisEntity.getId().getLocalPart() + '/'
+                String variableCollectionLocalName = hypothesisEntity.getId().getLocalPart() + '_'
                                 + Constants.HYPOTHESIS_VARIABLES_BINDING;
+                QualifiedName qn = prov.qn(variableCollectionLocalName,
+                                DocumentProv.PROV_NEUROSCIENCE_HYPOTHESIS_PREFIX);
                 Entity variableCollection = pFactory.newEntity(
-                                prov.qn(variableCollectionLocalName, DocumentProv.PROV_NEUROSCIENCE_HYPOTHESIS_PREFIX),
+                                qn,
                                 "Collection of question variables");
                 WasDerivedFrom derivationVariables = pFactory.newWasDerivedFrom(null,
                                 variableCollection.getId(), questionVariableCollection.getId());
@@ -775,7 +768,8 @@ public class Mapper {
                         try {
                                 // Create Hypothesis variable entity
                                 Entity variableBindingEntity = createVariableBindingEntity(variableBinding,
-                                                variableCollectionLocalName, variableCollectionLocalName);
+                                                DocumentProv.PROV_NEUROSCIENCE_HYPOTHESIS_PREFIX,
+                                                variableCollectionLocalName);
                                 // Link the variable to the collection
                                 HadMember hadMember = pFactory.newHadMember(variableCollection.getId(),
                                                 variableBindingEntity.getId());
@@ -819,8 +813,9 @@ public class Mapper {
                 String variable = variableBinding.getVariable();
                 String localName = Utils.getFragment(variable);
                 String binding = variableBinding.getBinding();
-                String variableLocalName = parentCollectionLocalName + '/' + localName;
-                Entity variableBindingEntity = pFactory.newEntity(prov.qn(variableLocalName, prefix), binding);
+                String variableLocalName = parentCollectionLocalName + '_' + localName;
+                QualifiedName qn = prov.qn(variableLocalName, prefix);
+                Entity variableBindingEntity = pFactory.newEntity(qn, binding);
                 hypothesisBundle.getStatement().add(variableBindingEntity);
                 return variableBindingEntity;
         }

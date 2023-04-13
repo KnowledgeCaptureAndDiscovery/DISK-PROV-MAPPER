@@ -96,8 +96,12 @@ public class DocumentProv {
         return ns.qualifiedName(PROV_NEUROSCIENCE_PREFIX, n, factory);
     }
 
-    public QualifiedName qn(String n, String prefix) {
-        return ns.qualifiedName(prefix, n, factory);
+    public QualifiedName qn(String n, String prefix) throws RuntimeException {
+        try {
+            return ns.qualifiedName(prefix, n, factory);
+        } catch (Exception e) {
+            throw new RuntimeException("Error in qn: " + n + " " + prefix);
+        }
     }
 
     public QualifiedName qn(String n, String prefix_iri, String none) {
