@@ -3,12 +3,16 @@ package edu.isi.disk.opmm;
 import java.io.File;
 import java.io.IOException;
 import java.text.ParseException;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.diskproject.shared.classes.hypothesis.Hypothesis;
 import org.diskproject.shared.classes.loi.LineOfInquiry;
 import org.diskproject.shared.classes.loi.TriggeredLOI;
 import org.diskproject.shared.classes.question.Question;
+import org.diskproject.shared.classes.workflow.VariableBinding;
 import org.junit.Test;
 import org.openprovenance.prov.model.Bundle;
 import org.openprovenance.prov.model.Document;
@@ -86,11 +90,28 @@ public class MapperTest {
   }
 
   @Test
-  public void findDatasetByType() {
+  public void findCatalog() {
     Bundle datasetBundle = provDocumentReader.getBundle(Constants.LOIS_BUNDLE_NAME);
     String type = "http://www.w3.org/ns/dcat#Catalog";
-    Entity dataset = provDocumentReader.getEntityByType(datasetBundle, type);
-    Assert.assertEquals(Constants.DCAT_CATALOG_LOCALNAME, dataset.getId().getLocalPart());
+    Entity catalog = provDocumentReader.getEntityByType(datasetBundle, type);
+    Assert.assertEquals(Constants.DCAT_CATALOG_LOCALNAME, catalog.getId().getLocalPart());
+  }
+
+  @Test
+  public void findWorkflowArtifacts() {
+    Bundle datasetBundle = provDocumentReader.getBundle(Constants.TLOIS_BUNDLE_NAME);
+    String type = Constants.OPMW_WORKFLOW_EXECUTION_ARTIFACT_URL;
+    List<Entity> outputs = provDocumentReader.getEntitiesByType(datasetBundle, type);
+    Assert.assertEquals(4, outputs.size());
+  }
+
+  @Test
+  public void findDcatResource() {
+    // TODO: #9 DISK should stores the dcat resource in the lois bundle
+    Bundle datasetBundle = provDocumentReader.getBundle(Constants.TLOIS_BUNDLE_NAME);
+    String type = "http://www.w3.org/ns/dcat#Resource";
+    List<Entity> resources = provDocumentReader.getEntitiesByType(datasetBundle, type);
+    Assert.assertEquals(4, resources.size());
   }
 
   @Test

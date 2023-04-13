@@ -1,5 +1,6 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix disk: <http://disk-project.org/ontology/disk#> .
+@prefix opmw: <http://www.opmw.org/ontology/> .
 @prefix provNeuroScienceLOI: <http://provenance.isi.edu/disk/neuro/loi/> .
 @prefix wings: <http://www.wings-workflows.org/ontology/> .
 @prefix enigmaQuestion: <https://w3id.org/sqo/resource/> .
@@ -21,19 +22,19 @@ provNeuroScience:hvargas a prov:Agent ;
 provNeuroScience:neda a prov:Agent ;
 	rdfs:label "Neda Jahanshad" .
 
-_:blank13 a prov:Delegation ;
+_:blank1 a prov:Delegation ;
 	prov:agent provNeuroScience:neda .
 
-provNeuroScience:hvargas prov:qualifiedDelegation _:blank13 .
+provNeuroScience:hvargas prov:qualifiedDelegation _:blank1 .
 
-_:blank13 prov:hadActivity provNeuroScience:createQuestion .
+_:blank1 prov:hadActivity provNeuroScience:createQuestion .
 
-_:blank14 a prov:Delegation ;
+_:blank2 a prov:Delegation ;
 	prov:agent provNeuroScience:neda .
 
-provNeuroScience:hvargas prov:qualifiedDelegation _:blank14 .
+provNeuroScience:hvargas prov:qualifiedDelegation _:blank2 .
 
-_:blank14 prov:hadActivity provNeuroScience:createHypothesis .
+_:blank2 prov:hadActivity provNeuroScience:createHypothesis .
 
 wings:New_Enigma a prov:Entity ;
 	rdfs:label "New_Enigma" .
@@ -283,53 +284,68 @@ wings:New_Enigma a prov:Entity ;
 
 provNeuroScienceTLOI:Unknown prov:wasGeneratedBy provNeuroScienceTLOI:createRun .
 
-<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-tvUdPs5yRiWf/metaWorkflowInputsFileBinding> a prov:Entity ;
-	rdfs:label "Stores the run inputs for the Meta Workflow" ;
-	prov:wasGeneratedBy provNeuroScience:executeDataQuery .
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding> a prov:Entity ;
+	rdfs:label "inputs" ;
+	prov:wasGeneratedBy provNeuroScience:executeDataQuery ;
+	prov:used provNeuroScienceTLOI:createRun ;
+	rdfs:label "parameters" , "outputs" .
 
-<http://provenance.isi.edu/disk/neuro/tloi/Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding/area> a prov:Entity ;
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding/area> a prov:Entity , "http://www.opmw.org/ontology/ParameterVariable"^^xsd:anyURI ;
 	rdfs:label "area" ;
 	prov:value "Precentral" .
 
-<http://provenance.isi.edu/disk/neuro/hypothesis/Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding/area> .
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding/area> .
 
-<http://provenance.isi.edu/disk/neuro/tloi/Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding/cohortData> a prov:Entity ;
-	rdfs:label "cohortData" ;
-	prov:value "[SHA4fe5c4_1000BRAINS_Significant_GWAS.csv, SHA4815c5_ADNI1_Significant_GWAS.csv, SHA4a85c5_ADNI2GO_Significant_GWAS.csv, SHA4bf5c6_ALSPACa_Significant_GWAS.csv, SHA47a5c5_ASRB_Significant_GWAS.csv, SHA4aa5c5_BETULA_Significant_GWAS.csv, SHA4945c5_BIG_Significant_GWAS.csv, SHA5305c4_BIG-PsychChip_Significant_GWAS.csv, SHA4c45c5_BONN_Significant_GWAS.csv, SHA4ad5c5_BrainScale_Significant_GWAS.csv]" .
-
-<http://provenance.isi.edu/disk/neuro/hypothesis/Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding/cohortData> .
-
-<http://provenance.isi.edu/disk/neuro/tloi/Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding/demographic> a prov:Entity ;
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding/demographic> a prov:Entity , "http://www.opmw.org/ontology/ParameterVariable"^^xsd:anyURI ;
 	rdfs:label "demographic" ;
 	prov:value "HasAge Mean (E)" .
 
-<http://provenance.isi.edu/disk/neuro/hypothesis/Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding/demographic> .
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding/demographic> .
 
-<http://provenance.isi.edu/disk/neuro/tloi/Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding/demographic_value> a prov:Entity ;
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding_demographic_value> a prov:Entity ;
+	rdfs:label "demographic_value" .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding/demographic_value> a prov:Entity , "http://www.opmw.org/ontology/ParameterVariable"^^xsd:anyURI ;
 	rdfs:label "demographic_value" ;
 	prov:value "[67.3, 74.8, 72.4, 19.6, 38.5, 62.4, 22.6, 22.5, 38.2, 10]" .
 
-<http://provenance.isi.edu/disk/neuro/hypothesis/Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding/demographic_value> .
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding/demographic_value> .
 
-<http://provenance.isi.edu/disk/neuro/tloi/Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding/snp> a prov:Entity ;
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding/snp> a prov:Entity , "http://www.opmw.org/ontology/ParameterVariable"^^xsd:anyURI ;
 	rdfs:label "snp" ;
 	prov:value "rs1080066" .
 
-<http://provenance.isi.edu/disk/neuro/hypothesis/Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding/snp> .
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding/snp> .
 
-<http://provenance.isi.edu/disk/neuro/tloi/Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding/trait> a prov:Entity ;
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding/trait> a prov:Entity , "http://www.opmw.org/ontology/ParameterVariable"^^xsd:anyURI ;
 	rdfs:label "trait" ;
 	prov:value "SA" .
 
-<http://provenance.isi.edu/disk/neuro/hypothesis/Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding/trait> .
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding/trait> .
 
-<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding> a prov:Entity ;
-	rdfs:label "Stores the run parameters for the Meta Workflow" ;
-	prov:wasGeneratedBy provNeuroScience:executeDataQuery ;
-	prov:used provNeuroScienceTLOI:createRun .
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding/p_value> a prov:Entity , "http://www.opmw.org/ontology/WorkflowExecutionArtifact"^^xsd:anyURI ;
+	rdfs:label "p_value" ;
+	prov:value "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#p_value-dk0ar4arwuggp9ce364frl6dh" .
 
-<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-tvUdPs5yRiWf/metaWorkflowOutputsFileBinding> a prov:Entity ;
-	rdfs:label "Stores the run parameters for the Meta Workflow" .
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding/p_value> .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding/shiny_visualization> a prov:Entity , "http://www.opmw.org/ontology/WorkflowExecutionArtifact"^^xsd:anyURI ;
+	rdfs:label "shiny_visualization" ;
+	prov:value "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#shiny_visualization-9z55v2d929ft5xrwu3hlf5y5t" .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding/shiny_visualization> .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding/brain_visualization> a prov:Entity , "http://www.opmw.org/ontology/WorkflowExecutionArtifact"^^xsd:anyURI ;
+	rdfs:label "brain_visualization" ;
+	prov:value "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#brain_visualization-99ah4oc12zrvsbzuzjs07en30" .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding/brain_visualization> .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding/age_vs_allele> a prov:Entity , "http://www.opmw.org/ontology/WorkflowExecutionArtifact"^^xsd:anyURI ;
+	rdfs:label "age_vs_allele" ;
+	prov:value "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#age_vs_allele-18qg40ugspzylrv3cedr4hp08" .
+
+<http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding> prov:hadMember <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding/age_vs_allele> .
 
 provNeuroScience:analyzeWorkflowRun a prov:Activity ;
 	rdfs:label "Analyze the Workflow Run" .

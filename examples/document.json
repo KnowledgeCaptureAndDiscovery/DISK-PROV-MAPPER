@@ -1,6 +1,6 @@
 {
   "hadMember": {
-    "_:hM109": {
+    "_:hM1": {
       "prov:entity": [
         "wings:New_Enigma"
       ],
@@ -16,105 +16,106 @@
     }
   },
   "wasGeneratedBy": {
-    "_:wGB85": {
+    "_:wGB1": {
       "prov:entity": "wings:unknown",
       "prov:activity": "neuroScienceDisk:select_workflow"
     }
   },
   "actedOnBehalfOf": {
-    "_:aOBO14": {
+    "_:aOBO2": {
       "prov:responsible": "neda",
       "prov:delegate": "hvargas",
       "prov:activity": "createHypothesis"
     },
-    "_:aOBO13": {
+    "_:aOBO1": {
       "prov:responsible": "neda",
       "prov:delegate": "hvargas",
       "prov:activity": "createQuestion"
     }
   },
   "prefix": {
-    "dcterms": "http://purl.org/dc/terms/",
-    "neuroScienceDisk": "http://localhost:8080/disk-server/admin/",
-    "provNeuroScienceQuestion": "http://provenance.isi.edu/disk/neuro/question/",
-    "dcat": "http://www.w3.org/ns/dcat#",
-    "enigmaQuestion": "https://w3id.org/sqo/resource/",
-    "provNeuroScienceTLOI": "http://provenance.isi.edu/disk/neuro/tloi/",
-    "provNeuroScienceHypothesis": "http://provenance.isi.edu/disk/neuro/hypothesis/",
-    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-    "default": "http://provenance.isi.edu/disk/neuro/",
-    "wings": "http://www.wings-workflows.org/ontology/",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "disk": "http://disk-project.org/ontology/disk#",
+    "provNeuroScienceQuestion": "http://provenance.isi.edu/disk/neuro/question/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "provNeuroScienceLOI": "http://provenance.isi.edu/disk/neuro/loi/",
+    "provNeuroScience": "http://provenance.isi.edu/disk/neuro/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "provNeuroScienceHypothesis": "http://provenance.isi.edu/disk/neuro/hypothesis/",
+    "opmw": "http://www.opmw.org/ontology/",
     "prov": "http://www.w3.org/ns/prov#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
-    "provNeuroScience": "http://provenance.isi.edu/disk/neuro/"
+    "dcterms": "http://purl.org/dc/terms/",
+    "wings": "http://www.wings-workflows.org/ontology/",
+    "neuroScienceDisk": "http://localhost:8080/disk-server/admin/",
+    "provNeuroScienceTLOI": "http://provenance.isi.edu/disk/neuro/tloi/",
+    "default": "http://provenance.isi.edu/disk/neuro/",
+    "enigmaQuestion": "https://w3id.org/sqo/resource/"
   },
   "used": {
-    "_:u57": {
+    "_:u2": {
+      "prov:entity": "wings:unknown",
+      "prov:activity": "neuroScienceDisk:select_variable_workflow"
+    },
+    "_:u3": {
       "prov:entity": "provNeuroScienceLOI:Catalog",
       "prov:activity": "neuroScienceDisk:select_data_source"
     },
-    "_:u55": {
+    "_:u1": {
       "prov:entity": "wings:New_Enigma",
       "prov:activity": "neuroScienceDisk:select_workflow"
-    },
-    "_:u56": {
-      "prov:entity": "wings:unknown",
-      "prov:activity": "neuroScienceDisk:select_variable_workflow"
     }
   },
   "bundle": {
     "provNeuroScience:loisBundle": {
       "hadMember": {
-        "_:hM116": {
-          "prov:entity": [
-            "cohortData"
-          ],
-          "prov:collection": "metaWorkflowVariableBinding"
-        },
-        "_:hM117": {
-          "prov:entity": [
-            "demographic"
-          ],
-          "prov:collection": "metaWorkflowVariableBinding"
-        },
-        "_:hM115": {
+        "_:hM7": {
           "prov:entity": [
             "area"
           ],
           "prov:collection": "metaWorkflowVariableBinding"
         },
-        "_:hM120": {
-          "prov:entity": [
-            "trait"
-          ],
-          "prov:collection": "metaWorkflowVariableBinding"
-        },
-        "_:hM118": {
+        "_:hM10": {
           "prov:entity": [
             "demographic_value"
           ],
           "prov:collection": "metaWorkflowVariableBinding"
         },
-        "_:hM119": {
+        "_:hM8": {
+          "prov:entity": [
+            "cohortData"
+          ],
+          "prov:collection": "metaWorkflowVariableBinding"
+        },
+        "_:hM11": {
           "prov:entity": [
             "snp"
+          ],
+          "prov:collection": "metaWorkflowVariableBinding"
+        },
+        "_:hM9": {
+          "prov:entity": [
+            "demographic"
+          ],
+          "prov:collection": "metaWorkflowVariableBinding"
+        },
+        "_:hM12": {
+          "prov:entity": [
+            "trait"
           ],
           "prov:collection": "metaWorkflowVariableBinding"
         }
       },
       "wasGeneratedBy": {
-        "_:wGB92": {
-          "prov:entity": "LOI-R12qZl77tJJ9",
-          "prov:activity": "neuroScienceDisk:saved_line_of_inquiry"
-        },
-        "_:wGB91": {
+        "_:wGB7": {
           "prov:entity": "data_query",
           "prov:activity": "neuroScienceDisk:write_data_query_template"
         },
-        "_:wGB90": {
+        "_:wGB8": {
+          "prov:entity": "LOI-R12qZl77tJJ9",
+          "prov:activity": "neuroScienceDisk:saved_line_of_inquiry"
+        },
+        "_:wGB6": {
           "prov:entity": "metaWorkflowVariableBinding",
           "prov:activity": "neuroScienceDisk:select_variable_workflow"
         }
@@ -161,59 +162,60 @@
         ]
       },
       "prefix": {
-        "dcterms": "http://purl.org/dc/terms/",
-        "neuroScienceDisk": "http://localhost:8080/disk-server/admin/",
-        "provNeuroScienceQuestion": "http://provenance.isi.edu/disk/neuro/question/",
-        "dcat": "http://www.w3.org/ns/dcat#",
-        "enigmaQuestion": "https://w3id.org/sqo/resource/",
-        "provNeuroScienceTLOI": "http://provenance.isi.edu/disk/neuro/tloi/",
-        "provNeuroScienceHypothesis": "http://provenance.isi.edu/disk/neuro/hypothesis/",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "default": "http://provenance.isi.edu/disk/neuro/loi/",
-        "wings": "http://www.wings-workflows.org/ontology/",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "disk": "http://disk-project.org/ontology/disk#",
+        "provNeuroScienceQuestion": "http://provenance.isi.edu/disk/neuro/question/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "provNeuroScienceLOI": "http://provenance.isi.edu/disk/neuro/loi/",
+        "provNeuroScience": "http://provenance.isi.edu/disk/neuro/",
+        "dcat": "http://www.w3.org/ns/dcat#",
+        "provNeuroScienceHypothesis": "http://provenance.isi.edu/disk/neuro/hypothesis/",
+        "opmw": "http://www.opmw.org/ontology/",
         "prov": "http://www.w3.org/ns/prov#",
         "xsd": "http://www.w3.org/2001/XMLSchema#",
-        "provNeuroScience": "http://provenance.isi.edu/disk/neuro/"
+        "dcterms": "http://purl.org/dc/terms/",
+        "wings": "http://www.wings-workflows.org/ontology/",
+        "neuroScienceDisk": "http://localhost:8080/disk-server/admin/",
+        "provNeuroScienceTLOI": "http://provenance.isi.edu/disk/neuro/tloi/",
+        "default": "http://provenance.isi.edu/disk/neuro/loi/",
+        "enigmaQuestion": "https://w3id.org/sqo/resource/"
       },
       "wasInformedBy": {
-        "_:Infm25": {
+        "_:Infm2": {
+          "prov:informed": "neuroScienceDisk:write_data_query_template",
+          "prov:informant": "neuroScienceDisk:select_variable_workflow"
+        },
+        "_:Infm1": {
           "prov:informed": "neuroScienceDisk:select_workflow",
           "prov:informant": "neuroScienceDisk:saved_line_of_inquiry"
         },
-        "_:Infm26": {
-          "prov:informed": "neuroScienceDisk:write_data_query_template",
-          "prov:informant": "neuroScienceDisk:select_variable_workflow"
-        },
-        "_:Infm27": {
-          "prov:informed": "neuroScienceDisk:write_data_query_template",
-          "prov:informant": "neuroScienceDisk:select_variable_workflow"
-        },
-        "_:Infm28": {
+        "_:Infm4": {
           "prov:informed": "neuroScienceDisk:select_variable_workflow",
           "prov:informant": "neuroScienceDisk:select_workflow"
+        },
+        "_:Infm3": {
+          "prov:informed": "neuroScienceDisk:write_data_query_template",
+          "prov:informant": "neuroScienceDisk:select_variable_workflow"
         }
       },
       "wasDerivedFrom": {
-        "_:wDF47": {
+        "_:wDF5": {
           "prov:generatedEntity": "LOI-R12qZl77tJJ9",
           "prov:usedEntity": "provNeuroScienceQuestion:EnigmaQuestion5"
         }
       },
       "used": {
-        "_:u60": {
+        "_:u6": {
           "prov:entity": "provNeuroScienceQuestion:EnigmaQuestion5",
           "prov:activity": "neuroScienceDisk:write_data_query_template"
         },
-        "_:u59": {
-          "prov:entity": "provNeuroScienceQuestion:EnigmaQuestion5",
-          "prov:activity": "neuroScienceDisk:select_question"
-        },
-        "_:u58": {
+        "_:u4": {
           "prov:entity": "metaWorkflowVariableBinding",
           "prov:activity": "neuroScienceDisk:write_data_query_template"
+        },
+        "_:u5": {
+          "prov:entity": "provNeuroScienceQuestion:EnigmaQuestion5",
+          "prov:activity": "neuroScienceDisk:select_question"
         }
       },
       "entity": {
@@ -279,31 +281,31 @@
     },
     "provNeuroScience:questionBundle": {
       "hadMember": {
-        "_:hM114": {
+        "_:hM6": {
           "prov:entity": [
             "ethnicGroup"
           ],
           "prov:collection": "EnigmaQuestion5/questionVariablesBinding"
         },
-        "_:hM112": {
+        "_:hM4": {
           "prov:entity": [
             "brainRegion"
           ],
           "prov:collection": "EnigmaQuestion5/questionVariablesBinding"
         },
-        "_:hM113": {
+        "_:hM5": {
           "prov:entity": [
             "demographicAttribute"
           ],
           "prov:collection": "EnigmaQuestion5/questionVariablesBinding"
         },
-        "_:hM110": {
+        "_:hM2": {
           "prov:entity": [
             "genotype"
           ],
           "prov:collection": "EnigmaQuestion5/questionVariablesBinding"
         },
-        "_:hM111": {
+        "_:hM3": {
           "prov:entity": [
             "brainImagingTrait"
           ],
@@ -311,11 +313,11 @@
         }
       },
       "wasGeneratedBy": {
-        "_:wGB87": {
+        "_:wGB3": {
           "prov:entity": "EnigmaQuestion5/questionVariablesBinding",
           "prov:activity": "provNeuroScience:createQuestion"
         },
-        "_:wGB86": {
+        "_:wGB2": {
           "prov:entity": "EnigmaQuestion5",
           "prov:activity": "provNeuroScience:createQuestion"
         }
@@ -330,31 +332,32 @@
         }
       },
       "prefix": {
-        "dcterms": "http://purl.org/dc/terms/",
-        "neuroScienceDisk": "http://localhost:8080/disk-server/admin/",
-        "provNeuroScienceQuestion": "http://provenance.isi.edu/disk/neuro/question/",
-        "dcat": "http://www.w3.org/ns/dcat#",
-        "enigmaQuestion": "https://w3id.org/sqo/resource/",
-        "provNeuroScienceTLOI": "http://provenance.isi.edu/disk/neuro/tloi/",
-        "provNeuroScienceHypothesis": "http://provenance.isi.edu/disk/neuro/hypothesis/",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "default": "http://provenance.isi.edu/disk/neuro/question/",
-        "wings": "http://www.wings-workflows.org/ontology/",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "disk": "http://disk-project.org/ontology/disk#",
+        "provNeuroScienceQuestion": "http://provenance.isi.edu/disk/neuro/question/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "provNeuroScienceLOI": "http://provenance.isi.edu/disk/neuro/loi/",
+        "provNeuroScience": "http://provenance.isi.edu/disk/neuro/",
+        "dcat": "http://www.w3.org/ns/dcat#",
+        "provNeuroScienceHypothesis": "http://provenance.isi.edu/disk/neuro/hypothesis/",
+        "opmw": "http://www.opmw.org/ontology/",
         "prov": "http://www.w3.org/ns/prov#",
         "xsd": "http://www.w3.org/2001/XMLSchema#",
-        "provNeuroScience": "http://provenance.isi.edu/disk/neuro/"
+        "dcterms": "http://purl.org/dc/terms/",
+        "wings": "http://www.wings-workflows.org/ontology/",
+        "neuroScienceDisk": "http://localhost:8080/disk-server/admin/",
+        "provNeuroScienceTLOI": "http://provenance.isi.edu/disk/neuro/tloi/",
+        "default": "http://provenance.isi.edu/disk/neuro/question/",
+        "enigmaQuestion": "https://w3id.org/sqo/resource/"
       },
       "wasDerivedFrom": {
-        "_:wDF43": {
-          "prov:generatedEntity": "EnigmaQuestion5",
-          "prov:usedEntity": "EnigmaQuestion5/questionVariablesBinding"
-        },
-        "_:wDF44": {
+        "_:wDF2": {
           "prov:generatedEntity": "provNeuroScienceHypothesis:Hypothesis-4CGdVLyttD07",
           "prov:usedEntity": "EnigmaQuestion5"
+        },
+        "_:wDF1": {
+          "prov:generatedEntity": "EnigmaQuestion5",
+          "prov:usedEntity": "EnigmaQuestion5/questionVariablesBinding"
         }
       },
       "entity": {
@@ -387,11 +390,11 @@
     },
     "provNeuroScience:hypothesisBundle": {
       "wasGeneratedBy": {
-        "_:wGB88": {
+        "_:wGB4": {
           "prov:entity": "Hypothesis-4CGdVLyttD07",
           "prov:activity": "provNeuroScience:createHypothesis"
         },
-        "_:wGB89": {
+        "_:wGB5": {
           "prov:entity": "Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding",
           "prov:activity": "provNeuroScience:createHypothesis"
         }
@@ -415,31 +418,32 @@
         ]
       },
       "prefix": {
-        "dcterms": "http://purl.org/dc/terms/",
-        "neuroScienceDisk": "http://localhost:8080/disk-server/admin/",
-        "provNeuroScienceQuestion": "http://provenance.isi.edu/disk/neuro/question/",
-        "dcat": "http://www.w3.org/ns/dcat#",
-        "enigmaQuestion": "https://w3id.org/sqo/resource/",
-        "provNeuroScienceTLOI": "http://provenance.isi.edu/disk/neuro/tloi/",
-        "provNeuroScienceHypothesis": "http://provenance.isi.edu/disk/neuro/hypothesis/",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "default": "http://provenance.isi.edu/disk/neuro/hypothesis/",
-        "wings": "http://www.wings-workflows.org/ontology/",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "disk": "http://disk-project.org/ontology/disk#",
+        "provNeuroScienceQuestion": "http://provenance.isi.edu/disk/neuro/question/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "provNeuroScienceLOI": "http://provenance.isi.edu/disk/neuro/loi/",
+        "provNeuroScience": "http://provenance.isi.edu/disk/neuro/",
+        "dcat": "http://www.w3.org/ns/dcat#",
+        "provNeuroScienceHypothesis": "http://provenance.isi.edu/disk/neuro/hypothesis/",
+        "opmw": "http://www.opmw.org/ontology/",
         "prov": "http://www.w3.org/ns/prov#",
         "xsd": "http://www.w3.org/2001/XMLSchema#",
-        "provNeuroScience": "http://provenance.isi.edu/disk/neuro/"
+        "dcterms": "http://purl.org/dc/terms/",
+        "wings": "http://www.wings-workflows.org/ontology/",
+        "neuroScienceDisk": "http://localhost:8080/disk-server/admin/",
+        "provNeuroScienceTLOI": "http://provenance.isi.edu/disk/neuro/tloi/",
+        "default": "http://provenance.isi.edu/disk/neuro/hypothesis/",
+        "enigmaQuestion": "https://w3id.org/sqo/resource/"
       },
       "wasDerivedFrom": {
-        "_:wDF46": {
-          "prov:generatedEntity": "Hypothesis-4CGdVLyttD07",
-          "prov:usedEntity": "Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding"
-        },
-        "_:wDF45": {
+        "_:wDF3": {
           "prov:generatedEntity": "Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding",
           "prov:usedEntity": "provNeuroScienceQuestion:EnigmaQuestion5/questionVariablesBinding"
+        },
+        "_:wDF4": {
+          "prov:generatedEntity": "Hypothesis-4CGdVLyttD07",
+          "prov:usedEntity": "Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding"
         }
       },
       "entity": {
@@ -457,67 +461,89 @@
     },
     "provNeuroScience:triggerBundle": {
       "hadMember": {
-        "_:hM125": {
+        "_:hM20": {
           "prov:entity": [
-            "Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding/snp"
+            "TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding/brain_visualization"
           ],
-          "prov:collection": "provNeuroScienceHypothesis:Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding"
+          "prov:collection": "TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding"
         },
-        "_:hM126": {
+        "_:hM21": {
           "prov:entity": [
-            "Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding/trait"
+            "TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding/age_vs_allele"
           ],
-          "prov:collection": "provNeuroScienceHypothesis:Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding"
+          "prov:collection": "TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding"
         },
-        "_:hM123": {
+        "_:hM19": {
           "prov:entity": [
-            "Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding/demographic"
+            "TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding/shiny_visualization"
           ],
-          "prov:collection": "provNeuroScienceHypothesis:Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding"
+          "prov:collection": "TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding"
         },
-        "_:hM124": {
+        "_:hM17": {
           "prov:entity": [
-            "Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding/demographic_value"
+            "TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding/trait"
           ],
-          "prov:collection": "provNeuroScienceHypothesis:Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding"
+          "prov:collection": "TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding"
         },
-        "_:hM121": {
+        "_:hM18": {
           "prov:entity": [
-            "Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding/area"
+            "TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding/p_value"
           ],
-          "prov:collection": "provNeuroScienceHypothesis:Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding"
+          "prov:collection": "TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding"
         },
-        "_:hM122": {
+        "_:hM15": {
           "prov:entity": [
-            "Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding/cohortData"
+            "TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding/demographic_value"
           ],
-          "prov:collection": "provNeuroScienceHypothesis:Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding"
+          "prov:collection": "TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding"
+        },
+        "_:hM16": {
+          "prov:entity": [
+            "TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding/snp"
+          ],
+          "prov:collection": "TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding"
+        },
+        "_:hM13": {
+          "prov:entity": [
+            "TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding/area"
+          ],
+          "prov:collection": "TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding"
+        },
+        "_:hM14": {
+          "prov:entity": [
+            "TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding/demographic"
+          ],
+          "prov:collection": "TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding"
         }
       },
       "wasGeneratedBy": {
-        "_:wGB98": {
-          "prov:entity": "provNeuroScience:analysis",
-          "prov:activity": "provNeuroScience:analyzeWorkflowRun"
-        },
-        "_:wGB97": {
-          "prov:entity": "TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding",
-          "prov:activity": "provNeuroScience:executeDataQuery"
-        },
-        "_:wGB96": {
-          "prov:entity": "TriggeredLOI-tvUdPs5yRiWf/metaWorkflowInputsFileBinding",
-          "prov:activity": "provNeuroScience:executeDataQuery"
-        },
-        "_:wGB95": {
+        "_:wGB11": {
           "prov:entity": "Unknown",
           "prov:activity": "createRun"
         },
-        "_:wGB94": {
+        "_:wGB10": {
           "prov:entity": "data_query",
           "prov:activity": "provNeuroScience:transformDataQueryTemplate"
         },
-        "_:wGB93": {
+        "_:wGB9": {
           "prov:entity": "TriggeredLOI-tvUdPs5yRiWf",
           "prov:activity": "provNeuroScience:transformDataQueryTemplate"
+        },
+        "_:wGB15": {
+          "prov:entity": "provNeuroScience:analysis",
+          "prov:activity": "provNeuroScience:analyzeWorkflowRun"
+        },
+        "_:wGB14": {
+          "prov:entity": "TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding",
+          "prov:activity": "provNeuroScience:executeDataQuery"
+        },
+        "_:wGB13": {
+          "prov:entity": "TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding",
+          "prov:activity": "provNeuroScience:executeDataQuery"
+        },
+        "_:wGB12": {
+          "prov:entity": "TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding",
+          "prov:activity": "provNeuroScience:executeDataQuery"
         }
       },
       "activity": {
@@ -535,50 +561,70 @@
         }
       },
       "prefix": {
-        "dcterms": "http://purl.org/dc/terms/",
-        "neuroScienceDisk": "http://localhost:8080/disk-server/admin/",
-        "provNeuroScienceQuestion": "http://provenance.isi.edu/disk/neuro/question/",
-        "dcat": "http://www.w3.org/ns/dcat#",
-        "enigmaQuestion": "https://w3id.org/sqo/resource/",
-        "provNeuroScienceTLOI": "http://provenance.isi.edu/disk/neuro/tloi/",
-        "provNeuroScienceHypothesis": "http://provenance.isi.edu/disk/neuro/hypothesis/",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "default": "http://provenance.isi.edu/disk/neuro/tloi/",
-        "wings": "http://www.wings-workflows.org/ontology/",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "disk": "http://disk-project.org/ontology/disk#",
+        "provNeuroScienceQuestion": "http://provenance.isi.edu/disk/neuro/question/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "provNeuroScienceLOI": "http://provenance.isi.edu/disk/neuro/loi/",
+        "provNeuroScience": "http://provenance.isi.edu/disk/neuro/",
+        "dcat": "http://www.w3.org/ns/dcat#",
+        "provNeuroScienceHypothesis": "http://provenance.isi.edu/disk/neuro/hypothesis/",
+        "opmw": "http://www.opmw.org/ontology/",
         "prov": "http://www.w3.org/ns/prov#",
         "xsd": "http://www.w3.org/2001/XMLSchema#",
-        "provNeuroScience": "http://provenance.isi.edu/disk/neuro/"
+        "dcterms": "http://purl.org/dc/terms/",
+        "wings": "http://www.wings-workflows.org/ontology/",
+        "neuroScienceDisk": "http://localhost:8080/disk-server/admin/",
+        "provNeuroScienceTLOI": "http://provenance.isi.edu/disk/neuro/tloi/",
+        "default": "http://provenance.isi.edu/disk/neuro/tloi/",
+        "enigmaQuestion": "https://w3id.org/sqo/resource/"
       },
       "wasDerivedFrom": {
-        "_:wDF49": {
-          "prov:generatedEntity": "dataSource",
-          "prov:usedEntity": "provNeuroScienceLOI:Catalog"
-        },
-        "_:wDF48": {
+        "_:wDF6": {
           "prov:generatedEntity": "TriggeredLOI-tvUdPs5yRiWf",
           "prov:usedEntity": "provNeuroScienceLOI:LOI-R12qZl77tJJ9"
+        },
+        "_:wDF7": {
+          "prov:generatedEntity": "dataSource",
+          "prov:usedEntity": "provNeuroScienceLOI:Catalog"
         }
       },
       "used": {
-        "_:u62": {
+        "_:u7": {
+          "prov:entity": "provNeuroScience:transformDataQueryTemplate",
+          "prov:activity": "provNeuroScienceLOI:data_query"
+        },
+        "_:u8": {
           "prov:entity": "createRun",
           "prov:activity": "TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding"
         },
-        "_:u63": {
+        "_:u9": {
+          "prov:entity": "createRun",
+          "prov:activity": "TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding"
+        },
+        "_:u11": {
           "prov:entity": "provNeuroScience:analyzeWorkflowRun",
           "prov:activity": "Unknown"
         },
-        "_:u61": {
-          "prov:entity": "provNeuroScience:transformDataQueryTemplate",
-          "prov:activity": "provNeuroScienceLOI:data_query"
+        "_:u10": {
+          "prov:entity": "createRun",
+          "prov:activity": "TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding"
         }
       },
       "entity": {
         "wings:New_Enigma": {
           "prov:label": "New_Enigma"
+        },
+        "TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding/p_value": {
+          "prov:value": {
+            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#p_value-dk0ar4arwuggp9ce364frl6dh",
+            "type": "xsd:string"
+          },
+          "prov:type": {
+            "$": "http://www.opmw.org/ontology/WorkflowExecutionArtifact",
+            "type": "xsd:anyURI"
+          },
+          "prov:label": "p_value"
         },
         "TriggeredLOI-tvUdPs5yRiWf": {
           "prov:generatedAtTime": {
@@ -595,12 +641,49 @@
             "type": "xsd:Name"
           }
         },
-        "Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding/demographic": {
+        "TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding/age_vs_allele": {
           "prov:value": {
-            "$": "HasAge Mean (E)",
+            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#age_vs_allele-18qg40ugspzylrv3cedr4hp08",
             "type": "xsd:string"
           },
-          "prov:label": "demographic"
+          "prov:type": {
+            "$": "http://www.opmw.org/ontology/WorkflowExecutionArtifact",
+            "type": "xsd:anyURI"
+          },
+          "prov:label": "age_vs_allele"
+        },
+        "TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding/brain_visualization": {
+          "prov:value": {
+            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#brain_visualization-99ah4oc12zrvsbzuzjs07en30",
+            "type": "xsd:string"
+          },
+          "prov:type": {
+            "$": "http://www.opmw.org/ontology/WorkflowExecutionArtifact",
+            "type": "xsd:anyURI"
+          },
+          "prov:label": "brain_visualization"
+        },
+        "TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding/demographic_value": {
+          "prov:value": {
+            "$": "[67.3, 74.8, 72.4, 19.6, 38.5, 62.4, 22.6, 22.5, 38.2, 10]",
+            "type": "xsd:string"
+          },
+          "prov:type": {
+            "$": "http://www.opmw.org/ontology/ParameterVariable",
+            "type": "xsd:anyURI"
+          },
+          "prov:label": "demographic_value"
+        },
+        "TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding/trait": {
+          "prov:value": {
+            "$": "SA",
+            "type": "xsd:string"
+          },
+          "prov:type": {
+            "$": "http://www.opmw.org/ontology/ParameterVariable",
+            "type": "xsd:anyURI"
+          },
+          "prov:label": "trait"
         },
         "TriggeredLOI-tvUdPs5yRiWf/ConfidenceReport": {
           "prov:value": {
@@ -616,33 +699,42 @@
         "provNeuroScience:analysis": {
           "prov:label": "Analysis"
         },
-        "Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding/cohortData": {
+        "TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding/area": {
           "prov:value": {
-            "$": "[SHA4fe5c4_1000BRAINS_Significant_GWAS.csv, SHA4815c5_ADNI1_Significant_GWAS.csv, SHA4a85c5_ADNI2GO_Significant_GWAS.csv, SHA4bf5c6_ALSPACa_Significant_GWAS.csv, SHA47a5c5_ASRB_Significant_GWAS.csv, SHA4aa5c5_BETULA_Significant_GWAS.csv, SHA4945c5_BIG_Significant_GWAS.csv, SHA5305c4_BIG-PsychChip_Significant_GWAS.csv, SHA4c45c5_BONN_Significant_GWAS.csv, SHA4ad5c5_BrainScale_Significant_GWAS.csv]",
+            "$": "Precentral",
             "type": "xsd:string"
           },
-          "prov:label": "cohortData"
+          "prov:type": {
+            "$": "http://www.opmw.org/ontology/ParameterVariable",
+            "type": "xsd:anyURI"
+          },
+          "prov:label": "area"
         },
-        "TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding": {
-          "prov:label": "Stores the run parameters for the Meta Workflow"
+        "TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding": [
+          {
+            "prov:label": "inputs"
+          },
+          {
+            "prov:label": "parameters"
+          },
+          {
+            "prov:label": "outputs"
+          }
+        ],
+        "TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding/shiny_visualization": {
+          "prov:value": {
+            "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#shiny_visualization-9z55v2d929ft5xrwu3hlf5y5t",
+            "type": "xsd:string"
+          },
+          "prov:type": {
+            "$": "http://www.opmw.org/ontology/WorkflowExecutionArtifact",
+            "type": "xsd:anyURI"
+          },
+          "prov:label": "shiny_visualization"
         },
         "Unknown": {},
-        "Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding/trait": {
-          "prov:value": {
-            "$": "SA",
-            "type": "xsd:string"
-          },
-          "prov:label": "trait"
-        },
-        "TriggeredLOI-tvUdPs5yRiWf/metaWorkflowOutputsFileBinding": {
-          "prov:label": "Stores the run parameters for the Meta Workflow"
-        },
-        "Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding/snp": {
-          "prov:value": {
-            "$": "rs1080066",
-            "type": "xsd:string"
-          },
-          "prov:label": "snp"
+        "TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding_demographic_value": {
+          "prov:label": "demographic_value"
         },
         "data_query": {
           "prov:label": "?project a ?projectClass .\n?projectClass rdfs:label \"Project (E)\" .\n?project ?hasCohort ?Cohorts .\n?hasCohort rdfs:label \"HasCohort (E)\" .\n?Cohorts ?hasCohortProj ?CohortProjects .\n?hasCohortProj rdfs:label \"HasCohortProject (E)\" .\n?CohortProjects ?hasProjectResults ?ProjectResults .\n?hasProjectResults rdfs:label \"HasProjectResults (E)\" .\n?ProjectResults ?regionprop \"Precentral\" .\n?regionprop rdfs:label \"BrainRegion\" .\n?ProjectResults ?traitprop \"SA\" .\n?traitprop rdfs:label \"Trait\" .\n?ProjectResults ?snpprop \"rs1080066\" .\n?snpprop rdfs:label \"SNP\" .\n?ProjectResults ?contenturlProp ?CohortData .\n?contenturlProp rdfs:label \"HasContentUrl (E)\" .\n#Demographic\noptional {\n?participantsProp rdfs:label \"HasNumberOfParticipants (E)\" .\n?CohortProjects ?participantsProp ?nParticipants\n}\n?CohortProjects \u003chttp://localhost:8080/enigma_dev/Special:URIResolver/Property-3AHasAge_Mean_-28E-29\u003e ?demographicValue .\n\u003chttp://localhost:8080/enigma_dev/Special:URIResolver/Property-3AHasAge_Mean_-28E-29\u003e rdfs:label ?DemographicLabel .\nBIND(\nIF(?DemographicLabel \u003d \"HasNumberOfFemaleSex (E)\" || ?DemographicLabel \u003d \"HasNumberOfMaleSex (E)\" ,\n(xsd:integer(?demographicValue)/xsd:integer(?nParticipants)),\n?demographicValue)\nas ?realDemographic)\n"
@@ -650,22 +742,27 @@
         "dataSource": {
           "prov:label": "https://endpoint.mint.isi.edu/enigma_dev"
         },
-        "TriggeredLOI-tvUdPs5yRiWf/metaWorkflowInputsFileBinding": {
-          "prov:label": "Stores the run inputs for the Meta Workflow"
-        },
-        "Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding/area": {
+        "TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding/demographic": {
           "prov:value": {
-            "$": "Precentral",
+            "$": "HasAge Mean (E)",
             "type": "xsd:string"
           },
-          "prov:label": "area"
+          "prov:type": {
+            "$": "http://www.opmw.org/ontology/ParameterVariable",
+            "type": "xsd:anyURI"
+          },
+          "prov:label": "demographic"
         },
-        "Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding/demographic_value": {
+        "TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding/snp": {
           "prov:value": {
-            "$": "[67.3, 74.8, 72.4, 19.6, 38.5, 62.4, 22.6, 22.5, 38.2, 10]",
+            "$": "rs1080066",
             "type": "xsd:string"
           },
-          "prov:label": "demographic_value"
+          "prov:type": {
+            "$": "http://www.opmw.org/ontology/ParameterVariable",
+            "type": "xsd:anyURI"
+          },
+          "prov:label": "snp"
         }
       }
     }

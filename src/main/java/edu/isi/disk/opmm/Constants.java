@@ -8,6 +8,22 @@ package edu.isi.disk.opmm;
 // TO DO: Cleanup of the deprecated properties is needed
 
 public class Constants {
+        // OPMW
+        public static final String OPMW_WORKFLOW_EXECUTION_ARTIFACT_LOCALNAME = "WorkflowExecutionArtifact";
+        public static final String OPMW_WORKFLOW_EXECUTION_ARTIFACT_URL = "http://www.opmw.org/ontology/WorkflowExecutionArtifact";
+        public static final String OPMW_WORKFLOW_EXECUTION_PARAMETER_VARIABLE_LOCAL_NAME = "ParameterVariable";
+        public static final String OPMW_WORKFLOW_EXECUTION_PARAMETER_VARIABLE_URL = "http://www.opmw.org/ontology/ParameterVariable";
+        public static final String OPMW_WORKFLOW_EXECUTION_DATA_VARIABLE_LOCAL_NAME = "DataVariable";
+        public static final String OPMW_WORKFLOW_EXECUTION_DATA_VARIABLE_URL = "http://www.opmw.org/ontology/DataVariable";
+        // Entities types
+        public static String DISK_ONTOLOGY_TRIGGER_LINE_OF_INQUIRY_LOCALNAME = "TriggeredLineOfInquiry";
+        public static final String DCAT_DATASET_LOCALNAME = "Dataset";
+        public static final String DCAT_CATALOG_LOCALNAME = "Catalog";
+        public static final String DCAT_RESOURCE_LOCALNAME = "Resource";
+        public static final String DCAT_DATASET_URL = "http://www.w3.org/ns/dcat#Dataset";
+        public static final String DCAT_CATALOG_URL = "http://www.w3.org/ns/dcat#Catalog";
+        public static final String DCAT_RESOURCE_URL = "http://www.w3.org/ns/dcat#Resource";
+
         // Entity local names
 
         // BUNDLE NAMES
@@ -32,11 +48,6 @@ public class Constants {
         public static enum WORKFLOW_TYPE {
                 META_WORKFLOW, WORKFLOW
         }
-
-        // Entities types
-        public static String DISK_ONTOLOGY_TRIGGER_LINE_OF_INQUIRY_LOCALNAME = "TriggeredLineOfInquiry";
-        public static final String DCAT_DATASET_LOCALNAME = "Dataset";
-        public static final String DCAT_CATALOG_LOCALNAME = "Catalog";
 
         // Activity constants: local names, labels, etc
 

@@ -1,6 +1,7 @@
 document
 default <http://provenance.isi.edu/disk/neuro/>
 prefix disk <http://disk-project.org/ontology/disk#>
+prefix opmw <http://www.opmw.org/ontology/>
 prefix provNeuroScienceLOI <http://provenance.isi.edu/disk/neuro/loi/>
 prefix wings <http://www.wings-workflows.org/ontology/>
 prefix enigmaQuestion <https://w3id.org/sqo/resource/>
@@ -27,6 +28,7 @@ used(neuroScienceDisk:select_data_source,provNeuroScienceLOI:Catalog,-)
 bundle provNeuroScience:questionBundle
 default <http://provenance.isi.edu/disk/neuro/question/>
 prefix disk <http://disk-project.org/ontology/disk#>
+prefix opmw <http://www.opmw.org/ontology/>
 prefix provNeuroScienceLOI <http://provenance.isi.edu/disk/neuro/loi/>
 prefix wings <http://www.wings-workflows.org/ontology/>
 prefix enigmaQuestion <https://w3id.org/sqo/resource/>
@@ -61,6 +63,7 @@ endBundle
 bundle provNeuroScience:hypothesisBundle
 default <http://provenance.isi.edu/disk/neuro/hypothesis/>
 prefix disk <http://disk-project.org/ontology/disk#>
+prefix opmw <http://www.opmw.org/ontology/>
 prefix provNeuroScienceLOI <http://provenance.isi.edu/disk/neuro/loi/>
 prefix wings <http://www.wings-workflows.org/ontology/>
 prefix enigmaQuestion <https://w3id.org/sqo/resource/>
@@ -86,6 +89,7 @@ endBundle
 bundle provNeuroScience:loisBundle
 default <http://provenance.isi.edu/disk/neuro/loi/>
 prefix disk <http://disk-project.org/ontology/disk#>
+prefix opmw <http://www.opmw.org/ontology/>
 prefix provNeuroScienceLOI <http://provenance.isi.edu/disk/neuro/loi/>
 prefix wings <http://www.wings-workflows.org/ontology/>
 prefix enigmaQuestion <https://w3id.org/sqo/resource/>
@@ -165,6 +169,7 @@ endBundle
 bundle provNeuroScience:triggerBundle
 default <http://provenance.isi.edu/disk/neuro/tloi/>
 prefix disk <http://disk-project.org/ontology/disk#>
+prefix opmw <http://www.opmw.org/ontology/>
 prefix provNeuroScienceLOI <http://provenance.isi.edu/disk/neuro/loi/>
 prefix wings <http://www.wings-workflows.org/ontology/>
 prefix enigmaQuestion <https://w3id.org/sqo/resource/>
@@ -219,24 +224,34 @@ wasGeneratedBy(data_query,provNeuroScience:transformDataQueryTemplate,-)
 entity(Unknown)
 entity(wings:New_Enigma,[prov:label = "New_Enigma"])
 wasGeneratedBy(Unknown,createRun,-)
-entity(TriggeredLOI-tvUdPs5yRiWf/metaWorkflowInputsFileBinding,[prov:label = "Stores the run inputs for the Meta Workflow"])
-wasGeneratedBy(TriggeredLOI-tvUdPs5yRiWf/metaWorkflowInputsFileBinding,provNeuroScience:executeDataQuery,-)
-entity(Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding/area,[prov:label = "area", prov:value = "Precentral" %% xsd:string])
-hadMember(provNeuroScienceHypothesis:Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding,Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding/area)
-entity(Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding/cohortData,[prov:label = "cohortData", prov:value = "[SHA4fe5c4_1000BRAINS_Significant_GWAS.csv, SHA4815c5_ADNI1_Significant_GWAS.csv, SHA4a85c5_ADNI2GO_Significant_GWAS.csv, SHA4bf5c6_ALSPACa_Significant_GWAS.csv, SHA47a5c5_ASRB_Significant_GWAS.csv, SHA4aa5c5_BETULA_Significant_GWAS.csv, SHA4945c5_BIG_Significant_GWAS.csv, SHA5305c4_BIG-PsychChip_Significant_GWAS.csv, SHA4c45c5_BONN_Significant_GWAS.csv, SHA4ad5c5_BrainScale_Significant_GWAS.csv]" %% xsd:string])
-hadMember(provNeuroScienceHypothesis:Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding,Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding/cohortData)
-entity(Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding/demographic,[prov:label = "demographic", prov:value = "HasAge Mean (E)" %% xsd:string])
-hadMember(provNeuroScienceHypothesis:Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding,Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding/demographic)
-entity(Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding/demographic_value,[prov:label = "demographic_value", prov:value = "[67.3, 74.8, 72.4, 19.6, 38.5, 62.4, 22.6, 22.5, 38.2, 10]" %% xsd:string])
-hadMember(provNeuroScienceHypothesis:Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding,Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding/demographic_value)
-entity(Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding/snp,[prov:label = "snp", prov:value = "rs1080066" %% xsd:string])
-hadMember(provNeuroScienceHypothesis:Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding,Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding/snp)
-entity(Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding/trait,[prov:label = "trait", prov:value = "SA" %% xsd:string])
-hadMember(provNeuroScienceHypothesis:Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding,Hypothesis-4CGdVLyttD07/hypothesisVariablesBinding/trait)
-entity(TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding,[prov:label = "Stores the run parameters for the Meta Workflow"])
+entity(TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding,[prov:label = "inputs"])
 wasGeneratedBy(TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding,provNeuroScience:executeDataQuery,-)
 used(TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding,createRun,-)
-entity(TriggeredLOI-tvUdPs5yRiWf/metaWorkflowOutputsFileBinding,[prov:label = "Stores the run parameters for the Meta Workflow"])
+entity(TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding,[prov:label = "parameters"])
+wasGeneratedBy(TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding,provNeuroScience:executeDataQuery,-)
+used(TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding,createRun,-)
+entity(TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding,[prov:label = "outputs"])
+wasGeneratedBy(TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding,provNeuroScience:executeDataQuery,-)
+used(TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding,createRun,-)
+entity(TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding/area,[prov:type = "http://www.opmw.org/ontology/ParameterVariable" %% xsd:anyURI, prov:label = "area", prov:value = "Precentral" %% xsd:string])
+hadMember(TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding,TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding/area)
+entity(TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding/demographic,[prov:type = "http://www.opmw.org/ontology/ParameterVariable" %% xsd:anyURI, prov:label = "demographic", prov:value = "HasAge Mean (E)" %% xsd:string])
+hadMember(TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding,TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding/demographic)
+entity(TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding_demographic_value,[prov:label = "demographic_value"])
+entity(TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding/demographic_value,[prov:type = "http://www.opmw.org/ontology/ParameterVariable" %% xsd:anyURI, prov:label = "demographic_value", prov:value = "[67.3, 74.8, 72.4, 19.6, 38.5, 62.4, 22.6, 22.5, 38.2, 10]" %% xsd:string])
+hadMember(TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding,TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding/demographic_value)
+entity(TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding/snp,[prov:type = "http://www.opmw.org/ontology/ParameterVariable" %% xsd:anyURI, prov:label = "snp", prov:value = "rs1080066" %% xsd:string])
+hadMember(TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding,TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding/snp)
+entity(TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding/trait,[prov:type = "http://www.opmw.org/ontology/ParameterVariable" %% xsd:anyURI, prov:label = "trait", prov:value = "SA" %% xsd:string])
+hadMember(TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding,TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding/trait)
+entity(TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding/p_value,[prov:type = "http://www.opmw.org/ontology/WorkflowExecutionArtifact" %% xsd:anyURI, prov:label = "p_value", prov:value = "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#p_value-dk0ar4arwuggp9ce364frl6dh" %% xsd:string])
+hadMember(TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding,TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding/p_value)
+entity(TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding/shiny_visualization,[prov:type = "http://www.opmw.org/ontology/WorkflowExecutionArtifact" %% xsd:anyURI, prov:label = "shiny_visualization", prov:value = "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#shiny_visualization-9z55v2d929ft5xrwu3hlf5y5t" %% xsd:string])
+hadMember(TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding,TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding/shiny_visualization)
+entity(TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding/brain_visualization,[prov:type = "http://www.opmw.org/ontology/WorkflowExecutionArtifact" %% xsd:anyURI, prov:label = "brain_visualization", prov:value = "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#brain_visualization-99ah4oc12zrvsbzuzjs07en30" %% xsd:string])
+hadMember(TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding,TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding/brain_visualization)
+entity(TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding/age_vs_allele,[prov:type = "http://www.opmw.org/ontology/WorkflowExecutionArtifact" %% xsd:anyURI, prov:label = "age_vs_allele", prov:value = "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#age_vs_allele-18qg40ugspzylrv3cedr4hp08" %% xsd:string])
+hadMember(TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding,TriggeredLOI-tvUdPs5yRiWf/metaWorkflowVariablesBinding/age_vs_allele)
 activity(provNeuroScience:analyzeWorkflowRun,-,-,[prov:label = "Analyze the Workflow Run"])
 entity(provNeuroScience:analysis,[prov:label = "Analysis"])
 used(Unknown,provNeuroScience:analyzeWorkflowRun,-)

@@ -1,5 +1,6 @@
 package edu.isi.disk.opmm;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.openprovenance.prov.model.Bundle;
@@ -64,5 +65,27 @@ public class ProvDocumentReader {
       }
     }
     throw new RuntimeException("Record not found: " + type);
+  }
+
+  /**
+   * Get a List entity with the give type from the given bundle.
+   *
+   * @param bundle A bundle from the document
+   * @param type   The type of the entity
+   * @return The entity with the given type
+   * @throws RuntimeException if the entity is not found
+   *
+   */
+  public List<Entity> getEntitiesByType(Bundle bundle, String type) throws RuntimeException {
+    List<Entity> entities = new ArrayList<Entity>();
+    for (Entity entity : u.getEntity(bundle)) {
+      List<Type> types = entity.getType();
+      for (Type t : types) {
+        if (t.getValue().equals(type)) {
+          entities.add(entity);
+        }
+      }
+    }
+    return entities;
   }
 }

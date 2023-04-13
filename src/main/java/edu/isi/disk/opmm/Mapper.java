@@ -2,9 +2,13 @@ package edu.isi.disk.opmm;
 
 import java.net.URISyntaxException;
 import java.text.ParseException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+
 import org.diskproject.shared.classes.hypothesis.Hypothesis;
 import org.diskproject.shared.classes.loi.LineOfInquiry;
 import org.diskproject.shared.classes.loi.TriggeredLOI;
@@ -12,6 +16,7 @@ import org.diskproject.shared.classes.loi.WorkflowBindings;
 import org.diskproject.shared.classes.question.Question;
 import org.diskproject.shared.classes.question.QuestionVariable;
 import org.diskproject.shared.classes.workflow.VariableBinding;
+import org.mapdb.Atomic.Var;
 import org.openprovenance.prov.interop.InteropFramework;
 import org.openprovenance.prov.model.ActedOnBehalfOf;
 import org.openprovenance.prov.model.Activity;
@@ -133,7 +138,18 @@ public class Mapper {
                 }
         }
 
-        private void addRunVariableBinding(Entity collection, String name, String value) {
+        private Entity addRunVariableBinding(Entity collection, VariableBinding variableBinding) {
+                String name = variableBinding.getVariable();
+                String value = variableBinding.getBinding();
+                Boolean isCollection = variableBinding.isCollection();
+
+                if (isCollection) {
+                        String localName = collection.getId().getLocalPart() + '_' + name;
+                        Entity subCollection = createBaseEntity(localName, name,
+                                        DocumentProv.PROV_NEUROSCIENCE_TRIGGER_PREFIX);
+                } else {
+
+                }
                 String variableLocalName = collection.getId().getLocalPart() + '/'
                                 + name;
                 Entity variableBindingEntity = pFactory.newEntity(
@@ -147,6 +163,7 @@ public class Mapper {
 
                 triggerBundle.getStatement().add(variableBindingEntity);
                 triggerBundle.getStatement().add(hm2);
+                return variableBindingEntity;
         }
 
         private void addVariableBindingWorkflow(Entity variablesBindingMetaWorkflowEntity,
@@ -324,19 +341,8 @@ public class Mapper {
                         Entity hypothesisVariableCollection) {
 
                 // Create entities: dataQuery
-                String dataQueryConcreteText = triggeredLOI.getDataQuery();
-                Entity dataQueryConcreteEntity = pFactory.newEntity(
-                                prov.qn("data_query", DocumentProv.PROV_NEUROSCIENCE_TRIGGER_PREFIX),
-                                dataQueryConcreteText);
-                triggerBundle.getStatement().add(dataQueryConcreteEntity);
-
-                String dataSource = triggeredLOI.getDataSource();
-                Entity dataSourceEntity = pFactory.newEntity(
-                                prov.qn("dataSource", DocumentProv.PROV_NEUROSCIENCE_TRIGGER_PREFIX), dataSource);
-                triggerBundle.getStatement().add(dataSourceEntity);
-                WasDerivedFrom dataSourceWasDerivedFrom = pFactory.newWasDerivedFrom(null, dataSourceEntity.getId(),
-                                dataSourceLoi.getId());
-                triggerBundle.getStatement().add(dataSourceWasDerivedFrom);
+                Entity dataQueryConcreteEntity = createDataQuery(triggeredLOI);
+                Entity dataSourceEntity = createDataSource(triggeredLOI, dataSourceLoi);
 
                 // Create activities: transformDataQuery, executeDataQuery
                 Activity transformDataQuery = pFactory.newActivity(prov.qn("transformDataQueryTemplate"),
@@ -405,6 +411,26 @@ public class Mapper {
 
         }
 
+        private Entity createDataSource(TriggeredLOI triggeredLOI, Entity dataSourceLoi) {
+                String dataSource = triggeredLOI.getDataSource();
+                Entity dataSourceEntity = pFactory.newEntity(
+                                prov.qn("dataSource", DocumentProv.PROV_NEUROSCIENCE_TRIGGER_PREFIX), dataSource);
+                triggerBundle.getStatement().add(dataSourceEntity);
+                WasDerivedFrom dataSourceWasDerivedFrom = pFactory.newWasDerivedFrom(null, dataSourceEntity.getId(),
+                                dataSourceLoi.getId());
+                triggerBundle.getStatement().add(dataSourceWasDerivedFrom);
+                return dataSourceEntity;
+        }
+
+        private Entity createDataQuery(TriggeredLOI triggeredLOI) {
+                String dataQueryConcreteText = triggeredLOI.getDataQuery();
+                Entity dataQueryConcreteEntity = pFactory.newEntity(
+                                prov.qn("data_query", DocumentProv.PROV_NEUROSCIENCE_TRIGGER_PREFIX),
+                                dataQueryConcreteText);
+                triggerBundle.getStatement().add(dataQueryConcreteEntity);
+                return dataQueryConcreteEntity;
+        }
+
         /**
          * Add the variable binding workflow to the activity
          *
@@ -420,38 +446,37 @@ public class Mapper {
 
         private void createWorkflowRun(Entity triggerEntity, Entity hypothesisVariableCollection,
                         Activity executeDataQuery,
-                        Activity createRunActivity, WorkflowBindings metaWorkflow) {
-                Entity workflowRun = createEntityWorkflowRun(metaWorkflow);
-                Entity workflowRunSystem = createEntityWorkflowSystem(metaWorkflow);
+                        Activity createRunActivity, WorkflowBindings workflow) {
+                Entity runEntity = createEntityWorkflowRun(workflow);
+                Entity systemEntity = createEntityWorkflowSystem(workflow);
                 // Workflow runs are generated by the createRun activity
-                WasGeneratedBy metaWorkflowWasGeneratedBy = pFactory.newWasGeneratedBy(null,
-                                workflowRun.getId(), createRunActivity.getId(), null, null);
-                triggerBundle.getStatement().add(metaWorkflowWasGeneratedBy);
-                List<VariableBinding> metaWorkflowBinding = metaWorkflow.getBindings();
-                // Handle the files of the Workflow Run
-                Entity workflowRunInputsCollection = createWorkflowRunInputFilesCollection(triggerEntity,
-                                executeDataQuery);
-                Entity workflowRunParametersCollection = createWorkflowParametersCollection(triggerEntity,
-                                hypothesisVariableCollection,
-                                executeDataQuery, metaWorkflowBinding, createRunActivity);
-                Entity workflowRunOutputsCollection = createWorkflowRunOutputsCollection(triggerEntity);
-                // TODO: metaworkflowLOI is null. We lost the relationship between the LOI
-                // Workflow and the Triggered LOI
-                // Activity `createRunOnWorkflow` uses the Meta Workflow
-                // Used createRunUsedMetaWorkflow = pFactory.newUsed(null,
-                // metaWorkflowLoi.getId(),
-                // createRunActivity.getId(), null, null);
-                // triggerBundle.getStatement().add(createRunUsedMetaWorkflow);
+                WasGeneratedBy wasGeneratedBy = pFactory.newWasGeneratedBy(null,
+                                runEntity.getId(), createRunActivity.getId(), null, null);
+                triggerBundle.getStatement().add(wasGeneratedBy);
+                List<VariableBinding> bindings = workflow.getBindings();
+                // Filter the parameters of the workflow from variables
+                Map<String, String> runFiles = workflow.getRun().getFiles();
+                List<VariableBinding> runParametersBindings = filterParameters(bindings, runFiles);
+                List<VariableBinding> runInputsBindings = filterInputs(bindings, runFiles);
 
-                /*
-                 * New Activity `AnalyzeWorkflowRun` analyzes the WorkflowRun
-                 * `AnalysisWorkflowRun` uses the WorkflowRun
-                 * `AnalysisWorkflowRun` generates the Analysis
-                 */
+                Entity workflowRunInputsCollection = createWorkflowVariableBindingCollection(triggerEntity,
+                                executeDataQuery, createRunActivity, Constants.META_WORKFLOW_VARIABLES_BINDING,
+                                "inputs");
+                Entity workflowRunParametersCollection = createWorkflowVariableBindingCollection(triggerEntity,
+                                executeDataQuery, createRunActivity, Constants.META_WORKFLOW_VARIABLES_BINDING,
+                                "parameters");
+                Entity workflowRunOutputsCollection = createWorkflowVariableBindingCollection(triggerEntity,
+                                executeDataQuery, createRunActivity, Constants.META_WORKFLOW_VARIABLES_BINDING,
+                                "outputs");
+
+                addWorkflowRunInputs(runInputsBindings, workflowRunInputsCollection);
+                addWorkflowRunParameters(runParametersBindings, workflowRunParametersCollection);
+                addWorkflowRunOutputs(workflow.getRun().getOutputs(), workflowRunOutputsCollection);
+
                 Activity analyzeWorkflowRun = pFactory.newActivity(prov.qn("analyzeWorkflowRun"),
                                 "Analyze the Workflow Run");
                 Used analyzeWorkflowRunUsedWorkflowRun = pFactory.newUsed(null,
-                                workflowRun.getId(),
+                                runEntity.getId(),
                                 analyzeWorkflowRun.getId(), null, null);
                 Entity analysis = pFactory.newEntity(prov.qn("analysis"), "Analysis");
                 WasGeneratedBy analysisWasGeneratedBy = pFactory.newWasGeneratedBy(null,
@@ -463,73 +488,127 @@ public class Mapper {
                 triggerBundle.getStatement().add(analysisWasGeneratedBy);
         }
 
-        private Entity createWorkflowParametersCollection(Entity triggerEntity, Entity hypothesisVariableCollection,
-                        Activity executeDataQuery,
-                        List<VariableBinding> metaWorkflowBinding, Activity createRunActivity) {
-                String collectionLocalName = triggerEntity.getId().getLocalPart() + '/'
-                                + Constants.META_WORKFLOW_VARIABLES_BINDING;
-                Entity collection = pFactory.newEntity(
-                                prov.qn(collectionLocalName,
-                                                DocumentProv.PROV_NEUROSCIENCE_TRIGGER_PREFIX),
-                                "Stores the run parameters for the Meta Workflow");
-                metaWorkflowBinding.forEach(variableBinding -> {
-                        addRunVariableBinding(hypothesisVariableCollection, variableBinding.getVariable(),
-                                        variableBinding.getBinding());
-                });
-                triggerBundle.getStatement().add(collection);
-                // Execute Data Query Activity generates the Variable Binding
-                WasGeneratedBy runVariableBindingMetaWorkflowWasGeneratedBy = pFactory.newWasGeneratedBy(null,
-                                collection.getId(), executeDataQuery.getId(), null,
+        public Entity createBaseEntity(String localName, String label, String prefix) {
+                Entity entity = pFactory.newEntity(prov.qn(localName, prefix), label);
+                triggerBundle.getStatement().add(entity);
+                return entity;
+        }
+
+        /**
+         * Create `prov:Collection` to store the Parameters, Inputs and Outputs
+         *
+         * @param triggerEntity
+         * @param generator
+         * @param uses
+         * @param collectionType
+         * @param label
+         * @return
+         */
+        private Entity createWorkflowVariableBindingCollection(Entity triggerEntity, Activity generator, Activity uses,
+                        String collectionType, String label) {
+                String localName = triggerEntity.getId().getLocalPart() + '/' + collectionType;
+                Entity entity = createBaseEntity(localName, label, DocumentProv.PROV_NEUROSCIENCE_TRIGGER_PREFIX);
+                WasGeneratedBy wasGeneratedBy = pFactory.newWasGeneratedBy(null,
+                                entity.getId(), generator.getId(), null,
                                 null);
-                triggerBundle.getStatement().add(runVariableBindingMetaWorkflowWasGeneratedBy);
+                triggerBundle.getStatement().add(wasGeneratedBy);
                 // Activity `createRunOnWorkflow` uses the Parameters Collection
-                Used createRunUsedVariablesHypothesis = pFactory.newUsed(null,
-                                collection.getId(),
-                                createRunActivity.getId(), null, null);
-                triggerBundle.getStatement().add(createRunUsedVariablesHypothesis);
-                return collection;
+                Used used = pFactory.newUsed(null,
+                                entity.getId(),
+                                uses.getId(), null, null);
+                triggerBundle.getStatement().add(used);
+                return entity;
         }
 
-        private Entity createWorkflowRunOutputsCollection(Entity triggerEntity) {
-                String collectionLocalName = triggerEntity.getId().getLocalPart() + '/'
-                                + Constants.META_WORKFLOW_OUTPUTS_BINDING;
-                Entity collection = pFactory.newEntity(
-                                prov.qn(collectionLocalName,
-                                                DocumentProv.PROV_NEUROSCIENCE_TRIGGER_PREFIX),
-                                "Stores the run parameters for the Meta Workflow");
-                triggerBundle.getStatement().add(collection);
-                // TODO: #7 Handle the outputs of the Meta Workflow
-                /*
-                 * Entity `metaWorkflowRun` generates a Collection of Entity
-                 * `outputCollection`
-                 * Entity `outputItem` is a member of Entity `outputCollection`
-                 */
-                // Entity runOutputCollection =
-                // pFactory.newEntity(prov.qn("runOutputCollection"),
-                // "Collection of the outputs of the Workflow Run");
-                // WasGeneratedBy runOutputCollectionWasGeneratedBy =
-                // pFactory.newWasGeneratedBy(null,
-                // runOutputCollection.getId(), metaWorkflowRun.getId(), null, null);
-                // triggerBundle.getStatement().add(runOutputCollection);
-                // triggerBundle.getStatement().add(runOutputCollectionWasGeneratedBy);
-                return collection;
+        private void addWorkflowRunOutputs(Map<String, String> outputs,
+                        Entity workflowRunParametersCollection) {
+                outputs.entrySet().forEach(entry -> {
+                        VariableBinding binding = new VariableBinding(entry.getKey(), entry.getValue());
+                        Entity entity = addRunVariableBinding(workflowRunParametersCollection, binding);
+                        addTypeToEntity(entity, DocumentProv.OPMW_PREFIX,
+                                        Constants.OPMW_WORKFLOW_EXECUTION_ARTIFACT_LOCALNAME);
+                });
         }
 
-        private Entity createWorkflowRunInputFilesCollection(Entity triggerEntity, Activity executeDataQuery) {
-                String localName = triggerEntity.getId().getLocalPart() + '/'
-                                + Constants.META_WORKFLOW_INPUTS_BINDING;
-                Entity collection = pFactory.newEntity(
-                                prov.qn(localName,
-                                                DocumentProv.PROV_NEUROSCIENCE_TRIGGER_PREFIX),
-                                "Stores the run inputs for the Meta Workflow");
-                triggerBundle.getStatement().add(collection);
-                // TODO: #6 Handle the files
-                // Handle the parameters of the Workflow Run
-                WasGeneratedBy runInputBindingMetaWorkflowWasGeneratedBy = pFactory.newWasGeneratedBy(null,
-                                collection.getId(), executeDataQuery.getId(), null,
-                                null);
-                triggerBundle.getStatement().add(runInputBindingMetaWorkflowWasGeneratedBy);
-                return collection;
+        private void addWorkflowRunParameters(List<VariableBinding> runParametersBindings,
+                        Entity workflowRunParametersCollection) {
+                runParametersBindings.forEach(binding -> {
+                        Entity entity = addRunVariableBinding(workflowRunParametersCollection, binding);
+                        addTypeToEntity(entity, DocumentProv.OPMW_PREFIX,
+                                        Constants.OPMW_WORKFLOW_EXECUTION_PARAMETER_VARIABLE_LOCAL_NAME);
+                });
+        }
+
+        private void addWorkflowRunInputs(List<VariableBinding> runInputsBindings,
+                        Entity workflowRunInputsCollection) {
+                runInputsBindings.forEach(binding -> {
+                        Entity entity = addRunVariableBinding(workflowRunInputsCollection, binding);
+                        addTypeToEntity(entity, DocumentProv.OPMW_PREFIX,
+                                        Constants.OPMW_WORKFLOW_EXECUTION_DATA_VARIABLE_LOCAL_NAME);
+                        addTypeToEntity(entity, DocumentProv.DCAT_PREFIX, Constants.DCAT_RESOURCE_LOCALNAME);
+
+                        if (binding.isCollection()) {
+                                String[] resources = splitArrayString(binding.getBinding());
+                                for (String resource : resources) {
+                                        String resourceLocalName = "resource_" + resource;
+                                        Entity resourceEntity = createBaseEntity(resourceLocalName, resource,
+                                                        DocumentProv.PROV_NEUROSCIENCE_TRIGGER_PREFIX);
+                                        addTypeToEntity(resourceEntity, DocumentProv.DCAT_PREFIX,
+                                                        Constants.DCAT_RESOURCE_LOCALNAME);
+                                }
+
+                        }
+                });
+        }
+
+        public static List<VariableBinding> filterInputs(List<VariableBinding> bindings, Map<String, String> runFiles) {
+                List<VariableBinding> runInputsBindings = new ArrayList<>();
+
+                for (VariableBinding binding : bindings) {
+                        Boolean isFile = false;
+                        // loop over the files
+                        for (String file : runFiles.keySet()) {
+                                String bindingValues = binding.getBinding();
+
+                                if (binding.isCollection()) {
+                                        String[] bindingValuesArray = bindingValues.replace("[", "").replace("]", "")
+                                                        .replace(" ", "")
+                                                        .split(",");
+
+                                        if (Arrays.asList(bindingValuesArray).contains(file)) {
+                                                String newBinding = binding.getBinding().replace(file,
+                                                                runFiles.get(file));
+                                                binding.setBinding(newBinding);
+                                                runInputsBindings.add(binding);
+                                        }
+                                } else {
+
+                                        if (binding.getBinding().contains(file)) {
+                                                binding.setBinding(runFiles.get(file));
+                                                runInputsBindings.add(binding);
+                                        }
+                                }
+                                isFile = true;
+                        }
+
+                }
+                return runInputsBindings;
+        }
+
+        private List<VariableBinding> filterParameters(List<VariableBinding> bindings, Map<String, String> runFiles) {
+                List<VariableBinding> runParametersBindings = bindings.stream()
+                                .filter(binding -> {
+                                        Boolean isParameter = true;
+                                        // loop over the files
+                                        for (String file : runFiles.keySet()) {
+                                                if (binding.getBinding().contains(file))
+                                                        isParameter = false;
+                                        }
+
+                                        return isParameter;
+                                })
+                                .collect(Collectors.toList());
+                return runParametersBindings;
         }
 
         private Entity createEntityWorkflowSystem(WorkflowBindings metaWorkflow) {
@@ -697,7 +776,6 @@ public class Mapper {
                                 // Create Hypothesis variable entity
                                 Entity variableBindingEntity = createVariableBindingEntity(variableBinding,
                                                 variableCollectionLocalName, variableCollectionLocalName);
-                                hypothesisBundle.getStatement().add(variableBindingEntity);
                                 // Link the variable to the collection
                                 HadMember hadMember = pFactory.newHadMember(variableCollection.getId(),
                                                 variableBindingEntity.getId());
@@ -743,16 +821,8 @@ public class Mapper {
                 String binding = variableBinding.getBinding();
                 String variableLocalName = parentCollectionLocalName + '/' + localName;
                 Entity variableBindingEntity = pFactory.newEntity(prov.qn(variableLocalName, prefix), binding);
+                hypothesisBundle.getStatement().add(variableBindingEntity);
                 return variableBindingEntity;
-        }
-
-        private Entity createVariableEntity(String localName, String name, String value, String prefix,
-                        String parentCollectionLocalName) {
-                if (parentCollectionLocalName != null) {
-                        localName = parentCollectionLocalName + '/' + localName;
-                }
-                Entity variableEntity = pFactory.newEntity(prov.qn(localName, prefix), value);
-                return variableEntity;
         }
 
         /**
@@ -866,4 +936,13 @@ public class Mapper {
                                 .orElse(null);
         }
 
+        public static String[] splitArrayString(String arrayString) {
+                String newString = arrayString.replace("[", "").replace("]", "")
+                                .replace(" ", "");
+                String[] array = newString.split(",");
+                for (int i = 0; i < array.length; i++) {
+                        array[i] = array[i].trim();
+                }
+                return array;
+        }
 }
