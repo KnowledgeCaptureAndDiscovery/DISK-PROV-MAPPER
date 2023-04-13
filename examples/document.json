@@ -34,23 +34,24 @@
     }
   },
   "prefix": {
-    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "disk": "http://disk-project.org/ontology/disk#",
-    "provNeuroScienceQuestion": "http://provenance.isi.edu/disk/neuro/question/",
-    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-    "provNeuroScienceLOI": "http://provenance.isi.edu/disk/neuro/loi/",
-    "provNeuroScience": "http://provenance.isi.edu/disk/neuro/",
-    "dcat": "http://www.w3.org/ns/dcat#",
-    "provNeuroScienceHypothesis": "http://provenance.isi.edu/disk/neuro/hypothesis/",
-    "opmw": "http://www.opmw.org/ontology/",
+    "default": "http://provenance.isi.edu/disk/neuro/",
+    "TriggeredLOI-tvUdPs5yRiWf": "http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-tvUdPs5yRiWf",
     "prov": "http://www.w3.org/ns/prov#",
+    "enigmaQuestion": "https://w3id.org/sqo/resource/",
+    "provNeuroScienceTLOI": "http://provenance.isi.edu/disk/neuro/tloi/",
+    "dcat": "http://www.w3.org/ns/dcat#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "dcterms": "http://purl.org/dc/terms/",
     "wings": "http://www.wings-workflows.org/ontology/",
+    "opmw": "http://www.opmw.org/ontology/",
+    "disk": "http://disk-project.org/ontology/disk#",
+    "provNeuroScienceQuestion": "http://provenance.isi.edu/disk/neuro/question/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "provNeuroScienceLOI": "http://provenance.isi.edu/disk/neuro/loi/",
     "neuroScienceDisk": "http://localhost:8080/disk-server/admin/",
-    "provNeuroScienceTLOI": "http://provenance.isi.edu/disk/neuro/tloi/",
-    "default": "http://provenance.isi.edu/disk/neuro/",
-    "enigmaQuestion": "https://w3id.org/sqo/resource/"
+    "provNeuroScience": "http://provenance.isi.edu/disk/neuro/",
+    "provNeuroScienceHypothesis": "http://provenance.isi.edu/disk/neuro/hypothesis/"
   },
   "used": {
     "_:u122": {

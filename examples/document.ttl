@@ -14,6 +14,7 @@
 @prefix provNeuroScienceQuestion: <http://provenance.isi.edu/disk/neuro/question/> .
 @prefix provNeuroScienceTLOI: <http://provenance.isi.edu/disk/neuro/tloi/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix TriggeredLOI-tvUdPs5yRiWf: <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-tvUdPs5yRiWf> .
 
 
 provNeuroScience:hvargas a prov:Agent ;

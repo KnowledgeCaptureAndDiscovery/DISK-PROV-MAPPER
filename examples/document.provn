@@ -13,6 +13,7 @@ prefix neuroScienceDisk <http://localhost:8080/disk-server/admin/>
 prefix provNeuroScience <http://provenance.isi.edu/disk/neuro/>
 prefix provNeuroScienceTLOI <http://provenance.isi.edu/disk/neuro/tloi/>
 prefix provNeuroScienceQuestion <http://provenance.isi.edu/disk/neuro/question/>
+prefix TriggeredLOI-tvUdPs5yRiWf <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-tvUdPs5yRiWf>
 prefix dcterms <http://purl.org/dc/terms/>
 agent(hvargas,[prov:label = "Hernan Vargas"])
 agent(neda,[prov:label = "Neda Jahanshad"])

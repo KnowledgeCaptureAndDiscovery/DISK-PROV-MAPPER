@@ -130,10 +130,9 @@ public class Mapper {
                 localWasDerived(questionEntity, hypothesisEntity, questionBundle);
                 localWasDerived(questionEntity, lineOfInquiryEntity, loisBundle);
                 for (TriggeredLOI triggerLineInquiry : triggeredLOIList) {
-
-                        String id = triggerLineInquiry.getId();
+                        String id = DocumentProv.PROV_NEUROSCIENCE_TRIGGER_NS + triggerLineInquiry.getId();
                         String localName = Utils.getFragment(id);
-                        // prov.ns.register(localName, id);
+                        prov.ns.register(localName, id);
                         Entity triggerEntity = createTiggerEntity(triggerLineInquiry);
                         localWasDerived(lineOfInquiryEntity, triggerEntity, triggerBundle);
                         level2LineAdd(triggerLineInquiry, lineOfInquiry,
@@ -151,6 +150,25 @@ public class Mapper {
                                 + name;
                 Entity variableBindingEntity = pFactory.newEntity(
                                 prov.qn(variableLocalName, DocumentProv.PROV_NEUROSCIENCE_TRIGGER_PREFIX),
+                                name);
+                variableBindingEntity.setValue(pFactory.newValue(value));
+
+                HadMember hm2 = pFactory.newHadMember(
+                                collection.getId(),
+                                variableBindingEntity.getId());
+
+                triggerBundle.getStatement().add(variableBindingEntity);
+                triggerBundle.getStatement().add(hm2);
+                return variableBindingEntity;
+        }
+
+        private Entity addRunVariableBinding(Entity collection, VariableBinding variableBinding, String prefix) {
+                String name = variableBinding.getVariable();
+                String value = variableBinding.getBinding();
+                String variableLocalName = collection.getId().getLocalPart() + '_'
+                                + name;
+                Entity variableBindingEntity = pFactory.newEntity(
+                                prov.qn(variableLocalName, prefix),
                                 name);
                 variableBindingEntity.setValue(pFactory.newValue(value));
 
@@ -475,7 +493,8 @@ public class Mapper {
                 addWorkflowRunInputs(runInputsBindings, workflowRunInputsCollection);
                 addWorkflowRunParameters(runParametersBindings,
                                 workflowRunParametersCollection);
-                addWorkflowRunOutputs(workflow.getRun().getOutputs(), workflowRunOutputsCollection);
+                addWorkflowRunOutputs(workflow.getRun().getOutputs(), workflowRunOutputsCollection,
+                                triggerEntity.getId().getLocalPart());
 
                 Activity analyzeWorkflowRun = pFactory.newActivity(prov.qn("analyzeWorkflowRun"),
                                 "Analyze the Workflow Run");
@@ -526,10 +545,11 @@ public class Mapper {
         }
 
         private void addWorkflowRunOutputs(Map<String, String> outputs,
-                        Entity workflowRunParametersCollection) {
+                        Entity workflowRunParametersCollection, String prefix) {
                 outputs.entrySet().forEach(entry -> {
                         VariableBinding binding = new VariableBinding(entry.getKey(), entry.getValue());
-                        Entity entity = addRunVariableBinding(workflowRunParametersCollection, binding);
+                        Entity entity = addRunVariableBinding(workflowRunParametersCollection, binding,
+                                        DocumentProv.PROV_NEUROSCIENCE_TRIGGER_PREFIX);
                         addTypeToEntity(entity, DocumentProv.OPMW_PREFIX,
                                         Constants.OPMW_WORKFLOW_EXECUTION_ARTIFACT_LOCALNAME);
                 });
