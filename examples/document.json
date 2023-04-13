@@ -1,6 +1,6 @@
 {
   "hadMember": {
-    "_:hM397": {
+    "_:hM1": {
       "prov:entity": [
         "wings:New_Enigma"
       ],
@@ -16,21 +16,21 @@
     }
   },
   "wasGeneratedBy": {
-    "_:wGB166": {
+    "_:wGB1": {
       "prov:entity": "wings:unknown",
       "prov:activity": "neuroScienceDisk:select_workflow"
     }
   },
   "actedOnBehalfOf": {
-    "_:aOBO23": {
-      "prov:responsible": "neda",
-      "prov:delegate": "hvargas",
-      "prov:activity": "createQuestion"
-    },
-    "_:aOBO24": {
+    "_:aOBO2": {
       "prov:responsible": "neda",
       "prov:delegate": "hvargas",
       "prov:activity": "createHypothesis"
+    },
+    "_:aOBO1": {
+      "prov:responsible": "neda",
+      "prov:delegate": "hvargas",
+      "prov:activity": "createQuestion"
     }
   },
   "prefix": {
@@ -54,71 +54,71 @@
     "provNeuroScienceHypothesis": "http://provenance.isi.edu/disk/neuro/hypothesis/"
   },
   "used": {
-    "_:u122": {
-      "prov:entity": "wings:New_Enigma",
-      "prov:activity": "neuroScienceDisk:select_workflow"
+    "_:u2": {
+      "prov:entity": "wings:unknown",
+      "prov:activity": "neuroScienceDisk:select_variable_workflow"
     },
-    "_:u124": {
+    "_:u3": {
       "prov:entity": "provNeuroScienceLOI:Catalog",
       "prov:activity": "neuroScienceDisk:select_data_source"
     },
-    "_:u123": {
-      "prov:entity": "wings:unknown",
-      "prov:activity": "neuroScienceDisk:select_variable_workflow"
+    "_:u1": {
+      "prov:entity": "wings:New_Enigma",
+      "prov:activity": "neuroScienceDisk:select_workflow"
     }
   },
   "bundle": {
     "provNeuroScience:loisBundle": {
       "hadMember": {
-        "_:hM413": {
+        "_:hM17": {
           "prov:entity": [
             "trait"
           ],
           "prov:collection": "metaWorkflowVariableBinding"
         },
-        "_:hM411": {
+        "_:hM15": {
           "prov:entity": [
             "demographic_value"
           ],
           "prov:collection": "metaWorkflowVariableBinding"
         },
-        "_:hM412": {
+        "_:hM16": {
           "prov:entity": [
             "snp"
           ],
           "prov:collection": "metaWorkflowVariableBinding"
         },
-        "_:hM410": {
+        "_:hM13": {
+          "prov:entity": [
+            "cohortData"
+          ],
+          "prov:collection": "metaWorkflowVariableBinding"
+        },
+        "_:hM14": {
           "prov:entity": [
             "demographic"
           ],
           "prov:collection": "metaWorkflowVariableBinding"
         },
-        "_:hM408": {
+        "_:hM12": {
           "prov:entity": [
             "area"
-          ],
-          "prov:collection": "metaWorkflowVariableBinding"
-        },
-        "_:hM409": {
-          "prov:entity": [
-            "cohortData"
           ],
           "prov:collection": "metaWorkflowVariableBinding"
         }
       },
       "wasGeneratedBy": {
-        "_:wGB172": {
+        "_:wGB7": {
           "prov:entity": "data_query",
           "prov:activity": "neuroScienceDisk:write_data_query_template"
         },
-        "_:wGB171": {
-          "prov:entity": "metaWorkflowVariableBinding",
-          "prov:activity": "neuroScienceDisk:select_variable_workflow"
-        },
-        "_:wGB173": {
+        "_:wGB8": {
           "prov:entity": "LOI-R12qZl77tJJ9",
           "prov:activity": "neuroScienceDisk:saved_line_of_inquiry"
+        },
+        "_:wGB6": {
+          "prov:entity": "metaWorkflowVariableBinding",
+          "prov:activity": "neuroScienceDisk:select_variable_workflow"
         }
       },
       "activity": {
@@ -182,41 +182,41 @@
         "enigmaQuestion": "https://w3id.org/sqo/resource/"
       },
       "wasInformedBy": {
-        "_:Infm45": {
+        "_:Infm2": {
+          "prov:informed": "neuroScienceDisk:write_data_query_template",
+          "prov:informant": "neuroScienceDisk:select_variable_workflow"
+        },
+        "_:Infm1": {
           "prov:informed": "neuroScienceDisk:select_workflow",
           "prov:informant": "neuroScienceDisk:saved_line_of_inquiry"
         },
-        "_:Infm46": {
-          "prov:informed": "neuroScienceDisk:write_data_query_template",
-          "prov:informant": "neuroScienceDisk:select_variable_workflow"
-        },
-        "_:Infm47": {
-          "prov:informed": "neuroScienceDisk:write_data_query_template",
-          "prov:informant": "neuroScienceDisk:select_variable_workflow"
-        },
-        "_:Infm48": {
+        "_:Infm4": {
           "prov:informed": "neuroScienceDisk:select_variable_workflow",
           "prov:informant": "neuroScienceDisk:select_workflow"
+        },
+        "_:Infm3": {
+          "prov:informed": "neuroScienceDisk:write_data_query_template",
+          "prov:informant": "neuroScienceDisk:select_variable_workflow"
         }
       },
       "wasDerivedFrom": {
-        "_:wDF142": {
+        "_:wDF10": {
           "prov:generatedEntity": "LOI-R12qZl77tJJ9",
           "prov:usedEntity": "provNeuroScienceQuestion:EnigmaQuestion5"
         }
       },
       "used": {
-        "_:u126": {
+        "_:u6": {
           "prov:entity": "provNeuroScienceQuestion:EnigmaQuestion5",
-          "prov:activity": "neuroScienceDisk:select_question"
+          "prov:activity": "neuroScienceDisk:write_data_query_template"
         },
-        "_:u125": {
+        "_:u4": {
           "prov:entity": "metaWorkflowVariableBinding",
           "prov:activity": "neuroScienceDisk:write_data_query_template"
         },
-        "_:u127": {
+        "_:u5": {
           "prov:entity": "provNeuroScienceQuestion:EnigmaQuestion5",
-          "prov:activity": "neuroScienceDisk:write_data_query_template"
+          "prov:activity": "neuroScienceDisk:select_question"
         }
       },
       "entity": {
@@ -282,31 +282,31 @@
     },
     "provNeuroScience:questionBundle": {
       "hadMember": {
-        "_:hM402": {
+        "_:hM6": {
           "prov:entity": [
             "ethnicGroup"
           ],
           "prov:collection": "EnigmaQuestion5_questionVariablesBinding"
         },
-        "_:hM400": {
+        "_:hM4": {
           "prov:entity": [
             "brainRegion"
           ],
           "prov:collection": "EnigmaQuestion5_questionVariablesBinding"
         },
-        "_:hM401": {
+        "_:hM5": {
           "prov:entity": [
             "demographicAttribute"
           ],
           "prov:collection": "EnigmaQuestion5_questionVariablesBinding"
         },
-        "_:hM398": {
+        "_:hM2": {
           "prov:entity": [
             "genotype"
           ],
           "prov:collection": "EnigmaQuestion5_questionVariablesBinding"
         },
-        "_:hM399": {
+        "_:hM3": {
           "prov:entity": [
             "brainImagingTrait"
           ],
@@ -314,12 +314,12 @@
         }
       },
       "wasGeneratedBy": {
-        "_:wGB167": {
-          "prov:entity": "EnigmaQuestion5",
+        "_:wGB3": {
+          "prov:entity": "EnigmaQuestion5_questionVariablesBinding",
           "prov:activity": "provNeuroScience:createQuestion"
         },
-        "_:wGB168": {
-          "prov:entity": "EnigmaQuestion5_questionVariablesBinding",
+        "_:wGB2": {
+          "prov:entity": "EnigmaQuestion5",
           "prov:activity": "provNeuroScience:createQuestion"
         }
       },
@@ -352,13 +352,13 @@
         "enigmaQuestion": "https://w3id.org/sqo/resource/"
       },
       "wasDerivedFrom": {
-        "_:wDF133": {
-          "prov:generatedEntity": "EnigmaQuestion5",
-          "prov:usedEntity": "EnigmaQuestion5_questionVariablesBinding"
-        },
-        "_:wDF134": {
+        "_:wDF2": {
           "prov:generatedEntity": "provNeuroScienceHypothesis:Hypothesis-4CGdVLyttD07",
           "prov:usedEntity": "EnigmaQuestion5"
+        },
+        "_:wDF1": {
+          "prov:generatedEntity": "EnigmaQuestion5",
+          "prov:usedEntity": "EnigmaQuestion5_questionVariablesBinding"
         }
       },
       "entity": {
@@ -391,31 +391,31 @@
     },
     "provNeuroScience:hypothesisBundle": {
       "hadMember": {
-        "_:hM403": {
+        "_:hM7": {
           "prov:entity": [
             "Hypothesis-4CGdVLyttD07_hypothesisVariablesBinding_genotype"
           ],
           "prov:collection": "Hypothesis-4CGdVLyttD07_hypothesisVariablesBinding"
         },
-        "_:hM406": {
+        "_:hM10": {
           "prov:entity": [
             "Hypothesis-4CGdVLyttD07_hypothesisVariablesBinding_demographicAttribute"
           ],
           "prov:collection": "Hypothesis-4CGdVLyttD07_hypothesisVariablesBinding"
         },
-        "_:hM407": {
-          "prov:entity": [
-            "Hypothesis-4CGdVLyttD07_hypothesisVariablesBinding_ethnicGroup"
-          ],
-          "prov:collection": "Hypothesis-4CGdVLyttD07_hypothesisVariablesBinding"
-        },
-        "_:hM404": {
+        "_:hM8": {
           "prov:entity": [
             "Hypothesis-4CGdVLyttD07_hypothesisVariablesBinding_brainImagingTrait"
           ],
           "prov:collection": "Hypothesis-4CGdVLyttD07_hypothesisVariablesBinding"
         },
-        "_:hM405": {
+        "_:hM11": {
+          "prov:entity": [
+            "Hypothesis-4CGdVLyttD07_hypothesisVariablesBinding_ethnicGroup"
+          ],
+          "prov:collection": "Hypothesis-4CGdVLyttD07_hypothesisVariablesBinding"
+        },
+        "_:hM9": {
           "prov:entity": [
             "Hypothesis-4CGdVLyttD07_hypothesisVariablesBinding_brainRegion"
           ],
@@ -423,12 +423,12 @@
         }
       },
       "wasGeneratedBy": {
-        "_:wGB170": {
-          "prov:entity": "Hypothesis-4CGdVLyttD07_hypothesisVariablesBinding",
+        "_:wGB4": {
+          "prov:entity": "Hypothesis-4CGdVLyttD07",
           "prov:activity": "provNeuroScience:createHypothesis"
         },
-        "_:wGB169": {
-          "prov:entity": "Hypothesis-4CGdVLyttD07",
+        "_:wGB5": {
+          "prov:entity": "Hypothesis-4CGdVLyttD07_hypothesisVariablesBinding",
           "prov:activity": "provNeuroScience:createHypothesis"
         }
       },
@@ -470,33 +470,33 @@
         "enigmaQuestion": "https://w3id.org/sqo/resource/"
       },
       "wasDerivedFrom": {
-        "_:wDF138": {
-          "prov:generatedEntity": "Hypothesis-4CGdVLyttD07_hypothesisVariablesBinding_brainRegion",
-          "prov:usedEntity": "provNeuroScienceQuestion:brainRegion"
-        },
-        "_:wDF139": {
-          "prov:generatedEntity": "Hypothesis-4CGdVLyttD07_hypothesisVariablesBinding_demographicAttribute",
-          "prov:usedEntity": "provNeuroScienceQuestion:demographicAttribute"
-        },
-        "_:wDF140": {
-          "prov:generatedEntity": "Hypothesis-4CGdVLyttD07_hypothesisVariablesBinding_ethnicGroup",
-          "prov:usedEntity": "provNeuroScienceQuestion:ethnicGroup"
-        },
-        "_:wDF141": {
-          "prov:generatedEntity": "Hypothesis-4CGdVLyttD07",
-          "prov:usedEntity": "Hypothesis-4CGdVLyttD07_hypothesisVariablesBinding"
-        },
-        "_:wDF135": {
+        "_:wDF3": {
           "prov:generatedEntity": "Hypothesis-4CGdVLyttD07_hypothesisVariablesBinding",
           "prov:usedEntity": "provNeuroScienceQuestion:EnigmaQuestion5_questionVariablesBinding"
         },
-        "_:wDF136": {
+        "_:wDF4": {
           "prov:generatedEntity": "Hypothesis-4CGdVLyttD07_hypothesisVariablesBinding_genotype",
           "prov:usedEntity": "provNeuroScienceQuestion:genotype"
         },
-        "_:wDF137": {
+        "_:wDF5": {
           "prov:generatedEntity": "Hypothesis-4CGdVLyttD07_hypothesisVariablesBinding_brainImagingTrait",
           "prov:usedEntity": "provNeuroScienceQuestion:brainImagingTrait"
+        },
+        "_:wDF6": {
+          "prov:generatedEntity": "Hypothesis-4CGdVLyttD07_hypothesisVariablesBinding_brainRegion",
+          "prov:usedEntity": "provNeuroScienceQuestion:brainRegion"
+        },
+        "_:wDF7": {
+          "prov:generatedEntity": "Hypothesis-4CGdVLyttD07_hypothesisVariablesBinding_demographicAttribute",
+          "prov:usedEntity": "provNeuroScienceQuestion:demographicAttribute"
+        },
+        "_:wDF8": {
+          "prov:generatedEntity": "Hypothesis-4CGdVLyttD07_hypothesisVariablesBinding_ethnicGroup",
+          "prov:usedEntity": "provNeuroScienceQuestion:ethnicGroup"
+        },
+        "_:wDF9": {
+          "prov:generatedEntity": "Hypothesis-4CGdVLyttD07",
+          "prov:usedEntity": "Hypothesis-4CGdVLyttD07_hypothesisVariablesBinding"
         }
       },
       "entity": {
@@ -529,147 +529,147 @@
     },
     "provNeuroScience:triggerBundle": {
       "hadMember": {
-        "_:hM424": {
-          "prov:entity": [
-            "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_area"
-          ],
-          "prov:collection": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
-        },
-        "_:hM414": {
+        "_:hM20": {
           "prov:entity": [
             "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_cohortData"
           ],
           "prov:collection": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
         },
-        "_:hM425": {
+        "_:hM31": {
           "prov:entity": [
-            "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_demographic"
+            "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_snp"
           ],
           "prov:collection": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
         },
-        "_:hM422": {
-          "prov:entity": [
-            "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_cohortData"
-          ],
-          "prov:collection": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
-        },
-        "_:hM423": {
+        "_:hM21": {
           "prov:entity": [
             "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_cohortData"
           ],
           "prov:collection": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
         },
-        "_:hM420": {
-          "prov:entity": [
-            "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_cohortData"
-          ],
-          "prov:collection": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
-        },
-        "_:hM431": {
-          "prov:entity": [
-            "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_brain_visualization"
-          ],
-          "prov:collection": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
-        },
-        "_:hM421": {
-          "prov:entity": [
-            "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_cohortData"
-          ],
-          "prov:collection": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
-        },
-        "_:hM432": {
-          "prov:entity": [
-            "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_age_vs_allele"
-          ],
-          "prov:collection": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
-        },
-        "_:hM430": {
-          "prov:entity": [
-            "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_shiny_visualization"
-          ],
-          "prov:collection": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
-        },
-        "_:hM419": {
-          "prov:entity": [
-            "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_cohortData"
-          ],
-          "prov:collection": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
-        },
-        "_:hM417": {
-          "prov:entity": [
-            "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_cohortData"
-          ],
-          "prov:collection": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
-        },
-        "_:hM428": {
+        "_:hM32": {
           "prov:entity": [
             "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_trait"
           ],
           "prov:collection": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
         },
-        "_:hM418": {
-          "prov:entity": [
-            "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_cohortData"
-          ],
-          "prov:collection": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
-        },
-        "_:hM429": {
-          "prov:entity": [
-            "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_p_value"
-          ],
-          "prov:collection": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
-        },
-        "_:hM415": {
-          "prov:entity": [
-            "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_cohortData"
-          ],
-          "prov:collection": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
-        },
-        "_:hM426": {
+        "_:hM30": {
           "prov:entity": [
             "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_demographic_value"
           ],
           "prov:collection": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
         },
-        "_:hM416": {
+        "_:hM19": {
           "prov:entity": [
             "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_cohortData"
           ],
           "prov:collection": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
         },
-        "_:hM427": {
+        "_:hM28": {
           "prov:entity": [
-            "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_snp"
+            "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_area"
+          ],
+          "prov:collection": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
+        },
+        "_:hM18": {
+          "prov:entity": [
+            "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_cohortData"
+          ],
+          "prov:collection": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
+        },
+        "_:hM29": {
+          "prov:entity": [
+            "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_demographic"
+          ],
+          "prov:collection": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
+        },
+        "_:hM26": {
+          "prov:entity": [
+            "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_cohortData"
+          ],
+          "prov:collection": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
+        },
+        "_:hM27": {
+          "prov:entity": [
+            "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_cohortData"
+          ],
+          "prov:collection": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
+        },
+        "_:hM24": {
+          "prov:entity": [
+            "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_cohortData"
+          ],
+          "prov:collection": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
+        },
+        "_:hM35": {
+          "prov:entity": [
+            "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_brain_visualization"
+          ],
+          "prov:collection": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
+        },
+        "_:hM25": {
+          "prov:entity": [
+            "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_cohortData"
+          ],
+          "prov:collection": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
+        },
+        "_:hM36": {
+          "prov:entity": [
+            "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_age_vs_allele"
+          ],
+          "prov:collection": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
+        },
+        "_:hM22": {
+          "prov:entity": [
+            "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_cohortData"
+          ],
+          "prov:collection": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
+        },
+        "_:hM33": {
+          "prov:entity": [
+            "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_p_value"
+          ],
+          "prov:collection": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
+        },
+        "_:hM23": {
+          "prov:entity": [
+            "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_cohortData"
+          ],
+          "prov:collection": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
+        },
+        "_:hM34": {
+          "prov:entity": [
+            "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_shiny_visualization"
           ],
           "prov:collection": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
         }
       },
       "wasGeneratedBy": {
-        "_:wGB180": {
-          "prov:entity": "provNeuroScience:analysis",
-          "prov:activity": "provNeuroScience:analyzeWorkflowRun"
-        },
-        "_:wGB174": {
-          "prov:entity": "TriggeredLOI-tvUdPs5yRiWf",
-          "prov:activity": "provNeuroScience:transformDataQueryTemplate"
-        },
-        "_:wGB176": {
+        "_:wGB11": {
           "prov:entity": "Unknown",
           "prov:activity": "createRun"
         },
-        "_:wGB175": {
+        "_:wGB10": {
           "prov:entity": "data_query",
           "prov:activity": "provNeuroScience:transformDataQueryTemplate"
         },
-        "_:wGB178": {
+        "_:wGB9": {
+          "prov:entity": "TriggeredLOI-tvUdPs5yRiWf",
+          "prov:activity": "provNeuroScience:transformDataQueryTemplate"
+        },
+        "_:wGB15": {
+          "prov:entity": "provNeuroScience:analysis",
+          "prov:activity": "provNeuroScience:analyzeWorkflowRun"
+        },
+        "_:wGB14": {
           "prov:entity": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding",
           "prov:activity": "provNeuroScience:executeDataQuery"
         },
-        "_:wGB177": {
+        "_:wGB13": {
           "prov:entity": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding",
           "prov:activity": "provNeuroScience:executeDataQuery"
         },
-        "_:wGB179": {
+        "_:wGB12": {
           "prov:entity": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding",
           "prov:activity": "provNeuroScience:executeDataQuery"
         }
@@ -708,35 +708,35 @@
         "enigmaQuestion": "https://w3id.org/sqo/resource/"
       },
       "wasDerivedFrom": {
-        "_:wDF143": {
-          "prov:generatedEntity": "TriggeredLOI-tvUdPs5yRiWf",
-          "prov:usedEntity": "provNeuroScienceLOI:LOI-R12qZl77tJJ9"
-        },
-        "_:wDF144": {
+        "_:wDF12": {
           "prov:generatedEntity": "dataSource",
           "prov:usedEntity": "provNeuroScienceLOI:Catalog"
+        },
+        "_:wDF11": {
+          "prov:generatedEntity": "TriggeredLOI-tvUdPs5yRiWf",
+          "prov:usedEntity": "provNeuroScienceLOI:LOI-R12qZl77tJJ9"
         }
       },
       "used": {
-        "_:u132": {
+        "_:u7": {
+          "prov:entity": "provNeuroScience:transformDataQueryTemplate",
+          "prov:activity": "provNeuroScienceLOI:data_query"
+        },
+        "_:u8": {
+          "prov:entity": "createRun",
+          "prov:activity": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
+        },
+        "_:u9": {
+          "prov:entity": "createRun",
+          "prov:activity": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
+        },
+        "_:u11": {
           "prov:entity": "provNeuroScience:analyzeWorkflowRun",
           "prov:activity": "Unknown"
         },
-        "_:u131": {
+        "_:u10": {
           "prov:entity": "createRun",
           "prov:activity": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
-        },
-        "_:u130": {
-          "prov:entity": "createRun",
-          "prov:activity": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
-        },
-        "_:u129": {
-          "prov:entity": "createRun",
-          "prov:activity": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
-        },
-        "_:u128": {
-          "prov:entity": "provNeuroScience:transformDataQueryTemplate",
-          "prov:activity": "provNeuroScienceLOI:data_query"
         }
       },
       "entity": {

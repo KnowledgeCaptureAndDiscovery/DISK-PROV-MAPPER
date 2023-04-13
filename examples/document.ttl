@@ -23,19 +23,19 @@ provNeuroScience:hvargas a prov:Agent ;
 provNeuroScience:neda a prov:Agent ;
 	rdfs:label "Neda Jahanshad" .
 
-_:blank23 a prov:Delegation ;
+_:blank1 a prov:Delegation ;
 	prov:agent provNeuroScience:neda .
 
-provNeuroScience:hvargas prov:qualifiedDelegation _:blank23 .
+provNeuroScience:hvargas prov:qualifiedDelegation _:blank1 .
 
-_:blank23 prov:hadActivity provNeuroScience:createQuestion .
+_:blank1 prov:hadActivity provNeuroScience:createQuestion .
 
-_:blank24 a prov:Delegation ;
+_:blank2 a prov:Delegation ;
 	prov:agent provNeuroScience:neda .
 
-provNeuroScience:hvargas prov:qualifiedDelegation _:blank24 .
+provNeuroScience:hvargas prov:qualifiedDelegation _:blank2 .
 
-_:blank24 prov:hadActivity provNeuroScience:createHypothesis .
+_:blank2 prov:hadActivity provNeuroScience:createHypothesis .
 
 wings:New_Enigma a prov:Entity ;
 	rdfs:label "New_Enigma" .

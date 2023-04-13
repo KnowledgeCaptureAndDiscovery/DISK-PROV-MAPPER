@@ -57,8 +57,8 @@ public class DocumentProv {
     public static final String OPMW_NS = "http://www.opmw.org/ontology/";
     public static final String OPMW_PREFIX = "opmw";
 
-    public final ProvFactory factory;
-    public final Namespace ns;
+    public ProvFactory factory;
+    public Namespace ns;
     public Document document;
 
     public DocumentProv(ProvFactory pFactory) {
