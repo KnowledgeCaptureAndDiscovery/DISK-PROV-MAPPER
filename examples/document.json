@@ -1,6 +1,6 @@
 {
   "hadMember": {
-    "_:hM289": {
+    "_:hM397": {
       "prov:entity": [
         "wings:New_Enigma"
       ],
@@ -16,21 +16,21 @@
     }
   },
   "wasGeneratedBy": {
-    "_:wGB121": {
+    "_:wGB166": {
       "prov:entity": "wings:unknown",
       "prov:activity": "neuroScienceDisk:select_workflow"
     }
   },
   "actedOnBehalfOf": {
-    "_:aOBO18": {
-      "prov:responsible": "neda",
-      "prov:delegate": "hvargas",
-      "prov:activity": "createHypothesis"
-    },
-    "_:aOBO17": {
+    "_:aOBO23": {
       "prov:responsible": "neda",
       "prov:delegate": "hvargas",
       "prov:activity": "createQuestion"
+    },
+    "_:aOBO24": {
+      "prov:responsible": "neda",
+      "prov:delegate": "hvargas",
+      "prov:activity": "createHypothesis"
     }
   },
   "prefix": {
@@ -53,71 +53,71 @@
     "enigmaQuestion": "https://w3id.org/sqo/resource/"
   },
   "used": {
-    "_:u91": {
+    "_:u122": {
+      "prov:entity": "wings:New_Enigma",
+      "prov:activity": "neuroScienceDisk:select_workflow"
+    },
+    "_:u124": {
       "prov:entity": "provNeuroScienceLOI:Catalog",
       "prov:activity": "neuroScienceDisk:select_data_source"
     },
-    "_:u90": {
+    "_:u123": {
       "prov:entity": "wings:unknown",
       "prov:activity": "neuroScienceDisk:select_variable_workflow"
-    },
-    "_:u89": {
-      "prov:entity": "wings:New_Enigma",
-      "prov:activity": "neuroScienceDisk:select_workflow"
     }
   },
   "bundle": {
     "provNeuroScience:loisBundle": {
       "hadMember": {
-        "_:hM303": {
+        "_:hM413": {
+          "prov:entity": [
+            "trait"
+          ],
+          "prov:collection": "metaWorkflowVariableBinding"
+        },
+        "_:hM411": {
           "prov:entity": [
             "demographic_value"
           ],
           "prov:collection": "metaWorkflowVariableBinding"
         },
-        "_:hM304": {
+        "_:hM412": {
           "prov:entity": [
             "snp"
           ],
           "prov:collection": "metaWorkflowVariableBinding"
         },
-        "_:hM301": {
-          "prov:entity": [
-            "cohortData"
-          ],
-          "prov:collection": "metaWorkflowVariableBinding"
-        },
-        "_:hM302": {
+        "_:hM410": {
           "prov:entity": [
             "demographic"
           ],
           "prov:collection": "metaWorkflowVariableBinding"
         },
-        "_:hM300": {
+        "_:hM408": {
           "prov:entity": [
             "area"
           ],
           "prov:collection": "metaWorkflowVariableBinding"
         },
-        "_:hM305": {
+        "_:hM409": {
           "prov:entity": [
-            "trait"
+            "cohortData"
           ],
           "prov:collection": "metaWorkflowVariableBinding"
         }
       },
       "wasGeneratedBy": {
-        "_:wGB128": {
-          "prov:entity": "LOI-R12qZl77tJJ9",
-          "prov:activity": "neuroScienceDisk:saved_line_of_inquiry"
-        },
-        "_:wGB127": {
+        "_:wGB172": {
           "prov:entity": "data_query",
           "prov:activity": "neuroScienceDisk:write_data_query_template"
         },
-        "_:wGB126": {
+        "_:wGB171": {
           "prov:entity": "metaWorkflowVariableBinding",
           "prov:activity": "neuroScienceDisk:select_variable_workflow"
+        },
+        "_:wGB173": {
+          "prov:entity": "LOI-R12qZl77tJJ9",
+          "prov:activity": "neuroScienceDisk:saved_line_of_inquiry"
         }
       },
       "activity": {
@@ -181,40 +181,40 @@
         "enigmaQuestion": "https://w3id.org/sqo/resource/"
       },
       "wasInformedBy": {
-        "_:Infm34": {
-          "prov:informed": "neuroScienceDisk:write_data_query_template",
-          "prov:informant": "neuroScienceDisk:select_variable_workflow"
-        },
-        "_:Infm35": {
-          "prov:informed": "neuroScienceDisk:write_data_query_template",
-          "prov:informant": "neuroScienceDisk:select_variable_workflow"
-        },
-        "_:Infm36": {
-          "prov:informed": "neuroScienceDisk:select_variable_workflow",
-          "prov:informant": "neuroScienceDisk:select_workflow"
-        },
-        "_:Infm33": {
+        "_:Infm45": {
           "prov:informed": "neuroScienceDisk:select_workflow",
           "prov:informant": "neuroScienceDisk:saved_line_of_inquiry"
+        },
+        "_:Infm46": {
+          "prov:informed": "neuroScienceDisk:write_data_query_template",
+          "prov:informant": "neuroScienceDisk:select_variable_workflow"
+        },
+        "_:Infm47": {
+          "prov:informed": "neuroScienceDisk:write_data_query_template",
+          "prov:informant": "neuroScienceDisk:select_variable_workflow"
+        },
+        "_:Infm48": {
+          "prov:informed": "neuroScienceDisk:select_variable_workflow",
+          "prov:informant": "neuroScienceDisk:select_workflow"
         }
       },
       "wasDerivedFrom": {
-        "_:wDF106": {
+        "_:wDF142": {
           "prov:generatedEntity": "LOI-R12qZl77tJJ9",
           "prov:usedEntity": "provNeuroScienceQuestion:EnigmaQuestion5"
         }
       },
       "used": {
-        "_:u93": {
+        "_:u126": {
           "prov:entity": "provNeuroScienceQuestion:EnigmaQuestion5",
           "prov:activity": "neuroScienceDisk:select_question"
         },
-        "_:u94": {
-          "prov:entity": "provNeuroScienceQuestion:EnigmaQuestion5",
+        "_:u125": {
+          "prov:entity": "metaWorkflowVariableBinding",
           "prov:activity": "neuroScienceDisk:write_data_query_template"
         },
-        "_:u92": {
-          "prov:entity": "metaWorkflowVariableBinding",
+        "_:u127": {
+          "prov:entity": "provNeuroScienceQuestion:EnigmaQuestion5",
           "prov:activity": "neuroScienceDisk:write_data_query_template"
         }
       },
@@ -281,44 +281,44 @@
     },
     "provNeuroScience:questionBundle": {
       "hadMember": {
-        "_:hM293": {
-          "prov:entity": [
-            "demographicAttribute"
-          ],
-          "prov:collection": "EnigmaQuestion5_questionVariablesBinding"
-        },
-        "_:hM294": {
+        "_:hM402": {
           "prov:entity": [
             "ethnicGroup"
           ],
           "prov:collection": "EnigmaQuestion5_questionVariablesBinding"
         },
-        "_:hM291": {
-          "prov:entity": [
-            "brainImagingTrait"
-          ],
-          "prov:collection": "EnigmaQuestion5_questionVariablesBinding"
-        },
-        "_:hM292": {
+        "_:hM400": {
           "prov:entity": [
             "brainRegion"
           ],
           "prov:collection": "EnigmaQuestion5_questionVariablesBinding"
         },
-        "_:hM290": {
+        "_:hM401": {
+          "prov:entity": [
+            "demographicAttribute"
+          ],
+          "prov:collection": "EnigmaQuestion5_questionVariablesBinding"
+        },
+        "_:hM398": {
           "prov:entity": [
             "genotype"
+          ],
+          "prov:collection": "EnigmaQuestion5_questionVariablesBinding"
+        },
+        "_:hM399": {
+          "prov:entity": [
+            "brainImagingTrait"
           ],
           "prov:collection": "EnigmaQuestion5_questionVariablesBinding"
         }
       },
       "wasGeneratedBy": {
-        "_:wGB123": {
-          "prov:entity": "EnigmaQuestion5_questionVariablesBinding",
+        "_:wGB167": {
+          "prov:entity": "EnigmaQuestion5",
           "prov:activity": "provNeuroScience:createQuestion"
         },
-        "_:wGB122": {
-          "prov:entity": "EnigmaQuestion5",
+        "_:wGB168": {
+          "prov:entity": "EnigmaQuestion5_questionVariablesBinding",
           "prov:activity": "provNeuroScience:createQuestion"
         }
       },
@@ -351,13 +351,13 @@
         "enigmaQuestion": "https://w3id.org/sqo/resource/"
       },
       "wasDerivedFrom": {
-        "_:wDF98": {
-          "prov:generatedEntity": "provNeuroScienceHypothesis:Hypothesis-4CGdVLyttD07",
-          "prov:usedEntity": "EnigmaQuestion5"
-        },
-        "_:wDF97": {
+        "_:wDF133": {
           "prov:generatedEntity": "EnigmaQuestion5",
           "prov:usedEntity": "EnigmaQuestion5_questionVariablesBinding"
+        },
+        "_:wDF134": {
+          "prov:generatedEntity": "provNeuroScienceHypothesis:Hypothesis-4CGdVLyttD07",
+          "prov:usedEntity": "EnigmaQuestion5"
         }
       },
       "entity": {
@@ -390,43 +390,43 @@
     },
     "provNeuroScience:hypothesisBundle": {
       "hadMember": {
-        "_:hM299": {
-          "prov:entity": [
-            "Hypothesis-4CGdVLyttD07_hypothesisVariablesBinding_ethnicGroup"
-          ],
-          "prov:collection": "Hypothesis-4CGdVLyttD07_hypothesisVariablesBinding"
-        },
-        "_:hM297": {
-          "prov:entity": [
-            "Hypothesis-4CGdVLyttD07_hypothesisVariablesBinding_brainRegion"
-          ],
-          "prov:collection": "Hypothesis-4CGdVLyttD07_hypothesisVariablesBinding"
-        },
-        "_:hM298": {
-          "prov:entity": [
-            "Hypothesis-4CGdVLyttD07_hypothesisVariablesBinding_demographicAttribute"
-          ],
-          "prov:collection": "Hypothesis-4CGdVLyttD07_hypothesisVariablesBinding"
-        },
-        "_:hM295": {
+        "_:hM403": {
           "prov:entity": [
             "Hypothesis-4CGdVLyttD07_hypothesisVariablesBinding_genotype"
           ],
           "prov:collection": "Hypothesis-4CGdVLyttD07_hypothesisVariablesBinding"
         },
-        "_:hM296": {
+        "_:hM406": {
+          "prov:entity": [
+            "Hypothesis-4CGdVLyttD07_hypothesisVariablesBinding_demographicAttribute"
+          ],
+          "prov:collection": "Hypothesis-4CGdVLyttD07_hypothesisVariablesBinding"
+        },
+        "_:hM407": {
+          "prov:entity": [
+            "Hypothesis-4CGdVLyttD07_hypothesisVariablesBinding_ethnicGroup"
+          ],
+          "prov:collection": "Hypothesis-4CGdVLyttD07_hypothesisVariablesBinding"
+        },
+        "_:hM404": {
           "prov:entity": [
             "Hypothesis-4CGdVLyttD07_hypothesisVariablesBinding_brainImagingTrait"
+          ],
+          "prov:collection": "Hypothesis-4CGdVLyttD07_hypothesisVariablesBinding"
+        },
+        "_:hM405": {
+          "prov:entity": [
+            "Hypothesis-4CGdVLyttD07_hypothesisVariablesBinding_brainRegion"
           ],
           "prov:collection": "Hypothesis-4CGdVLyttD07_hypothesisVariablesBinding"
         }
       },
       "wasGeneratedBy": {
-        "_:wGB125": {
+        "_:wGB170": {
           "prov:entity": "Hypothesis-4CGdVLyttD07_hypothesisVariablesBinding",
           "prov:activity": "provNeuroScience:createHypothesis"
         },
-        "_:wGB124": {
+        "_:wGB169": {
           "prov:entity": "Hypothesis-4CGdVLyttD07",
           "prov:activity": "provNeuroScience:createHypothesis"
         }
@@ -469,33 +469,33 @@
         "enigmaQuestion": "https://w3id.org/sqo/resource/"
       },
       "wasDerivedFrom": {
-        "_:wDF105": {
-          "prov:generatedEntity": "Hypothesis-4CGdVLyttD07",
-          "prov:usedEntity": "Hypothesis-4CGdVLyttD07_hypothesisVariablesBinding"
-        },
-        "_:wDF99": {
-          "prov:generatedEntity": "Hypothesis-4CGdVLyttD07_hypothesisVariablesBinding",
-          "prov:usedEntity": "provNeuroScienceQuestion:EnigmaQuestion5_questionVariablesBinding"
-        },
-        "_:wDF100": {
-          "prov:generatedEntity": "Hypothesis-4CGdVLyttD07_hypothesisVariablesBinding_genotype",
-          "prov:usedEntity": "provNeuroScienceQuestion:genotype"
-        },
-        "_:wDF101": {
-          "prov:generatedEntity": "Hypothesis-4CGdVLyttD07_hypothesisVariablesBinding_brainImagingTrait",
-          "prov:usedEntity": "provNeuroScienceQuestion:brainImagingTrait"
-        },
-        "_:wDF102": {
+        "_:wDF138": {
           "prov:generatedEntity": "Hypothesis-4CGdVLyttD07_hypothesisVariablesBinding_brainRegion",
           "prov:usedEntity": "provNeuroScienceQuestion:brainRegion"
         },
-        "_:wDF103": {
+        "_:wDF139": {
           "prov:generatedEntity": "Hypothesis-4CGdVLyttD07_hypothesisVariablesBinding_demographicAttribute",
           "prov:usedEntity": "provNeuroScienceQuestion:demographicAttribute"
         },
-        "_:wDF104": {
+        "_:wDF140": {
           "prov:generatedEntity": "Hypothesis-4CGdVLyttD07_hypothesisVariablesBinding_ethnicGroup",
           "prov:usedEntity": "provNeuroScienceQuestion:ethnicGroup"
+        },
+        "_:wDF141": {
+          "prov:generatedEntity": "Hypothesis-4CGdVLyttD07",
+          "prov:usedEntity": "Hypothesis-4CGdVLyttD07_hypothesisVariablesBinding"
+        },
+        "_:wDF135": {
+          "prov:generatedEntity": "Hypothesis-4CGdVLyttD07_hypothesisVariablesBinding",
+          "prov:usedEntity": "provNeuroScienceQuestion:EnigmaQuestion5_questionVariablesBinding"
+        },
+        "_:wDF136": {
+          "prov:generatedEntity": "Hypothesis-4CGdVLyttD07_hypothesisVariablesBinding_genotype",
+          "prov:usedEntity": "provNeuroScienceQuestion:genotype"
+        },
+        "_:wDF137": {
+          "prov:generatedEntity": "Hypothesis-4CGdVLyttD07_hypothesisVariablesBinding_brainImagingTrait",
+          "prov:usedEntity": "provNeuroScienceQuestion:brainImagingTrait"
         }
       },
       "entity": {
@@ -528,149 +528,149 @@
     },
     "provNeuroScience:triggerBundle": {
       "hadMember": {
-        "_:hM314": {
-          "prov:entity": [
-            "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_cohortData"
-          ],
-          "prov:collection": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
-        },
-        "_:hM315": {
-          "prov:entity": [
-            "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_cohortData"
-          ],
-          "prov:collection": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
-        },
-        "_:hM312": {
-          "prov:entity": [
-            "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_cohortData"
-          ],
-          "prov:collection": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
-        },
-        "_:hM323": {
-          "prov:entity": [
-            "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_brain_visualization"
-          ],
-          "prov:collection": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
-        },
-        "_:hM313": {
-          "prov:entity": [
-            "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_cohortData"
-          ],
-          "prov:collection": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
-        },
-        "_:hM324": {
-          "prov:entity": [
-            "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_age_vs_allele"
-          ],
-          "prov:collection": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
-        },
-        "_:hM310": {
-          "prov:entity": [
-            "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_cohortData"
-          ],
-          "prov:collection": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
-        },
-        "_:hM321": {
-          "prov:entity": [
-            "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_p_value"
-          ],
-          "prov:collection": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
-        },
-        "_:hM311": {
-          "prov:entity": [
-            "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_cohortData"
-          ],
-          "prov:collection": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
-        },
-        "_:hM322": {
-          "prov:entity": [
-            "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_shiny_visualization"
-          ],
-          "prov:collection": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
-        },
-        "_:hM320": {
-          "prov:entity": [
-            "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_trait"
-          ],
-          "prov:collection": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
-        },
-        "_:hM309": {
-          "prov:entity": [
-            "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_cohortData"
-          ],
-          "prov:collection": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
-        },
-        "_:hM307": {
-          "prov:entity": [
-            "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_cohortData"
-          ],
-          "prov:collection": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
-        },
-        "_:hM318": {
-          "prov:entity": [
-            "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_demographic_value"
-          ],
-          "prov:collection": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
-        },
-        "_:hM308": {
-          "prov:entity": [
-            "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_cohortData"
-          ],
-          "prov:collection": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
-        },
-        "_:hM319": {
-          "prov:entity": [
-            "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_snp"
-          ],
-          "prov:collection": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
-        },
-        "_:hM316": {
+        "_:hM424": {
           "prov:entity": [
             "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_area"
           ],
           "prov:collection": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
         },
-        "_:hM306": {
+        "_:hM414": {
           "prov:entity": [
             "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_cohortData"
           ],
           "prov:collection": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
         },
-        "_:hM317": {
+        "_:hM425": {
           "prov:entity": [
             "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_demographic"
+          ],
+          "prov:collection": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
+        },
+        "_:hM422": {
+          "prov:entity": [
+            "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_cohortData"
+          ],
+          "prov:collection": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
+        },
+        "_:hM423": {
+          "prov:entity": [
+            "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_cohortData"
+          ],
+          "prov:collection": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
+        },
+        "_:hM420": {
+          "prov:entity": [
+            "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_cohortData"
+          ],
+          "prov:collection": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
+        },
+        "_:hM431": {
+          "prov:entity": [
+            "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_brain_visualization"
+          ],
+          "prov:collection": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
+        },
+        "_:hM421": {
+          "prov:entity": [
+            "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_cohortData"
+          ],
+          "prov:collection": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
+        },
+        "_:hM432": {
+          "prov:entity": [
+            "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_age_vs_allele"
+          ],
+          "prov:collection": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
+        },
+        "_:hM430": {
+          "prov:entity": [
+            "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_shiny_visualization"
+          ],
+          "prov:collection": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
+        },
+        "_:hM419": {
+          "prov:entity": [
+            "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_cohortData"
+          ],
+          "prov:collection": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
+        },
+        "_:hM417": {
+          "prov:entity": [
+            "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_cohortData"
+          ],
+          "prov:collection": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
+        },
+        "_:hM428": {
+          "prov:entity": [
+            "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_trait"
+          ],
+          "prov:collection": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
+        },
+        "_:hM418": {
+          "prov:entity": [
+            "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_cohortData"
+          ],
+          "prov:collection": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
+        },
+        "_:hM429": {
+          "prov:entity": [
+            "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_p_value"
+          ],
+          "prov:collection": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
+        },
+        "_:hM415": {
+          "prov:entity": [
+            "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_cohortData"
+          ],
+          "prov:collection": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
+        },
+        "_:hM426": {
+          "prov:entity": [
+            "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_demographic_value"
+          ],
+          "prov:collection": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
+        },
+        "_:hM416": {
+          "prov:entity": [
+            "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_cohortData"
+          ],
+          "prov:collection": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
+        },
+        "_:hM427": {
+          "prov:entity": [
+            "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_snp"
           ],
           "prov:collection": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
         }
       },
       "wasGeneratedBy": {
-        "_:wGB129": {
+        "_:wGB180": {
+          "prov:entity": "provNeuroScience:analysis",
+          "prov:activity": "provNeuroScience:analyzeWorkflowRun"
+        },
+        "_:wGB174": {
           "prov:entity": "TriggeredLOI-tvUdPs5yRiWf",
           "prov:activity": "provNeuroScience:transformDataQueryTemplate"
         },
-        "_:wGB130": {
-          "prov:entity": "data_query",
-          "prov:activity": "provNeuroScience:transformDataQueryTemplate"
-        },
-        "_:wGB132": {
-          "prov:entity": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding",
-          "prov:activity": "provNeuroScience:executeDataQuery"
-        },
-        "_:wGB131": {
+        "_:wGB176": {
           "prov:entity": "Unknown",
           "prov:activity": "createRun"
         },
-        "_:wGB134": {
+        "_:wGB175": {
+          "prov:entity": "data_query",
+          "prov:activity": "provNeuroScience:transformDataQueryTemplate"
+        },
+        "_:wGB178": {
           "prov:entity": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding",
           "prov:activity": "provNeuroScience:executeDataQuery"
         },
-        "_:wGB133": {
+        "_:wGB177": {
           "prov:entity": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding",
           "prov:activity": "provNeuroScience:executeDataQuery"
         },
-        "_:wGB135": {
-          "prov:entity": "provNeuroScience:analysis",
-          "prov:activity": "provNeuroScience:analyzeWorkflowRun"
+        "_:wGB179": {
+          "prov:entity": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding",
+          "prov:activity": "provNeuroScience:executeDataQuery"
         }
       },
       "activity": {
@@ -707,237 +707,107 @@
         "enigmaQuestion": "https://w3id.org/sqo/resource/"
       },
       "wasDerivedFrom": {
-        "_:wDF107": {
+        "_:wDF143": {
           "prov:generatedEntity": "TriggeredLOI-tvUdPs5yRiWf",
           "prov:usedEntity": "provNeuroScienceLOI:LOI-R12qZl77tJJ9"
         },
-        "_:wDF108": {
+        "_:wDF144": {
           "prov:generatedEntity": "dataSource",
           "prov:usedEntity": "provNeuroScienceLOI:Catalog"
         }
       },
       "used": {
-        "_:u95": {
-          "prov:entity": "provNeuroScience:transformDataQueryTemplate",
-          "prov:activity": "provNeuroScienceLOI:data_query"
-        },
-        "_:u96": {
-          "prov:entity": "createRun",
-          "prov:activity": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
-        },
-        "_:u99": {
+        "_:u132": {
           "prov:entity": "provNeuroScience:analyzeWorkflowRun",
           "prov:activity": "Unknown"
         },
-        "_:u97": {
+        "_:u131": {
           "prov:entity": "createRun",
           "prov:activity": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
         },
-        "_:u98": {
+        "_:u130": {
           "prov:entity": "createRun",
           "prov:activity": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
+        },
+        "_:u129": {
+          "prov:entity": "createRun",
+          "prov:activity": "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding"
+        },
+        "_:u128": {
+          "prov:entity": "provNeuroScience:transformDataQueryTemplate",
+          "prov:activity": "provNeuroScienceLOI:data_query"
         }
       },
       "entity": {
         "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_cohortData": [
           {
+            "prov:value": {
+              "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4fe5c4_1000BRAINS_Significant_GWAS.csv",
+              "type": "xsd:string"
+            },
             "prov:label": "cohortData"
           },
           {
             "prov:value": {
-              "$": "[http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4fe5c4_1000BRAINS_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4815c5_ADNI1_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4a85c5_ADNI2GO_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4bf5c6_ALSPACa_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA47a5c5_ASRB_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4aa5c5_BETULA_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4945c5_BIG_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA5305c4_BIG-PsychChip_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4c45c5_BONN_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4ad5c5_BrainScale_Significant_GWAS.csv]",
+              "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4815c5_ADNI1_Significant_GWAS.csv",
               "type": "xsd:string"
             },
-            "prov:type": [
-              {
-                "$": "http://www.opmw.org/ontology/DataVariable",
-                "type": "xsd:anyURI"
-              },
-              {
-                "$": "http://www.w3.org/ns/dcat#Resource",
-                "type": "xsd:anyURI"
-              }
-            ],
-            "prov:label": "cohortData"
-          },
-          {
             "prov:label": "cohortData"
           },
           {
             "prov:value": {
-              "$": "[http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4fe5c4_1000BRAINS_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4815c5_ADNI1_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4a85c5_ADNI2GO_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4bf5c6_ALSPACa_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA47a5c5_ASRB_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4aa5c5_BETULA_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4945c5_BIG_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA5305c4_BIG-PsychChip_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4c45c5_BONN_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4ad5c5_BrainScale_Significant_GWAS.csv]",
+              "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4a85c5_ADNI2GO_Significant_GWAS.csv",
               "type": "xsd:string"
             },
-            "prov:type": [
-              {
-                "$": "http://www.opmw.org/ontology/DataVariable",
-                "type": "xsd:anyURI"
-              },
-              {
-                "$": "http://www.w3.org/ns/dcat#Resource",
-                "type": "xsd:anyURI"
-              }
-            ],
-            "prov:label": "cohortData"
-          },
-          {
             "prov:label": "cohortData"
           },
           {
             "prov:value": {
-              "$": "[http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4fe5c4_1000BRAINS_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4815c5_ADNI1_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4a85c5_ADNI2GO_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4bf5c6_ALSPACa_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA47a5c5_ASRB_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4aa5c5_BETULA_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4945c5_BIG_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA5305c4_BIG-PsychChip_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4c45c5_BONN_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4ad5c5_BrainScale_Significant_GWAS.csv]",
+              "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4bf5c6_ALSPACa_Significant_GWAS.csv",
               "type": "xsd:string"
             },
-            "prov:type": [
-              {
-                "$": "http://www.opmw.org/ontology/DataVariable",
-                "type": "xsd:anyURI"
-              },
-              {
-                "$": "http://www.w3.org/ns/dcat#Resource",
-                "type": "xsd:anyURI"
-              }
-            ],
-            "prov:label": "cohortData"
-          },
-          {
             "prov:label": "cohortData"
           },
           {
             "prov:value": {
-              "$": "[http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4fe5c4_1000BRAINS_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4815c5_ADNI1_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4a85c5_ADNI2GO_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4bf5c6_ALSPACa_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA47a5c5_ASRB_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4aa5c5_BETULA_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4945c5_BIG_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA5305c4_BIG-PsychChip_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4c45c5_BONN_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4ad5c5_BrainScale_Significant_GWAS.csv]",
+              "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA47a5c5_ASRB_Significant_GWAS.csv",
               "type": "xsd:string"
             },
-            "prov:type": [
-              {
-                "$": "http://www.opmw.org/ontology/DataVariable",
-                "type": "xsd:anyURI"
-              },
-              {
-                "$": "http://www.w3.org/ns/dcat#Resource",
-                "type": "xsd:anyURI"
-              }
-            ],
-            "prov:label": "cohortData"
-          },
-          {
             "prov:label": "cohortData"
           },
           {
             "prov:value": {
-              "$": "[http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4fe5c4_1000BRAINS_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4815c5_ADNI1_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4a85c5_ADNI2GO_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4bf5c6_ALSPACa_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA47a5c5_ASRB_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4aa5c5_BETULA_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4945c5_BIG_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA5305c4_BIG-PsychChip_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4c45c5_BONN_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4ad5c5_BrainScale_Significant_GWAS.csv]",
+              "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4aa5c5_BETULA_Significant_GWAS.csv",
               "type": "xsd:string"
             },
-            "prov:type": [
-              {
-                "$": "http://www.opmw.org/ontology/DataVariable",
-                "type": "xsd:anyURI"
-              },
-              {
-                "$": "http://www.w3.org/ns/dcat#Resource",
-                "type": "xsd:anyURI"
-              }
-            ],
-            "prov:label": "cohortData"
-          },
-          {
             "prov:label": "cohortData"
           },
           {
             "prov:value": {
-              "$": "[http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4fe5c4_1000BRAINS_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4815c5_ADNI1_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4a85c5_ADNI2GO_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4bf5c6_ALSPACa_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA47a5c5_ASRB_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4aa5c5_BETULA_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4945c5_BIG_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA5305c4_BIG-PsychChip_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4c45c5_BONN_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4ad5c5_BrainScale_Significant_GWAS.csv]",
+              "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4945c5_BIG_Significant_GWAS.csv",
               "type": "xsd:string"
             },
-            "prov:type": [
-              {
-                "$": "http://www.opmw.org/ontology/DataVariable",
-                "type": "xsd:anyURI"
-              },
-              {
-                "$": "http://www.w3.org/ns/dcat#Resource",
-                "type": "xsd:anyURI"
-              }
-            ],
-            "prov:label": "cohortData"
-          },
-          {
             "prov:label": "cohortData"
           },
           {
             "prov:value": {
-              "$": "[http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4fe5c4_1000BRAINS_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4815c5_ADNI1_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4a85c5_ADNI2GO_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4bf5c6_ALSPACa_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA47a5c5_ASRB_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4aa5c5_BETULA_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4945c5_BIG_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA5305c4_BIG-PsychChip_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4c45c5_BONN_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4ad5c5_BrainScale_Significant_GWAS.csv]",
+              "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA5305c4_BIG-PsychChip_Significant_GWAS.csv",
               "type": "xsd:string"
             },
-            "prov:type": [
-              {
-                "$": "http://www.opmw.org/ontology/DataVariable",
-                "type": "xsd:anyURI"
-              },
-              {
-                "$": "http://www.w3.org/ns/dcat#Resource",
-                "type": "xsd:anyURI"
-              }
-            ],
-            "prov:label": "cohortData"
-          },
-          {
             "prov:label": "cohortData"
           },
           {
             "prov:value": {
-              "$": "[http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4fe5c4_1000BRAINS_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4815c5_ADNI1_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4a85c5_ADNI2GO_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4bf5c6_ALSPACa_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA47a5c5_ASRB_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4aa5c5_BETULA_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4945c5_BIG_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA5305c4_BIG-PsychChip_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4c45c5_BONN_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4ad5c5_BrainScale_Significant_GWAS.csv]",
+              "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4c45c5_BONN_Significant_GWAS.csv",
               "type": "xsd:string"
             },
-            "prov:type": [
-              {
-                "$": "http://www.opmw.org/ontology/DataVariable",
-                "type": "xsd:anyURI"
-              },
-              {
-                "$": "http://www.w3.org/ns/dcat#Resource",
-                "type": "xsd:anyURI"
-              }
-            ],
-            "prov:label": "cohortData"
-          },
-          {
             "prov:label": "cohortData"
           },
           {
             "prov:value": {
-              "$": "[http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4fe5c4_1000BRAINS_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4815c5_ADNI1_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4a85c5_ADNI2GO_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4bf5c6_ALSPACa_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA47a5c5_ASRB_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4aa5c5_BETULA_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4945c5_BIG_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA5305c4_BIG-PsychChip_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4c45c5_BONN_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4ad5c5_BrainScale_Significant_GWAS.csv]",
+              "$": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4ad5c5_BrainScale_Significant_GWAS.csv",
               "type": "xsd:string"
             },
-            "prov:type": [
-              {
-                "$": "http://www.opmw.org/ontology/DataVariable",
-                "type": "xsd:anyURI"
-              },
-              {
-                "$": "http://www.w3.org/ns/dcat#Resource",
-                "type": "xsd:anyURI"
-              }
-            ],
-            "prov:label": "cohortData"
-          },
-          {
-            "prov:label": "cohortData"
-          },
-          {
-            "prov:value": {
-              "$": "[http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4fe5c4_1000BRAINS_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4815c5_ADNI1_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4a85c5_ADNI2GO_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4bf5c6_ALSPACa_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA47a5c5_ASRB_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4aa5c5_BETULA_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4945c5_BIG_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA5305c4_BIG-PsychChip_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4c45c5_BONN_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4ad5c5_BrainScale_Significant_GWAS.csv]",
-              "type": "xsd:string"
-            },
-            "prov:type": [
-              {
-                "$": "http://www.opmw.org/ontology/DataVariable",
-                "type": "xsd:anyURI"
-              },
-              {
-                "$": "http://www.w3.org/ns/dcat#Resource",
-                "type": "xsd:anyURI"
-              }
-            ],
             "prov:label": "cohortData"
           }
         ],
@@ -946,6 +816,56 @@
         },
         "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding": [
           {
+            "prov:type": [
+              {
+                "$": "http://www.w3.org/ns/dcat#Dataset",
+                "type": "xsd:anyURI"
+              },
+              {
+                "$": "http://www.opmw.org/ontology/DataVariable",
+                "type": "xsd:anyURI"
+              },
+              {
+                "$": "http://www.w3.org/ns/dcat#Resource",
+                "type": "xsd:anyURI"
+              },
+              {
+                "$": "http://www.w3.org/ns/dcat#Resource",
+                "type": "xsd:anyURI"
+              },
+              {
+                "$": "http://www.w3.org/ns/dcat#Resource",
+                "type": "xsd:anyURI"
+              },
+              {
+                "$": "http://www.w3.org/ns/dcat#Resource",
+                "type": "xsd:anyURI"
+              },
+              {
+                "$": "http://www.w3.org/ns/dcat#Resource",
+                "type": "xsd:anyURI"
+              },
+              {
+                "$": "http://www.w3.org/ns/dcat#Resource",
+                "type": "xsd:anyURI"
+              },
+              {
+                "$": "http://www.w3.org/ns/dcat#Resource",
+                "type": "xsd:anyURI"
+              },
+              {
+                "$": "http://www.w3.org/ns/dcat#Resource",
+                "type": "xsd:anyURI"
+              },
+              {
+                "$": "http://www.w3.org/ns/dcat#Resource",
+                "type": "xsd:anyURI"
+              },
+              {
+                "$": "http://www.w3.org/ns/dcat#Resource",
+                "type": "xsd:anyURI"
+              }
+            ],
             "prov:label": "inputs"
           },
           {
@@ -966,22 +886,17 @@
           },
           "prov:label": "area"
         },
-        "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_demographic_value": [
-          {
-            "prov:label": "demographic_value"
+        "TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_demographic_value": {
+          "prov:value": {
+            "$": "[67.3, 74.8, 72.4, 19.6, 38.5, 62.4, 22.6, 22.5, 38.2, 10]",
+            "type": "xsd:string"
           },
-          {
-            "prov:value": {
-              "$": "[67.3, 74.8, 72.4, 19.6, 38.5, 62.4, 22.6, 22.5, 38.2, 10]",
-              "type": "xsd:string"
-            },
-            "prov:type": {
-              "$": "http://www.opmw.org/ontology/ParameterVariable",
-              "type": "xsd:anyURI"
-            },
-            "prov:label": "demographic_value"
-          }
-        ],
+          "prov:type": {
+            "$": "http://www.opmw.org/ontology/ParameterVariable",
+            "type": "xsd:anyURI"
+          },
+          "prov:label": "demographic_value"
+        },
         "TriggeredLOI-tvUdPs5yRiWf": {
           "prov:generatedAtTime": {
             "$": "07:12:58 2022-08-10",

@@ -98,16 +98,33 @@ public class MapperTest {
     Assert.assertEquals(4, outputs.size());
   }
 
-  // @Test
-  // public void findDcatDataset() {
-  // // TODO: #9 DISK should stores the dcat resource in the lois bundle
-  // Bundle datasetBundle =
-  // provDocumentReader.getBundle(Constants.TLOIS_BUNDLE_NAME);
-  // String type = "http://www.w3.org/ns/dcat#Dataset";
-  // List<Entity> resources = provDocumentReader.getEntitiesByType(datasetBundle,
-  // type);
-  // Assert.assertEquals(1, resources.size());
-  // }
+  @Test
+  public void findDcatDataset() {
+    // TODO: #9 DISK should stores the dcat resource in the lois bundle
+    Bundle datasetBundle = provDocumentReader.getBundle(Constants.TLOIS_BUNDLE_NAME);
+    String type = "http://www.w3.org/ns/dcat#Dataset";
+    List<Entity> resources = provDocumentReader.getEntitiesByType(datasetBundle,
+        type);
+    Assert.assertEquals(1, resources.size());
+  }
+
+  @Test
+  public void findDataVariable() {
+    Bundle datasetBundle = provDocumentReader.getBundle(Constants.TLOIS_BUNDLE_NAME);
+    String type = Constants.OPMW_WORKFLOW_EXECUTION_DATA_VARIABLE_URL;
+    List<Entity> resources = provDocumentReader.getEntitiesByType(datasetBundle,
+        type);
+    Assert.assertEquals(1, resources.size());
+  }
+
+  @Test
+  public void findWorkflowParameterVariable() {
+    Bundle datasetBundle = provDocumentReader.getBundle(Constants.TLOIS_BUNDLE_NAME);
+    String type = Constants.OPMW_WORKFLOW_EXECUTION_PARAMETER_VARIABLE_URL;
+    List<Entity> resources = provDocumentReader.getEntitiesByType(datasetBundle,
+        type);
+    Assert.assertEquals(5, resources.size());
+  }
 
   @Test
   public void findDcatResource() {

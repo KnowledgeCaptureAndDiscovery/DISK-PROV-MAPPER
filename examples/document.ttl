@@ -22,19 +22,19 @@ provNeuroScience:hvargas a prov:Agent ;
 provNeuroScience:neda a prov:Agent ;
 	rdfs:label "Neda Jahanshad" .
 
-_:blank17 a prov:Delegation ;
+_:blank23 a prov:Delegation ;
 	prov:agent provNeuroScience:neda .
 
-provNeuroScience:hvargas prov:qualifiedDelegation _:blank17 .
+provNeuroScience:hvargas prov:qualifiedDelegation _:blank23 .
 
-_:blank17 prov:hadActivity provNeuroScience:createQuestion .
+_:blank23 prov:hadActivity provNeuroScience:createQuestion .
 
-_:blank18 a prov:Delegation ;
+_:blank24 a prov:Delegation ;
 	prov:agent provNeuroScience:neda .
 
-provNeuroScience:hvargas prov:qualifiedDelegation _:blank18 .
+provNeuroScience:hvargas prov:qualifiedDelegation _:blank24 .
 
-_:blank18 prov:hadActivity provNeuroScience:createHypothesis .
+_:blank24 prov:hadActivity provNeuroScience:createHypothesis .
 
 wings:New_Enigma a prov:Entity ;
 	rdfs:label "New_Enigma" .
@@ -320,7 +320,7 @@ wings:New_Enigma a prov:Entity ;
 
 provNeuroScienceTLOI:Unknown prov:wasGeneratedBy provNeuroScienceTLOI:createRun .
 
-provNeuroScienceTLOI:TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding a prov:Entity ;
+provNeuroScienceTLOI:TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding a prov:Entity , "http://www.w3.org/ns/dcat#Dataset"^^xsd:anyURI , "http://www.opmw.org/ontology/DataVariable"^^xsd:anyURI , "http://www.w3.org/ns/dcat#Resource"^^xsd:anyURI ;
 	rdfs:label "inputs" ;
 	prov:wasGeneratedBy provNeuroScience:executeDataQuery ;
 	prov:used provNeuroScienceTLOI:createRun ;
@@ -328,10 +328,11 @@ provNeuroScienceTLOI:TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding a pr
 
 provNeuroScienceTLOI:TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_cohortData a prov:Entity ;
 	rdfs:label "cohortData" ;
-	a "http://www.opmw.org/ontology/DataVariable"^^xsd:anyURI , "http://www.w3.org/ns/dcat#Resource"^^xsd:anyURI ;
-	prov:value "[http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4fe5c4_1000BRAINS_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4815c5_ADNI1_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4a85c5_ADNI2GO_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4bf5c6_ALSPACa_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA47a5c5_ASRB_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4aa5c5_BETULA_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4945c5_BIG_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA5305c4_BIG-PsychChip_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4c45c5_BONN_Significant_GWAS.csv, http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4ad5c5_BrainScale_Significant_GWAS.csv]" .
+	prov:value "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4fe5c4_1000BRAINS_Significant_GWAS.csv" .
 
 provNeuroScienceTLOI:TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding prov:hadMember provNeuroScienceTLOI:TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_cohortData .
+
+provNeuroScienceTLOI:TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_cohortData prov:value "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4815c5_ADNI1_Significant_GWAS.csv" , "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4a85c5_ADNI2GO_Significant_GWAS.csv" , "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4bf5c6_ALSPACa_Significant_GWAS.csv" , "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA47a5c5_ASRB_Significant_GWAS.csv" , "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4aa5c5_BETULA_Significant_GWAS.csv" , "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4945c5_BIG_Significant_GWAS.csv" , "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA5305c4_BIG-PsychChip_Significant_GWAS.csv" , "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4c45c5_BONN_Significant_GWAS.csv" , "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4ad5c5_BrainScale_Significant_GWAS.csv" .
 
 provNeuroScienceTLOI:TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_area a prov:Entity , "http://www.opmw.org/ontology/ParameterVariable"^^xsd:anyURI ;
 	rdfs:label "area" ;
@@ -345,9 +346,8 @@ provNeuroScienceTLOI:TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_demo
 
 provNeuroScienceTLOI:TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding prov:hadMember provNeuroScienceTLOI:TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_demographic .
 
-provNeuroScienceTLOI:TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_demographic_value a prov:Entity ;
+provNeuroScienceTLOI:TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_demographic_value a prov:Entity , "http://www.opmw.org/ontology/ParameterVariable"^^xsd:anyURI ;
 	rdfs:label "demographic_value" ;
-	a "http://www.opmw.org/ontology/ParameterVariable"^^xsd:anyURI ;
 	prov:value "[67.3, 74.8, 72.4, 19.6, 38.5, 62.4, 22.6, 22.5, 38.2, 10]" .
 
 provNeuroScienceTLOI:TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding prov:hadMember provNeuroScienceTLOI:TriggeredLOI-tvUdPs5yRiWf_metaWorkflowVariablesBinding_demographic_value .
