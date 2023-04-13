@@ -54,6 +54,9 @@ public class DocumentProv {
     public static final String DCTERMS_NS = "http://purl.org/dc/terms/";
     public static final String DCTERMS_PREFIX = "dcterms";
 
+    public static final String OPMW_NS = "http://www.opmw.org/ontology/";
+    public static final String OPMW_PREFIX = "opmw";
+
     public final ProvFactory factory;
     public final Namespace ns;
     public Document document;
@@ -80,6 +83,7 @@ public class DocumentProv {
         localNs.register(RDF_PREFIX, RDF_NS);
         localNs.register(DCTERMS_PREFIX, DCTERMS_NS);
         localNs.register(DCAT_PREFIX, DCAT_NS);
+        localNs.register(OPMW_PREFIX, OPMW_NS);
         localNs.setDefaultNamespace(defaultNameSpace);
         System.out.println("Default namespace: " + localNs.getDefaultNamespace());
     }
@@ -92,8 +96,12 @@ public class DocumentProv {
         return ns.qualifiedName(PROV_NEUROSCIENCE_PREFIX, n, factory);
     }
 
-    public QualifiedName qn(String n, String prefix) {
-        return ns.qualifiedName(prefix, n, factory);
+    public QualifiedName qn(String n, String prefix) throws RuntimeException {
+        try {
+            return ns.qualifiedName(prefix, n, factory);
+        } catch (Exception e) {
+            throw new RuntimeException("Error in qn: " + n + " " + prefix);
+        }
     }
 
     public QualifiedName qn(String n, String prefix_iri, String none) {

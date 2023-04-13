@@ -1,10 +1,11 @@
 package edu.isi.disk.opmm;
 
-import java.io.File;
+import static org.junit.Assert.fail;
+
 import java.io.IOException;
+import java.net.URISyntaxException;
 import java.text.ParseException;
 import java.util.List;
-
 import org.diskproject.shared.classes.hypothesis.Hypothesis;
 import org.diskproject.shared.classes.loi.LineOfInquiry;
 import org.diskproject.shared.classes.loi.TriggeredLOI;
@@ -24,7 +25,7 @@ public class MapperTest {
   Document document;
   ProvDocumentReader provDocumentReader;
 
-  public MapperTest() throws IOException {
+  public MapperTest() throws IOException, ParseException, URISyntaxException {
     Hypothesis hypothesis = UtilsTest.loadHypothesis("src/test/resources/Hypothesis-4CGdVLyttD07/hypothesis.json");
     List<Question> questions = UtilsTest.loadQuestions("src/test/resources/Hypothesis-4CGdVLyttD07/questions.json");
     TriggeredLOI tloi = UtilsTest.loadTriggeredLOI("src/test/resources/Hypothesis-4CGdVLyttD07/tloi.json");
@@ -32,16 +33,12 @@ public class MapperTest {
     LineOfInquiry loi = UtilsTest.loadLineOfInquiry("src/test/resources/Hypothesis-4CGdVLyttD07/loi.json");
     // List<LineOfInquiry> lois =
     // Utils.loadLinesOfInquiry("src/test/resources/Hypothesis-4CGdVLyttD07/lois.json");
-    try {
-      Mapper mapper = new Mapper(hypothesis, loi, tlois, questions);
-      DocumentProv documentProv = mapper.doc;
-      document = documentProv.document;
-      documentProv.doConversions("examples/document");
-      provDocumentReader = new ProvDocumentReader(document);
+    Mapper mapper = new Mapper(hypothesis, loi, tlois, questions);
+    DocumentProv documentProv = mapper.doc;
+    document = documentProv.document;
+    documentProv.doConversions("examples/document");
+    provDocumentReader = new ProvDocumentReader(document);
 
-    } catch (Exception e) {
-      e.printStackTrace();
-    }
   }
 
   @Test
@@ -86,11 +83,39 @@ public class MapperTest {
   }
 
   @Test
-  public void findDatasetByType() {
+  public void findCatalog() {
     Bundle datasetBundle = provDocumentReader.getBundle(Constants.LOIS_BUNDLE_NAME);
     String type = "http://www.w3.org/ns/dcat#Catalog";
-    Entity dataset = provDocumentReader.getEntityByType(datasetBundle, type);
-    Assert.assertEquals(Constants.DCAT_CATALOG_LOCALNAME, dataset.getId().getLocalPart());
+    Entity catalog = provDocumentReader.getEntityByType(datasetBundle, type);
+    Assert.assertEquals(Constants.DCAT_CATALOG_LOCALNAME, catalog.getId().getLocalPart());
+  }
+
+  @Test
+  public void findWorkflowArtifacts() {
+    Bundle datasetBundle = provDocumentReader.getBundle(Constants.TLOIS_BUNDLE_NAME);
+    String type = Constants.OPMW_WORKFLOW_EXECUTION_ARTIFACT_URL;
+    List<Entity> outputs = provDocumentReader.getEntitiesByType(datasetBundle, type);
+    Assert.assertEquals(4, outputs.size());
+  }
+
+  // @Test
+  // public void findDcatDataset() {
+  // // TODO: #9 DISK should stores the dcat resource in the lois bundle
+  // Bundle datasetBundle =
+  // provDocumentReader.getBundle(Constants.TLOIS_BUNDLE_NAME);
+  // String type = "http://www.w3.org/ns/dcat#Dataset";
+  // List<Entity> resources = provDocumentReader.getEntitiesByType(datasetBundle,
+  // type);
+  // Assert.assertEquals(1, resources.size());
+  // }
+
+  @Test
+  public void findDcatResource() {
+    // TODO: #9 DISK should stores the dcat resource in the lois bundle
+    Bundle datasetBundle = provDocumentReader.getBundle(Constants.TLOIS_BUNDLE_NAME);
+    String type = "http://www.w3.org/ns/dcat#Resource";
+    List<Entity> resources = provDocumentReader.getEntitiesByType(datasetBundle, type);
+    Assert.assertEquals(10, resources.size());
   }
 
   @Test
