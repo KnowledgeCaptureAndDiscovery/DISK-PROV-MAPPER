@@ -5,11 +5,16 @@ import static org.junit.Assert.fail;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.text.ParseException;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+
 import org.diskproject.shared.classes.hypothesis.Hypothesis;
 import org.diskproject.shared.classes.loi.LineOfInquiry;
 import org.diskproject.shared.classes.loi.TriggeredLOI;
 import org.diskproject.shared.classes.question.Question;
+import org.diskproject.shared.classes.workflow.VariableBinding;
 import org.junit.Test;
 import org.openprovenance.prov.model.Bundle;
 import org.openprovenance.prov.model.Document;
