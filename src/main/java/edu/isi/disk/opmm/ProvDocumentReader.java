@@ -7,8 +7,6 @@ import org.openprovenance.prov.model.Bundle;
 import org.openprovenance.prov.model.Document;
 import org.openprovenance.prov.model.Entity;
 import org.openprovenance.prov.model.ProvUtilities;
-import org.openprovenance.prov.model.Statement;
-import org.openprovenance.prov.model.StatementOrBundle;
 import org.openprovenance.prov.model.Type;
 
 public class ProvDocumentReader {
@@ -59,7 +57,8 @@ public class ProvDocumentReader {
     for (Entity entity : u.getEntity(bundle)) {
       List<Type> types = entity.getType();
       for (Type t : types) {
-        if (t.getValue().equals(type)) {
+        Object entityType = t.getValue();
+        if (entityType.equals(type)) {
           return entity;
         }
       }

@@ -26,7 +26,7 @@ public class MapperStaticTest {
     binding.setBinding(
         "[SHA4fe5c4_1000BRAINS_Significant_GWAS.csv, SHA4815c5_ADNI1_Significant_GWAS.csv, SHA4a85c5_ADNI2GO_Significant_GWAS.csv, SHA4bf5c6_ALSPACa_Significant_GWAS.csv, SHA47a5c5_ASRB_Significant_GWAS.csv, SHA4aa5c5_BETULA_Significant_GWAS.csv, SHA4945c5_BIG_Significant_GWAS.csv, SHA5305c4_BIG-PsychChip_Significant_GWAS.csv, SHA4c45c5_BONN_Significant_GWAS.csv, SHA4ad5c5_BrainScale_Significant_GWAS.csv]");
     bindings.add(binding);
-    List<VariableBinding> filesVariableBindings = Mapper.filterInputs(bindings, files);
+    List<VariableBinding> filesVariableBindings = Mapper.addMissingTypeVariableBinding(bindings, files);
     System.out.println(filesVariableBindings);
   }
 
