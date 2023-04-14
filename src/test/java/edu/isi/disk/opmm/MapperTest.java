@@ -67,41 +67,45 @@ public class MapperTest {
 
   @Test
   public void findTriggerLOIByLocalName() {
-    Bundle tloiBundle = provDocumentReader.getBundle(Constants.TLOIS_BUNDLE_NAME);
+    String bundleName = "TriggeredLOI-tvUdPs5yRiWf";
+    Bundle bundle = provDocumentReader.getBundle(bundleName);
     String tloiLocalName = "TriggeredLOI-tvUdPs5yRiWf";
-    Entity tloi = provDocumentReader.getEntityByLocalName(tloiBundle, tloiLocalName);
+    Entity tloi = provDocumentReader.getEntityByLocalName(bundle, tloiLocalName);
     Assert.assertEquals(tloiLocalName, tloi.getId().getLocalPart());
   }
 
   @Test
   public void findTriggerLOIByType() {
-    Bundle tloiBundle = provDocumentReader.getBundle(Constants.TLOIS_BUNDLE_NAME);
+    String bundleName = "TriggeredLOI-tvUdPs5yRiWf";
+    Bundle bundle = provDocumentReader.getBundle(bundleName);
     String tloiLocalName = "TriggeredLOI-tvUdPs5yRiWf";
     String type = "http://disk-project.org/ontology/disk#TriggeredLineOfInquiry";
-    Entity tloi = provDocumentReader.getEntityByType(tloiBundle, type);
+    Entity tloi = provDocumentReader.getEntityByType(bundle, type);
     Assert.assertEquals(tloiLocalName, tloi.getId().getLocalPart());
   }
 
   @Test
   public void findCatalog() {
-    Bundle datasetBundle = provDocumentReader.getBundle(Constants.LOIS_BUNDLE_NAME);
+    Bundle bundle = provDocumentReader.getBundle(Constants.LOIS_BUNDLE_NAME);
     String type = "http://www.w3.org/ns/dcat#Catalog";
-    Entity catalog = provDocumentReader.getEntityByType(datasetBundle, type);
+    Entity catalog = provDocumentReader.getEntityByType(bundle, type);
     Assert.assertEquals(Constants.DCAT_CATALOG_LOCALNAME, catalog.getId().getLocalPart());
   }
 
   @Test
   public void findWorkflowArtifacts() {
-    Bundle datasetBundle = provDocumentReader.getBundle(Constants.TLOIS_BUNDLE_NAME);
+    String bundleName = "TriggeredLOI-tvUdPs5yRiWf";
+    Bundle bundle = provDocumentReader.getBundle(bundleName);
     String type = Constants.OPMW_WORKFLOW_EXECUTION_ARTIFACT_URL;
-    List<Entity> outputs = provDocumentReader.getEntitiesByType(datasetBundle, type);
+    List<Entity> outputs = provDocumentReader.getEntitiesByType(bundle, type);
     Assert.assertEquals(4, outputs.size());
   }
 
   @Test
   public void findDcatDataset() {
     // TODO: #9 DISK should stores the dcat resource in the lois bundle
-    Bundle datasetBundle = provDocumentReader.getBundle(Constants.TLOIS_BUNDLE_NAME);
+    String bundleName = "TriggeredLOI-tvUdPs5yRiWf";
+    Bundle datasetBundle = provDocumentReader.getBundle(bundleName);
     String type = "http://www.w3.org/ns/dcat#Dataset";
     List<Entity> resources = provDocumentReader.getEntitiesByType(datasetBundle,
         type);
@@ -110,7 +114,8 @@ public class MapperTest {
 
   @Test
   public void findDataVariable() {
-    Bundle datasetBundle = provDocumentReader.getBundle(Constants.TLOIS_BUNDLE_NAME);
+    String bundleName = "TriggeredLOI-tvUdPs5yRiWf";
+    Bundle datasetBundle = provDocumentReader.getBundle(bundleName);
     String type = Constants.OPMW_WORKFLOW_EXECUTION_DATA_VARIABLE_URL;
     List<Entity> resources = provDocumentReader.getEntitiesByType(datasetBundle,
         type);
@@ -119,7 +124,8 @@ public class MapperTest {
 
   @Test
   public void findWorkflowParameterVariable() {
-    Bundle datasetBundle = provDocumentReader.getBundle(Constants.TLOIS_BUNDLE_NAME);
+    String bundleName = "TriggeredLOI-tvUdPs5yRiWf";
+    Bundle datasetBundle = provDocumentReader.getBundle(bundleName);
     String type = Constants.OPMW_WORKFLOW_EXECUTION_PARAMETER_VARIABLE_URL;
     List<Entity> resources = provDocumentReader.getEntitiesByType(datasetBundle,
         type);
@@ -129,7 +135,8 @@ public class MapperTest {
   @Test
   public void findDcatResource() {
     // TODO: #9 DISK should stores the dcat resource in the lois bundle
-    Bundle datasetBundle = provDocumentReader.getBundle(Constants.TLOIS_BUNDLE_NAME);
+    String bundleName = "TriggeredLOI-tvUdPs5yRiWf";
+    Bundle datasetBundle = provDocumentReader.getBundle(bundleName);
     String type = "http://www.w3.org/ns/dcat#Resource";
     List<Entity> resources = provDocumentReader.getEntitiesByType(datasetBundle, type);
     Assert.assertEquals(10, resources.size());
@@ -137,7 +144,7 @@ public class MapperTest {
 
   @Test
   public void numberBundlesTest() {
-    Assert.assertEquals(4, provDocumentReader.bundles.size());
+    Assert.assertEquals(40, provDocumentReader.bundles.size());
   }
 
 }
