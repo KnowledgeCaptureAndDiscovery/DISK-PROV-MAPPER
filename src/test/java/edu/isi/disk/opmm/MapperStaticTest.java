@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.diskproject.shared.classes.workflow.VariableBinding;
+import edu.isi.kcap.diskproject.shared.classes.workflow.VariableBinding;
 import org.junit.Test;
 
 import io.github.knowledgecaptureanddiscovery.diskprovmapper.Mapper;

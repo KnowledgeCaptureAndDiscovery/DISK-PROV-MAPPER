@@ -3,13 +3,13 @@ package edu.isi.disk.opmm;
 import java.io.IOException;
 import java.util.List;
 
-import org.diskproject.shared.classes.hypothesis.Hypothesis;
+import edu.isi.kcap.diskproject.shared.classes.hypothesis.Hypothesis;
 import org.junit.Assert;
 import org.junit.Test;
 
 import com.fasterxml.jackson.core.exc.StreamReadException;
 import com.fasterxml.jackson.databind.DatabindException;
-import org.diskproject.shared.classes.workflow.VariableBinding;
+import edu.isi.kcap.diskproject.shared.classes.workflow.VariableBinding;
 
 public class HypothesisTest {
 

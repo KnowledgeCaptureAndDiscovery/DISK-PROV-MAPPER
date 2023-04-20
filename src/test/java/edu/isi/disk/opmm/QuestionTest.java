@@ -3,7 +3,7 @@ package edu.isi.disk.opmm;
 import java.io.IOException;
 import java.util.List;
 
-import org.diskproject.shared.classes.question.Question;
+import edu.isi.kcap.diskproject.shared.classes.question.Question;
 import org.junit.Assert;
 import org.junit.Test;
 

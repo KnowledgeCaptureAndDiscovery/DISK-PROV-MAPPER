@@ -79,7 +79,7 @@
       <version>0.9.27</version>
     </dependency>
     <dependency>
-      <groupId>edu.isi.edu.kcap.diskproject</groupId>
+      <groupId>edu.isi.kcap.diskproject</groupId>
       <artifactId>disk-project-shared</artifactId>
       <version>3.0.2</version>
     </dependency>
@@ -119,14 +119,6 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-javadoc-plugin</artifactId>
         <version>2.9.1</version>
-        <executions>
-          <execution>
-            <id>attach-javadocs</id>
-            <goals>
-              <goal>jar</goal>
-            </goals>
-          </execution>
-        </executions>
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
