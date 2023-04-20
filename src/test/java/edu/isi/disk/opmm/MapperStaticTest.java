@@ -8,6 +8,7 @@ import java.util.Map;
 import org.diskproject.shared.classes.workflow.VariableBinding;
 import org.junit.Test;
 
+import io.github.knowledgecaptureanddiscovery.diskprovmapper.Mapper;
 import junit.framework.Assert;
 
 public class MapperStaticTest {

@@ -31,7 +31,7 @@ prefix TriggeredLOI-TmEVFJEqb2im <http://provenance.isi.edu/disk/neuro/tloi/Trig
 prefix TriggeredLOI-ERL6519PEFY0 <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-ERL6519PEFY0>
 prefix TriggeredLOI-EB3W5EeggS6C <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-EB3W5EeggS6C>
 prefix provNeuroScience <http://provenance.isi.edu/disk/neuro/>
-prefix enigmaQuestion <https://w3id.org/sqo/resource/>
+prefix sqo <https://w3id.org/sqo#>
 prefix TriggeredLOI-uOysSy65gpjn <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-uOysSy65gpjn>
 prefix provNeuroScienceHypothesis <http://provenance.isi.edu/disk/neuro/hypothesis/>
 prefix TriggeredLOI-INd2PftDIcDo <http://provenance.isi.edu/disk/neuro/tloi/TriggeredLOI-INd2PftDIcDo>
@@ -320,7 +320,6 @@ prefix disk <http://disk-project.org/ontology/disk#>
 prefix opmw <http://www.opmw.org/ontology/>
 prefix provNeuroScienceLOI <http://provenance.isi.edu/disk/neuro/loi/>
 prefix wings <http://www.wings-workflows.org/ontology/>
-prefix enigmaQuestion <https://w3id.org/sqo/resource/>
 prefix rdfs <http://www.w3.org/2000/01/rdf-schema#>
 prefix rdf <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 prefix provNeuroScienceHypothesis <http://provenance.isi.edu/disk/neuro/hypothesis/>
@@ -329,6 +328,7 @@ prefix neuroScienceDisk <http://localhost:8080/disk-server/admin/>
 prefix provNeuroScience <http://provenance.isi.edu/disk/neuro/>
 prefix provNeuroScienceTLOI <http://provenance.isi.edu/disk/neuro/tloi/>
 prefix provNeuroScienceQuestion <http://provenance.isi.edu/disk/neuro/question/>
+prefix sqo <https://w3id.org/sqo#>
 prefix dcterms <http://purl.org/dc/terms/>
 
 entity(provNeuroScienceTLOI:TriggeredLOI-tvUdPs5yRiWf,[prov:type = "http://disk-project.org/ontology/disk#TriggeredLineOfInquiry" %% xsd:anyURI, prov:label = "Triggered: Effect size estimation in different cohorts", dcterms:created = "07:12:58 2022-08-10" %% xsd:Name, prov:generatedAtTime = "07:12:58 2022-08-10" %% xsd:dateTime])
@@ -432,7 +432,6 @@ prefix disk <http://disk-project.org/ontology/disk#>
 prefix opmw <http://www.opmw.org/ontology/>
 prefix provNeuroScienceLOI <http://provenance.isi.edu/disk/neuro/loi/>
 prefix wings <http://www.wings-workflows.org/ontology/>
-prefix enigmaQuestion <https://w3id.org/sqo/resource/>
 prefix rdfs <http://www.w3.org/2000/01/rdf-schema#>
 prefix rdf <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 prefix provNeuroScienceHypothesis <http://provenance.isi.edu/disk/neuro/hypothesis/>
@@ -441,6 +440,7 @@ prefix neuroScienceDisk <http://localhost:8080/disk-server/admin/>
 prefix provNeuroScience <http://provenance.isi.edu/disk/neuro/>
 prefix provNeuroScienceTLOI <http://provenance.isi.edu/disk/neuro/tloi/>
 prefix provNeuroScienceQuestion <http://provenance.isi.edu/disk/neuro/question/>
+prefix sqo <https://w3id.org/sqo#>
 prefix dcterms <http://purl.org/dc/terms/>
 
 entity(provNeuroScienceTLOI:TriggeredLOI-kIlPvsC0WlIO,[prov:type = "http://disk-project.org/ontology/disk#TriggeredLineOfInquiry" %% xsd:anyURI, prov:label = "Triggered: Effect size estimation in different cohorts", dcterms:created = "07:14:04 2022-08-10" %% xsd:Name, prov:generatedAtTime = "07:14:04 2022-08-10" %% xsd:dateTime])
@@ -564,7 +564,6 @@ prefix disk <http://disk-project.org/ontology/disk#>
 prefix opmw <http://www.opmw.org/ontology/>
 prefix provNeuroScienceLOI <http://provenance.isi.edu/disk/neuro/loi/>
 prefix wings <http://www.wings-workflows.org/ontology/>
-prefix enigmaQuestion <https://w3id.org/sqo/resource/>
 prefix rdfs <http://www.w3.org/2000/01/rdf-schema#>
 prefix rdf <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 prefix provNeuroScienceHypothesis <http://provenance.isi.edu/disk/neuro/hypothesis/>
@@ -573,6 +572,7 @@ prefix neuroScienceDisk <http://localhost:8080/disk-server/admin/>
 prefix provNeuroScience <http://provenance.isi.edu/disk/neuro/>
 prefix provNeuroScienceTLOI <http://provenance.isi.edu/disk/neuro/tloi/>
 prefix provNeuroScienceQuestion <http://provenance.isi.edu/disk/neuro/question/>
+prefix sqo <https://w3id.org/sqo#>
 prefix dcterms <http://purl.org/dc/terms/>
 
 entity(provNeuroScienceTLOI:TriggeredLOI-5aKCfWU7AV8B,[prov:type = "http://disk-project.org/ontology/disk#TriggeredLineOfInquiry" %% xsd:anyURI, prov:label = "Triggered: Effect size estimation in different cohorts", dcterms:created = "07:14:38 2022-08-10" %% xsd:Name, prov:generatedAtTime = "07:14:38 2022-08-10" %% xsd:dateTime])
@@ -716,7 +716,6 @@ prefix disk <http://disk-project.org/ontology/disk#>
 prefix opmw <http://www.opmw.org/ontology/>
 prefix provNeuroScienceLOI <http://provenance.isi.edu/disk/neuro/loi/>
 prefix wings <http://www.wings-workflows.org/ontology/>
-prefix enigmaQuestion <https://w3id.org/sqo/resource/>
 prefix rdfs <http://www.w3.org/2000/01/rdf-schema#>
 prefix rdf <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 prefix provNeuroScienceHypothesis <http://provenance.isi.edu/disk/neuro/hypothesis/>
@@ -725,6 +724,7 @@ prefix neuroScienceDisk <http://localhost:8080/disk-server/admin/>
 prefix provNeuroScience <http://provenance.isi.edu/disk/neuro/>
 prefix provNeuroScienceTLOI <http://provenance.isi.edu/disk/neuro/tloi/>
 prefix provNeuroScienceQuestion <http://provenance.isi.edu/disk/neuro/question/>
+prefix sqo <https://w3id.org/sqo#>
 prefix dcterms <http://purl.org/dc/terms/>
 
 entity(provNeuroScienceTLOI:TriggeredLOI-YThF4Po5A9DI,[prov:type = "http://disk-project.org/ontology/disk#TriggeredLineOfInquiry" %% xsd:anyURI, prov:label = "Triggered: Effect size estimation in different cohorts", dcterms:created = "07:15:13 2022-08-10" %% xsd:Name, prov:generatedAtTime = "07:15:13 2022-08-10" %% xsd:dateTime])
@@ -888,7 +888,6 @@ prefix disk <http://disk-project.org/ontology/disk#>
 prefix opmw <http://www.opmw.org/ontology/>
 prefix provNeuroScienceLOI <http://provenance.isi.edu/disk/neuro/loi/>
 prefix wings <http://www.wings-workflows.org/ontology/>
-prefix enigmaQuestion <https://w3id.org/sqo/resource/>
 prefix rdfs <http://www.w3.org/2000/01/rdf-schema#>
 prefix rdf <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 prefix provNeuroScienceHypothesis <http://provenance.isi.edu/disk/neuro/hypothesis/>
@@ -897,6 +896,7 @@ prefix neuroScienceDisk <http://localhost:8080/disk-server/admin/>
 prefix provNeuroScience <http://provenance.isi.edu/disk/neuro/>
 prefix provNeuroScienceTLOI <http://provenance.isi.edu/disk/neuro/tloi/>
 prefix provNeuroScienceQuestion <http://provenance.isi.edu/disk/neuro/question/>
+prefix sqo <https://w3id.org/sqo#>
 prefix dcterms <http://purl.org/dc/terms/>
 
 entity(provNeuroScienceTLOI:TriggeredLOI-J9NZoMXDzMaR,[prov:type = "http://disk-project.org/ontology/disk#TriggeredLineOfInquiry" %% xsd:anyURI, prov:label = "Triggered: Effect size estimation in different cohorts", dcterms:created = "17:02:49 2022-08-10" %% xsd:Name, prov:generatedAtTime = "17:02:49 2022-08-10" %% xsd:dateTime])
@@ -1080,7 +1080,6 @@ prefix disk <http://disk-project.org/ontology/disk#>
 prefix opmw <http://www.opmw.org/ontology/>
 prefix provNeuroScienceLOI <http://provenance.isi.edu/disk/neuro/loi/>
 prefix wings <http://www.wings-workflows.org/ontology/>
-prefix enigmaQuestion <https://w3id.org/sqo/resource/>
 prefix rdfs <http://www.w3.org/2000/01/rdf-schema#>
 prefix rdf <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 prefix provNeuroScienceHypothesis <http://provenance.isi.edu/disk/neuro/hypothesis/>
@@ -1089,6 +1088,7 @@ prefix neuroScienceDisk <http://localhost:8080/disk-server/admin/>
 prefix provNeuroScience <http://provenance.isi.edu/disk/neuro/>
 prefix provNeuroScienceTLOI <http://provenance.isi.edu/disk/neuro/tloi/>
 prefix provNeuroScienceQuestion <http://provenance.isi.edu/disk/neuro/question/>
+prefix sqo <https://w3id.org/sqo#>
 prefix dcterms <http://purl.org/dc/terms/>
 
 entity(provNeuroScienceTLOI:TriggeredLOI-7xUIdKye1A6U,[prov:type = "http://disk-project.org/ontology/disk#TriggeredLineOfInquiry" %% xsd:anyURI, prov:label = "Triggered: Effect size estimation in different cohorts", dcterms:created = "17:48:16 2022-08-10" %% xsd:Name, prov:generatedAtTime = "17:48:16 2022-08-10" %% xsd:dateTime])
@@ -1192,7 +1192,6 @@ prefix disk <http://disk-project.org/ontology/disk#>
 prefix opmw <http://www.opmw.org/ontology/>
 prefix provNeuroScienceLOI <http://provenance.isi.edu/disk/neuro/loi/>
 prefix wings <http://www.wings-workflows.org/ontology/>
-prefix enigmaQuestion <https://w3id.org/sqo/resource/>
 prefix rdfs <http://www.w3.org/2000/01/rdf-schema#>
 prefix rdf <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 prefix provNeuroScienceHypothesis <http://provenance.isi.edu/disk/neuro/hypothesis/>
@@ -1201,6 +1200,7 @@ prefix neuroScienceDisk <http://localhost:8080/disk-server/admin/>
 prefix provNeuroScience <http://provenance.isi.edu/disk/neuro/>
 prefix provNeuroScienceTLOI <http://provenance.isi.edu/disk/neuro/tloi/>
 prefix provNeuroScienceQuestion <http://provenance.isi.edu/disk/neuro/question/>
+prefix sqo <https://w3id.org/sqo#>
 prefix dcterms <http://purl.org/dc/terms/>
 
 entity(provNeuroScienceTLOI:TriggeredLOI-xii1gQm2Yz2X,[prov:type = "http://disk-project.org/ontology/disk#TriggeredLineOfInquiry" %% xsd:anyURI, prov:label = "Triggered: Effect size estimation in different cohorts", dcterms:created = "17:51:47 2022-08-10" %% xsd:Name, prov:generatedAtTime = "17:51:47 2022-08-10" %% xsd:dateTime])
@@ -1324,7 +1324,6 @@ prefix disk <http://disk-project.org/ontology/disk#>
 prefix opmw <http://www.opmw.org/ontology/>
 prefix provNeuroScienceLOI <http://provenance.isi.edu/disk/neuro/loi/>
 prefix wings <http://www.wings-workflows.org/ontology/>
-prefix enigmaQuestion <https://w3id.org/sqo/resource/>
 prefix rdfs <http://www.w3.org/2000/01/rdf-schema#>
 prefix rdf <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 prefix provNeuroScienceHypothesis <http://provenance.isi.edu/disk/neuro/hypothesis/>
@@ -1333,6 +1332,7 @@ prefix neuroScienceDisk <http://localhost:8080/disk-server/admin/>
 prefix provNeuroScience <http://provenance.isi.edu/disk/neuro/>
 prefix provNeuroScienceTLOI <http://provenance.isi.edu/disk/neuro/tloi/>
 prefix provNeuroScienceQuestion <http://provenance.isi.edu/disk/neuro/question/>
+prefix sqo <https://w3id.org/sqo#>
 prefix dcterms <http://purl.org/dc/terms/>
 
 entity(provNeuroScienceTLOI:TriggeredLOI-EB3W5EeggS6C,[prov:type = "http://disk-project.org/ontology/disk#TriggeredLineOfInquiry" %% xsd:anyURI, prov:label = "Triggered: Effect size estimation in different cohorts", dcterms:created = "17:52:16 2022-08-10" %% xsd:Name, prov:generatedAtTime = "17:52:16 2022-08-10" %% xsd:dateTime])
@@ -1476,7 +1476,6 @@ prefix disk <http://disk-project.org/ontology/disk#>
 prefix opmw <http://www.opmw.org/ontology/>
 prefix provNeuroScienceLOI <http://provenance.isi.edu/disk/neuro/loi/>
 prefix wings <http://www.wings-workflows.org/ontology/>
-prefix enigmaQuestion <https://w3id.org/sqo/resource/>
 prefix rdfs <http://www.w3.org/2000/01/rdf-schema#>
 prefix rdf <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 prefix provNeuroScienceHypothesis <http://provenance.isi.edu/disk/neuro/hypothesis/>
@@ -1485,6 +1484,7 @@ prefix neuroScienceDisk <http://localhost:8080/disk-server/admin/>
 prefix provNeuroScience <http://provenance.isi.edu/disk/neuro/>
 prefix provNeuroScienceTLOI <http://provenance.isi.edu/disk/neuro/tloi/>
 prefix provNeuroScienceQuestion <http://provenance.isi.edu/disk/neuro/question/>
+prefix sqo <https://w3id.org/sqo#>
 prefix dcterms <http://purl.org/dc/terms/>
 
 entity(provNeuroScienceTLOI:TriggeredLOI-ERL6519PEFY0,[prov:type = "http://disk-project.org/ontology/disk#TriggeredLineOfInquiry" %% xsd:anyURI, prov:label = "Triggered: Effect size estimation in different cohorts", dcterms:created = "17:52:38 2022-08-10" %% xsd:Name, prov:generatedAtTime = "17:52:38 2022-08-10" %% xsd:dateTime])
@@ -1648,7 +1648,6 @@ prefix disk <http://disk-project.org/ontology/disk#>
 prefix opmw <http://www.opmw.org/ontology/>
 prefix provNeuroScienceLOI <http://provenance.isi.edu/disk/neuro/loi/>
 prefix wings <http://www.wings-workflows.org/ontology/>
-prefix enigmaQuestion <https://w3id.org/sqo/resource/>
 prefix rdfs <http://www.w3.org/2000/01/rdf-schema#>
 prefix rdf <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 prefix provNeuroScienceHypothesis <http://provenance.isi.edu/disk/neuro/hypothesis/>
@@ -1657,6 +1656,7 @@ prefix neuroScienceDisk <http://localhost:8080/disk-server/admin/>
 prefix provNeuroScience <http://provenance.isi.edu/disk/neuro/>
 prefix provNeuroScienceTLOI <http://provenance.isi.edu/disk/neuro/tloi/>
 prefix provNeuroScienceQuestion <http://provenance.isi.edu/disk/neuro/question/>
+prefix sqo <https://w3id.org/sqo#>
 prefix dcterms <http://purl.org/dc/terms/>
 
 entity(provNeuroScienceTLOI:TriggeredLOI-ZmhgQ9ArLGmI,[prov:type = "http://disk-project.org/ontology/disk#TriggeredLineOfInquiry" %% xsd:anyURI, prov:label = "Triggered: Effect size estimation in different cohorts", dcterms:created = "18:01:20 2022-08-10" %% xsd:Name, prov:generatedAtTime = "18:01:20 2022-08-10" %% xsd:dateTime])
@@ -1840,7 +1840,6 @@ prefix disk <http://disk-project.org/ontology/disk#>
 prefix opmw <http://www.opmw.org/ontology/>
 prefix provNeuroScienceLOI <http://provenance.isi.edu/disk/neuro/loi/>
 prefix wings <http://www.wings-workflows.org/ontology/>
-prefix enigmaQuestion <https://w3id.org/sqo/resource/>
 prefix rdfs <http://www.w3.org/2000/01/rdf-schema#>
 prefix rdf <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 prefix provNeuroScienceHypothesis <http://provenance.isi.edu/disk/neuro/hypothesis/>
@@ -1849,6 +1848,7 @@ prefix neuroScienceDisk <http://localhost:8080/disk-server/admin/>
 prefix provNeuroScience <http://provenance.isi.edu/disk/neuro/>
 prefix provNeuroScienceTLOI <http://provenance.isi.edu/disk/neuro/tloi/>
 prefix provNeuroScienceQuestion <http://provenance.isi.edu/disk/neuro/question/>
+prefix sqo <https://w3id.org/sqo#>
 prefix dcterms <http://purl.org/dc/terms/>
 
 entity(provNeuroScienceTLOI:TriggeredLOI-5CmvNQkyuUQd,[prov:type = "http://disk-project.org/ontology/disk#TriggeredLineOfInquiry" %% xsd:anyURI, prov:label = "Triggered: Effect size estimation in different cohorts", dcterms:created = "18:03:04 2022-08-10" %% xsd:Name, prov:generatedAtTime = "18:03:04 2022-08-10" %% xsd:dateTime])
@@ -2046,7 +2046,6 @@ prefix disk <http://disk-project.org/ontology/disk#>
 prefix opmw <http://www.opmw.org/ontology/>
 prefix provNeuroScienceLOI <http://provenance.isi.edu/disk/neuro/loi/>
 prefix wings <http://www.wings-workflows.org/ontology/>
-prefix enigmaQuestion <https://w3id.org/sqo/resource/>
 prefix rdfs <http://www.w3.org/2000/01/rdf-schema#>
 prefix rdf <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 prefix provNeuroScienceHypothesis <http://provenance.isi.edu/disk/neuro/hypothesis/>
@@ -2055,6 +2054,7 @@ prefix neuroScienceDisk <http://localhost:8080/disk-server/admin/>
 prefix provNeuroScience <http://provenance.isi.edu/disk/neuro/>
 prefix provNeuroScienceTLOI <http://provenance.isi.edu/disk/neuro/tloi/>
 prefix provNeuroScienceQuestion <http://provenance.isi.edu/disk/neuro/question/>
+prefix sqo <https://w3id.org/sqo#>
 prefix dcterms <http://purl.org/dc/terms/>
 
 entity(provNeuroScienceTLOI:TriggeredLOI-NcQfzKJBE0yz,[prov:type = "http://disk-project.org/ontology/disk#TriggeredLineOfInquiry" %% xsd:anyURI, prov:label = "Triggered: Effect size estimation in different cohorts", dcterms:created = "04:16:26 2022-08-31" %% xsd:Name, prov:generatedAtTime = "04:16:26 2022-08-31" %% xsd:dateTime])
@@ -2252,7 +2252,6 @@ prefix disk <http://disk-project.org/ontology/disk#>
 prefix opmw <http://www.opmw.org/ontology/>
 prefix provNeuroScienceLOI <http://provenance.isi.edu/disk/neuro/loi/>
 prefix wings <http://www.wings-workflows.org/ontology/>
-prefix enigmaQuestion <https://w3id.org/sqo/resource/>
 prefix rdfs <http://www.w3.org/2000/01/rdf-schema#>
 prefix rdf <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 prefix provNeuroScienceHypothesis <http://provenance.isi.edu/disk/neuro/hypothesis/>
@@ -2261,6 +2260,7 @@ prefix neuroScienceDisk <http://localhost:8080/disk-server/admin/>
 prefix provNeuroScience <http://provenance.isi.edu/disk/neuro/>
 prefix provNeuroScienceTLOI <http://provenance.isi.edu/disk/neuro/tloi/>
 prefix provNeuroScienceQuestion <http://provenance.isi.edu/disk/neuro/question/>
+prefix sqo <https://w3id.org/sqo#>
 prefix dcterms <http://purl.org/dc/terms/>
 
 entity(provNeuroScienceTLOI:TriggeredLOI-TmEVFJEqb2im,[prov:type = "http://disk-project.org/ontology/disk#TriggeredLineOfInquiry" %% xsd:anyURI, prov:label = "Triggered: Effect size estimation in different cohorts", dcterms:created = "03:38:22 2022-09-21" %% xsd:Name, prov:generatedAtTime = "03:38:22 2022-09-21" %% xsd:dateTime])
@@ -2459,7 +2459,6 @@ prefix disk <http://disk-project.org/ontology/disk#>
 prefix opmw <http://www.opmw.org/ontology/>
 prefix provNeuroScienceLOI <http://provenance.isi.edu/disk/neuro/loi/>
 prefix wings <http://www.wings-workflows.org/ontology/>
-prefix enigmaQuestion <https://w3id.org/sqo/resource/>
 prefix rdfs <http://www.w3.org/2000/01/rdf-schema#>
 prefix rdf <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 prefix provNeuroScienceHypothesis <http://provenance.isi.edu/disk/neuro/hypothesis/>
@@ -2468,6 +2467,7 @@ prefix neuroScienceDisk <http://localhost:8080/disk-server/admin/>
 prefix provNeuroScience <http://provenance.isi.edu/disk/neuro/>
 prefix provNeuroScienceTLOI <http://provenance.isi.edu/disk/neuro/tloi/>
 prefix provNeuroScienceQuestion <http://provenance.isi.edu/disk/neuro/question/>
+prefix sqo <https://w3id.org/sqo#>
 prefix dcterms <http://purl.org/dc/terms/>
 
 entity(provNeuroScienceTLOI:TriggeredLOI-TVTvUJyBREfz,[prov:type = "http://disk-project.org/ontology/disk#TriggeredLineOfInquiry" %% xsd:anyURI, prov:label = "Triggered: Effect size estimation in different cohorts", dcterms:created = "22:16:39 2022-10-02" %% xsd:Name, prov:generatedAtTime = "22:16:39 2022-10-02" %% xsd:dateTime])
@@ -2666,7 +2666,6 @@ prefix disk <http://disk-project.org/ontology/disk#>
 prefix opmw <http://www.opmw.org/ontology/>
 prefix provNeuroScienceLOI <http://provenance.isi.edu/disk/neuro/loi/>
 prefix wings <http://www.wings-workflows.org/ontology/>
-prefix enigmaQuestion <https://w3id.org/sqo/resource/>
 prefix rdfs <http://www.w3.org/2000/01/rdf-schema#>
 prefix rdf <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 prefix provNeuroScienceHypothesis <http://provenance.isi.edu/disk/neuro/hypothesis/>
@@ -2675,6 +2674,7 @@ prefix neuroScienceDisk <http://localhost:8080/disk-server/admin/>
 prefix provNeuroScience <http://provenance.isi.edu/disk/neuro/>
 prefix provNeuroScienceTLOI <http://provenance.isi.edu/disk/neuro/tloi/>
 prefix provNeuroScienceQuestion <http://provenance.isi.edu/disk/neuro/question/>
+prefix sqo <https://w3id.org/sqo#>
 prefix dcterms <http://purl.org/dc/terms/>
 
 entity(provNeuroScienceTLOI:TriggeredLOI-AkIHsNc6PHCQ,[prov:type = "http://disk-project.org/ontology/disk#TriggeredLineOfInquiry" %% xsd:anyURI, prov:label = "Triggered: Effect size estimation in different cohorts", dcterms:created = "22:45:47 2022-10-02" %% xsd:Name, prov:generatedAtTime = "22:45:47 2022-10-02" %% xsd:dateTime])
@@ -2821,7 +2821,6 @@ prefix disk <http://disk-project.org/ontology/disk#>
 prefix opmw <http://www.opmw.org/ontology/>
 prefix provNeuroScienceLOI <http://provenance.isi.edu/disk/neuro/loi/>
 prefix wings <http://www.wings-workflows.org/ontology/>
-prefix enigmaQuestion <https://w3id.org/sqo/resource/>
 prefix rdfs <http://www.w3.org/2000/01/rdf-schema#>
 prefix rdf <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 prefix provNeuroScienceHypothesis <http://provenance.isi.edu/disk/neuro/hypothesis/>
@@ -2830,6 +2829,7 @@ prefix neuroScienceDisk <http://localhost:8080/disk-server/admin/>
 prefix provNeuroScience <http://provenance.isi.edu/disk/neuro/>
 prefix provNeuroScienceTLOI <http://provenance.isi.edu/disk/neuro/tloi/>
 prefix provNeuroScienceQuestion <http://provenance.isi.edu/disk/neuro/question/>
+prefix sqo <https://w3id.org/sqo#>
 prefix dcterms <http://purl.org/dc/terms/>
 
 entity(provNeuroScienceTLOI:TriggeredLOI-fPkAS8LDiDHb,[prov:type = "http://disk-project.org/ontology/disk#TriggeredLineOfInquiry" %% xsd:anyURI, prov:label = "Triggered: Meta regression with ancestry", dcterms:created = "22:46:23 2022-10-02" %% xsd:Name, prov:generatedAtTime = "22:46:23 2022-10-02" %% xsd:dateTime])
@@ -2936,7 +2936,6 @@ prefix disk <http://disk-project.org/ontology/disk#>
 prefix opmw <http://www.opmw.org/ontology/>
 prefix provNeuroScienceLOI <http://provenance.isi.edu/disk/neuro/loi/>
 prefix wings <http://www.wings-workflows.org/ontology/>
-prefix enigmaQuestion <https://w3id.org/sqo/resource/>
 prefix rdfs <http://www.w3.org/2000/01/rdf-schema#>
 prefix rdf <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 prefix provNeuroScienceHypothesis <http://provenance.isi.edu/disk/neuro/hypothesis/>
@@ -2945,6 +2944,7 @@ prefix neuroScienceDisk <http://localhost:8080/disk-server/admin/>
 prefix provNeuroScience <http://provenance.isi.edu/disk/neuro/>
 prefix provNeuroScienceTLOI <http://provenance.isi.edu/disk/neuro/tloi/>
 prefix provNeuroScienceQuestion <http://provenance.isi.edu/disk/neuro/question/>
+prefix sqo <https://w3id.org/sqo#>
 prefix dcterms <http://purl.org/dc/terms/>
 
 entity(provNeuroScienceTLOI:TriggeredLOI-gGN59OJTBi14,[prov:type = "http://disk-project.org/ontology/disk#TriggeredLineOfInquiry" %% xsd:anyURI, prov:label = "Triggered: Meta regression with ancestry", dcterms:created = "22:46:34 2022-10-02" %% xsd:Name, prov:generatedAtTime = "22:46:34 2022-10-02" %% xsd:dateTime])
@@ -3071,7 +3071,6 @@ prefix disk <http://disk-project.org/ontology/disk#>
 prefix opmw <http://www.opmw.org/ontology/>
 prefix provNeuroScienceLOI <http://provenance.isi.edu/disk/neuro/loi/>
 prefix wings <http://www.wings-workflows.org/ontology/>
-prefix enigmaQuestion <https://w3id.org/sqo/resource/>
 prefix rdfs <http://www.w3.org/2000/01/rdf-schema#>
 prefix rdf <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 prefix provNeuroScienceHypothesis <http://provenance.isi.edu/disk/neuro/hypothesis/>
@@ -3080,6 +3079,7 @@ prefix neuroScienceDisk <http://localhost:8080/disk-server/admin/>
 prefix provNeuroScience <http://provenance.isi.edu/disk/neuro/>
 prefix provNeuroScienceTLOI <http://provenance.isi.edu/disk/neuro/tloi/>
 prefix provNeuroScienceQuestion <http://provenance.isi.edu/disk/neuro/question/>
+prefix sqo <https://w3id.org/sqo#>
 prefix dcterms <http://purl.org/dc/terms/>
 
 entity(provNeuroScienceTLOI:TriggeredLOI-s7P6saSNVfuK,[prov:type = "http://disk-project.org/ontology/disk#TriggeredLineOfInquiry" %% xsd:anyURI, prov:label = "Triggered: Meta regression with ancestry", dcterms:created = "22:46:45 2022-10-02" %% xsd:Name, prov:generatedAtTime = "22:46:45 2022-10-02" %% xsd:dateTime])
@@ -3226,7 +3226,6 @@ prefix disk <http://disk-project.org/ontology/disk#>
 prefix opmw <http://www.opmw.org/ontology/>
 prefix provNeuroScienceLOI <http://provenance.isi.edu/disk/neuro/loi/>
 prefix wings <http://www.wings-workflows.org/ontology/>
-prefix enigmaQuestion <https://w3id.org/sqo/resource/>
 prefix rdfs <http://www.w3.org/2000/01/rdf-schema#>
 prefix rdf <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 prefix provNeuroScienceHypothesis <http://provenance.isi.edu/disk/neuro/hypothesis/>
@@ -3235,6 +3234,7 @@ prefix neuroScienceDisk <http://localhost:8080/disk-server/admin/>
 prefix provNeuroScience <http://provenance.isi.edu/disk/neuro/>
 prefix provNeuroScienceTLOI <http://provenance.isi.edu/disk/neuro/tloi/>
 prefix provNeuroScienceQuestion <http://provenance.isi.edu/disk/neuro/question/>
+prefix sqo <https://w3id.org/sqo#>
 prefix dcterms <http://purl.org/dc/terms/>
 
 entity(provNeuroScienceTLOI:TriggeredLOI-1Cik0uEwd1vm,[prov:type = "http://disk-project.org/ontology/disk#TriggeredLineOfInquiry" %% xsd:anyURI, prov:label = "Triggered: Meta regression with ancestry", dcterms:created = "22:46:56 2022-10-02" %% xsd:Name, prov:generatedAtTime = "22:46:56 2022-10-02" %% xsd:dateTime])
@@ -3401,7 +3401,6 @@ prefix disk <http://disk-project.org/ontology/disk#>
 prefix opmw <http://www.opmw.org/ontology/>
 prefix provNeuroScienceLOI <http://provenance.isi.edu/disk/neuro/loi/>
 prefix wings <http://www.wings-workflows.org/ontology/>
-prefix enigmaQuestion <https://w3id.org/sqo/resource/>
 prefix rdfs <http://www.w3.org/2000/01/rdf-schema#>
 prefix rdf <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 prefix provNeuroScienceHypothesis <http://provenance.isi.edu/disk/neuro/hypothesis/>
@@ -3410,6 +3409,7 @@ prefix neuroScienceDisk <http://localhost:8080/disk-server/admin/>
 prefix provNeuroScience <http://provenance.isi.edu/disk/neuro/>
 prefix provNeuroScienceTLOI <http://provenance.isi.edu/disk/neuro/tloi/>
 prefix provNeuroScienceQuestion <http://provenance.isi.edu/disk/neuro/question/>
+prefix sqo <https://w3id.org/sqo#>
 prefix dcterms <http://purl.org/dc/terms/>
 
 entity(provNeuroScienceTLOI:TriggeredLOI-WlH2lKhrp1v4,[prov:type = "http://disk-project.org/ontology/disk#TriggeredLineOfInquiry" %% xsd:anyURI, prov:label = "Triggered: Meta regression with ancestry", dcterms:created = "22:10:52 2023-02-07" %% xsd:Name, prov:generatedAtTime = "22:10:52 2023-02-07" %% xsd:dateTime])
@@ -3590,7 +3590,6 @@ prefix disk <http://disk-project.org/ontology/disk#>
 prefix opmw <http://www.opmw.org/ontology/>
 prefix provNeuroScienceLOI <http://provenance.isi.edu/disk/neuro/loi/>
 prefix wings <http://www.wings-workflows.org/ontology/>
-prefix enigmaQuestion <https://w3id.org/sqo/resource/>
 prefix rdfs <http://www.w3.org/2000/01/rdf-schema#>
 prefix rdf <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 prefix provNeuroScienceHypothesis <http://provenance.isi.edu/disk/neuro/hypothesis/>
@@ -3599,6 +3598,7 @@ prefix neuroScienceDisk <http://localhost:8080/disk-server/admin/>
 prefix provNeuroScience <http://provenance.isi.edu/disk/neuro/>
 prefix provNeuroScienceTLOI <http://provenance.isi.edu/disk/neuro/tloi/>
 prefix provNeuroScienceQuestion <http://provenance.isi.edu/disk/neuro/question/>
+prefix sqo <https://w3id.org/sqo#>
 prefix dcterms <http://purl.org/dc/terms/>
 
 entity(provNeuroScienceTLOI:TriggeredLOI-PIBinbKjNC9O,[prov:type = "http://disk-project.org/ontology/disk#TriggeredLineOfInquiry" %% xsd:anyURI, prov:label = "Triggered: Meta regression with ancestry", dcterms:created = "06:20:11 2023-03-02" %% xsd:Name, prov:generatedAtTime = "06:20:11 2023-03-02" %% xsd:dateTime])
@@ -3703,7 +3703,6 @@ prefix disk <http://disk-project.org/ontology/disk#>
 prefix opmw <http://www.opmw.org/ontology/>
 prefix provNeuroScienceLOI <http://provenance.isi.edu/disk/neuro/loi/>
 prefix wings <http://www.wings-workflows.org/ontology/>
-prefix enigmaQuestion <https://w3id.org/sqo/resource/>
 prefix rdfs <http://www.w3.org/2000/01/rdf-schema#>
 prefix rdf <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 prefix provNeuroScienceHypothesis <http://provenance.isi.edu/disk/neuro/hypothesis/>
@@ -3712,6 +3711,7 @@ prefix neuroScienceDisk <http://localhost:8080/disk-server/admin/>
 prefix provNeuroScience <http://provenance.isi.edu/disk/neuro/>
 prefix provNeuroScienceTLOI <http://provenance.isi.edu/disk/neuro/tloi/>
 prefix provNeuroScienceQuestion <http://provenance.isi.edu/disk/neuro/question/>
+prefix sqo <https://w3id.org/sqo#>
 prefix dcterms <http://purl.org/dc/terms/>
 
 entity(provNeuroScienceTLOI:TriggeredLOI-LyGtbqcartdj,[prov:type = "http://disk-project.org/ontology/disk#TriggeredLineOfInquiry" %% xsd:anyURI, prov:label = "Triggered: Meta regression with ancestry", dcterms:created = "06:29:49 2023-03-02" %% xsd:Name, prov:generatedAtTime = "06:29:49 2023-03-02" %% xsd:dateTime])
@@ -3836,7 +3836,6 @@ prefix disk <http://disk-project.org/ontology/disk#>
 prefix opmw <http://www.opmw.org/ontology/>
 prefix provNeuroScienceLOI <http://provenance.isi.edu/disk/neuro/loi/>
 prefix wings <http://www.wings-workflows.org/ontology/>
-prefix enigmaQuestion <https://w3id.org/sqo/resource/>
 prefix rdfs <http://www.w3.org/2000/01/rdf-schema#>
 prefix rdf <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 prefix provNeuroScienceHypothesis <http://provenance.isi.edu/disk/neuro/hypothesis/>
@@ -3845,6 +3844,7 @@ prefix neuroScienceDisk <http://localhost:8080/disk-server/admin/>
 prefix provNeuroScience <http://provenance.isi.edu/disk/neuro/>
 prefix provNeuroScienceTLOI <http://provenance.isi.edu/disk/neuro/tloi/>
 prefix provNeuroScienceQuestion <http://provenance.isi.edu/disk/neuro/question/>
+prefix sqo <https://w3id.org/sqo#>
 prefix dcterms <http://purl.org/dc/terms/>
 
 entity(provNeuroScienceTLOI:TriggeredLOI-uOysSy65gpjn,[prov:type = "http://disk-project.org/ontology/disk#TriggeredLineOfInquiry" %% xsd:anyURI, prov:label = "Triggered: Meta regression with ancestry", dcterms:created = "06:30:45 2023-03-02" %% xsd:Name, prov:generatedAtTime = "06:30:45 2023-03-02" %% xsd:dateTime])
@@ -3989,7 +3989,6 @@ prefix disk <http://disk-project.org/ontology/disk#>
 prefix opmw <http://www.opmw.org/ontology/>
 prefix provNeuroScienceLOI <http://provenance.isi.edu/disk/neuro/loi/>
 prefix wings <http://www.wings-workflows.org/ontology/>
-prefix enigmaQuestion <https://w3id.org/sqo/resource/>
 prefix rdfs <http://www.w3.org/2000/01/rdf-schema#>
 prefix rdf <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 prefix provNeuroScienceHypothesis <http://provenance.isi.edu/disk/neuro/hypothesis/>
@@ -3998,6 +3997,7 @@ prefix neuroScienceDisk <http://localhost:8080/disk-server/admin/>
 prefix provNeuroScience <http://provenance.isi.edu/disk/neuro/>
 prefix provNeuroScienceTLOI <http://provenance.isi.edu/disk/neuro/tloi/>
 prefix provNeuroScienceQuestion <http://provenance.isi.edu/disk/neuro/question/>
+prefix sqo <https://w3id.org/sqo#>
 prefix dcterms <http://purl.org/dc/terms/>
 
 entity(provNeuroScienceTLOI:TriggeredLOI-INd2PftDIcDo,[prov:type = "http://disk-project.org/ontology/disk#TriggeredLineOfInquiry" %% xsd:anyURI, prov:label = "Triggered: Meta regression with ancestry", dcterms:created = "06:31:02 2023-03-02" %% xsd:Name, prov:generatedAtTime = "06:31:02 2023-03-02" %% xsd:dateTime])
@@ -4162,7 +4162,6 @@ prefix disk <http://disk-project.org/ontology/disk#>
 prefix opmw <http://www.opmw.org/ontology/>
 prefix provNeuroScienceLOI <http://provenance.isi.edu/disk/neuro/loi/>
 prefix wings <http://www.wings-workflows.org/ontology/>
-prefix enigmaQuestion <https://w3id.org/sqo/resource/>
 prefix rdfs <http://www.w3.org/2000/01/rdf-schema#>
 prefix rdf <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 prefix provNeuroScienceHypothesis <http://provenance.isi.edu/disk/neuro/hypothesis/>
@@ -4171,6 +4170,7 @@ prefix neuroScienceDisk <http://localhost:8080/disk-server/admin/>
 prefix provNeuroScience <http://provenance.isi.edu/disk/neuro/>
 prefix provNeuroScienceTLOI <http://provenance.isi.edu/disk/neuro/tloi/>
 prefix provNeuroScienceQuestion <http://provenance.isi.edu/disk/neuro/question/>
+prefix sqo <https://w3id.org/sqo#>
 prefix dcterms <http://purl.org/dc/terms/>
 
 entity(provNeuroScienceTLOI:TriggeredLOI-rAvbe0yHtJiF,[prov:type = "http://disk-project.org/ontology/disk#TriggeredLineOfInquiry" %% xsd:anyURI, prov:label = "Triggered: Meta regression with ancestry", dcterms:created = "06:31:15 2023-03-02" %% xsd:Name, prov:generatedAtTime = "06:31:15 2023-03-02" %% xsd:dateTime])
@@ -4351,7 +4351,6 @@ prefix disk <http://disk-project.org/ontology/disk#>
 prefix opmw <http://www.opmw.org/ontology/>
 prefix provNeuroScienceLOI <http://provenance.isi.edu/disk/neuro/loi/>
 prefix wings <http://www.wings-workflows.org/ontology/>
-prefix enigmaQuestion <https://w3id.org/sqo/resource/>
 prefix rdfs <http://www.w3.org/2000/01/rdf-schema#>
 prefix rdf <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 prefix provNeuroScienceHypothesis <http://provenance.isi.edu/disk/neuro/hypothesis/>
@@ -4360,6 +4359,7 @@ prefix neuroScienceDisk <http://localhost:8080/disk-server/admin/>
 prefix provNeuroScience <http://provenance.isi.edu/disk/neuro/>
 prefix provNeuroScienceTLOI <http://provenance.isi.edu/disk/neuro/tloi/>
 prefix provNeuroScienceQuestion <http://provenance.isi.edu/disk/neuro/question/>
+prefix sqo <https://w3id.org/sqo#>
 prefix dcterms <http://purl.org/dc/terms/>
 
 entity(provNeuroScienceTLOI:TriggeredLOI-X7cNPgPRHBal,[prov:type = "http://disk-project.org/ontology/disk#TriggeredLineOfInquiry" %% xsd:anyURI, prov:label = "Triggered: Meta regression with ancestry", dcterms:created = "06:40:35 2023-03-02" %% xsd:Name, prov:generatedAtTime = "06:40:35 2023-03-02" %% xsd:dateTime])
@@ -4542,7 +4542,6 @@ prefix disk <http://disk-project.org/ontology/disk#>
 prefix opmw <http://www.opmw.org/ontology/>
 prefix provNeuroScienceLOI <http://provenance.isi.edu/disk/neuro/loi/>
 prefix wings <http://www.wings-workflows.org/ontology/>
-prefix enigmaQuestion <https://w3id.org/sqo/resource/>
 prefix rdfs <http://www.w3.org/2000/01/rdf-schema#>
 prefix rdf <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 prefix provNeuroScienceHypothesis <http://provenance.isi.edu/disk/neuro/hypothesis/>
@@ -4551,6 +4550,7 @@ prefix neuroScienceDisk <http://localhost:8080/disk-server/admin/>
 prefix provNeuroScience <http://provenance.isi.edu/disk/neuro/>
 prefix provNeuroScienceTLOI <http://provenance.isi.edu/disk/neuro/tloi/>
 prefix provNeuroScienceQuestion <http://provenance.isi.edu/disk/neuro/question/>
+prefix sqo <https://w3id.org/sqo#>
 prefix dcterms <http://purl.org/dc/terms/>
 
 entity(provNeuroScienceTLOI:TriggeredLOI-qUxXpmAPlCwh,[prov:type = "http://disk-project.org/ontology/disk#TriggeredLineOfInquiry" %% xsd:anyURI, prov:label = "Triggered: Meta regression with ancestry", dcterms:created = "07:36:17 2023-03-02" %% xsd:Name, prov:generatedAtTime = "07:36:17 2023-03-02" %% xsd:dateTime])
@@ -4733,7 +4733,6 @@ prefix disk <http://disk-project.org/ontology/disk#>
 prefix opmw <http://www.opmw.org/ontology/>
 prefix provNeuroScienceLOI <http://provenance.isi.edu/disk/neuro/loi/>
 prefix wings <http://www.wings-workflows.org/ontology/>
-prefix enigmaQuestion <https://w3id.org/sqo/resource/>
 prefix rdfs <http://www.w3.org/2000/01/rdf-schema#>
 prefix rdf <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 prefix provNeuroScienceHypothesis <http://provenance.isi.edu/disk/neuro/hypothesis/>
@@ -4742,6 +4741,7 @@ prefix neuroScienceDisk <http://localhost:8080/disk-server/admin/>
 prefix provNeuroScience <http://provenance.isi.edu/disk/neuro/>
 prefix provNeuroScienceTLOI <http://provenance.isi.edu/disk/neuro/tloi/>
 prefix provNeuroScienceQuestion <http://provenance.isi.edu/disk/neuro/question/>
+prefix sqo <https://w3id.org/sqo#>
 prefix dcterms <http://purl.org/dc/terms/>
 
 entity(provNeuroScienceTLOI:TriggeredLOI-90Mx5s6MvSoF,[prov:type = "http://disk-project.org/ontology/disk#TriggeredLineOfInquiry" %% xsd:anyURI, prov:label = "Triggered: Meta analysis with ancestry", dcterms:created = "07:36:19 2023-03-02" %% xsd:Name, prov:generatedAtTime = "07:36:19 2023-03-02" %% xsd:dateTime])
@@ -4909,7 +4909,6 @@ prefix disk <http://disk-project.org/ontology/disk#>
 prefix opmw <http://www.opmw.org/ontology/>
 prefix provNeuroScienceLOI <http://provenance.isi.edu/disk/neuro/loi/>
 prefix wings <http://www.wings-workflows.org/ontology/>
-prefix enigmaQuestion <https://w3id.org/sqo/resource/>
 prefix rdfs <http://www.w3.org/2000/01/rdf-schema#>
 prefix rdf <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 prefix provNeuroScienceHypothesis <http://provenance.isi.edu/disk/neuro/hypothesis/>
@@ -4918,6 +4917,7 @@ prefix neuroScienceDisk <http://localhost:8080/disk-server/admin/>
 prefix provNeuroScience <http://provenance.isi.edu/disk/neuro/>
 prefix provNeuroScienceTLOI <http://provenance.isi.edu/disk/neuro/tloi/>
 prefix provNeuroScienceQuestion <http://provenance.isi.edu/disk/neuro/question/>
+prefix sqo <https://w3id.org/sqo#>
 prefix dcterms <http://purl.org/dc/terms/>
 
 entity(provNeuroScienceTLOI:TriggeredLOI-NX1AZFp7AzfT,[prov:type = "http://disk-project.org/ontology/disk#TriggeredLineOfInquiry" %% xsd:anyURI, prov:label = "Triggered: Meta analysis with ancestry", dcterms:created = "07:02:41 2023-03-30" %% xsd:Name, prov:generatedAtTime = "07:02:41 2023-03-30" %% xsd:dateTime])
@@ -5009,7 +5009,6 @@ prefix disk <http://disk-project.org/ontology/disk#>
 prefix opmw <http://www.opmw.org/ontology/>
 prefix provNeuroScienceLOI <http://provenance.isi.edu/disk/neuro/loi/>
 prefix wings <http://www.wings-workflows.org/ontology/>
-prefix enigmaQuestion <https://w3id.org/sqo/resource/>
 prefix rdfs <http://www.w3.org/2000/01/rdf-schema#>
 prefix rdf <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 prefix provNeuroScienceHypothesis <http://provenance.isi.edu/disk/neuro/hypothesis/>
@@ -5018,6 +5017,7 @@ prefix neuroScienceDisk <http://localhost:8080/disk-server/admin/>
 prefix provNeuroScience <http://provenance.isi.edu/disk/neuro/>
 prefix provNeuroScienceTLOI <http://provenance.isi.edu/disk/neuro/tloi/>
 prefix provNeuroScienceQuestion <http://provenance.isi.edu/disk/neuro/question/>
+prefix sqo <https://w3id.org/sqo#>
 prefix dcterms <http://purl.org/dc/terms/>
 
 entity(provNeuroScienceTLOI:TriggeredLOI-F6d4IWalhAlg,[prov:type = "http://disk-project.org/ontology/disk#TriggeredLineOfInquiry" %% xsd:anyURI, prov:label = "Triggered: Meta analysis with ancestry", dcterms:created = "07:02:57 2023-03-30" %% xsd:Name, prov:generatedAtTime = "07:02:57 2023-03-30" %% xsd:dateTime])
@@ -5129,7 +5129,6 @@ prefix disk <http://disk-project.org/ontology/disk#>
 prefix opmw <http://www.opmw.org/ontology/>
 prefix provNeuroScienceLOI <http://provenance.isi.edu/disk/neuro/loi/>
 prefix wings <http://www.wings-workflows.org/ontology/>
-prefix enigmaQuestion <https://w3id.org/sqo/resource/>
 prefix rdfs <http://www.w3.org/2000/01/rdf-schema#>
 prefix rdf <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 prefix provNeuroScienceHypothesis <http://provenance.isi.edu/disk/neuro/hypothesis/>
@@ -5138,6 +5137,7 @@ prefix neuroScienceDisk <http://localhost:8080/disk-server/admin/>
 prefix provNeuroScience <http://provenance.isi.edu/disk/neuro/>
 prefix provNeuroScienceTLOI <http://provenance.isi.edu/disk/neuro/tloi/>
 prefix provNeuroScienceQuestion <http://provenance.isi.edu/disk/neuro/question/>
+prefix sqo <https://w3id.org/sqo#>
 prefix dcterms <http://purl.org/dc/terms/>
 
 entity(provNeuroScienceTLOI:TriggeredLOI-OZEid652i723,[prov:type = "http://disk-project.org/ontology/disk#TriggeredLineOfInquiry" %% xsd:anyURI, prov:label = "Triggered: Meta analysis with ancestry", dcterms:created = "07:03:11 2023-03-30" %% xsd:Name, prov:generatedAtTime = "07:03:11 2023-03-30" %% xsd:dateTime])
@@ -5269,7 +5269,6 @@ prefix disk <http://disk-project.org/ontology/disk#>
 prefix opmw <http://www.opmw.org/ontology/>
 prefix provNeuroScienceLOI <http://provenance.isi.edu/disk/neuro/loi/>
 prefix wings <http://www.wings-workflows.org/ontology/>
-prefix enigmaQuestion <https://w3id.org/sqo/resource/>
 prefix rdfs <http://www.w3.org/2000/01/rdf-schema#>
 prefix rdf <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 prefix provNeuroScienceHypothesis <http://provenance.isi.edu/disk/neuro/hypothesis/>
@@ -5278,6 +5277,7 @@ prefix neuroScienceDisk <http://localhost:8080/disk-server/admin/>
 prefix provNeuroScience <http://provenance.isi.edu/disk/neuro/>
 prefix provNeuroScienceTLOI <http://provenance.isi.edu/disk/neuro/tloi/>
 prefix provNeuroScienceQuestion <http://provenance.isi.edu/disk/neuro/question/>
+prefix sqo <https://w3id.org/sqo#>
 prefix dcterms <http://purl.org/dc/terms/>
 
 entity(provNeuroScienceTLOI:TriggeredLOI-gTp7lCfCuCPI,[prov:type = "http://disk-project.org/ontology/disk#TriggeredLineOfInquiry" %% xsd:anyURI, prov:label = "Triggered: Meta analysis with ancestry", dcterms:created = "07:03:31 2023-03-30" %% xsd:Name, prov:generatedAtTime = "07:03:31 2023-03-30" %% xsd:dateTime])
@@ -5429,7 +5429,6 @@ prefix disk <http://disk-project.org/ontology/disk#>
 prefix opmw <http://www.opmw.org/ontology/>
 prefix provNeuroScienceLOI <http://provenance.isi.edu/disk/neuro/loi/>
 prefix wings <http://www.wings-workflows.org/ontology/>
-prefix enigmaQuestion <https://w3id.org/sqo/resource/>
 prefix rdfs <http://www.w3.org/2000/01/rdf-schema#>
 prefix rdf <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 prefix provNeuroScienceHypothesis <http://provenance.isi.edu/disk/neuro/hypothesis/>
@@ -5438,6 +5437,7 @@ prefix neuroScienceDisk <http://localhost:8080/disk-server/admin/>
 prefix provNeuroScience <http://provenance.isi.edu/disk/neuro/>
 prefix provNeuroScienceTLOI <http://provenance.isi.edu/disk/neuro/tloi/>
 prefix provNeuroScienceQuestion <http://provenance.isi.edu/disk/neuro/question/>
+prefix sqo <https://w3id.org/sqo#>
 prefix dcterms <http://purl.org/dc/terms/>
 
 entity(provNeuroScienceTLOI:TriggeredLOI-g0G3fBgsadSm,[prov:type = "http://disk-project.org/ontology/disk#TriggeredLineOfInquiry" %% xsd:anyURI, prov:label = "Triggered: Meta analysis with ancestry", dcterms:created = "07:03:43 2023-03-30" %% xsd:Name, prov:generatedAtTime = "07:03:43 2023-03-30" %% xsd:dateTime])
@@ -5605,7 +5605,6 @@ prefix disk <http://disk-project.org/ontology/disk#>
 prefix opmw <http://www.opmw.org/ontology/>
 prefix provNeuroScienceLOI <http://provenance.isi.edu/disk/neuro/loi/>
 prefix wings <http://www.wings-workflows.org/ontology/>
-prefix enigmaQuestion <https://w3id.org/sqo/resource/>
 prefix rdfs <http://www.w3.org/2000/01/rdf-schema#>
 prefix rdf <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 prefix provNeuroScienceHypothesis <http://provenance.isi.edu/disk/neuro/hypothesis/>
@@ -5614,6 +5613,7 @@ prefix neuroScienceDisk <http://localhost:8080/disk-server/admin/>
 prefix provNeuroScience <http://provenance.isi.edu/disk/neuro/>
 prefix provNeuroScienceTLOI <http://provenance.isi.edu/disk/neuro/tloi/>
 prefix provNeuroScienceQuestion <http://provenance.isi.edu/disk/neuro/question/>
+prefix sqo <https://w3id.org/sqo#>
 prefix dcterms <http://purl.org/dc/terms/>
 
 entity(provNeuroScienceTLOI:TriggeredLOI-ILUQKduYQvjJ,[prov:type = "http://disk-project.org/ontology/disk#TriggeredLineOfInquiry" %% xsd:anyURI, prov:label = "Triggered: Meta analysis with ancestry", dcterms:created = "07:11:11 2023-03-30" %% xsd:Name, prov:generatedAtTime = "07:11:11 2023-03-30" %% xsd:dateTime])
@@ -5783,7 +5783,6 @@ prefix disk <http://disk-project.org/ontology/disk#>
 prefix opmw <http://www.opmw.org/ontology/>
 prefix provNeuroScienceLOI <http://provenance.isi.edu/disk/neuro/loi/>
 prefix wings <http://www.wings-workflows.org/ontology/>
-prefix enigmaQuestion <https://w3id.org/sqo/resource/>
 prefix rdfs <http://www.w3.org/2000/01/rdf-schema#>
 prefix rdf <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 prefix provNeuroScienceHypothesis <http://provenance.isi.edu/disk/neuro/hypothesis/>
@@ -5792,6 +5791,7 @@ prefix neuroScienceDisk <http://localhost:8080/disk-server/admin/>
 prefix provNeuroScience <http://provenance.isi.edu/disk/neuro/>
 prefix provNeuroScienceTLOI <http://provenance.isi.edu/disk/neuro/tloi/>
 prefix provNeuroScienceQuestion <http://provenance.isi.edu/disk/neuro/question/>
+prefix sqo <https://w3id.org/sqo#>
 prefix dcterms <http://purl.org/dc/terms/>
 
 entity(provNeuroScienceTLOI:TriggeredLOI-fRzITnSoZTmv,[prov:type = "http://disk-project.org/ontology/disk#TriggeredLineOfInquiry" %% xsd:anyURI, prov:label = "Triggered: Meta analysis with ancestry", dcterms:created = "07:19:08 2023-03-30" %% xsd:Name, prov:generatedAtTime = "07:19:08 2023-03-30" %% xsd:dateTime])
@@ -5961,7 +5961,6 @@ prefix disk <http://disk-project.org/ontology/disk#>
 prefix opmw <http://www.opmw.org/ontology/>
 prefix provNeuroScienceLOI <http://provenance.isi.edu/disk/neuro/loi/>
 prefix wings <http://www.wings-workflows.org/ontology/>
-prefix enigmaQuestion <https://w3id.org/sqo/resource/>
 prefix rdfs <http://www.w3.org/2000/01/rdf-schema#>
 prefix rdf <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 prefix provNeuroScienceHypothesis <http://provenance.isi.edu/disk/neuro/hypothesis/>
@@ -5970,6 +5969,7 @@ prefix neuroScienceDisk <http://localhost:8080/disk-server/admin/>
 prefix provNeuroScience <http://provenance.isi.edu/disk/neuro/>
 prefix provNeuroScienceTLOI <http://provenance.isi.edu/disk/neuro/tloi/>
 prefix provNeuroScienceQuestion <http://provenance.isi.edu/disk/neuro/question/>
+prefix sqo <https://w3id.org/sqo#>
 prefix dcterms <http://purl.org/dc/terms/>
 
 entity(provNeuroScienceTLOI:TriggeredLOI-AECygCB9q73t,[prov:type = "http://disk-project.org/ontology/disk#TriggeredLineOfInquiry" %% xsd:anyURI, prov:label = "Triggered: Meta regression with ancestry", dcterms:created = "07:43:52 2023-03-30" %% xsd:Name, prov:generatedAtTime = "07:43:52 2023-03-30" %% xsd:dateTime])
@@ -6154,7 +6154,6 @@ prefix disk <http://disk-project.org/ontology/disk#>
 prefix opmw <http://www.opmw.org/ontology/>
 prefix provNeuroScienceLOI <http://provenance.isi.edu/disk/neuro/loi/>
 prefix wings <http://www.wings-workflows.org/ontology/>
-prefix enigmaQuestion <https://w3id.org/sqo/resource/>
 prefix rdfs <http://www.w3.org/2000/01/rdf-schema#>
 prefix rdf <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 prefix provNeuroScienceHypothesis <http://provenance.isi.edu/disk/neuro/hypothesis/>
@@ -6163,6 +6162,7 @@ prefix neuroScienceDisk <http://localhost:8080/disk-server/admin/>
 prefix provNeuroScience <http://provenance.isi.edu/disk/neuro/>
 prefix provNeuroScienceTLOI <http://provenance.isi.edu/disk/neuro/tloi/>
 prefix provNeuroScienceQuestion <http://provenance.isi.edu/disk/neuro/question/>
+prefix sqo <https://w3id.org/sqo#>
 prefix dcterms <http://purl.org/dc/terms/>
 
 entity(provNeuroScienceTLOI:TriggeredLOI-gK5e7bfdpop9,[prov:type = "http://disk-project.org/ontology/disk#TriggeredLineOfInquiry" %% xsd:anyURI, prov:label = "Triggered: Meta analysis with ancestry", dcterms:created = "07:43:53 2023-03-30" %% xsd:Name, prov:generatedAtTime = "07:43:53 2023-03-30" %% xsd:dateTime])
@@ -6334,7 +6334,6 @@ prefix disk <http://disk-project.org/ontology/disk#>
 prefix opmw <http://www.opmw.org/ontology/>
 prefix provNeuroScienceLOI <http://provenance.isi.edu/disk/neuro/loi/>
 prefix wings <http://www.wings-workflows.org/ontology/>
-prefix enigmaQuestion <https://w3id.org/sqo/resource/>
 prefix rdfs <http://www.w3.org/2000/01/rdf-schema#>
 prefix rdf <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 prefix provNeuroScienceHypothesis <http://provenance.isi.edu/disk/neuro/hypothesis/>
@@ -6343,21 +6342,22 @@ prefix neuroScienceDisk <http://localhost:8080/disk-server/admin/>
 prefix provNeuroScience <http://provenance.isi.edu/disk/neuro/>
 prefix provNeuroScienceTLOI <http://provenance.isi.edu/disk/neuro/tloi/>
 prefix provNeuroScienceQuestion <http://provenance.isi.edu/disk/neuro/question/>
+prefix sqo <https://w3id.org/sqo#>
 prefix dcterms <http://purl.org/dc/terms/>
 
 entity(EnigmaQuestion5,[prov:label = "Is the effect size of ?Genotype on ?Brain Imaging Trait of ?Region associated with ?Demographic Attribute for cohorts of ?Ethnic ancestry?", rdfs:comment = "Question class represents a scientific question. Is linked to the template, the pattern and all the variables this question uses." %% xsd:Name])
 activity(provNeuroScience:createQuestion,-,-,[prov:label = "Create the question", rdfs:comment = "The agent creates a Question and each of the variables of them. The agent then creates a hypothesis." %% xsd:Name])
 wasGeneratedBy(EnigmaQuestion5,provNeuroScience:createQuestion,-)
 hadMember(EnigmaQuestion5_questionVariablesBinding,genotype)
-entity(genotype,[prov:label = "?Genotype"])
+entity(genotype,[prov:type = "https://w3id.org/sqo#Question" %% xsd:anyURI, prov:label = "?Genotype"])
 hadMember(EnigmaQuestion5_questionVariablesBinding,brainImagingTrait)
-entity(brainImagingTrait,[prov:label = "?BrainImagingTrait"])
+entity(brainImagingTrait,[prov:type = "https://w3id.org/sqo#Question" %% xsd:anyURI, prov:label = "?BrainImagingTrait"])
 hadMember(EnigmaQuestion5_questionVariablesBinding,brainRegion)
-entity(brainRegion,[prov:label = "?Region"])
+entity(brainRegion,[prov:type = "https://w3id.org/sqo#Question" %% xsd:anyURI, prov:label = "?Region"])
 hadMember(EnigmaQuestion5_questionVariablesBinding,demographicAttribute)
-entity(demographicAttribute,[prov:label = "?DemographicAttribute"])
+entity(demographicAttribute,[prov:type = "https://w3id.org/sqo#Question" %% xsd:anyURI, prov:label = "?DemographicAttribute"])
 hadMember(EnigmaQuestion5_questionVariablesBinding,ethnicGroup)
-entity(ethnicGroup,[prov:label = "?EthnicGroup"])
+entity(ethnicGroup,[prov:type = "https://w3id.org/sqo#Question" %% xsd:anyURI, prov:label = "?EthnicGroup"])
 wasDerivedFrom(EnigmaQuestion5, EnigmaQuestion5_questionVariablesBinding)
 entity(EnigmaQuestion5_questionVariablesBinding,[prov:label = "Collection of question variables"])
 wasGeneratedBy(EnigmaQuestion5_questionVariablesBinding,provNeuroScience:createQuestion,-)
@@ -6369,7 +6369,6 @@ prefix disk <http://disk-project.org/ontology/disk#>
 prefix opmw <http://www.opmw.org/ontology/>
 prefix provNeuroScienceLOI <http://provenance.isi.edu/disk/neuro/loi/>
 prefix wings <http://www.wings-workflows.org/ontology/>
-prefix enigmaQuestion <https://w3id.org/sqo/resource/>
 prefix rdfs <http://www.w3.org/2000/01/rdf-schema#>
 prefix rdf <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 prefix provNeuroScienceHypothesis <http://provenance.isi.edu/disk/neuro/hypothesis/>
@@ -6378,6 +6377,7 @@ prefix neuroScienceDisk <http://localhost:8080/disk-server/admin/>
 prefix provNeuroScience <http://provenance.isi.edu/disk/neuro/>
 prefix provNeuroScienceTLOI <http://provenance.isi.edu/disk/neuro/tloi/>
 prefix provNeuroScienceQuestion <http://provenance.isi.edu/disk/neuro/question/>
+prefix sqo <https://w3id.org/sqo#>
 prefix dcterms <http://purl.org/dc/terms/>
 
 entity(Hypothesis-4CGdVLyttD07,[prov:label = "Is the effect size of rs1080066 on Surface Area of Precentral associated with Percentage of Females for cohorts of European ancestry", dcterms:created = "17:48:24 2022-09-28" %% xsd:Name])
@@ -6410,7 +6410,6 @@ prefix disk <http://disk-project.org/ontology/disk#>
 prefix opmw <http://www.opmw.org/ontology/>
 prefix provNeuroScienceLOI <http://provenance.isi.edu/disk/neuro/loi/>
 prefix wings <http://www.wings-workflows.org/ontology/>
-prefix enigmaQuestion <https://w3id.org/sqo/resource/>
 prefix rdfs <http://www.w3.org/2000/01/rdf-schema#>
 prefix rdf <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 prefix provNeuroScienceHypothesis <http://provenance.isi.edu/disk/neuro/hypothesis/>
@@ -6419,6 +6418,7 @@ prefix neuroScienceDisk <http://localhost:8080/disk-server/admin/>
 prefix provNeuroScience <http://provenance.isi.edu/disk/neuro/>
 prefix provNeuroScienceTLOI <http://provenance.isi.edu/disk/neuro/tloi/>
 prefix provNeuroScienceQuestion <http://provenance.isi.edu/disk/neuro/question/>
+prefix sqo <https://w3id.org/sqo#>
 prefix dcterms <http://purl.org/dc/terms/>
 
 entity(LOI-R12qZl77tJJ9,[prov:label = "Meta regression with ancestry"])

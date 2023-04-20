@@ -1,20 +1,13 @@
 package edu.isi.disk.opmm;
 
-import static org.junit.Assert.fail;
-
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.text.ParseException;
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-
 import org.diskproject.shared.classes.hypothesis.Hypothesis;
 import org.diskproject.shared.classes.loi.LineOfInquiry;
 import org.diskproject.shared.classes.loi.TriggeredLOI;
 import org.diskproject.shared.classes.question.Question;
-import org.diskproject.shared.classes.workflow.VariableBinding;
 import org.junit.Test;
 import org.openprovenance.prov.model.Bundle;
 import org.openprovenance.prov.model.Document;
@@ -22,6 +15,11 @@ import org.openprovenance.prov.model.Entity;
 
 import com.fasterxml.jackson.core.exc.StreamReadException;
 import com.fasterxml.jackson.databind.DatabindException;
+
+import io.github.knowledgecaptureanddiscovery.diskprovmapper.Constants;
+import io.github.knowledgecaptureanddiscovery.diskprovmapper.Mapper;
+import io.github.knowledgecaptureanddiscovery.diskprovmapper.DocumentProv;
+import io.github.knowledgecaptureanddiscovery.diskprovmapper.ProvDocumentReader;
 
 import junit.framework.Assert;
 
@@ -33,7 +31,6 @@ public class MapperTest {
   public MapperTest() throws IOException, ParseException, URISyntaxException {
     Hypothesis hypothesis = UtilsTest.loadHypothesis("src/test/resources/Hypothesis-4CGdVLyttD07/hypothesis.json");
     List<Question> questions = UtilsTest.loadQuestions("src/test/resources/Hypothesis-4CGdVLyttD07/questions.json");
-    TriggeredLOI tloi = UtilsTest.loadTriggeredLOI("src/test/resources/Hypothesis-4CGdVLyttD07/tloi.json");
     List<TriggeredLOI> tlois = UtilsTest.loadTriggeredLOIs("src/test/resources/Hypothesis-4CGdVLyttD07/tlois.json");
     LineOfInquiry loi = UtilsTest.loadLineOfInquiry("src/test/resources/Hypothesis-4CGdVLyttD07/loi.json");
     // List<LineOfInquiry> lois =
@@ -153,5 +150,3 @@ public class MapperTest {
   }
 
 }
-
-  
