@@ -28,6 +28,8 @@ jobs:
           # Verify gpg secret key
           gpg --list-secret-keys --keyid-format LONG
 
+      - name: Install graphviz package on ubuntu-latest
+        run: sudo apt-get install graphviz
       - id: publish-to-central
         name: Publish to Central Repository
         env:
