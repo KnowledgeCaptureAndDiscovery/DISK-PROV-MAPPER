@@ -4,10 +4,10 @@ import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
-import org.diskproject.shared.classes.hypothesis.Hypothesis;
-import org.diskproject.shared.classes.loi.LineOfInquiry;
-import org.diskproject.shared.classes.loi.TriggeredLOI;
-import org.diskproject.shared.classes.question.Question;
+import edu.isi.kcap.diskproject.shared.classes.hypothesis.Hypothesis;
+import edu.isi.kcap.diskproject.shared.classes.loi.LineOfInquiry;
+import edu.isi.kcap.diskproject.shared.classes.loi.TriggeredLOI;
+import edu.isi.kcap.diskproject.shared.classes.question.Question;
 
 import com.fasterxml.jackson.core.exc.StreamReadException;
 import com.fasterxml.jackson.core.type.TypeReference;
