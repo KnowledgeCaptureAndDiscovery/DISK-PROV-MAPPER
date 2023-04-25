@@ -3,11 +3,11 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>edu.isi.disk</groupId>
-  <artifactId>disk-opmm</artifactId>
+  <groupId>io.github.knowledgecaptureanddiscovery</groupId>
+  <artifactId>diskprovmapper</artifactId>
   <name>Disk OPM Mapper</name>
   <packaging>jar</packaging>
-  <description>Disk OPM (Open Provenance Model) Mapper</description>
+  <description>Disk PROV Mapper</description>
   <version>0.0.1</version>
   <properties>
     <log4j.version>2.16.0</log4j.version>
@@ -17,6 +17,51 @@
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
+
+  <scm>
+    <connection>
+    scm:git:git@github.com/KnowledgeCaptureAndDiscovery/DISK-PROV-MAPPER
+    </connection>
+    <developerConnection>
+    scm:git:git@github.com/KnowledgeCaptureAndDiscovery/DISK-PROV-MAPPER
+    </developerConnection>
+    <url>https://github.com/KnowledgeCaptureAndDiscovery/DISK-PROV-MAPPER</url>
+  </scm>
+
+  <url>https://github.com/KnowledgeCaptureAndDiscovery/DISK-PROV-MAPPER</url>
+  <licenses>
+    <license>
+      <name>Apache-2.0</name>
+      <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+      <comments>A business-friendly OSS license</comments>
+    </license>
+  </licenses>
+  <organization>
+    <name>USC/Information Sciences Institute</name>
+    <url>http://www.isi.edu/ikcap</url>
+  </organization>
+
+  <developers>
+    <developer>
+      <id>mosorio</id>
+      <name>Maximiliano Osorio</name>
+      <email>mosorio@isi.edu</email>
+      <url>https://mosorio.dev</url>
+      <roles>
+        <role>architect</role>
+        <role>developer</role>
+      </roles>
+    </developer>
+  </developers>
+
+
+  <distributionManagement>
+    <snapshotRepository>
+      <id>ossrh</id>
+      <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
+    </snapshotRepository>
+  </distributionManagement>
 
   <!-- Dependencies -->
   <dependencies>
@@ -95,8 +140,21 @@
     </dependency>
 
   </dependencies>
+
   <build>
+    <finalName>maven-unit-test</finalName>
     <plugins>
+      <plugin>
+        <groupId>org.sonatype.plugins</groupId>
+        <artifactId>nexus-staging-maven-plugin</artifactId>
+        <version>1.6.13</version>
+        <extensions>true</extensions>
+        <configuration>
+          <serverId>ossrh</serverId>
+          <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
+          <autoReleaseAfterClose>true</autoReleaseAfterClose>
+        </configuration>
+      </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-source-plugin</artifactId>
@@ -113,7 +171,19 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-javadoc-plugin</artifactId>
-        <version>2.9.1</version>
+        <version>3.0.1</version>
+        <configuration>
+          <additionalparam>-Xdoclint:none</additionalparam>
+        </configuration>
+
+        <executions>
+          <execution>
+            <id>attach-javadocs</id>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+          </execution>
+        </executions>
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -129,6 +199,12 @@
           </execution>
         </executions>
       </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.0.0-M5</version>
+      </plugin>
+
     </plugins>
   </build>
 </project>
