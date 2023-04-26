@@ -1,4 +1,5 @@
 examples
+pom.xml.versionsBackup
 .release-it.json
 .vscode
 # Compiled class file
