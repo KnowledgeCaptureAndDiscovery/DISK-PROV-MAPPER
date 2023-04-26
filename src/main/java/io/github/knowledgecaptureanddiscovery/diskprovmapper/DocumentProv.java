@@ -1,6 +1,9 @@
 package io.github.knowledgecaptureanddiscovery.diskprovmapper;
 
+import java.io.OutputStream;
+
 import org.openprovenance.prov.interop.InteropFramework;
+import org.openprovenance.prov.interop.Formats.ProvFormat;
 import org.openprovenance.prov.model.Document;
 import org.openprovenance.prov.model.Namespace;
 import org.openprovenance.prov.model.QualifiedName;
@@ -119,6 +122,12 @@ public class DocumentProv {
         intF.writeDocument(provFile, document);
         intF.writeDocument(ttlFile, document);
         intF.writeDocument(jsonFile, document);
+    }
+
+    public void convert(OutputStream outputStream, String format) {
+        InteropFramework intF = new InteropFramework();
+        ProvFormat provFormat = ProvFormat.valueOf(format.toUpperCase());
+        intF.writeDocument(outputStream, provFormat, document);
     }
 
     public void doFigure(Document document, String file) {
