@@ -1,6 +1,8 @@
 package edu.isi.disk.opmm;
 
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.net.URISyntaxException;
 import java.text.ParseException;
 import java.util.List;
@@ -27,6 +29,7 @@ public class MapperTest {
 
   Document document;
   ProvDocumentReader provDocumentReader;
+  DocumentProv documentProv;
 
   public MapperTest() throws IOException, ParseException, URISyntaxException {
     Hypothesis hypothesis = UtilsTest.loadHypothesis("src/test/resources/Hypothesis-4CGdVLyttD07/hypothesis.json");
@@ -36,11 +39,29 @@ public class MapperTest {
     // List<LineOfInquiry> lois =
     // Utils.loadLinesOfInquiry("src/test/resources/Hypothesis-4CGdVLyttD07/lois.json");
     Mapper mapper = new Mapper(hypothesis, loi, tlois, questions);
-    DocumentProv documentProv = mapper.doc;
+    documentProv = mapper.doc;
     document = documentProv.document;
     documentProv.doConversions("examples/document");
     provDocumentReader = new ProvDocumentReader(document);
 
+  }
+
+  @Test
+  public void convertFormatProvN() {
+    OutputStream out = new ByteArrayOutputStream();
+    String formatProvN = "provn";
+    documentProv.convert(out, formatProvN);
+    String strings = out.toString();
+    Assert.assertTrue(strings.contains("document"));
+  }
+
+  @Test
+  public void convertFormatTrig() {
+    OutputStream out = new ByteArrayOutputStream();
+    String formatProvN = "trig";
+    documentProv.convert(out, formatProvN);
+    String strings = out.toString();
+    Assert.assertTrue(strings.contains("@prefix"));
   }
 
   @Test
