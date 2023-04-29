@@ -24,6 +24,12 @@ public class Constants {
         public static final String DCAT_CATALOG_URL = "http://www.w3.org/ns/dcat#Catalog";
         public static final String DCAT_RESOURCE_URL = "http://www.w3.org/ns/dcat#Resource";
 
+        public static final String SQO_PREFIX = "sqo";
+        public static final String SQO_NS = "https://w3id.org/sqo";
+
+        public static final String SQO_RESOURCE_PREFIX = "sqo-resource";
+        public static final String SQO_RESOURCE_NS = "https://w3id.org/sqo/resource/";
+
         public static final String SQO_QUESTION_LOCALNAME = "Question";
         public static final String SQO_QUESTION_VARIABLE_LOCALNAME = "QuestionVariable";
         public static final String SQO_HYPOTHESIS_LOCALNAME = "Hypothesis";

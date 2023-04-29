@@ -87,6 +87,8 @@ public class DocumentProv {
         localNs.register(DCTERMS_PREFIX, DCTERMS_NS);
         localNs.register(DCAT_PREFIX, DCAT_NS);
         localNs.register(OPMW_PREFIX, OPMW_NS);
+        localNs.register(Constants.SQO_PREFIX, Constants.SQO_NS);
+        localNs.register(Constants.SQO_RESOURCE_PREFIX, Constants.SQO_RESOURCE_NS);
         localNs.setDefaultNamespace(defaultNameSpace);
         System.out.println("Default namespace: " + localNs.getDefaultNamespace());
     }
