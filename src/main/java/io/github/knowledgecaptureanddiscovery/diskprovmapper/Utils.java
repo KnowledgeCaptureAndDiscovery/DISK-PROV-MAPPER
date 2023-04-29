@@ -10,4 +10,10 @@ public class Utils {
     String path = uri.getPath();
     return path.substring(path.lastIndexOf('/') + 1);
   }
+
+  public static String getNamespace(String uriStr) throws URISyntaxException {
+    URI uri = new URI(uriStr);
+    String path = uri.getPath();
+    return path.substring(path.lastIndexOf('/') + 0);
+  }
 }

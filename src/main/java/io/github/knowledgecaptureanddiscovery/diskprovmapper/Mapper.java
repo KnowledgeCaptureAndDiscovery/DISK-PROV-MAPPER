@@ -87,8 +87,10 @@ public class Mapper {
         }
 
         /**
-         * Generate a DocumentProv object from a Hypothesis, LineOfInquiry, TriggeredLOI
+         * Generate a DocumentProv object from a Hypothesis, LineOfInquiries,
+         * TriggeredLOI
          * and Questions
+         * This is useful when you have multiple TriggeredLOI objects
          *
          * @param hypothesis              The Hypothesis object
          * @param lineOfInquiry           The LineOfInquiry object
@@ -935,6 +937,7 @@ public class Mapper {
                 String id = hypothesis.getId();
                 String name = hypothesis.getName();
                 String localName = Utils.getFragment(id);
+
                 String dateCreated = hypothesis.getDateCreated();
 
                 Entity hypothesisEntity = pFactory.newEntity(
