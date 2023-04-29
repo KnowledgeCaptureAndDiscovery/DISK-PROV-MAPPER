@@ -1,6 +1,6 @@
 {
   "$id": "https://example.com/arrays.schema.json",
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$schema": "https://raw.githubusercontent.com/KnowledgeCaptureAndDiscovery/DISK-PROV-MAPPER/master/schema.json",
   "description": "A representation of the variables extracted from a PROV document. Each variable is a class that can have a set of values.",
   "type": "object",
   "properties": {
@@ -14,18 +14,19 @@
   "$defs": {
     "variable": {
       "type": "object",
-      "title": "A variable is a class extracted from a PROV document. It can have a set of values.",
+      "title": "A variable is a Entity extracted from a PROV document. It can have a set of values.",
       "properties": {
         "id": {
           "type": "string",
           "default": "",
-          "title": "The IRI of the class",
+          "title": "Entity type IRI extracted from the PROV document",
           "examples": ["https://w3id.org/sqo#QuestionVariable"]
         },
         "name": {
           "type": "string",
           "default": "",
-          "title": "A human readable name for the variable",
+          "pattern": "(?m)^[ ]*([^\r\n:]+?)s*:",
+          "title": "A machine readable name for the variable",
           "examples": ["questionBinding"]
         },
         "comment": {

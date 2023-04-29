@@ -51,10 +51,8 @@ public class VariableItem {
     @JsonProperty("comment")
     private String comment = "";
     @JsonProperty("values")
-    @Valid
     private List<VariableValue> values;
     @JsonIgnore
-    @Valid
     private Map<String, Object> additionalProperties = new LinkedHashMap<String, Object>();
 
     /**
