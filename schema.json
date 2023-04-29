@@ -1,0 +1,111 @@
+{
+  "$id": "https://example.com/arrays.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "A representation of the variables extracted from a PROV document. Each variable is a class that can have a set of values.",
+  "type": "object",
+  "properties": {
+    "variables": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/variable"
+      }
+    }
+  },
+  "$defs": {
+    "variable": {
+      "type": "object",
+      "title": "A variable is a class extracted from a PROV document. It can have a set of values.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "default": "",
+          "title": "The IRI of the class",
+          "examples": ["https://w3id.org/sqo#QuestionVariable"]
+        },
+        "name": {
+          "type": "string",
+          "default": "",
+          "title": "A human readable name for the variable",
+          "examples": ["questionBinding"]
+        },
+        "comment": {
+          "type": "string",
+          "default": "",
+          "title": "A human readable comment for the variable",
+          "examples": [
+            "Class that represents a variable used on a Question. This variable name must be present on the template and pattern of the question that uses it. Can have contraints in the form of a query (hasConstraint property) or a list of possible options (hasFixedOptions property)."
+          ]
+        },
+        "values": {
+          "title": "The values associated with the variable",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/variableValue"
+          }
+        }
+      }
+    },
+    "variableValue": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "title": "The IRI of the variable value",
+          "type": "string",
+          "default": "",
+          "examples": ["https://w3id.org/sqo/resource/EnigmaQuestion4"]
+        },
+        "name": {
+          "title": "A human readable name for the variable value",
+          "type": "string",
+          "default": "",
+          "examples": [
+            "What is the effect size of ?Genotype on ?Region ?Brain Imaging Trait?"
+          ]
+        },
+        "label": {
+          "title": "A human readable label for the variable value",
+          "type": "string",
+          "default": "",
+          "examples": [
+            "What is the effect size of Genotype on Region Brain Imaging Trait?"
+          ]
+        },
+        "comment": {
+          "title": "A human readable comment for the variable value",
+          "type": "string",
+          "default": "",
+          "examples": [
+            "Question that asks for the effect size of a genotype on a brain imaging trait."
+          ]
+        },
+        "value": {
+          "title": "The value of the variable value",
+          "type": "array",
+          "default": [],
+          "items": {
+            "anyOf": [
+              {
+                "title": "It supports a string values",
+                "type": "string",
+                "examples": ["rs1080066", "a"]
+              },
+              {
+                "title": "A Schema",
+                "type": "integer",
+                "default": 0,
+                "examples": [1]
+              },
+              {
+                "title": "A Schema",
+                "type": "boolean",
+                "default": false,
+                "examples": [true]
+              }
+            ]
+          },
+          "examples": [["rs1080066", "a", 1, true]]
+        }
+      }
+    }
+  }
+}
