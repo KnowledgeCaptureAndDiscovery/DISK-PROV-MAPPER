@@ -8,7 +8,7 @@ import org.junit.Test;
 
 import com.google.common.collect.Maps;
 
-import io.github.knowledgecaptureanddiscovery.diskprovmapper.DataNarrativeGenerator;
+import io.github.knowledgecaptureanddiscovery.diskprovmapper.Generator.DataNarrativeGenerator;
 
 public class DatanarrativeGeneratorTest {
   @Test

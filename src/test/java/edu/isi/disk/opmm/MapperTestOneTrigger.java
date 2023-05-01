@@ -22,9 +22,8 @@ import com.fasterxml.jackson.databind.DatabindException;
 
 import io.github.knowledgecaptureanddiscovery.diskprovmapper.Constants;
 import io.github.knowledgecaptureanddiscovery.diskprovmapper.Mapper;
+import io.github.knowledgecaptureanddiscovery.diskprovmapper.Extractor.ProvDocumentReader;
 import io.github.knowledgecaptureanddiscovery.diskprovmapper.DocumentProv;
-import io.github.knowledgecaptureanddiscovery.diskprovmapper.ProvDocumentReader;
-
 import junit.framework.Assert;
 
 public class MapperTestOneTrigger {
@@ -43,7 +42,7 @@ public class MapperTestOneTrigger {
     Mapper mapper = new Mapper(hypothesis, loi, tlois.get(0), questions);
     documentProv = mapper.doc;
     document = documentProv.document;
-    documentProv.doConversions("examples/simple/document");
+    documentProv.write("examples/simple/document");
     provDocumentReader = new ProvDocumentReader(document);
   }
 
@@ -51,7 +50,7 @@ public class MapperTestOneTrigger {
   public void convertFormatProvN() {
     OutputStream out = new ByteArrayOutputStream();
     String formatProvN = "provn";
-    documentProv.convert(out, formatProvN);
+    documentProv.write(out, formatProvN);
     String strings = out.toString();
     Assert.assertTrue(strings.contains("document"));
   }
@@ -60,7 +59,7 @@ public class MapperTestOneTrigger {
   public void convertFormatTrig() {
     OutputStream out = new ByteArrayOutputStream();
     String formatProvN = "trig";
-    documentProv.convert(out, formatProvN);
+    documentProv.write(out, formatProvN);
     String strings = out.toString();
     Assert.assertTrue(strings.contains("@prefix"));
   }

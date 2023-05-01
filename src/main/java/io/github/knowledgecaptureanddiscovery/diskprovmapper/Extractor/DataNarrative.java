@@ -1,8 +1,9 @@
-package io.github.knowledgecaptureanddiscovery.diskprovmapper;
+package io.github.knowledgecaptureanddiscovery.diskprovmapper.Extractor;
 
 import java.util.HashMap;
 import java.util.List;
 
+import org.openprovenance.prov.interop.InteropFramework;
 import org.openprovenance.prov.model.Bundle;
 import org.openprovenance.prov.model.Document;
 import org.openprovenance.prov.model.Entity;
@@ -31,6 +32,8 @@ public class DataNarrative {
   HashMap<String, Bundle> bundleMap = new HashMap<String, Bundle>();
 
   public DataNarrative(Document document) {
+    ReadWrite tutorial = new ReadWrite(InteropFramework.newXMLProvFactory());
+
     this.document = document;
     System.out.println("DataNarrative: " + document);
 

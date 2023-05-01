@@ -1,4 +1,4 @@
-package io.github.knowledgecaptureanddiscovery.diskprovmapper;
+package io.github.knowledgecaptureanddiscovery.diskprovmapper.Generator;
 
 import java.util.Map;
 import com.hubspot.jinjava.Jinjava;

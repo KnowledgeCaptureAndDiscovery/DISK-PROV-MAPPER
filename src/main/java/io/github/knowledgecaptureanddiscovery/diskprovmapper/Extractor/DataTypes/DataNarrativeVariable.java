@@ -1,5 +1,5 @@
 
-package io.github.knowledgecaptureanddiscovery.diskprovmapper.extractor;
+package io.github.knowledgecaptureanddiscovery.diskprovmapper.Extractor.DataTypes;
 
 import java.util.LinkedHashMap;
 import java.util.List;

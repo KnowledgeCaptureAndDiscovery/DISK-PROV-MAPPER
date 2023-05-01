@@ -114,7 +114,7 @@ public class DocumentProv {
         return ns.qualifiedName(prefix, n, factory);
     }
 
-    public void doConversions(String file) {
+    public void write(String file) {
         String pngFile = file + ".png";
         String provFile = file + ".provn";
         String ttlFile = file + ".ttl";
@@ -126,7 +126,12 @@ public class DocumentProv {
         intF.writeDocument(jsonFile, document);
     }
 
-    public void convert(OutputStream outputStream, String format) {
+    public Document read(String file) {
+        InteropFramework intF = new InteropFramework();
+        return intF.readDocument(file);
+    }
+
+    public void write(OutputStream outputStream, String format) {
         InteropFramework intF = new InteropFramework();
         ProvFormat provFormat = ProvFormat.valueOf(format.toUpperCase());
         intF.writeDocument(outputStream, provFormat, document);
