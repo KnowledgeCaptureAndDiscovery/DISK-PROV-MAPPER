@@ -66,7 +66,7 @@ public class MapperTestOneTrigger {
 
   @Test
   public void findQuestionByLocalName() throws StreamReadException, DatabindException, IOException, ParseException {
-    Bundle questionBundle = provDocumentReader.getBundle(Constants.QUESTION_BUNDLE_NAME);
+    Bundle questionBundle = provDocumentReader.getBundle(Constants.BUNDLE_FRAMING_NAME);
     String questionLocalName = "EnigmaQuestion5";
     Entity question = provDocumentReader.getEntityByLocalName(questionBundle, questionLocalName);
     Assert.assertEquals(questionLocalName, question.getId().getLocalPart());
@@ -74,7 +74,7 @@ public class MapperTestOneTrigger {
 
   @Test
   public void findHypothesisByLocalName() {
-    Bundle hypothesisBundle = provDocumentReader.getBundle(Constants.HYPOTHESIS_BUNDLE_NAME);
+    Bundle hypothesisBundle = provDocumentReader.getBundle(Constants.BUNDLE_HYPOTHESIS_NAME);
     String hypothesisLocalName = "Hypothesis-4CGdVLyttD07";
     Entity hypothesis = provDocumentReader.getEntityByLocalName(hypothesisBundle, hypothesisLocalName);
     Assert.assertEquals(hypothesisLocalName, hypothesis.getId().getLocalPart());
@@ -82,7 +82,7 @@ public class MapperTestOneTrigger {
 
   @Test
   public void findLineOfInquiryByLocalName() {
-    Bundle loiBundle = provDocumentReader.getBundle(Constants.LOIS_BUNDLE_NAME);
+    Bundle loiBundle = provDocumentReader.getBundle(Constants.BUNDLE_LOIS_NAME);
     String loiLocalName = "LOI-R12qZl77tJJ9";
     Entity loi = provDocumentReader.getEntityByLocalName(loiBundle, loiLocalName);
     Assert.assertEquals(loiLocalName, loi.getId().getLocalPart());
@@ -110,7 +110,7 @@ public class MapperTestOneTrigger {
 
   @Test
   public void findCatalog() {
-    Bundle bundle = provDocumentReader.getBundle(Constants.LOIS_BUNDLE_NAME);
+    Bundle bundle = provDocumentReader.getBundle(Constants.BUNDLE_DATA_NAME);
     QualifiedName type = documentProv.qn(Constants.DCAT_CATALOG_LOCALNAME, DocumentProv.DCAT_PREFIX);
     Entity catalog = provDocumentReader.getEntityByType(bundle, type);
     Assert.assertEquals(Constants.DCAT_CATALOG_LOCALNAME, catalog.getId().getLocalPart());

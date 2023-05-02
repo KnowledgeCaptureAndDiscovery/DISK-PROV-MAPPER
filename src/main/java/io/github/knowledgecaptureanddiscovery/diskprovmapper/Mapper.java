@@ -45,9 +45,10 @@ public class Mapper {
          */
         public DocumentProv prov = new DocumentProv(InteropFramework.getDefaultFactory());
         public ProvFactory pFactory = prov.factory;
-        Bundle questionBundle = pFactory.newNamedBundle(prov.qn("questionBundle"), null);
-        Bundle hypothesisBundle = pFactory.newNamedBundle(prov.qn("hypothesisBundle"), null);
-        Bundle loisBundle = pFactory.newNamedBundle(prov.qn("loisBundle"), null);
+        Bundle dataBundle = pFactory.newNamedBundle(prov.qn(Constants.BUNDLE_DATA_NAME), null);
+        Bundle framingBundle = pFactory.newNamedBundle(prov.qn(Constants.BUNDLE_FRAMING_NAME), null);
+        Bundle hypothesisBundle = pFactory.newNamedBundle(prov.qn(Constants.BUNDLE_HYPOTHESIS_NAME), null);
+        Bundle loisBundle = pFactory.newNamedBundle(prov.qn(Constants.BUNDLE_HYPOTHESIS_NAME), null);
         public DocumentProv doc;
 
         /**
@@ -77,8 +78,8 @@ public class Mapper {
                 DocumentProv.register(questionDefaultNamespace, DocumentProv.PROV_NEUROSCIENCE_QUESTION_NS);
 
                 prov.document.setNamespace(prov.ns);
-                questionBundle.setNamespace(questionDefaultNamespace);
-                prov.document.getStatementOrBundle().add(questionBundle);
+                framingBundle.setNamespace(questionDefaultNamespace);
+                prov.document.getStatementOrBundle().add(framingBundle);
                 hypothesisBundle.setNamespace(hypothesisDefaultNamespace);
                 prov.document.getStatementOrBundle().add(hypothesisBundle);
                 loisBundle.setNamespace(loisDefaultNamespace);
@@ -113,8 +114,8 @@ public class Mapper {
                 DocumentProv.register(questionDefaultNamespace, DocumentProv.PROV_NEUROSCIENCE_QUESTION_NS);
 
                 prov.document.setNamespace(prov.ns);
-                questionBundle.setNamespace(questionDefaultNamespace);
-                prov.document.getStatementOrBundle().add(questionBundle);
+                framingBundle.setNamespace(questionDefaultNamespace);
+                prov.document.getStatementOrBundle().add(framingBundle);
                 hypothesisBundle.setNamespace(hypothesisDefaultNamespace);
                 prov.document.getStatementOrBundle().add(hypothesisBundle);
                 loisBundle.setNamespace(loisDefaultNamespace);
@@ -152,7 +153,7 @@ public class Mapper {
                 Entity hypothesisEntity = createHypothesisEntity(hypothesis);
                 Entity lineOfInquiryEntity = createLineOfInquiryEntity(lineOfInquiry);
 
-                Activity createQuestionActivity = linkActivityEntities(hvargas, neda, questionEntity, questionBundle,
+                Activity createQuestionActivity = linkActivityEntities(hvargas, neda, questionEntity, framingBundle,
                                 Constants.ACTIVITY_CREATE_QUESTION_LOCALNAME, Constants.ACTIVITY_CREATE_QUESTION_LABEL,
                                 Constants.ACTIVITY_CREATE_QUESTION_DESCRIPTION);
                 Activity createHypothesisActivity = linkActivityEntities(hvargas, neda,
@@ -162,12 +163,12 @@ public class Mapper {
                                 Constants.ACTIVITY_CREATE_HYPOTHESIS_LABEL,
                                 Constants.ACTIVITY_CREATE_HYPOTHESIS_DESCRIPTION);
 
-                Entity questionVariablesBinding = level2QuestionAddVariables(question, questionEntity, null,
+                Entity questionVariables = mapQuestionVariables(question, questionEntity, null,
                                 createQuestionActivity);
                 Entity hypothesisVariablesCollection = level2HypothesisAddVariables(hypothesis, hypothesisEntity,
-                                questionVariablesBinding, createHypothesisActivity, question);
+                                questionVariables, createHypothesisActivity, question);
 
-                localWasDerived(questionEntity, hypothesisEntity, questionBundle);
+                localWasDerived(questionEntity, hypothesisEntity, framingBundle);
                 localWasDerived(questionEntity, lineOfInquiryEntity, loisBundle);
 
                 for (TriggeredLOI triggerLineInquiry : triggeredLOIList) {
@@ -314,9 +315,7 @@ public class Mapper {
 
                 // create the activity for writing the data query
 
-                Entity dataQueryTemplateEntity = pFactory.newEntity(
-                                prov.qn("data_query", DocumentProv.PROV_NEUROSCIENCE_LINE_PREFIX),
-                                dataQuery);
+                Entity dataQueryTemplateEntity = createDataQuery(triggerOfLineInquiry, dataBundle);
                 loisBundle.getStatement().add(dataQueryTemplateEntity);
                 Entity dataSource = createDataSource(dataSourceText);
 
@@ -389,7 +388,7 @@ public class Mapper {
                                 prov.qn(Constants.DCAT_CATALOG_LOCALNAME, DocumentProv.PROV_NEUROSCIENCE_LINE_PREFIX),
                                 dataSourceText);
                 addTypeToEntity(dataSource, DocumentProv.DCAT_PREFIX, Constants.DCAT_CATALOG_LOCALNAME);
-                loisBundle.getStatement().add(dataSource);
+                dataBundle.getStatement().add(dataSource);
                 return dataSource;
         }
 
@@ -399,27 +398,11 @@ public class Mapper {
                         Entity variablesBindingWorkflowEntity, Entity variablesBindingMetaWorkflowEntity,
                         Entity hypothesisVariableCollection, Bundle triggerBundle) {
 
-                // Create entities: dataQuery
                 Entity dataQueryConcreteEntity = createDataQuery(triggeredLOI, triggerBundle);
                 Entity dataSourceEntity = createDataSource(triggeredLOI, dataSourceLoi, triggerBundle);
-
-                // Create activities: transformDataQuery, executeDataQuery
-                Activity transformDataQuery = pFactory.newActivity(prov.qn("transformDataQueryTemplate"),
-                                "Replace the variables in the data query template with the variables of the hypothesis");
-                Used transformDataQueryActivityUsed = pFactory.newUsed(null, dataQueryTemplate.getId(),
-                                transformDataQuery.getId(), null,
-                                null);
-                WasGeneratedBy dataQueryWasGeneratedBy = pFactory.newWasGeneratedBy(null,
-                                dataQueryConcreteEntity.getId(),
-                                transformDataQuery.getId(), null, null);
-                Activity executeDataQuery = pFactory.newActivity(prov.qn("executeDataQuery"), "Execute the data query");
-                WasGeneratedBy toiWasGeneratedBy = pFactory.newWasGeneratedBy(null, triggerEntity.getId(),
-                                transformDataQuery.getId(), null, null);
-                triggerBundle.getStatement().add(toiWasGeneratedBy);
-                triggerBundle.getStatement().add(executeDataQuery);
-                triggerBundle.getStatement().add(transformDataQuery);
-                triggerBundle.getStatement().add(transformDataQueryActivityUsed);
-                triggerBundle.getStatement().add(dataQueryWasGeneratedBy);
+                Activity transformDataQuery = activityTransformDataQueryTemplate(dataQueryTemplate, triggerBundle);
+                Activity executeDataQuery = extracted(triggerEntity, triggerBundle, dataQueryConcreteEntity,
+                                transformDataQuery);
 
                 if (variablesBindingMetaWorkflowEntity != null) {
                         addVariableBindingWorkflow(variablesBindingMetaWorkflowEntity,
@@ -456,7 +439,7 @@ public class Mapper {
                                 "Confidence Report");
 
                 // Add other type
-                addTypeToEntity(dataSourceEntity, DocumentProv.DISK_ONTOLOGY_PREFIX,
+                addTypeToEntity(confidenceReport, DocumentProv.DISK_ONTOLOGY_PREFIX,
                                 Constants.DISK_ONTOLOGY_CONFIDENCE_REPORT_LOCALNAME);
                 String confidenceReportValue = null;
                 if (confidenceReportValue == null) {
@@ -468,6 +451,31 @@ public class Mapper {
 
         }
 
+        private Activity extracted(Entity triggerEntity, Bundle triggerBundle, Entity dataQueryConcreteEntity,
+                        Activity transformDataQuery) {
+                WasGeneratedBy dataQueryWasGeneratedBy = pFactory.newWasGeneratedBy(null,
+                                dataQueryConcreteEntity.getId(),
+                                transformDataQuery.getId(), null, null);
+                Activity executeDataQuery = pFactory.newActivity(prov.qn("executeDataQuery"), "Execute the data query");
+                WasGeneratedBy toiWasGeneratedBy = pFactory.newWasGeneratedBy(null, triggerEntity.getId(),
+                                transformDataQuery.getId(), null, null);
+                triggerBundle.getStatement().add(toiWasGeneratedBy);
+                triggerBundle.getStatement().add(executeDataQuery);
+                triggerBundle.getStatement().add(dataQueryWasGeneratedBy);
+                return executeDataQuery;
+        }
+
+        private Activity activityTransformDataQueryTemplate(Entity dataQueryTemplate, Bundle triggerBundle) {
+                Activity transformDataQuery = pFactory.newActivity(prov.qn("transformDataQueryTemplate"),
+                                "Replace the variables in the data query template with the variables of the hypothesis");
+                Used transformDataQueryActivityUsed = pFactory.newUsed(null, dataQueryTemplate.getId(),
+                                transformDataQuery.getId(), null,
+                                null);
+                triggerBundle.getStatement().add(transformDataQuery);
+                triggerBundle.getStatement().add(transformDataQueryActivityUsed);
+                return transformDataQuery;
+        }
+
         private Entity createDataSource(TriggeredLOI triggeredLOI, Entity dataSourceLoi, Bundle triggerBundle) {
                 String dataSource = triggeredLOI.getDataSource();
                 Entity dataSourceEntity = pFactory.newEntity(
@@ -475,17 +483,20 @@ public class Mapper {
                 triggerBundle.getStatement().add(dataSourceEntity);
                 WasDerivedFrom dataSourceWasDerivedFrom = pFactory.newWasDerivedFrom(null, dataSourceEntity.getId(),
                                 dataSourceLoi.getId());
-                triggerBundle.getStatement().add(dataSourceWasDerivedFrom);
+                dataBundle.getStatement().add(dataSourceWasDerivedFrom);
                 return dataSourceEntity;
         }
 
         private Entity createDataQuery(TriggeredLOI triggeredLOI, Bundle triggerBundle) {
-                String dataQueryConcreteText = triggeredLOI.getDataQuery();
-                Entity dataQueryConcreteEntity = pFactory.newEntity(
+                String value = triggeredLOI.getDataQuery();
+                String label = triggeredLOI.getDataQueryExplanation();
+                Entity entity = pFactory.newEntity(
                                 prov.qn("data_query", DocumentProv.PROV_NEUROSCIENCE_TRIGGER_PREFIX),
-                                dataQueryConcreteText);
-                triggerBundle.getStatement().add(dataQueryConcreteEntity);
-                return dataQueryConcreteEntity;
+                                label);
+                entity.setValue(pFactory.newValue(value));
+                addTypeToEntity(entity, DocumentProv.DCAT_PREFIX, Constants.DCAT_QUERY_LOCALNAME);
+                dataBundle.getStatement().add(entity);
+                return entity;
         }
 
         /**
@@ -766,7 +777,7 @@ public class Mapper {
 
         }
 
-        private Entity level2QuestionAddVariables(Question question,
+        private Entity mapQuestionVariables(Question question,
                         Entity questionEntity, HashMap<String, Entity> questionVariablesMap,
                         Activity createQuestionActivity) {
 
@@ -790,8 +801,8 @@ public class Mapper {
                                                 Constants.SQO_QUESTION_VARIABLE_LOCALNAME);
                                 HadMember hadMember = pFactory.newHadMember(questionVariableCollection.getId(),
                                                 questionVariableEntity.getId());
-                                questionBundle.getStatement().addAll(Arrays.asList(hadMember));
-                                questionBundle.getStatement().add(questionVariableEntity);
+                                framingBundle.getStatement().addAll(Arrays.asList(hadMember));
+                                framingBundle.getStatement().add(questionVariableEntity);
                         } catch (Exception e) {
                                 e.printStackTrace();
                         }
@@ -801,9 +812,9 @@ public class Mapper {
                                 questionVariableCollection.getId());
                 WasGeneratedBy wgb = pFactory.newWasGeneratedBy(null, questionVariableCollection.getId(),
                                 createQuestionActivity.getId());
-                questionBundle.getStatement().addAll(Arrays.asList(wdf));
-                questionBundle.getStatement().add(questionVariableCollection);
-                questionBundle.getStatement().add(wgb);
+                framingBundle.getStatement().addAll(Arrays.asList(wdf));
+                framingBundle.getStatement().add(questionVariableCollection);
+                framingBundle.getStatement().add(wgb);
                 return questionVariableCollection;
         }
 
@@ -840,6 +851,11 @@ public class Mapper {
                                 Entity variableBindingEntity = createVariableBindingEntity(variableBinding,
                                                 DocumentProv.PROV_NEUROSCIENCE_HYPOTHESIS_PREFIX,
                                                 variableCollectionLocalName);
+                                /// Add the value
+                                variableBindingEntity.setValue(pFactory.newValue(variableBinding.getBinding()));
+                                // Add the type
+                                addTypeToEntity(variableBindingEntity, DocumentProv.DISK_ONTOLOGY_PREFIX,
+                                                Constants.SQO_QUESTION_VARIABLE_LOCALNAME);
                                 // Link the variable to the collection
                                 HadMember hadMember = pFactory.newHadMember(variableCollection.getId(),
                                                 variableBindingEntity.getId());
@@ -886,6 +902,8 @@ public class Mapper {
                 String variableLocalName = parentCollectionLocalName + '_' + localName;
                 QualifiedName qn = prov.qn(variableLocalName, prefix);
                 Entity variableBindingEntity = pFactory.newEntity(qn, binding);
+                addTypeToEntity(variableBindingEntity, DocumentProv.QUESTION_ONTOLOGY_PREFIX,
+                                Constants.SQO_QUESTION_VARIABLE_LOCALNAME);
                 hypothesisBundle.getStatement().add(variableBindingEntity);
                 return variableBindingEntity;
         }
@@ -926,7 +944,7 @@ public class Mapper {
                 questionEntity.getOther().add(pFactory.newOther(DocumentProv.RDFS_NS, commentLocalName,
                                 DocumentProv.RDFS_PREFIX, commentValue,
                                 pFactory.getName().XSD_NAME));
-                questionBundle.getStatement().add(questionEntity);
+                framingBundle.getStatement().add(questionEntity);
                 return questionEntity;
         }
 

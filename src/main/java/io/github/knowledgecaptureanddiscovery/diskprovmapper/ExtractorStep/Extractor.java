@@ -3,40 +3,88 @@ package io.github.knowledgecaptureanddiscovery.diskprovmapper.ExtractorStep;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.xml.crypto.Data;
+
+import org.openprovenance.prov.model.Bundle;
 import org.openprovenance.prov.model.Document;
 import org.openprovenance.prov.model.Entity;
 import org.openprovenance.prov.model.Type;
+import org.openprovenance.prov.model.Value;
+import org.openprovenance.prov.model.QualifiedName;
 
-import io.github.knowledgecaptureanddiscovery.diskprovmapper.ExtractorStep.DataTypes.DataNarrativeVariable;
-import io.github.knowledgecaptureanddiscovery.diskprovmapper.ExtractorStep.DataTypes.VariableItem;
-import io.github.knowledgecaptureanddiscovery.diskprovmapper.ExtractorStep.DataTypes.VariableValue;
+import io.github.knowledgecaptureanddiscovery.diskprovmapper.ExtractorStep.DataTypes.DataNarrativeVariableSchema;
+import io.github.knowledgecaptureanddiscovery.diskprovmapper.ExtractorStep.DataTypes.EntityGroup;
+import io.github.knowledgecaptureanddiscovery.diskprovmapper.ExtractorStep.DataTypes.EntityItem;
 
 public class Extractor {
   Document document;
+  List<EntityGroup> entityGroups = new ArrayList<EntityGroup>();
+  DataNarrativeVariableSchema dataNarrativeVariable = new DataNarrativeVariableSchema();
 
   public Extractor(Document document) {
     this.document = document;
     ProvDocumentReader reader = new ProvDocumentReader(document);
-    DataNarrativeVariable dataNarrativeVariable = new DataNarrativeVariable();
+    List<String> views = new ArrayList<String>();
     reader.bundles.forEach(bundle -> {
+      views.add(bundle.getId().getLocalPart());
       System.out.println(bundle.getId().getLocalPart());
       List<Type> types = reader.getTypesOfBundle(bundle);
       for (Type type : types) {
-        VariableItem variableItem = new VariableItem();
-        variableItem.setId(type.getValue().toString());
+        // Get all entities of the type
         List<Entity> entities = reader.getEntitiesByType(bundle, type);
-        List<VariableValue> variableValues = new ArrayList<VariableValue>();
+        QualifiedName typeQn = (QualifiedName) type.getValue();
+        // Create a group of entities for the type
+        EntityGroup entityGroup = new EntityGroup();
+        String entityGroupId = typeQn.getUri();
+        String entityGroupName = typeQn.getLocalPart();
+        String entityGroupCmment = typeQn.getUri();
+        entityGroup.setId(entityGroupId);
+        entityGroup.setName(entityGroupName);
+        entityGroup.setComment(entityGroupCmment);
+        entityGroup.setView(bundle.getId().getLocalPart());
+
+        // Create a temporary list of entity items
+        List<EntityItem> entityItems = new ArrayList<EntityItem>();
         for (Entity entity : entities) {
-          String id = entity.getId().toString();
-          String name = entity.getLabel().toString();
-          String label = entity.getLabel().toString();
-          String value = entity.getValue().toString();
-          VariableValue variableValue = new VariableValue(id, name, label, value);
+          EntityItem entityItem = new EntityItem();
+          QualifiedName entityQn = entity.getId();
+          String id = entityQn.getUri();
+          String name = entity.getId().getLocalPart();
+          String label = entity.getLabel().get(0).getValue();
+          String comment = entity.getLabel().get(0).getValue();
+          Value value = entity.getValue();
+          ArrayList<Object> objects = new ArrayList<Object>();
+          objects.add(value);
+          entityItem.setId(id);
+          entityItem.setName(name);
+          entityItem.setLabel(label);
+          entityItem.setComment(comment);
+          entityItem.setValue(objects);
+          entityItems.add(entityItem);
         }
-        dataNarrativeVariable.getVariables().add(variableItem);
+        // Set the list of entity items to the group
+        entityGroup.setEntities(entityItems);
+        entityGroups.add(entityGroup);
       }
       ;
     });
+    dataNarrativeVariable.setViews(views);
+    dataNarrativeVariable.setGroups(entityGroups);
   }
 
+  public DataNarrativeVariableSchema getDataNarrativeVariable() {
+    return dataNarrativeVariable;
+  }
+
+  public void setDataNarrativeVariable(DataNarrativeVariableSchema dataNarrativeVariable) {
+    this.dataNarrativeVariable = dataNarrativeVariable;
+  }
+
+  public List<EntityGroup> getEntityGroups() {
+    return entityGroups;
+  }
+
+  public void setEntityGroups(List<EntityGroup> entityGroups) {
+    this.entityGroups = entityGroups;
+  }
 }

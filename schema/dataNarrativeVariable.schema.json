@@ -4,6 +4,12 @@
   "description": "A representation of the Entity extracted from a PROV document. Each entity has a set of values.",
   "type": "object",
   "properties": {
+    "views": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
     "groups": {
       "type": "array",
       "items": {
@@ -33,6 +39,14 @@
           "type": "string",
           "default": "",
           "title": "A human readable comment for the entity. For example: the description from the ontology",
+          "examples": [
+            "Class that represents a variable used on a Question. This variable name must be present on the template and pattern of the question that uses it. Can have contraints in the form of a query (hasConstraint property) or a list of possible options (hasFixedOptions property)."
+          ]
+        },
+        "view": {
+          "type": "string",
+          "default": "",
+          "title": "Data Narrative view where the Entity must be. For example: questionVariable is in the  view",
           "examples": [
             "Class that represents a variable used on a Question. This variable name must be present on the template and pattern of the question that uses it. Can have contraints in the form of a query (hasConstraint property) or a list of possible options (hasFixedOptions property)."
           ]
