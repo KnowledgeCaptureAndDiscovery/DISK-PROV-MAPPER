@@ -22,7 +22,7 @@ import com.fasterxml.jackson.databind.DatabindException;
 
 import io.github.knowledgecaptureanddiscovery.diskprovmapper.Constants;
 import io.github.knowledgecaptureanddiscovery.diskprovmapper.Mapper;
-import io.github.knowledgecaptureanddiscovery.diskprovmapper.Extractor.ProvDocumentReader;
+import io.github.knowledgecaptureanddiscovery.diskprovmapper.ExtractorStep.ProvDocumentReader;
 import io.github.knowledgecaptureanddiscovery.diskprovmapper.DocumentProv;
 import junit.framework.Assert;
 

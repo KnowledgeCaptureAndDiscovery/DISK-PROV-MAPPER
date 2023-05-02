@@ -1,4 +1,4 @@
-package io.github.knowledgecaptureanddiscovery.diskprovmapper.Extractor;
+package io.github.knowledgecaptureanddiscovery.diskprovmapper.ExtractorStep;
 
 import java.util.ArrayList;
 import java.util.HashMap;

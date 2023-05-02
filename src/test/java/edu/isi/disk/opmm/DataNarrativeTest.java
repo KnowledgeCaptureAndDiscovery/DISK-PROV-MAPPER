@@ -5,8 +5,6 @@ import javax.xml.crypto.Data;
 
 import org.junit.Test;
 
-import io.github.knowledgecaptureanddiscovery.diskprovmapper.Extractor.DataNarrative;
-
 public class DataNarrativeTest {
   public DataNarrativeTest() {
   }
