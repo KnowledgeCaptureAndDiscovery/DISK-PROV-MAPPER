@@ -24,6 +24,7 @@ public class Constants {
         public static final String DCAT_CATALOG_LOCALNAME = "Catalog";
         public static final String DCAT_QUERY_LOCALNAME = "Query";
         public static final String DCAT_RESOURCE_LOCALNAME = "Resource";
+        public static final String DISK_VARIABLE_BINDING_LOCALNAME = "VariableBinding";
         // 2. Framing question related
         public static final String SQO_QUESTION_LOCALNAME = "Question";
         public static final String SQO_QUESTION_VARIABLE_LOCALNAME = "QuestionVariable";

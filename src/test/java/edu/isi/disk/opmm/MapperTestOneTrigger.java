@@ -42,7 +42,6 @@ public class MapperTestOneTrigger {
     Mapper mapper = new Mapper(hypothesis, loi, tlois.get(0), questions);
     documentProv = mapper.doc;
     document = documentProv.document;
-    documentProv.write("examples/simple/document");
     provDocumentReader = new ProvDocumentReader(document);
   }
 
@@ -74,7 +73,7 @@ public class MapperTestOneTrigger {
 
   @Test
   public void findHypothesisByLocalName() {
-    Bundle hypothesisBundle = provDocumentReader.getBundle(Constants.BUNDLE_HYPOTHESIS_NAME);
+    Bundle hypothesisBundle = provDocumentReader.getBundle(Constants.BUNDLE_DATA_NAME);
     String hypothesisLocalName = "Hypothesis-4CGdVLyttD07";
     Entity hypothesis = provDocumentReader.getEntityByLocalName(hypothesisBundle, hypothesisLocalName);
     Assert.assertEquals(hypothesisLocalName, hypothesis.getId().getLocalPart());
@@ -171,7 +170,7 @@ public class MapperTestOneTrigger {
 
   @Test
   public void numberBundlesTest() {
-    Assert.assertEquals(4, provDocumentReader.bundles.size());
+    Assert.assertEquals(5, provDocumentReader.bundles.size());
   }
 
   @Test

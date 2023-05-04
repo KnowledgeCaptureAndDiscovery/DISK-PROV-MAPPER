@@ -121,13 +121,13 @@ public class DocumentProv {
     }
 
     public void write(String file) {
-        String pngFile = file + ".png";
         String provFile = file + ".provn";
+        String pngFile = file + ".png";
         String ttlFile = file + ".ttl";
         String jsonFile = file + ".json";
         InteropFramework intF = new InteropFramework();
-        intF.writeDocument(pngFile, document);
         intF.writeDocument(provFile, document);
+        intF.writeDocument(pngFile, document);
         intF.writeDocument(ttlFile, document);
         intF.writeDocument(jsonFile, document);
     }

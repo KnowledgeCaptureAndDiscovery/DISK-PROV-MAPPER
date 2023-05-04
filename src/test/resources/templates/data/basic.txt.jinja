@@ -1,0 +1,13 @@
+{% import 'macro.j2' as macro %}
+
+## Data
+
+Data Catalog: {{Catalog.label}}: {{Catalog.comment}}
+
+Data Query: {{Query.label}}: {{Query.comment}}
+
+
+The system sends a Data Query on the {{Catalog.label}} catalog. The query is defined by the following parameters: {{macro.cycler(QuestionVariable)}}
+
+The query returns {{Resource|length}} resources. The resources are:
+{{macro.enumerate_list_value(Resource)}}

@@ -9,8 +9,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-import javax.print.Doc;
-
 import edu.isi.kcap.diskproject.shared.classes.hypothesis.Hypothesis;
 import edu.isi.kcap.diskproject.shared.classes.loi.LineOfInquiry;
 import edu.isi.kcap.diskproject.shared.classes.loi.TriggeredLOI;
@@ -87,6 +85,7 @@ public class Mapper {
                 prov.document.getStatementOrBundle().add(hypothesisBundle);
                 loisBundle.setNamespace(loisDefaultNamespace);
                 prov.document.getStatementOrBundle().add(loisBundle);
+                dataBundle.setNamespace(loisDefaultNamespace);
                 prov.document.getStatementOrBundle().add(dataBundle);
                 doc = prov;
         }
@@ -504,11 +503,15 @@ public class Mapper {
 
         private Entity createDataQuery(TriggeredLOI triggeredLOI, Bundle triggerBundle) {
                 String value = triggeredLOI.getDataQuery();
-                String label = triggeredLOI.getDataQueryExplanation();
+                String label = (triggeredLOI.getDataQueryExplanation() == null)
+                                ? "The user didin't provide an explanation for the data query"
+                                : triggeredLOI.getDataQueryExplanation();
+                String comment = label;
                 Entity entity = pFactory.newEntity(
                                 prov.qn("data_query", DocumentProv.PROV_NEUROSCIENCE_TRIGGER_PREFIX),
                                 label);
                 entity.setValue(pFactory.newValue(value));
+                addCommentToEntity(entity, comment);
                 addTypeToEntity(entity, DocumentProv.DCAT_PREFIX, Constants.DCAT_QUERY_LOCALNAME);
                 dataBundle.getStatement().add(entity);
                 return entity;
@@ -779,9 +782,12 @@ public class Mapper {
                                         prov.qn(name, DocumentProv.PROV_NEUROSCIENCE_LINE_PREFIX),
                                         name);
                         // TODO: set value
+                        addTypeToEntity(variableBindingCollectionItem, DocumentProv.DISK_ONTOLOGY_PREFIX,
+                                        Constants.DISK_VARIABLE_BINDING_LOCALNAME);
                         if (value == null) {
                                 value = "";
                         }
+
                         variableBindingCollectionItem.setValue(pFactory.newValue(value));
 
                         loisBundle.getStatement().add(variableBindingCollectionItem);
@@ -865,7 +871,7 @@ public class Mapper {
                                 // Create Hypothesis variable entity
                                 Entity variableBindingEntity = createVariableBindingEntity(variableBinding,
                                                 DocumentProv.PROV_NEUROSCIENCE_HYPOTHESIS_PREFIX,
-                                                variableCollectionLocalName);
+                                                variableBinding.getVariable());
                                 /// Add the value
                                 variableBindingEntity.setValue(pFactory.newValue(variableBinding.getBinding()));
                                 // Add the type
@@ -904,18 +910,19 @@ public class Mapper {
          *
          * @param variableBinding
          * @param prefix
-         * @param parentCollectionLocalName
+         * @param parentCollectionUri
          * @return
          * @throws URISyntaxException
          */
 
         private Entity createVariableBindingEntity(VariableBinding variableBinding, String prefix,
-                        String parentCollectionLocalName) throws URISyntaxException {
+                        String parentCollectionUri) throws URISyntaxException {
                 String variable = variableBinding.getVariable();
                 String localName = Utils.getFragment(variable);
                 String binding = variableBinding.getBinding();
-                String variableLocalName = parentCollectionLocalName + '_' + localName;
-                QualifiedName qn = prov.qn(variableLocalName, prefix);
+                String parentCollectionLocalname = Utils.getFragment(parentCollectionUri);
+                String variableLocalName = parentCollectionLocalname + '_' + localName;
+                QualifiedName qn = prov.qn(variableLocalName, DocumentProv.QUESTION_ONTOLOGY_PREFIX);
                 Entity variableBindingEntity = pFactory.newEntity(qn, binding);
                 addTypeToEntity(variableBindingEntity, DocumentProv.QUESTION_ONTOLOGY_PREFIX,
                                 Constants.SQO_QUESTION_VARIABLE_LOCALNAME);
