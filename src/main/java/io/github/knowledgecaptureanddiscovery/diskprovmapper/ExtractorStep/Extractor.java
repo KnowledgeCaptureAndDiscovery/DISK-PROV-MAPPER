@@ -25,6 +25,7 @@ public class Extractor {
     this.document = document;
     ProvDocumentReader reader = new ProvDocumentReader(document);
     List<String> views = new ArrayList<String>();
+    List<String> groups = new ArrayList<String>();
     reader.bundles.forEach(bundle -> {
       views.add(bundle.getId().getLocalPart());
       System.out.println(bundle.getId().getLocalPart());
@@ -38,6 +39,7 @@ public class Extractor {
         String entityGroupId = typeQn.getUri();
         String entityGroupName = typeQn.getLocalPart();
         String entityGroupCmment = typeQn.getUri();
+        groups.add(entityGroupName);
         entityGroup.setId(entityGroupId);
         entityGroup.setName(entityGroupName);
         entityGroup.setComment(entityGroupCmment);
@@ -52,14 +54,14 @@ public class Extractor {
           String name = entity.getId().getLocalPart();
           String label = entity.getLabel().get(0).getValue();
           String comment = entity.getLabel().get(0).getValue();
-          Value value = entity.getValue();
-          ArrayList<Object> objects = new ArrayList<Object>();
-          objects.add(value);
+          Object value = null;
+          if (entity.getValue() != null)
+            value = entity.getValue().getConvertedValue();
           entityItem.setId(id);
           entityItem.setName(name);
           entityItem.setLabel(label);
           entityItem.setComment(comment);
-          entityItem.setValue(objects);
+          entityItem.setValue(value);
           entityItems.add(entityItem);
         }
         // Set the list of entity items to the group
@@ -70,6 +72,7 @@ public class Extractor {
     });
     dataNarrativeVariable.setViews(views);
     dataNarrativeVariable.setGroups(entityGroups);
+    dataNarrativeVariable.setVariableGroupsName(groups);
   }
 
   public DataNarrativeVariableSchema getDataNarrativeVariable() {

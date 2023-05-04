@@ -102,7 +102,7 @@ public class MapperTestOneTrigger {
     String bundleName = "TriggeredLOI-tvUdPs5yRiWf";
     Bundle bundle = provDocumentReader.getBundle(bundleName);
     String tloiLocalName = "TriggeredLOI-tvUdPs5yRiWf";
-    QualifiedName type = documentProv.qn(Constants.DISK_ONTOLOGY_TRIGGER_LINE_OF_INQUIRY_LOCALNAME,
+    QualifiedName type = documentProv.qn(Constants.TRIGGER_LINE_OF_INQUIRY_LOCALNAME,
         DocumentProv.DISK_ONTOLOGY_PREFIX);
     Entity tloi = provDocumentReader.getEntityByType(bundle, type);
     Assert.assertEquals(tloiLocalName, tloi.getId().getLocalPart());

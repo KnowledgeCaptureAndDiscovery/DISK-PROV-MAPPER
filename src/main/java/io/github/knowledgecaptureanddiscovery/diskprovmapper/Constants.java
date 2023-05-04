@@ -16,24 +16,21 @@ public class Constants {
         public static final String OPMW_WORKFLOW_EXECUTION_DATA_VARIABLE_LOCAL_NAME = "DataVariable";
         public static final String OPMW_WORKFLOW_EXECUTION_DATA_VARIABLE_URL = "http://www.opmw.org/ontology/DataVariable";
         // Entities types
-        public static String DISK_ONTOLOGY_TRIGGER_LINE_OF_INQUIRY_LOCALNAME = "TriggeredLineOfInquiry";
+        // Global
+        public static final String RDFS_COMMENT_LOCALNAME = "comment";
+
+        // 1. Data view related
         public static final String DCAT_DATASET_LOCALNAME = "Dataset";
         public static final String DCAT_CATALOG_LOCALNAME = "Catalog";
         public static final String DCAT_QUERY_LOCALNAME = "Query";
         public static final String DCAT_RESOURCE_LOCALNAME = "Resource";
-        public static final String DCAT_DATASET_URL = "http://www.w3.org/ns/dcat#Dataset";
-        public static final String DCAT_CATALOG_URL = "http://www.w3.org/ns/dcat#Catalog";
-        public static final String DCAT_RESOURCE_URL = "http://www.w3.org/ns/dcat#Resource";
-
-        public static final String SQO_PREFIX = "sqo";
-        public static final String SQO_NS = "https://w3id.org/sqo";
-
-        public static final String SQO_RESOURCE_PREFIX = "sqo-resource";
-        public static final String SQO_RESOURCE_NS = "https://w3id.org/sqo/resource/";
-
+        // 2. Framing question related
         public static final String SQO_QUESTION_LOCALNAME = "Question";
         public static final String SQO_QUESTION_VARIABLE_LOCALNAME = "QuestionVariable";
-        public static final String SQO_HYPOTHESIS_LOCALNAME = "Hypothesis";
+        public static final String SQO_QUESTION_CATEGORY_LOCALNAME = "QuestionCategory";
+        public static final String DISK_HYPOTHESIS_LOCALNAME = "Hypothesis";
+
+        public static final String TRIGGER_LINE_OF_INQUIRY_LOCALNAME = "TriggeredLineOfInquiry";
         // Entity local names
 
         // BUNDLE NAMES

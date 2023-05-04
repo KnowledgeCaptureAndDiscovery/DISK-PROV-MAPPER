@@ -5,6 +5,19 @@
     "hypothesisBundle",
     "hypothesisBundle"
   ],
+  "variableGroupsName": [
+    "TriggeredLineOfInquiry",
+    "Dataset",
+    "DataVariable",
+    "Resource",
+    "ParameterVariable",
+    "WorkflowExecutionArtifact",
+    "ConfidenceReport",
+    "Question",
+    "QuestionVariable",
+    "QuestionVariable",
+    "Query"
+  ],
   "groups": [
     {
       "id": "http://disk-project.org/ontology/disk#TriggeredLineOfInquiry",
@@ -67,18 +80,18 @@
               "value": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4fe5c4_1000BRAINS_Significant_GWAS.csv",
               "type": {
                 "prefix": "xsd",
-                "unescapedLocalPart": "string",
                 "localPart": "string",
+                "namespaceURI": "http://www.w3.org/2001/XMLSchema#",
                 "uri": "http://www.w3.org/2001/XMLSchema#string",
-                "namespaceURI": "http://www.w3.org/2001/XMLSchema#"
+                "unescapedLocalPart": "string"
               },
               "kind": "PROV_VALUE",
               "elementName": {
                 "prefix": "prov",
-                "unescapedLocalPart": "value",
                 "localPart": "value",
+                "namespaceURI": "http://www.w3.org/ns/prov#",
                 "uri": "http://www.w3.org/ns/prov#value",
-                "namespaceURI": "http://www.w3.org/ns/prov#"
+                "unescapedLocalPart": "value"
               },
               "convertedValue": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4fe5c4_1000BRAINS_Significant_GWAS.csv"
             }
@@ -94,18 +107,18 @@
               "value": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4815c5_ADNI1_Significant_GWAS.csv",
               "type": {
                 "prefix": "xsd",
-                "unescapedLocalPart": "string",
                 "localPart": "string",
+                "namespaceURI": "http://www.w3.org/2001/XMLSchema#",
                 "uri": "http://www.w3.org/2001/XMLSchema#string",
-                "namespaceURI": "http://www.w3.org/2001/XMLSchema#"
+                "unescapedLocalPart": "string"
               },
               "kind": "PROV_VALUE",
               "elementName": {
                 "prefix": "prov",
-                "unescapedLocalPart": "value",
                 "localPart": "value",
+                "namespaceURI": "http://www.w3.org/ns/prov#",
                 "uri": "http://www.w3.org/ns/prov#value",
-                "namespaceURI": "http://www.w3.org/ns/prov#"
+                "unescapedLocalPart": "value"
               },
               "convertedValue": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4815c5_ADNI1_Significant_GWAS.csv"
             }
@@ -121,18 +134,18 @@
               "value": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4a85c5_ADNI2GO_Significant_GWAS.csv",
               "type": {
                 "prefix": "xsd",
-                "unescapedLocalPart": "string",
                 "localPart": "string",
+                "namespaceURI": "http://www.w3.org/2001/XMLSchema#",
                 "uri": "http://www.w3.org/2001/XMLSchema#string",
-                "namespaceURI": "http://www.w3.org/2001/XMLSchema#"
+                "unescapedLocalPart": "string"
               },
               "kind": "PROV_VALUE",
               "elementName": {
                 "prefix": "prov",
-                "unescapedLocalPart": "value",
                 "localPart": "value",
+                "namespaceURI": "http://www.w3.org/ns/prov#",
                 "uri": "http://www.w3.org/ns/prov#value",
-                "namespaceURI": "http://www.w3.org/ns/prov#"
+                "unescapedLocalPart": "value"
               },
               "convertedValue": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4a85c5_ADNI2GO_Significant_GWAS.csv"
             }
@@ -148,18 +161,18 @@
               "value": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4bf5c6_ALSPACa_Significant_GWAS.csv",
               "type": {
                 "prefix": "xsd",
-                "unescapedLocalPart": "string",
                 "localPart": "string",
+                "namespaceURI": "http://www.w3.org/2001/XMLSchema#",
                 "uri": "http://www.w3.org/2001/XMLSchema#string",
-                "namespaceURI": "http://www.w3.org/2001/XMLSchema#"
+                "unescapedLocalPart": "string"
               },
               "kind": "PROV_VALUE",
               "elementName": {
                 "prefix": "prov",
-                "unescapedLocalPart": "value",
                 "localPart": "value",
+                "namespaceURI": "http://www.w3.org/ns/prov#",
                 "uri": "http://www.w3.org/ns/prov#value",
-                "namespaceURI": "http://www.w3.org/ns/prov#"
+                "unescapedLocalPart": "value"
               },
               "convertedValue": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4bf5c6_ALSPACa_Significant_GWAS.csv"
             }
@@ -175,18 +188,18 @@
               "value": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA47a5c5_ASRB_Significant_GWAS.csv",
               "type": {
                 "prefix": "xsd",
-                "unescapedLocalPart": "string",
                 "localPart": "string",
+                "namespaceURI": "http://www.w3.org/2001/XMLSchema#",
                 "uri": "http://www.w3.org/2001/XMLSchema#string",
-                "namespaceURI": "http://www.w3.org/2001/XMLSchema#"
+                "unescapedLocalPart": "string"
               },
               "kind": "PROV_VALUE",
               "elementName": {
                 "prefix": "prov",
-                "unescapedLocalPart": "value",
                 "localPart": "value",
+                "namespaceURI": "http://www.w3.org/ns/prov#",
                 "uri": "http://www.w3.org/ns/prov#value",
-                "namespaceURI": "http://www.w3.org/ns/prov#"
+                "unescapedLocalPart": "value"
               },
               "convertedValue": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA47a5c5_ASRB_Significant_GWAS.csv"
             }
@@ -202,18 +215,18 @@
               "value": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4aa5c5_BETULA_Significant_GWAS.csv",
               "type": {
                 "prefix": "xsd",
-                "unescapedLocalPart": "string",
                 "localPart": "string",
+                "namespaceURI": "http://www.w3.org/2001/XMLSchema#",
                 "uri": "http://www.w3.org/2001/XMLSchema#string",
-                "namespaceURI": "http://www.w3.org/2001/XMLSchema#"
+                "unescapedLocalPart": "string"
               },
               "kind": "PROV_VALUE",
               "elementName": {
                 "prefix": "prov",
-                "unescapedLocalPart": "value",
                 "localPart": "value",
+                "namespaceURI": "http://www.w3.org/ns/prov#",
                 "uri": "http://www.w3.org/ns/prov#value",
-                "namespaceURI": "http://www.w3.org/ns/prov#"
+                "unescapedLocalPart": "value"
               },
               "convertedValue": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4aa5c5_BETULA_Significant_GWAS.csv"
             }
@@ -229,18 +242,18 @@
               "value": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4945c5_BIG_Significant_GWAS.csv",
               "type": {
                 "prefix": "xsd",
-                "unescapedLocalPart": "string",
                 "localPart": "string",
+                "namespaceURI": "http://www.w3.org/2001/XMLSchema#",
                 "uri": "http://www.w3.org/2001/XMLSchema#string",
-                "namespaceURI": "http://www.w3.org/2001/XMLSchema#"
+                "unescapedLocalPart": "string"
               },
               "kind": "PROV_VALUE",
               "elementName": {
                 "prefix": "prov",
-                "unescapedLocalPart": "value",
                 "localPart": "value",
+                "namespaceURI": "http://www.w3.org/ns/prov#",
                 "uri": "http://www.w3.org/ns/prov#value",
-                "namespaceURI": "http://www.w3.org/ns/prov#"
+                "unescapedLocalPart": "value"
               },
               "convertedValue": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4945c5_BIG_Significant_GWAS.csv"
             }
@@ -256,18 +269,18 @@
               "value": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA5305c4_BIG-PsychChip_Significant_GWAS.csv",
               "type": {
                 "prefix": "xsd",
-                "unescapedLocalPart": "string",
                 "localPart": "string",
+                "namespaceURI": "http://www.w3.org/2001/XMLSchema#",
                 "uri": "http://www.w3.org/2001/XMLSchema#string",
-                "namespaceURI": "http://www.w3.org/2001/XMLSchema#"
+                "unescapedLocalPart": "string"
               },
               "kind": "PROV_VALUE",
               "elementName": {
                 "prefix": "prov",
-                "unescapedLocalPart": "value",
                 "localPart": "value",
+                "namespaceURI": "http://www.w3.org/ns/prov#",
                 "uri": "http://www.w3.org/ns/prov#value",
-                "namespaceURI": "http://www.w3.org/ns/prov#"
+                "unescapedLocalPart": "value"
               },
               "convertedValue": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA5305c4_BIG-PsychChip_Significant_GWAS.csv"
             }
@@ -283,18 +296,18 @@
               "value": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4c45c5_BONN_Significant_GWAS.csv",
               "type": {
                 "prefix": "xsd",
-                "unescapedLocalPart": "string",
                 "localPart": "string",
+                "namespaceURI": "http://www.w3.org/2001/XMLSchema#",
                 "uri": "http://www.w3.org/2001/XMLSchema#string",
-                "namespaceURI": "http://www.w3.org/2001/XMLSchema#"
+                "unescapedLocalPart": "string"
               },
               "kind": "PROV_VALUE",
               "elementName": {
                 "prefix": "prov",
-                "unescapedLocalPart": "value",
                 "localPart": "value",
+                "namespaceURI": "http://www.w3.org/ns/prov#",
                 "uri": "http://www.w3.org/ns/prov#value",
-                "namespaceURI": "http://www.w3.org/ns/prov#"
+                "unescapedLocalPart": "value"
               },
               "convertedValue": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4c45c5_BONN_Significant_GWAS.csv"
             }
@@ -310,18 +323,18 @@
               "value": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4ad5c5_BrainScale_Significant_GWAS.csv",
               "type": {
                 "prefix": "xsd",
-                "unescapedLocalPart": "string",
                 "localPart": "string",
+                "namespaceURI": "http://www.w3.org/2001/XMLSchema#",
                 "uri": "http://www.w3.org/2001/XMLSchema#string",
-                "namespaceURI": "http://www.w3.org/2001/XMLSchema#"
+                "unescapedLocalPart": "string"
               },
               "kind": "PROV_VALUE",
               "elementName": {
                 "prefix": "prov",
-                "unescapedLocalPart": "value",
                 "localPart": "value",
+                "namespaceURI": "http://www.w3.org/ns/prov#",
                 "uri": "http://www.w3.org/ns/prov#value",
-                "namespaceURI": "http://www.w3.org/ns/prov#"
+                "unescapedLocalPart": "value"
               },
               "convertedValue": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#SHA4ad5c5_BrainScale_Significant_GWAS.csv"
             }
@@ -345,18 +358,18 @@
               "value": "Precentral",
               "type": {
                 "prefix": "xsd",
-                "unescapedLocalPart": "string",
                 "localPart": "string",
+                "namespaceURI": "http://www.w3.org/2001/XMLSchema#",
                 "uri": "http://www.w3.org/2001/XMLSchema#string",
-                "namespaceURI": "http://www.w3.org/2001/XMLSchema#"
+                "unescapedLocalPart": "string"
               },
               "kind": "PROV_VALUE",
               "elementName": {
                 "prefix": "prov",
-                "unescapedLocalPart": "value",
                 "localPart": "value",
+                "namespaceURI": "http://www.w3.org/ns/prov#",
                 "uri": "http://www.w3.org/ns/prov#value",
-                "namespaceURI": "http://www.w3.org/ns/prov#"
+                "unescapedLocalPart": "value"
               },
               "convertedValue": "Precentral"
             }
@@ -372,18 +385,18 @@
               "value": "HasAge Mean (E)",
               "type": {
                 "prefix": "xsd",
-                "unescapedLocalPart": "string",
                 "localPart": "string",
+                "namespaceURI": "http://www.w3.org/2001/XMLSchema#",
                 "uri": "http://www.w3.org/2001/XMLSchema#string",
-                "namespaceURI": "http://www.w3.org/2001/XMLSchema#"
+                "unescapedLocalPart": "string"
               },
               "kind": "PROV_VALUE",
               "elementName": {
                 "prefix": "prov",
-                "unescapedLocalPart": "value",
                 "localPart": "value",
+                "namespaceURI": "http://www.w3.org/ns/prov#",
                 "uri": "http://www.w3.org/ns/prov#value",
-                "namespaceURI": "http://www.w3.org/ns/prov#"
+                "unescapedLocalPart": "value"
               },
               "convertedValue": "HasAge Mean (E)"
             }
@@ -399,18 +412,18 @@
               "value": "[67.3, 74.8, 72.4, 19.6, 38.5, 62.4, 22.6, 22.5, 38.2, 10]",
               "type": {
                 "prefix": "xsd",
-                "unescapedLocalPart": "string",
                 "localPart": "string",
+                "namespaceURI": "http://www.w3.org/2001/XMLSchema#",
                 "uri": "http://www.w3.org/2001/XMLSchema#string",
-                "namespaceURI": "http://www.w3.org/2001/XMLSchema#"
+                "unescapedLocalPart": "string"
               },
               "kind": "PROV_VALUE",
               "elementName": {
                 "prefix": "prov",
-                "unescapedLocalPart": "value",
                 "localPart": "value",
+                "namespaceURI": "http://www.w3.org/ns/prov#",
                 "uri": "http://www.w3.org/ns/prov#value",
-                "namespaceURI": "http://www.w3.org/ns/prov#"
+                "unescapedLocalPart": "value"
               },
               "convertedValue": "[67.3, 74.8, 72.4, 19.6, 38.5, 62.4, 22.6, 22.5, 38.2, 10]"
             }
@@ -426,18 +439,18 @@
               "value": "rs1080066",
               "type": {
                 "prefix": "xsd",
-                "unescapedLocalPart": "string",
                 "localPart": "string",
+                "namespaceURI": "http://www.w3.org/2001/XMLSchema#",
                 "uri": "http://www.w3.org/2001/XMLSchema#string",
-                "namespaceURI": "http://www.w3.org/2001/XMLSchema#"
+                "unescapedLocalPart": "string"
               },
               "kind": "PROV_VALUE",
               "elementName": {
                 "prefix": "prov",
-                "unescapedLocalPart": "value",
                 "localPart": "value",
+                "namespaceURI": "http://www.w3.org/ns/prov#",
                 "uri": "http://www.w3.org/ns/prov#value",
-                "namespaceURI": "http://www.w3.org/ns/prov#"
+                "unescapedLocalPart": "value"
               },
               "convertedValue": "rs1080066"
             }
@@ -453,18 +466,18 @@
               "value": "SA",
               "type": {
                 "prefix": "xsd",
-                "unescapedLocalPart": "string",
                 "localPart": "string",
+                "namespaceURI": "http://www.w3.org/2001/XMLSchema#",
                 "uri": "http://www.w3.org/2001/XMLSchema#string",
-                "namespaceURI": "http://www.w3.org/2001/XMLSchema#"
+                "unescapedLocalPart": "string"
               },
               "kind": "PROV_VALUE",
               "elementName": {
                 "prefix": "prov",
-                "unescapedLocalPart": "value",
                 "localPart": "value",
+                "namespaceURI": "http://www.w3.org/ns/prov#",
                 "uri": "http://www.w3.org/ns/prov#value",
-                "namespaceURI": "http://www.w3.org/ns/prov#"
+                "unescapedLocalPart": "value"
               },
               "convertedValue": "SA"
             }
@@ -488,18 +501,18 @@
               "value": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#p_value-dk0ar4arwuggp9ce364frl6dh",
               "type": {
                 "prefix": "xsd",
-                "unescapedLocalPart": "string",
                 "localPart": "string",
+                "namespaceURI": "http://www.w3.org/2001/XMLSchema#",
                 "uri": "http://www.w3.org/2001/XMLSchema#string",
-                "namespaceURI": "http://www.w3.org/2001/XMLSchema#"
+                "unescapedLocalPart": "string"
               },
               "kind": "PROV_VALUE",
               "elementName": {
                 "prefix": "prov",
-                "unescapedLocalPart": "value",
                 "localPart": "value",
+                "namespaceURI": "http://www.w3.org/ns/prov#",
                 "uri": "http://www.w3.org/ns/prov#value",
-                "namespaceURI": "http://www.w3.org/ns/prov#"
+                "unescapedLocalPart": "value"
               },
               "convertedValue": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#p_value-dk0ar4arwuggp9ce364frl6dh"
             }
@@ -515,18 +528,18 @@
               "value": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#shiny_visualization-9z55v2d929ft5xrwu3hlf5y5t",
               "type": {
                 "prefix": "xsd",
-                "unescapedLocalPart": "string",
                 "localPart": "string",
+                "namespaceURI": "http://www.w3.org/2001/XMLSchema#",
                 "uri": "http://www.w3.org/2001/XMLSchema#string",
-                "namespaceURI": "http://www.w3.org/2001/XMLSchema#"
+                "unescapedLocalPart": "string"
               },
               "kind": "PROV_VALUE",
               "elementName": {
                 "prefix": "prov",
-                "unescapedLocalPart": "value",
                 "localPart": "value",
+                "namespaceURI": "http://www.w3.org/ns/prov#",
                 "uri": "http://www.w3.org/ns/prov#value",
-                "namespaceURI": "http://www.w3.org/ns/prov#"
+                "unescapedLocalPart": "value"
               },
               "convertedValue": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#shiny_visualization-9z55v2d929ft5xrwu3hlf5y5t"
             }
@@ -542,18 +555,18 @@
               "value": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#brain_visualization-99ah4oc12zrvsbzuzjs07en30",
               "type": {
                 "prefix": "xsd",
-                "unescapedLocalPart": "string",
                 "localPart": "string",
+                "namespaceURI": "http://www.w3.org/2001/XMLSchema#",
                 "uri": "http://www.w3.org/2001/XMLSchema#string",
-                "namespaceURI": "http://www.w3.org/2001/XMLSchema#"
+                "unescapedLocalPart": "string"
               },
               "kind": "PROV_VALUE",
               "elementName": {
                 "prefix": "prov",
-                "unescapedLocalPart": "value",
                 "localPart": "value",
+                "namespaceURI": "http://www.w3.org/ns/prov#",
                 "uri": "http://www.w3.org/ns/prov#value",
-                "namespaceURI": "http://www.w3.org/ns/prov#"
+                "unescapedLocalPart": "value"
               },
               "convertedValue": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#brain_visualization-99ah4oc12zrvsbzuzjs07en30"
             }
@@ -569,18 +582,18 @@
               "value": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#age_vs_allele-18qg40ugspzylrv3cedr4hp08",
               "type": {
                 "prefix": "xsd",
-                "unescapedLocalPart": "string",
                 "localPart": "string",
+                "namespaceURI": "http://www.w3.org/2001/XMLSchema#",
                 "uri": "http://www.w3.org/2001/XMLSchema#string",
-                "namespaceURI": "http://www.w3.org/2001/XMLSchema#"
+                "unescapedLocalPart": "string"
               },
               "kind": "PROV_VALUE",
               "elementName": {
                 "prefix": "prov",
-                "unescapedLocalPart": "value",
                 "localPart": "value",
+                "namespaceURI": "http://www.w3.org/ns/prov#",
                 "uri": "http://www.w3.org/ns/prov#value",
-                "namespaceURI": "http://www.w3.org/ns/prov#"
+                "unescapedLocalPart": "value"
               },
               "convertedValue": "http://localhost:8080/wings-portal/export/users/admin/Enigma/data/library.owl#age_vs_allele-18qg40ugspzylrv3cedr4hp08"
             }
@@ -604,20 +617,55 @@
               "value": "0.0",
               "type": {
                 "prefix": "xsd",
-                "unescapedLocalPart": "string",
                 "localPart": "string",
+                "namespaceURI": "http://www.w3.org/2001/XMLSchema#",
                 "uri": "http://www.w3.org/2001/XMLSchema#string",
-                "namespaceURI": "http://www.w3.org/2001/XMLSchema#"
+                "unescapedLocalPart": "string"
               },
               "kind": "PROV_VALUE",
               "elementName": {
                 "prefix": "prov",
-                "unescapedLocalPart": "value",
                 "localPart": "value",
+                "namespaceURI": "http://www.w3.org/ns/prov#",
                 "uri": "http://www.w3.org/ns/prov#value",
-                "namespaceURI": "http://www.w3.org/ns/prov#"
+                "unescapedLocalPart": "value"
               },
               "convertedValue": "0.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "http://disk-project.org/ontology/disk#Question",
+      "name": "Question",
+      "comment": "http://disk-project.org/ontology/disk#Question",
+      "view": "framingBundle",
+      "entities": [
+        {
+          "id": "http://provenance.isi.edu/disk/neuro/hypothesis/Hypothesis-4CGdVLyttD07",
+          "name": "Hypothesis-4CGdVLyttD07",
+          "label": "Is the effect size of rs1080066 on Surface Area of Precentral associated with Percentage of Females for cohorts of European ancestry",
+          "comment": "Is the effect size of rs1080066 on Surface Area of Precentral associated with Percentage of Females for cohorts of European ancestry",
+          "value": [
+            {
+              "value": "Is the effect size of rs1080066 on Surface Area of Precentral associated with Percentage of Females for cohorts of European ancestry",
+              "type": {
+                "prefix": "xsd",
+                "localPart": "string",
+                "namespaceURI": "http://www.w3.org/2001/XMLSchema#",
+                "uri": "http://www.w3.org/2001/XMLSchema#string",
+                "unescapedLocalPart": "string"
+              },
+              "kind": "PROV_VALUE",
+              "elementName": {
+                "prefix": "prov",
+                "localPart": "value",
+                "namespaceURI": "http://www.w3.org/ns/prov#",
+                "uri": "http://www.w3.org/ns/prov#value",
+                "unescapedLocalPart": "value"
+              },
+              "convertedValue": "Is the effect size of rs1080066 on Surface Area of Precentral associated with Percentage of Females for cohorts of European ancestry"
             }
           ]
         }
@@ -663,15 +711,7 @@
           "label": "?EthnicGroup",
           "comment": "?EthnicGroup",
           "value": [null]
-        }
-      ]
-    },
-    {
-      "id": "https://w3id.org/sqo#QuestionVariable",
-      "name": "QuestionVariable",
-      "comment": "https://w3id.org/sqo#QuestionVariable",
-      "view": "hypothesisBundle",
-      "entities": [
+        },
         {
           "id": "http://provenance.isi.edu/disk/neuro/hypothesis/Hypothesis-4CGdVLyttD07_hypothesisVariablesBinding_genotype",
           "name": "Hypothesis-4CGdVLyttD07_hypothesisVariablesBinding_genotype",
@@ -682,18 +722,18 @@
               "value": "rs1080066",
               "type": {
                 "prefix": "xsd",
-                "unescapedLocalPart": "string",
                 "localPart": "string",
+                "namespaceURI": "http://www.w3.org/2001/XMLSchema#",
                 "uri": "http://www.w3.org/2001/XMLSchema#string",
-                "namespaceURI": "http://www.w3.org/2001/XMLSchema#"
+                "unescapedLocalPart": "string"
               },
               "kind": "PROV_VALUE",
               "elementName": {
                 "prefix": "prov",
-                "unescapedLocalPart": "value",
                 "localPart": "value",
+                "namespaceURI": "http://www.w3.org/ns/prov#",
                 "uri": "http://www.w3.org/ns/prov#value",
-                "namespaceURI": "http://www.w3.org/ns/prov#"
+                "unescapedLocalPart": "value"
               },
               "convertedValue": "rs1080066"
             }
@@ -709,18 +749,18 @@
               "value": "SA",
               "type": {
                 "prefix": "xsd",
-                "unescapedLocalPart": "string",
                 "localPart": "string",
+                "namespaceURI": "http://www.w3.org/2001/XMLSchema#",
                 "uri": "http://www.w3.org/2001/XMLSchema#string",
-                "namespaceURI": "http://www.w3.org/2001/XMLSchema#"
+                "unescapedLocalPart": "string"
               },
               "kind": "PROV_VALUE",
               "elementName": {
                 "prefix": "prov",
-                "unescapedLocalPart": "value",
                 "localPart": "value",
+                "namespaceURI": "http://www.w3.org/ns/prov#",
                 "uri": "http://www.w3.org/ns/prov#value",
-                "namespaceURI": "http://www.w3.org/ns/prov#"
+                "unescapedLocalPart": "value"
               },
               "convertedValue": "SA"
             }
@@ -736,18 +776,18 @@
               "value": "Precentral",
               "type": {
                 "prefix": "xsd",
-                "unescapedLocalPart": "string",
                 "localPart": "string",
+                "namespaceURI": "http://www.w3.org/2001/XMLSchema#",
                 "uri": "http://www.w3.org/2001/XMLSchema#string",
-                "namespaceURI": "http://www.w3.org/2001/XMLSchema#"
+                "unescapedLocalPart": "string"
               },
               "kind": "PROV_VALUE",
               "elementName": {
                 "prefix": "prov",
-                "unescapedLocalPart": "value",
                 "localPart": "value",
+                "namespaceURI": "http://www.w3.org/ns/prov#",
                 "uri": "http://www.w3.org/ns/prov#value",
-                "namespaceURI": "http://www.w3.org/ns/prov#"
+                "unescapedLocalPart": "value"
               },
               "convertedValue": "Precentral"
             }
@@ -763,18 +803,18 @@
               "value": "http://localhost:8080/enigma_dev/Special:URIResolver/Property-3AHasNumberOfFemaleSex_-28E-29",
               "type": {
                 "prefix": "xsd",
-                "unescapedLocalPart": "string",
                 "localPart": "string",
+                "namespaceURI": "http://www.w3.org/2001/XMLSchema#",
                 "uri": "http://www.w3.org/2001/XMLSchema#string",
-                "namespaceURI": "http://www.w3.org/2001/XMLSchema#"
+                "unescapedLocalPart": "string"
               },
               "kind": "PROV_VALUE",
               "elementName": {
                 "prefix": "prov",
-                "unescapedLocalPart": "value",
                 "localPart": "value",
+                "namespaceURI": "http://www.w3.org/ns/prov#",
                 "uri": "http://www.w3.org/ns/prov#value",
-                "namespaceURI": "http://www.w3.org/ns/prov#"
+                "unescapedLocalPart": "value"
               },
               "convertedValue": "http://localhost:8080/enigma_dev/Special:URIResolver/Property-3AHasNumberOfFemaleSex_-28E-29"
             }
@@ -790,18 +830,18 @@
               "value": "European",
               "type": {
                 "prefix": "xsd",
-                "unescapedLocalPart": "string",
                 "localPart": "string",
+                "namespaceURI": "http://www.w3.org/2001/XMLSchema#",
                 "uri": "http://www.w3.org/2001/XMLSchema#string",
-                "namespaceURI": "http://www.w3.org/2001/XMLSchema#"
+                "unescapedLocalPart": "string"
               },
               "kind": "PROV_VALUE",
               "elementName": {
                 "prefix": "prov",
-                "unescapedLocalPart": "value",
                 "localPart": "value",
+                "namespaceURI": "http://www.w3.org/ns/prov#",
                 "uri": "http://www.w3.org/ns/prov#value",
-                "namespaceURI": "http://www.w3.org/ns/prov#"
+                "unescapedLocalPart": "value"
               },
               "convertedValue": "European"
             }
@@ -813,7 +853,7 @@
       "id": "http://disk-project.org/ontology/disk#QuestionVariable",
       "name": "QuestionVariable",
       "comment": "http://disk-project.org/ontology/disk#QuestionVariable",
-      "view": "hypothesisBundle",
+      "view": "framingBundle",
       "entities": [
         {
           "id": "http://provenance.isi.edu/disk/neuro/hypothesis/Hypothesis-4CGdVLyttD07_hypothesisVariablesBinding_genotype",
@@ -825,18 +865,18 @@
               "value": "rs1080066",
               "type": {
                 "prefix": "xsd",
-                "unescapedLocalPart": "string",
                 "localPart": "string",
+                "namespaceURI": "http://www.w3.org/2001/XMLSchema#",
                 "uri": "http://www.w3.org/2001/XMLSchema#string",
-                "namespaceURI": "http://www.w3.org/2001/XMLSchema#"
+                "unescapedLocalPart": "string"
               },
               "kind": "PROV_VALUE",
               "elementName": {
                 "prefix": "prov",
-                "unescapedLocalPart": "value",
                 "localPart": "value",
+                "namespaceURI": "http://www.w3.org/ns/prov#",
                 "uri": "http://www.w3.org/ns/prov#value",
-                "namespaceURI": "http://www.w3.org/ns/prov#"
+                "unescapedLocalPart": "value"
               },
               "convertedValue": "rs1080066"
             }
@@ -852,18 +892,18 @@
               "value": "SA",
               "type": {
                 "prefix": "xsd",
-                "unescapedLocalPart": "string",
                 "localPart": "string",
+                "namespaceURI": "http://www.w3.org/2001/XMLSchema#",
                 "uri": "http://www.w3.org/2001/XMLSchema#string",
-                "namespaceURI": "http://www.w3.org/2001/XMLSchema#"
+                "unescapedLocalPart": "string"
               },
               "kind": "PROV_VALUE",
               "elementName": {
                 "prefix": "prov",
-                "unescapedLocalPart": "value",
                 "localPart": "value",
+                "namespaceURI": "http://www.w3.org/ns/prov#",
                 "uri": "http://www.w3.org/ns/prov#value",
-                "namespaceURI": "http://www.w3.org/ns/prov#"
+                "unescapedLocalPart": "value"
               },
               "convertedValue": "SA"
             }
@@ -879,18 +919,18 @@
               "value": "Precentral",
               "type": {
                 "prefix": "xsd",
-                "unescapedLocalPart": "string",
                 "localPart": "string",
+                "namespaceURI": "http://www.w3.org/2001/XMLSchema#",
                 "uri": "http://www.w3.org/2001/XMLSchema#string",
-                "namespaceURI": "http://www.w3.org/2001/XMLSchema#"
+                "unescapedLocalPart": "string"
               },
               "kind": "PROV_VALUE",
               "elementName": {
                 "prefix": "prov",
-                "unescapedLocalPart": "value",
                 "localPart": "value",
+                "namespaceURI": "http://www.w3.org/ns/prov#",
                 "uri": "http://www.w3.org/ns/prov#value",
-                "namespaceURI": "http://www.w3.org/ns/prov#"
+                "unescapedLocalPart": "value"
               },
               "convertedValue": "Precentral"
             }
@@ -906,18 +946,18 @@
               "value": "http://localhost:8080/enigma_dev/Special:URIResolver/Property-3AHasNumberOfFemaleSex_-28E-29",
               "type": {
                 "prefix": "xsd",
-                "unescapedLocalPart": "string",
                 "localPart": "string",
+                "namespaceURI": "http://www.w3.org/2001/XMLSchema#",
                 "uri": "http://www.w3.org/2001/XMLSchema#string",
-                "namespaceURI": "http://www.w3.org/2001/XMLSchema#"
+                "unescapedLocalPart": "string"
               },
               "kind": "PROV_VALUE",
               "elementName": {
                 "prefix": "prov",
-                "unescapedLocalPart": "value",
                 "localPart": "value",
+                "namespaceURI": "http://www.w3.org/ns/prov#",
                 "uri": "http://www.w3.org/ns/prov#value",
-                "namespaceURI": "http://www.w3.org/ns/prov#"
+                "unescapedLocalPart": "value"
               },
               "convertedValue": "http://localhost:8080/enigma_dev/Special:URIResolver/Property-3AHasNumberOfFemaleSex_-28E-29"
             }
@@ -933,18 +973,18 @@
               "value": "European",
               "type": {
                 "prefix": "xsd",
-                "unescapedLocalPart": "string",
                 "localPart": "string",
+                "namespaceURI": "http://www.w3.org/2001/XMLSchema#",
                 "uri": "http://www.w3.org/2001/XMLSchema#string",
-                "namespaceURI": "http://www.w3.org/2001/XMLSchema#"
+                "unescapedLocalPart": "string"
               },
               "kind": "PROV_VALUE",
               "elementName": {
                 "prefix": "prov",
-                "unescapedLocalPart": "value",
                 "localPart": "value",
+                "namespaceURI": "http://www.w3.org/ns/prov#",
                 "uri": "http://www.w3.org/ns/prov#value",
-                "namespaceURI": "http://www.w3.org/ns/prov#"
+                "unescapedLocalPart": "value"
               },
               "convertedValue": "European"
             }
@@ -968,18 +1008,18 @@
               "value": "?project a ?projectClass .\n?projectClass rdfs:label \"Project (E)\" .\n?project ?hasCohort ?Cohorts .\n?hasCohort rdfs:label \"HasCohort (E)\" .\n?Cohorts ?hasCohortProj ?CohortProjects .\n?hasCohortProj rdfs:label \"HasCohortProject (E)\" .\n?CohortProjects ?hasProjectResults ?ProjectResults .\n?hasProjectResults rdfs:label \"HasProjectResults (E)\" .\n?ProjectResults ?regionprop \"Precentral\" .\n?regionprop rdfs:label \"BrainRegion\" .\n?ProjectResults ?traitprop \"SA\" .\n?traitprop rdfs:label \"Trait\" .\n?ProjectResults ?snpprop \"rs1080066\" .\n?snpprop rdfs:label \"SNP\" .\n?ProjectResults ?contenturlProp ?CohortData .\n?contenturlProp rdfs:label \"HasContentUrl (E)\" .\n#Demographic\noptional {\n?participantsProp rdfs:label \"HasNumberOfParticipants (E)\" .\n?CohortProjects ?participantsProp ?nParticipants\n}\n?CohortProjects <http://localhost:8080/enigma_dev/Special:URIResolver/Property-3AHasAge_Mean_-28E-29> ?demographicValue .\n<http://localhost:8080/enigma_dev/Special:URIResolver/Property-3AHasAge_Mean_-28E-29> rdfs:label ?DemographicLabel .\nBIND(\nIF(?DemographicLabel = \"HasNumberOfFemaleSex (E)\" || ?DemographicLabel = \"HasNumberOfMaleSex (E)\" ,\n(xsd:integer(?demographicValue)/xsd:integer(?nParticipants)),\n?demographicValue)\nas ?realDemographic)\n",
               "type": {
                 "prefix": "xsd",
-                "unescapedLocalPart": "string",
                 "localPart": "string",
+                "namespaceURI": "http://www.w3.org/2001/XMLSchema#",
                 "uri": "http://www.w3.org/2001/XMLSchema#string",
-                "namespaceURI": "http://www.w3.org/2001/XMLSchema#"
+                "unescapedLocalPart": "string"
               },
               "kind": "PROV_VALUE",
               "elementName": {
                 "prefix": "prov",
-                "unescapedLocalPart": "value",
                 "localPart": "value",
+                "namespaceURI": "http://www.w3.org/ns/prov#",
                 "uri": "http://www.w3.org/ns/prov#value",
-                "namespaceURI": "http://www.w3.org/ns/prov#"
+                "unescapedLocalPart": "value"
               },
               "convertedValue": "?project a ?projectClass .\n?projectClass rdfs:label \"Project (E)\" .\n?project ?hasCohort ?Cohorts .\n?hasCohort rdfs:label \"HasCohort (E)\" .\n?Cohorts ?hasCohortProj ?CohortProjects .\n?hasCohortProj rdfs:label \"HasCohortProject (E)\" .\n?CohortProjects ?hasProjectResults ?ProjectResults .\n?hasProjectResults rdfs:label \"HasProjectResults (E)\" .\n?ProjectResults ?regionprop \"Precentral\" .\n?regionprop rdfs:label \"BrainRegion\" .\n?ProjectResults ?traitprop \"SA\" .\n?traitprop rdfs:label \"Trait\" .\n?ProjectResults ?snpprop \"rs1080066\" .\n?snpprop rdfs:label \"SNP\" .\n?ProjectResults ?contenturlProp ?CohortData .\n?contenturlProp rdfs:label \"HasContentUrl (E)\" .\n#Demographic\noptional {\n?participantsProp rdfs:label \"HasNumberOfParticipants (E)\" .\n?CohortProjects ?participantsProp ?nParticipants\n}\n?CohortProjects <http://localhost:8080/enigma_dev/Special:URIResolver/Property-3AHasAge_Mean_-28E-29> ?demographicValue .\n<http://localhost:8080/enigma_dev/Special:URIResolver/Property-3AHasAge_Mean_-28E-29> rdfs:label ?DemographicLabel .\nBIND(\nIF(?DemographicLabel = \"HasNumberOfFemaleSex (E)\" || ?DemographicLabel = \"HasNumberOfMaleSex (E)\" ,\n(xsd:integer(?demographicValue)/xsd:integer(?nParticipants)),\n?demographicValue)\nas ?realDemographic)\n"
             }

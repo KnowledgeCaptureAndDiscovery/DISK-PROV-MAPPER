@@ -16,11 +16,17 @@ import edu.isi.kcap.diskproject.shared.classes.hypothesis.Hypothesis;
 import edu.isi.kcap.diskproject.shared.classes.loi.LineOfInquiry;
 import edu.isi.kcap.diskproject.shared.classes.loi.TriggeredLOI;
 import edu.isi.kcap.diskproject.shared.classes.question.Question;
+import io.github.knowledgecaptureanddiscovery.diskprovmapper.Constants;
 import io.github.knowledgecaptureanddiscovery.diskprovmapper.DocumentProv;
 import io.github.knowledgecaptureanddiscovery.diskprovmapper.Mapper;
 import io.github.knowledgecaptureanddiscovery.diskprovmapper.ExtractorStep.Extractor;
+import io.github.knowledgecaptureanddiscovery.diskprovmapper.ExtractorStep.DataTypes.DataNarrativeVariableSchema;
+import junit.framework.Assert;
 
 public class ExtractorTest {
+  Extractor extractor;
+  private DataNarrativeVariableSchema dataNarrative;
+
   public ExtractorTest()
       throws StreamReadException, DatabindException, IOException, ParseException, URISyntaxException {
 
@@ -31,11 +37,25 @@ public class ExtractorTest {
     Mapper mapper = new Mapper(hypothesis, loi, tlois.get(0), questions);
     DocumentProv documentProv = mapper.doc;
     Document document = documentProv.document;
-    Extractor extractor = new Extractor(document);
+    extractor = new Extractor(document);
+    dataNarrative = extractor.getDataNarrativeVariable();
   }
 
   @Test
-  public void testConstructor() {
+  public void testDataQueryGroups() {
+    List<String> variables = dataNarrative.getVariableGroupsName();
+    Assert.assertTrue(variables.contains(Constants.DCAT_DATASET_LOCALNAME));
+    Assert.assertTrue(variables.contains(Constants.DCAT_CATALOG_LOCALNAME));
+    Assert.assertTrue(variables.contains(Constants.DCAT_QUERY_LOCALNAME));
+    Assert.assertTrue(variables.contains(Constants.DCAT_RESOURCE_LOCALNAME));
   }
 
+  @Test
+  public void testFraming() {
+    List<String> variables = dataNarrative.getVariableGroupsName();
+    System.out.println(variables);
+    Assert.assertTrue(variables.contains(Constants.SQO_QUESTION_LOCALNAME));
+    Assert.assertTrue(variables.contains(Constants.SQO_QUESTION_VARIABLE_LOCALNAME));
+    Assert.assertTrue(variables.contains(Constants.DISK_HYPOTHESIS_LOCALNAME));
+  }
 }

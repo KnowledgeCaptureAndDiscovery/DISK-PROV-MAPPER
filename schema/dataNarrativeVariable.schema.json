@@ -10,6 +10,12 @@
         "type": "string"
       }
     },
+    "variableGroupsName": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
     "groups": {
       "type": "array",
       "items": {
