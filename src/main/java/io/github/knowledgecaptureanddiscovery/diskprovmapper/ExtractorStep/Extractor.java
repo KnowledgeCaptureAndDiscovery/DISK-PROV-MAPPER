@@ -8,6 +8,7 @@ import org.openprovenance.prov.model.Entity;
 import org.openprovenance.prov.model.Type;
 import org.openprovenance.prov.model.QualifiedName;
 
+import io.github.knowledgecaptureanddiscovery.diskprovmapper.DocumentProv;
 import io.github.knowledgecaptureanddiscovery.diskprovmapper.ExtractorStep.DataTypes.DataNarrativeVariableSchema;
 import io.github.knowledgecaptureanddiscovery.diskprovmapper.ExtractorStep.DataTypes.EntityGroup;
 import io.github.knowledgecaptureanddiscovery.diskprovmapper.ExtractorStep.DataTypes.EntityItem;
@@ -17,9 +18,19 @@ public class Extractor {
   List<EntityGroup> entityGroups = new ArrayList<EntityGroup>();
   DataNarrativeVariableSchema dataNarrativeVariable = new DataNarrativeVariableSchema();
 
+  public Extractor(DocumentProv documentProv) {
+    this.document = documentProv.document;
+    ProvDocumentReader reader = new ProvDocumentReader(document);
+    extracted(reader);
+  }
+
   public Extractor(Document document) {
     this.document = document;
     ProvDocumentReader reader = new ProvDocumentReader(document);
+    extracted(reader);
+  }
+
+  private void extracted(ProvDocumentReader reader) {
     List<String> views = new ArrayList<String>();
     List<String> groups = new ArrayList<String>();
     reader.bundles.forEach(bundle -> {
