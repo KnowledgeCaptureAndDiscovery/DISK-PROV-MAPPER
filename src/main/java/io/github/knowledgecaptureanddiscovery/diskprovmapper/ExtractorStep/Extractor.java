@@ -3,13 +3,9 @@ package io.github.knowledgecaptureanddiscovery.diskprovmapper.ExtractorStep;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.xml.crypto.Data;
-
-import org.openprovenance.prov.model.Bundle;
 import org.openprovenance.prov.model.Document;
 import org.openprovenance.prov.model.Entity;
 import org.openprovenance.prov.model.Type;
-import org.openprovenance.prov.model.Value;
 import org.openprovenance.prov.model.QualifiedName;
 
 import io.github.knowledgecaptureanddiscovery.diskprovmapper.ExtractorStep.DataTypes.DataNarrativeVariableSchema;
@@ -54,9 +50,11 @@ public class Extractor {
           String name = entity.getId().getLocalPart();
           String label = entity.getLabel().get(0).getValue();
           String comment = entity.getLabel().get(0).getValue();
-          Object value = null;
-          if (entity.getValue() != null)
-            value = entity.getValue().getConvertedValue();
+          List<Object> value = null;
+          if (entity.getValue() != null) {
+            value = new ArrayList<Object>();
+            value.add(0, entity.getValue().getConvertedValue());
+          }
           entityItem.setId(id);
           entityItem.setName(name);
           entityItem.setLabel(label);
