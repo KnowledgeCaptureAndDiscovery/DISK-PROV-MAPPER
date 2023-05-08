@@ -1,0 +1,44 @@
+{% macro create_table_from_list(list) %}
+| Name |
+|------|
+{% for item in list -%}
+| {{ item.value }} |
+{% endfor -%}
+{% endmacro %}
+
+
+{% macro create_table_from_dict(dict) %}
+| Name | Value |
+|------|-------|
+{%- for key, value in dict.items() -%}
+| {{ key }} | {{ value }} |
+{% endfor %}
+{% endmacro %}
+
+{% macro enumerate_list_value(list) -%}
+{{ space }}
+{%- for item in list -%}
+{{ loop.index }}. {{ item.value }}
+{% endfor %}
+{% endmacro %}
+
+{% macro cycler(list) -%}
+{%- for item in list -%}
+{{ item.value }},
+{%- endfor -%}
+{% endmacro %}
+
+{% macro loop_get_label(list) -%}
+{%- for item in list -%}
+{{ item.name}},
+{%- endfor -%}
+{% endmacro %}
+
+{% macro create_table_binding(list) -%}
+| Name | Value |
+|------|-------|
+{{ space }}
+{%- for item in list -%}
+| {{ item.label }} | {{ item.value }} |
+{% endfor %}
+{% endmacro %}

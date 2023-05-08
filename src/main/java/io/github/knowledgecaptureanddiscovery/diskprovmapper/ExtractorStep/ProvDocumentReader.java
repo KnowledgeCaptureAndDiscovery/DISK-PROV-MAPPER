@@ -1,4 +1,4 @@
-package io.github.knowledgecaptureanddiscovery.diskprovmapper;
+package io.github.knowledgecaptureanddiscovery.diskprovmapper.ExtractorStep;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -11,6 +11,11 @@ import org.openprovenance.prov.model.ProvUtilities;
 import org.openprovenance.prov.model.QualifiedName;
 import org.openprovenance.prov.model.Type;
 
+/**
+ * This class provides methods to read a PROV document and extract information
+ * from it.
+ * The
+ */
 public class ProvDocumentReader {
   ProvUtilities u = new ProvUtilities();
   public List<Bundle> bundles;

@@ -1,20 +1,32 @@
 {
   "$id": "https://example.com/arrays.schema.json",
   "$schema": "https://raw.githubusercontent.com/KnowledgeCaptureAndDiscovery/DISK-PROV-MAPPER/master/schema.json",
-  "description": "A representation of the variables extracted from a PROV document. Each variable is a class that can have a set of values.",
+  "description": "A representation of the Entity extracted from a PROV document. Each entity has a set of values.",
   "type": "object",
   "properties": {
-    "variables": {
+    "views": {
       "type": "array",
       "items": {
-        "$ref": "#/$defs/variable"
+        "type": "string"
+      }
+    },
+    "variableGroupsName": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "groups": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/entityGroup"
       }
     }
   },
   "$defs": {
-    "variable": {
+    "entityGroup": {
       "type": "object",
-      "title": "A variable is a Entity extracted from a PROV document. It can have a set of values.",
+      "title": "A group of Entity extracted from a PROV document. They are grouped by the type of entity they represent.",
       "properties": {
         "id": {
           "type": "string",
@@ -26,37 +38,45 @@
           "type": "string",
           "default": "",
           "pattern": "(?m)^[ ]*([^\r\n:]+?)s*:",
-          "title": "A machine readable name for the variable",
+          "title": "A machine readable name for the entity",
           "examples": ["questionBinding"]
         },
         "comment": {
           "type": "string",
           "default": "",
-          "title": "A human readable comment for the variable",
+          "title": "A human readable comment for the entity. For example: the description from the ontology",
           "examples": [
             "Class that represents a variable used on a Question. This variable name must be present on the template and pattern of the question that uses it. Can have contraints in the form of a query (hasConstraint property) or a list of possible options (hasFixedOptions property)."
           ]
         },
-        "values": {
-          "title": "The values associated with the variable",
+        "view": {
+          "type": "string",
+          "default": "",
+          "title": "Data Narrative view where the Entity must be. For example: questionVariable is in the  view",
+          "examples": [
+            "Class that represents a variable used on a Question. This variable name must be present on the template and pattern of the question that uses it. Can have contraints in the form of a query (hasConstraint property) or a list of possible options (hasFixedOptions property)."
+          ]
+        },
+        "entities": {
+          "title": "A list of entities grouped by the type of entity they represent",
           "type": "array",
           "items": {
-            "$ref": "#/$defs/variableValue"
+            "$ref": "#/$defs/entityItem"
           }
         }
       }
     },
-    "variableValue": {
+    "entityItem": {
       "type": "object",
       "properties": {
         "id": {
-          "title": "The IRI of the variable value",
+          "title": "The IRI of the Entity",
           "type": "string",
           "default": "",
           "examples": ["https://w3id.org/sqo/resource/EnigmaQuestion4"]
         },
         "name": {
-          "title": "A human readable name for the variable value",
+          "title": "A human readable value of the Entity",
           "type": "string",
           "default": "",
           "examples": [
@@ -64,7 +84,7 @@
           ]
         },
         "label": {
-          "title": "A human readable label for the variable value",
+          "title": "A human readable label for the value of the Entity",
           "type": "string",
           "default": "",
           "examples": [

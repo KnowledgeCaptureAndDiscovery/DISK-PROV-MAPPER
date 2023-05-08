@@ -60,6 +60,12 @@ public class DocumentProv {
     public static final String OPMW_NS = "http://www.opmw.org/ontology/";
     public static final String OPMW_PREFIX = "opmw";
 
+    public static final String SQO_PREFIX = "sqo";
+    public static final String SQO_NS = "https://w3id.org/sqo";
+
+    public static final String SQO_RESOURCE_PREFIX = "sqo-resource";
+    public static final String SQO_RESOURCE_NS = "https://w3id.org/sqo/resource/";
+
     public ProvFactory factory;
     public Namespace ns;
     public Document document;
@@ -87,8 +93,8 @@ public class DocumentProv {
         localNs.register(DCTERMS_PREFIX, DCTERMS_NS);
         localNs.register(DCAT_PREFIX, DCAT_NS);
         localNs.register(OPMW_PREFIX, OPMW_NS);
-        localNs.register(Constants.SQO_PREFIX, Constants.SQO_NS);
-        localNs.register(Constants.SQO_RESOURCE_PREFIX, Constants.SQO_RESOURCE_NS);
+        localNs.register(SQO_PREFIX, SQO_NS);
+        localNs.register(SQO_RESOURCE_PREFIX, SQO_RESOURCE_NS);
         localNs.setDefaultNamespace(defaultNameSpace);
         System.out.println("Default namespace: " + localNs.getDefaultNamespace());
     }
@@ -114,19 +120,24 @@ public class DocumentProv {
         return ns.qualifiedName(prefix, n, factory);
     }
 
-    public void doConversions(String file) {
-        String pngFile = file + ".png";
+    public void write(String file) {
         String provFile = file + ".provn";
+        String pngFile = file + ".png";
         String ttlFile = file + ".ttl";
         String jsonFile = file + ".json";
         InteropFramework intF = new InteropFramework();
-        intF.writeDocument(pngFile, document);
         intF.writeDocument(provFile, document);
+        intF.writeDocument(pngFile, document);
         intF.writeDocument(ttlFile, document);
         intF.writeDocument(jsonFile, document);
     }
 
-    public void convert(OutputStream outputStream, String format) {
+    public Document read(String file) {
+        InteropFramework intF = new InteropFramework();
+        return intF.readDocument(file);
+    }
+
+    public void write(OutputStream outputStream, String format) {
         InteropFramework intF = new InteropFramework();
         ProvFormat provFormat = ProvFormat.valueOf(format.toUpperCase());
         intF.writeDocument(outputStream, provFormat, document);

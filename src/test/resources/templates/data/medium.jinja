@@ -1,0 +1,24 @@
+{% import 'macro.j2' as macro %}
+
+# Data Narrative
+
+## Data Query
+
+**Data Catalog**: {{Catalog.label}} {{Catalog.comment}}
+**Data query explanation**: {{Query.comment}}
+
+
+{{Catalog.query.value}}
+
+
+## Data retrieved
+
+The query returns information for the {{VariableBinding|length}} variables. The variables are:
+
+{{macro.create_table_binding(VariableBinding)}}
+
+### Input files
+
+The query returns {{Resource|length}} resources. The resources are: {{macro.create_table_from_list(Resource)}}
+
+
