@@ -1,17 +1,15 @@
-{% macro create_table_from_list(list) -%}
+{% macro create_table_from_list(list) %}
 | Name |
 |------|
-{{ space }}
-{%- for item in list -%}
-| {{ item }} |
-{% endfor %}
+{% for item in list -%}
+| {{ item.value }} |
+{% endfor -%}
 {% endmacro %}
 
 
-{% macro create_table_from_dict(dict) -%}
+{% macro create_table_from_dict(dict) %}
 | Name | Value |
 |------|-------|
-{{ space }}
 {%- for key, value in dict.items() -%}
 | {{ key }} | {{ value }} |
 {% endfor %}
@@ -41,6 +39,6 @@
 |------|-------|
 {{ space }}
 {%- for item in list -%}
-| {{ item.name }} | {{ item.value }} |
+| {{ item.label }} | {{ item.value }} |
 {% endfor %}
 {% endmacro %}

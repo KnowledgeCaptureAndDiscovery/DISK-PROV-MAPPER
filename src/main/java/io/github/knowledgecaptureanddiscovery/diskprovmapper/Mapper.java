@@ -318,7 +318,7 @@ public class Mapper {
 
                 // create the activity for writing the data query
 
-                Entity dataQueryTemplateEntity = createDataQuery(triggerOfLineInquiry, dataBundle);
+                Entity dataQueryTemplateEntity = createDataTemplateQuery(triggerOfLineInquiry, dataBundle);
                 loisBundle.getStatement().add(dataQueryTemplateEntity);
                 Entity dataSource = createDataCatalog(dataSourceText);
 
@@ -503,9 +503,10 @@ public class Mapper {
 
         private Entity createDataQuery(TriggeredLOI triggeredLOI, Bundle triggerBundle) {
                 String value = triggeredLOI.getDataQuery();
-                String label = (triggeredLOI.getDataQueryExplanation() == null)
-                                ? "The user didin't provide an explanation for the data query"
-                                : triggeredLOI.getDataQueryExplanation();
+                String label = (triggeredLOI.getDataQueryExplanation() == null
+                                || triggeredLOI.getDataQueryExplanation() == "")
+                                                ? "The user didin't provide an explanation for the data query"
+                                                : triggeredLOI.getDataQueryExplanation();
                 String comment = label;
                 Entity entity = pFactory.newEntity(
                                 prov.qn("data_query", DocumentProv.PROV_NEUROSCIENCE_TRIGGER_PREFIX),
@@ -513,6 +514,22 @@ public class Mapper {
                 entity.setValue(pFactory.newValue(value));
                 addCommentToEntity(entity, comment);
                 addTypeToEntity(entity, DocumentProv.DCAT_PREFIX, Constants.DCAT_QUERY_LOCALNAME);
+                dataBundle.getStatement().add(entity);
+                return entity;
+        }
+
+        private Entity createDataTemplateQuery(TriggeredLOI triggeredLOI, Bundle triggerBundle) {
+                String value = triggeredLOI.getDataQuery();
+                String label = (triggeredLOI.getDataQueryExplanation() == null)
+                                ? "The user didin't provide an explanation for the data query"
+                                : triggeredLOI.getDataQueryExplanation();
+                String comment = label;
+                Entity entity = pFactory.newEntity(
+                                prov.qn("data_query_template", DocumentProv.PROV_NEUROSCIENCE_TRIGGER_PREFIX),
+                                label);
+                entity.setValue(pFactory.newValue(value));
+                addCommentToEntity(entity, comment);
+                addTypeToEntity(entity, DocumentProv.DCAT_PREFIX, Constants.DCAT_QUERY_TEMPLATE_LOCALNAME);
                 dataBundle.getStatement().add(entity);
                 return entity;
         }

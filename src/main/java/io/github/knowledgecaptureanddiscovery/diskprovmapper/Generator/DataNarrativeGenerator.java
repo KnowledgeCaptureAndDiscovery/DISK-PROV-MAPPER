@@ -1,5 +1,7 @@
 package io.github.knowledgecaptureanddiscovery.diskprovmapper.Generator;
 
+import java.io.File;
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -7,6 +9,7 @@ import java.util.Map;
 
 import javax.xml.crypto.Data;
 
+import org.apache.commons.io.FileUtils;
 import org.openprovenance.prov.model.Value;
 
 import com.hubspot.jinjava.Jinjava;
@@ -49,5 +52,16 @@ public class DataNarrativeGenerator {
     }
 
     narrative = jinjava.render(dataNarrativeTemplate, context);
+  }
+
+  public void write(Path path) {
+    // Write file
+    File file = new File(path.toString());
+    try {
+      file.createNewFile();
+      FileUtils.writeStringToFile(file, narrative, "UTF-8");
+    } catch (Exception e) {
+      throw new RuntimeException(e);
+    }
   }
 }

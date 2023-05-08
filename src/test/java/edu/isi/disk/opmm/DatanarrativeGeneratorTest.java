@@ -3,6 +3,7 @@ package edu.isi.disk.opmm;
 import java.io.File;
 import java.io.IOException;
 import java.net.URISyntaxException;
+import java.nio.file.Path;
 import java.text.ParseException;
 import java.util.List;
 import java.util.Map;
@@ -47,8 +48,8 @@ public class DatanarrativeGeneratorTest {
     String template = FileUtils.readFileToString(new File("src/test/resources/templates/framing/basic.txt.jinja"),
         "UTF-8");
     datanarrativeGenerator = new DataNarrativeGenerator(narrativesVariables, template);
-    String narrative = datanarrativeGenerator.getNarrative();
-    System.out.println(narrative);
+    Path path = new File("framingNarrative.md").toPath();
+    datanarrativeGenerator.write(path);
   }
 
   @Test
@@ -56,8 +57,8 @@ public class DatanarrativeGeneratorTest {
     String template = FileUtils.readFileToString(new File("src/test/resources/templates/data/basic.txt.jinja"),
         "UTF-8");
     datanarrativeGenerator = new DataNarrativeGenerator(narrativesVariables, template);
-    String narrative = datanarrativeGenerator.getNarrative();
-    System.out.println(narrative);
+    Path path = new File("dataNarrative.md").toPath();
+    datanarrativeGenerator.write(path);
   }
 
   @Test
@@ -66,6 +67,7 @@ public class DatanarrativeGeneratorTest {
         "UTF-8");
     datanarrativeGenerator = new DataNarrativeGenerator(narrativesVariables, template);
     String narrative = datanarrativeGenerator.getNarrative();
-    System.out.println(narrative);
+    Path path = new File("dataNarrativeFull.md").toPath();
+    datanarrativeGenerator.write(path);
   }
 }

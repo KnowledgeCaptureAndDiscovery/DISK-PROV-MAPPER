@@ -23,11 +23,13 @@ public class Constants {
         public static final String DCAT_DATASET_LOCALNAME = "Dataset";
         public static final String DCAT_CATALOG_LOCALNAME = "Catalog";
         public static final String DCAT_QUERY_LOCALNAME = "Query";
+        public static final String DCAT_QUERY_TEMPLATE_LOCALNAME = "QueryTemplate";
         public static final String DCAT_RESOURCE_LOCALNAME = "Resource";
         public static final String DISK_VARIABLE_BINDING_LOCALNAME = "VariableBinding";
         // 2. Framing question related
         public static final String SQO_QUESTION_LOCALNAME = "Question";
         public static final String SQO_QUESTION_VARIABLE_LOCALNAME = "QuestionVariable";
+        public static final String SQO_QUESTION_BINDING_LOCALNAME = "QuestionBinding";
         public static final String SQO_QUESTION_CATEGORY_LOCALNAME = "QuestionCategory";
         public static final String DISK_HYPOTHESIS_LOCALNAME = "Hypothesis";
 

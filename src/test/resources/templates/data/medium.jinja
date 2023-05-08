@@ -1,10 +1,24 @@
 {% import 'macro.j2' as macro %}
 
-The system sends a Data Query on the {{Catalog.label}} catalog. The query is defined by the following parameters: {{macro.loop_get_label(QuestionVariable)}} and the resultant query is:
+# Data Narrative
 
-The query returns {{Resource|length}} resources. The resources are: {{macro.enumerate_list_value(Resource)}}
+## Data Query
 
-Also, the query obtain data from {{VariableBinding|length}} variables. The variables are: {{macro.create_table_binding(VariableBinding)}}
+**Data Catalog**: {{Catalog.label}} {{Catalog.comment}}
+**Data query explanation**: {{Query.comment}}
 
-{{VariableBinding|length}} variables are bound to the query.
-The variables are: {{macro.create_table_binding(VariableBinding)}}
+
+{{Catalog.query.value}}
+
+
+## Data retrieved
+
+The query returns information for the {{VariableBinding|length}} variables. The variables are:
+
+{{macro.create_table_binding(VariableBinding)}}
+
+### Input files
+
+The query returns {{Resource|length}} resources. The resources are: {{macro.create_table_from_list(Resource)}}
+
+
