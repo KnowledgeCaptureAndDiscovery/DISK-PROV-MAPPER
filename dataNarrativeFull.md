@@ -2,8 +2,8 @@
 
 ## Data Query
 
-**Data Catalog**: Enigma ODS wiki (Ontology). Data obtained from the Enigma ODS wiki (Ontology) a collaborative wiki for different working groups of Enigma.
-**Data query explanation**: The user didin't provide an explanation for the data query
+**Data Catalog**: Enigma ODS wiki (Ontology). Data was obtained from the Enigma ODS wiki (Ontology) a collaborative wiki for different working groups of Enigma.
+**Data query explanation**: The user didn't provide an explanation for the data query
 
 ## Data retrieved
 
