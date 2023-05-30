@@ -29,6 +29,7 @@
   </scm>
 
   <url>https://github.com/KnowledgeCaptureAndDiscovery/DISK-PROV-MAPPER</url>
+
   <licenses>
     <license>
       <name>Apache-2.0</name>
@@ -37,6 +38,7 @@
       <comments>A business-friendly OSS license</comments>
     </license>
   </licenses>
+
   <organization>
     <name>USC/Information Sciences Institute</name>
     <url>http://www.isi.edu/ikcap</url>

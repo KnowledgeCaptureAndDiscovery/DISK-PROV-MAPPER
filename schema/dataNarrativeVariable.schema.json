@@ -1,17 +1,20 @@
 {
   "$id": "https://example.com/arrays.schema.json",
-  "$schema": "https://raw.githubusercontent.com/KnowledgeCaptureAndDiscovery/DISK-PROV-MAPPER/master/schema.json",
+  "$schema": "https://raw.githubusercontent.com/KnowledgeCaptureAndDiscovery/DISK-PROV-MAPPER/master/schema/dataNarrativeVariable.schema.json",
   "description": "A representation of the Entity extracted from a PROV document. Each entity has a set of values.",
   "type": "object",
   "properties": {
     "views": {
       "type": "array",
+      "examples": ["Framing", "Data"],
       "items": {
         "type": "string"
       }
     },
-    "variableGroupsName": {
+    "groupNames": {
       "type": "array",
+      "title": "A list contains the Entities name which were grouped by the type of entity they represent",
+      "examples": ["QuestionVariable", "Question"],
       "items": {
         "type": "string"
       }
@@ -21,6 +24,24 @@
       "items": {
         "$ref": "#/$defs/entityGroup"
       }
+    }
+  },
+  "examples": {
+    "views": ["Framing", "Data"],
+    "groupNames": ["QuestionVariable", "Question"],
+    "entityGroup": {
+      "id": "https://w3id.org/sqo#QuestionVariable",
+      "name": "questionVariable",
+      "comment": "Class that represents a variable used on a Question. This variable name must be present on the template and pattern of the question that uses it. Can have contraints in the form of a query (hasConstraint property) or a list of possible options (hasFixedOptions property).",
+      "entities": [
+        {
+          "id": "https://w3id.org/sqo/resource/EnigmaQuestion4",
+          "name": "What is the effect size of ?Genotype on ?Region ?Brain Imaging Trait?",
+          "label": "What is the effect size of Genotype on Region Brain Imaging Trait?",
+          "comment": "Question that asks for the effect size of a genotype on a brain imaging trait.",
+          "value": "What is the effect size of ?Genotype on ?Region ?Brain Imaging Trait?"
+        }
+      ]
     }
   },
   "$defs": {
