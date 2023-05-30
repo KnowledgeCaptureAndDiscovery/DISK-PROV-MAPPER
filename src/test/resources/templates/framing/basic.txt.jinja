@@ -1,4 +1,4 @@
-{% import 'macro.j2' as macro %}
+{% import 'helper.j2' as helper%}
 
 # Framing Narrative
 
@@ -9,4 +9,4 @@ QuestionTemplate
 {{Question.value}}
 
 
-{{macro.create_table_binding(QuestionVariable)}}
+{{helper.create_table_binding(QuestionVariable)}}
