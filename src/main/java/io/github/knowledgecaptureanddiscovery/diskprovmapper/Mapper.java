@@ -49,7 +49,6 @@ public class Mapper {
         Bundle dataBundle = pFactory.newNamedBundle(prov.qn(Constants.BUNDLE_DATA_NAME), null);
         Bundle framingBundle = pFactory.newNamedBundle(prov.qn(Constants.BUNDLE_FRAMING_NAME), null);
         Bundle hypothesisBundle = pFactory.newNamedBundle(prov.qn(Constants.BUNDLE_HYPOTHESIS_NAME), null);
-        Bundle loisBundle = pFactory.newNamedBundle(prov.qn(Constants.BUNDLE_HYPOTHESIS_NAME), null);
         public DocumentProv doc;
 
         /**
@@ -83,8 +82,6 @@ public class Mapper {
                 prov.document.getStatementOrBundle().add(framingBundle);
                 hypothesisBundle.setNamespace(hypothesisDefaultNamespace);
                 prov.document.getStatementOrBundle().add(hypothesisBundle);
-                loisBundle.setNamespace(loisDefaultNamespace);
-                prov.document.getStatementOrBundle().add(loisBundle);
                 dataBundle.setNamespace(loisDefaultNamespace);
                 prov.document.getStatementOrBundle().add(dataBundle);
                 doc = prov;
@@ -121,8 +118,6 @@ public class Mapper {
                 prov.document.getStatementOrBundle().add(framingBundle);
                 hypothesisBundle.setNamespace(hypothesisDefaultNamespace);
                 prov.document.getStatementOrBundle().add(hypothesisBundle);
-                loisBundle.setNamespace(loisDefaultNamespace);
-                prov.document.getStatementOrBundle().add(loisBundle);
                 doc = prov;
         }
 
@@ -172,7 +167,7 @@ public class Mapper {
                                 questionVariables, createHypothesisActivity, question);
 
                 localWasDerived(questionEntity, hypothesisEntity, framingBundle);
-                localWasDerived(questionEntity, lineOfInquiryEntity, loisBundle);
+                localWasDerived(questionEntity, lineOfInquiryEntity, dataBundle);
 
                 for (TriggeredLOI triggerLineInquiry : triggeredLOIList) {
                         Bundle triggerBundle = createTriggerBundle(triggerLineInquiry);
@@ -266,7 +261,7 @@ public class Mapper {
                 activity.getOther().add(pFactory.newOther(DocumentProv.RDFS_NS, "comment",
                                 DocumentProv.RDFS_PREFIX, dateCreated,
                                 pFactory.getName().XSD_NAME));
-                loisBundle.getStatement().add(activity);
+                dataBundle.getStatement().add(activity);
                 return activity;
         }
 
@@ -319,17 +314,17 @@ public class Mapper {
                 // create the activity for writing the data query
 
                 Entity dataQueryTemplateEntity = createDataTemplateQuery(triggerOfLineInquiry, dataBundle);
-                loisBundle.getStatement().add(dataQueryTemplateEntity);
+                dataBundle.getStatement().add(dataQueryTemplateEntity);
                 Entity dataSource = createDataCatalog(dataSourceText);
 
                 Activity activitySelectQuestion = createActivity("select_question", "Select the question", dateCreated,
-                                loisBundle);
+                                dataBundle);
                 Activity activitySelectDataSource = createActivity("select_data_source", "Select the data source",
-                                dateCreated, loisBundle);
+                                dateCreated, dataBundle);
                 Activity activityWriteDataQueryTemplate = createActivity("write_data_query_template",
-                                "Write data query template", dateCreated, loisBundle);
+                                "Write data query template", dateCreated, dataBundle);
                 Activity activitySavedLineOfInquiry = createActivity("saved_line_of_inquiry", "Saved line of inquiry",
-                                dateCreated, loisBundle);
+                                dateCreated, dataBundle);
 
                 // Activity relations
                 WasInformedBy wib = pFactory.newWasInformedBy(null, activitySelectDataSource.getId(),
@@ -372,11 +367,11 @@ public class Mapper {
                                         activitySavedLineOfInquiry, Constants.WORKFLOW_TYPE.WORKFLOW, workflowSystem,
                                         workflow, variableBindingWorkflow);
                 }
-                loisBundle.getStatement().add(usedSelectQuestion);
+                dataBundle.getStatement().add(usedSelectQuestion);
                 prov.document.getStatementOrBundle().add(usedSelectDataSource);
-                loisBundle.getStatement().add(usedWriteDataQueryTemplate);
-                loisBundle.getStatement().add(wgbWriteDataQueryTemplate);
-                loisBundle.getStatement().add(wgbSavedLineOfInquiry);
+                dataBundle.getStatement().add(usedWriteDataQueryTemplate);
+                dataBundle.getStatement().add(wgbWriteDataQueryTemplate);
+                dataBundle.getStatement().add(wgbSavedLineOfInquiry);
 
                 level2AddTrigger(triggerOfLineInquiry, triggerEntity,
                                 lineOfInquiryEntity, dataSource,
@@ -773,22 +768,22 @@ public class Mapper {
                                 variableBindingWorkflow.getId(), null,
                                 null);
 
-                loisBundle.getStatement().add(variableBindingWorkflow);
+                dataBundle.getStatement().add(variableBindingWorkflow);
                 prov.document.getStatementOrBundle().add(workflow);
                 HadMember hm = pFactory.newHadMember(workflow.getId(), workflowSystem.getId());
                 prov.document.getStatementOrBundle().add(hm);
-                loisBundle.getStatement().add(activitySelectWorkflow);
-                loisBundle.getStatement().add(wib2);
-                loisBundle.getStatement().add(wib7);
-                loisBundle.getStatement().add(activitySelectVariableWorkflow);
-                loisBundle.getStatement().add(activitySelectVariableWorkflow);
-                loisBundle.getStatement().add(wib6);
-                loisBundle.getStatement().add(wib4);
+                dataBundle.getStatement().add(activitySelectWorkflow);
+                dataBundle.getStatement().add(wib2);
+                dataBundle.getStatement().add(wib7);
+                dataBundle.getStatement().add(activitySelectVariableWorkflow);
+                dataBundle.getStatement().add(activitySelectVariableWorkflow);
+                dataBundle.getStatement().add(wib6);
+                dataBundle.getStatement().add(wib4);
                 prov.document.getStatementOrBundle().add(usedSelectWorkflow);
                 prov.document.getStatementOrBundle().add(wgbSelectWorkflow);
-                loisBundle.getStatement().add(wgbSelectVariableWorkflow);
+                dataBundle.getStatement().add(wgbSelectVariableWorkflow);
                 prov.document.getStatementOrBundle().add(usedSelectVariableWorkflow);
-                loisBundle.getStatement().add(usedSavedLineOfInquiry);
+                dataBundle.getStatement().add(usedSavedLineOfInquiry);
 
                 // Add the variable bindings
                 workflowBindingResource.getBindings().forEach(b -> {
@@ -807,10 +802,10 @@ public class Mapper {
 
                         variableBindingCollectionItem.setValue(pFactory.newValue(value));
 
-                        loisBundle.getStatement().add(variableBindingCollectionItem);
+                        dataBundle.getStatement().add(variableBindingCollectionItem);
                         HadMember hm2 = pFactory.newHadMember(variableBindingWorkflow.getId(),
                                         variableBindingCollectionItem.getId());
-                        loisBundle.getStatement().add(hm2);
+                        dataBundle.getStatement().add(hm2);
                 });
 
         }
@@ -1029,7 +1024,7 @@ public class Mapper {
                         loisEntity.getOther().add(pFactory.newOther(DocumentProv.DCTERMS_NS, "created",
                                         DocumentProv.DCTERMS_PREFIX, dateCreated,
                                         pFactory.getName().XSD_NAME));
-                loisBundle.getStatement().add(loisEntity);
+                dataBundle.getStatement().add(loisEntity);
                 return loisEntity;
         }
 
