@@ -81,7 +81,7 @@ public class Extractor {
     });
     dataNarrativeVariable.setViews(views);
     dataNarrativeVariable.setGroups(entityGroups);
-    dataNarrativeVariable.setVariableGroupsName(groups);
+    dataNarrativeVariable.setGroupNames(groups);
   }
 
   public DataNarrativeVariableSchema getDataNarrativeVariable() {

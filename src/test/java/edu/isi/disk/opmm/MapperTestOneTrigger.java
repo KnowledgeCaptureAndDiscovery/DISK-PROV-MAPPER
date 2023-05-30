@@ -73,7 +73,7 @@ public class MapperTestOneTrigger {
 
   @Test
   public void findHypothesisByLocalName() {
-    Bundle hypothesisBundle = provDocumentReader.getBundle(Constants.BUNDLE_DATA_NAME);
+    Bundle hypothesisBundle = provDocumentReader.getBundle(Constants.BUNDLE_FRAMING_NAME);
     String hypothesisLocalName = "Hypothesis-4CGdVLyttD07";
     Entity hypothesis = provDocumentReader.getEntityByLocalName(hypothesisBundle, hypothesisLocalName);
     Assert.assertEquals(hypothesisLocalName, hypothesis.getId().getLocalPart());
@@ -81,7 +81,7 @@ public class MapperTestOneTrigger {
 
   @Test
   public void findLineOfInquiryByLocalName() {
-    Bundle loiBundle = provDocumentReader.getBundle(Constants.BUNDLE_LOIS_NAME);
+    Bundle loiBundle = provDocumentReader.getBundle(Constants.BUNDLE_DATA_NAME);
     String loiLocalName = "LOI-R12qZl77tJJ9";
     Entity loi = provDocumentReader.getEntityByLocalName(loiBundle, loiLocalName);
     Assert.assertEquals(loiLocalName, loi.getId().getLocalPart());
@@ -170,7 +170,7 @@ public class MapperTestOneTrigger {
 
   @Test
   public void numberBundlesTest() {
-    Assert.assertEquals(5, provDocumentReader.bundles.size());
+    Assert.assertEquals(4, provDocumentReader.bundles.size());
   }
 
   @Test

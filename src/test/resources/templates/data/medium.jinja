@@ -1,4 +1,4 @@
-{% import 'macro.j2' as macro %}
+{% import 'helper.j2' as helper %}
 
 # Data Narrative
 
@@ -15,10 +15,10 @@
 
 The query returns information for the {{VariableBinding|length}} variables. The variables are:
 
-{{macro.create_table_binding(VariableBinding)}}
+{{helper.create_table_binding(VariableBinding)}}
 
 ### Input files
 
-The query returns {{Resource|length}} resources. The resources are: {{macro.create_table_from_list(Resource)}}
+The query returns {{Resource|length}} resources. The resources are: {{helper.create_table_from_list(Resource)}}
 
 
