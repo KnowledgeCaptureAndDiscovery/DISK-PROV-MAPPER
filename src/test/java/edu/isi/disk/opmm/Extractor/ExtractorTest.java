@@ -43,7 +43,7 @@ public class ExtractorTest {
 
   @Test
   public void testDataQueryGroups() {
-    List<String> variables = dataNarrative.getVariableGroupsName();
+    List<String> variables = dataNarrative.getGroupNames();
     Assert.assertTrue(variables.contains(Constants.DCAT_DATASET_LOCALNAME));
     Assert.assertTrue(variables.contains(Constants.DCAT_CATALOG_LOCALNAME));
     Assert.assertTrue(variables.contains(Constants.DCAT_QUERY_LOCALNAME));
@@ -52,7 +52,7 @@ public class ExtractorTest {
 
   @Test
   public void testFraming() {
-    List<String> variables = dataNarrative.getVariableGroupsName();
+    List<String> variables = dataNarrative.getGroupNames();
     System.out.println(variables);
     Assert.assertTrue(variables.contains(Constants.SQO_QUESTION_LOCALNAME));
     Assert.assertTrue(variables.contains(Constants.SQO_QUESTION_VARIABLE_LOCALNAME));

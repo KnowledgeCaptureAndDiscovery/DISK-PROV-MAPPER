@@ -15,15 +15,21 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
     "views",
-    "variableGroupsName",
+    "groupNames",
     "groups"
 })
 public class DataNarrativeVariableSchema {
 
     @JsonProperty("views")
     private List<String> views = new ArrayList<String>();
-    @JsonProperty("variableGroupsName")
-    private List<String> variableGroupsName = new ArrayList<String>();
+    /**
+     * A list contains the Entities name which were grouped by the type of entity they represent
+     * <p>
+     * 
+     * 
+     */
+    @JsonProperty("groupNames")
+    private List<String> groupNames = new ArrayList<String>();
     @JsonProperty("groups")
     private List<EntityGroup> groups = new ArrayList<EntityGroup>();
 
@@ -37,14 +43,26 @@ public class DataNarrativeVariableSchema {
         this.views = views;
     }
 
-    @JsonProperty("variableGroupsName")
-    public List<String> getVariableGroupsName() {
-        return variableGroupsName;
+    /**
+     * A list contains the Entities name which were grouped by the type of entity they represent
+     * <p>
+     * 
+     * 
+     */
+    @JsonProperty("groupNames")
+    public List<String> getGroupNames() {
+        return groupNames;
     }
 
-    @JsonProperty("variableGroupsName")
-    public void setVariableGroupsName(List<String> variableGroupsName) {
-        this.variableGroupsName = variableGroupsName;
+    /**
+     * A list contains the Entities name which were grouped by the type of entity they represent
+     * <p>
+     * 
+     * 
+     */
+    @JsonProperty("groupNames")
+    public void setGroupNames(List<String> groupNames) {
+        this.groupNames = groupNames;
     }
 
     @JsonProperty("groups")
@@ -65,9 +83,9 @@ public class DataNarrativeVariableSchema {
         sb.append('=');
         sb.append(((this.views == null)?"<null>":this.views));
         sb.append(',');
-        sb.append("variableGroupsName");
+        sb.append("groupNames");
         sb.append('=');
-        sb.append(((this.variableGroupsName == null)?"<null>":this.variableGroupsName));
+        sb.append(((this.groupNames == null)?"<null>":this.groupNames));
         sb.append(',');
         sb.append("groups");
         sb.append('=');
@@ -84,9 +102,9 @@ public class DataNarrativeVariableSchema {
     @Override
     public int hashCode() {
         int result = 1;
+        result = ((result* 31)+((this.groupNames == null)? 0 :this.groupNames.hashCode()));
         result = ((result* 31)+((this.groups == null)? 0 :this.groups.hashCode()));
         result = ((result* 31)+((this.views == null)? 0 :this.views.hashCode()));
-        result = ((result* 31)+((this.variableGroupsName == null)? 0 :this.variableGroupsName.hashCode()));
         return result;
     }
 
@@ -99,7 +117,7 @@ public class DataNarrativeVariableSchema {
             return false;
         }
         DataNarrativeVariableSchema rhs = ((DataNarrativeVariableSchema) other);
-        return ((((this.groups == rhs.groups)||((this.groups!= null)&&this.groups.equals(rhs.groups)))&&((this.views == rhs.views)||((this.views!= null)&&this.views.equals(rhs.views))))&&((this.variableGroupsName == rhs.variableGroupsName)||((this.variableGroupsName!= null)&&this.variableGroupsName.equals(rhs.variableGroupsName))));
+        return ((((this.groupNames == rhs.groupNames)||((this.groupNames!= null)&&this.groupNames.equals(rhs.groupNames)))&&((this.groups == rhs.groups)||((this.groups!= null)&&this.groups.equals(rhs.groups))))&&((this.views == rhs.views)||((this.views!= null)&&this.views.equals(rhs.views))));
     }
 
 }
